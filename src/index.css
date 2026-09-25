@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #083B2D;
+    --secondary: #C49A3A;
+    --bg-ivory: #FAF8F4;
+    --surface-stone: #F2EEE6;
+    --accent-saffron: #E67E22;
+    --text-charcoal: #111827;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #FAF8F4;
+    color: #111827;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-subheading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #C49A3A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AA7F27;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(250, 248, 244, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 154, 58, 0.2);
+}
+
+.glass-dark {
+  background: rgba(8, 59, 45, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 154, 58, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 215, 205, 0.6);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(8, 59, 45, 0.06);
+}
+
+/* Golden text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DFB757 0%, #C49A3A 50%, #9E7A26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #185F3B 0%, #083B2D 50%, #04231B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Golden border shimmer */
+.gold-border {
+  border: 1px solid rgba(196, 154, 58, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(196, 154, 58, 0.25);
+}
+
+/* Animated grain texture overlay */
+.heritage-grain {
+  background-image: radial-gradient(rgba(196, 154, 58, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* 3D tilt perspective container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Print optimizations */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

@@ -354,7 +354,7 @@ export const AITripPlanner: React.FC = () => {
                   <h4 className="text-xs font-bold text-[#083B2D]">Rishi AI Heritage Companion</h4>
                   <span className="text-[10px] text-green-600 flex items-center space-x-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping inline-block" />
-                    <span>Neural Model Live • SIH 2026 Engine</span>
+                    <span>Sovereign Neural Engine • Bharat Live</span>
                   </span>
                 </div>
               </div>

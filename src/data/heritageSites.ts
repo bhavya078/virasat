@@ -139,7 +139,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'An astonishing complex of 34 rock-cut monasteries and temples carved side by side into the basalt cliffs of the Charanandri hills. Cave 16—the Kailasa Temple—is the world’s largest single monolithic rock excavation, chiselled top-down out of a single mountain cliff.',
     architectureStyle: 'Dravidian & Nagara Monolithic Rock-Cut',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -232,7 +232,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'Built during the second half of the 16th century by Emperor Akbar, Fatehpur Sikri (the City of Victory) served as the capital of the Mughal Empire for only 14 years. It is an ensemble of red sandstone palaces, courtly halls, and the gigantic Buland Darwaza.',
     architectureStyle: 'Mughal Fusion (Persian & Hindu synthesis)',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -356,7 +356,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Built by King Rajaraja Chola I, this temple is one of the Great Living Chola Temples. Known as the Big Temple, it showcases the pinnacle of Dravidian stone craftsmanship. Its soaring vimana tower reaches 66 meters, topped by a monolithic 80-tonne granite kumbam dome.',
     architectureStyle: 'Pure Dravidian Chola Classical',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -418,7 +418,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2014,
     description: 'An exceptional example of an inverted temple subterranean water management architecture on the banks of the Saraswati River. Built as an elaborate memorial by Queen Udayamati for King Bhima I, it descends through seven levels of stone-sculpted pillared pavilions.',
     architectureStyle: 'Maru-Gurjara Subterranean',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -511,7 +511,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A historic Hindu temple located on the southern bank of the Vaigai River in the 2,500-year-old city of Madurai. Dedicated to Goddess Meenakshi (Parvati) and Sundareswarar (Shiva), it is famous for its 14 towering gopuram gateway towers adorned with thousands of polychrome stone sculptures.',
     architectureStyle: 'Dravidian (Nayaka Epoch)',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -604,7 +604,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'Perched high on the Cheel ka Teela (Hill of Eagles) overlooking Maota Lake, Amer Fort is celebrated for its artistic Rajput style elements. Cobbled paths, formidable battlements, series of grand gates, and the world-renowned Sheesh Mahal (Mirror Palace) dazzle millions of travelers.',
     architectureStyle: 'Rajput Military & Mughal Courtly',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -635,7 +635,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2002,
     description: 'One of the four sacred sites related to the life of Gautama Buddha, and the most supreme: the place where Siddhartha Gautama attained supreme Enlightenment (Bodhi) beneath the sacred Bodhi Tree. The 55-meter grand pyramidal temple is among the earliest brick temples surviving in eastern India.',
     architectureStyle: 'Classical Gupta Brick Temple',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -666,7 +666,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2016,
     description: 'The premier center of higher learning in the ancient world, operating for over 700 consecutive years. At its peak, Nalanda accommodated over 10,000 international scholars and 2,000 teachers from China, Korea, Japan, Tibet, and Persia, featuring a legendary nine-storey library named Dharmaganja.',
     architectureStyle: 'Ancient Buddhist Monastic Brickwork',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -697,7 +697,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Located on Gharapuri Island in Mumbai Harbour, the Elephanta Caves contain a collection of rock-cut temples predominantly dedicated to Lord Shiva. The centerpiece is the celebrated 7-meter Sadashiva / Maheshmurti sculpture portraying Shiva as the Creator, Preserver, and Destroyer.',
     architectureStyle: 'Shaivite Rock-Cut Classical',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -759,7 +759,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'The largest mangrove forest in the world, covering the coastal delta of the Ganges, Brahmaputra, and Meghna rivers. Famed for its legendary population of swimming Royal Bengal Tigers, saltwater crocodiles, and complex labyrinth of tidal waterways.',
     architectureStyle: 'World Largest Mangrove Delta',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -790,7 +790,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1993,
     description: 'The first substantial example of monumental Mughal architecture in India, built under the patronage of Empress Bega Begum for Emperor Humayun. Designed by Persian architect Mirak Mirza Ghiyas, it introduced the Charbagh garden tomb concept that directly inspired the Taj Mahal six decades later.',
     architectureStyle: 'Early Classical Mughal Charbagh',
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -821,7 +821,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2010,
     description: 'An astronomical observation site built in the early 18th century, featuring 19 monumental stone architectural instruments. It contains the world’s largest stone sundial—the Vrihat Samrat Yantra—which calculates local Jaipur solar time with an accuracy of two seconds.',
     architectureStyle: 'Astronomical Stone Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -852,7 +852,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'The largest fort complex in India, spanning nearly 700 acres atop a 180-meter hill. The historic capital of Mewar, Chittorgarh resonates with epic legends of Rajput valor, the sacrifices of Rani Padmini and Meera Bai, and the monumental Vijay Stambha (Tower of Victory).',
     architectureStyle: 'Medieval Rajput Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -883,7 +883,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Described by Mughal Emperor Babur as the pearl among the fortresses of Hind, Gwalior Fort sits atop an isolated sandstone hill. Its Man Mandir Palace is famous for its vibrant turquoise and yellow enameled tile mosaics depicting ducks, elephants, and peacocks.',
     architectureStyle: 'Medieval Indian Hill Fort & Tomar Palace',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -914,7 +914,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A fortified citadel on the western outskirts of Hyderabad, Golconda was the capital of the medieval Golconda Sultanate. Renowned for its ingenious acoustic engineering, hydraulic systems, and as the diamond capital that produced the Koh-i-Noor and Hope Diamond.',
     architectureStyle: 'Deccani Military Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -945,7 +945,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1984,
     description: 'Perched right on the coast of the Bay of Bengal, the Shore Temple is one of the oldest structural stone temples of Southern India. Built by the Pallava King Rajasimha, its two granite towers house shrines dedicated to Lord Shiva and reclining Vishnu.',
     architectureStyle: 'Dravidian (Early Pallava Structural)',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -976,7 +976,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The first and foremost of the twelve holy Jyotirlinga shrines of Lord Shiva, situated at the confluence of the mythical Saraswati, Kapila, and Hiran rivers on the coast of Saurashtra. Known as the Shrine Eternal, it was reconstructed repeatedly following historic invasions.',
     architectureStyle: 'Chalukya / Kailash Mahameru Prasad',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1007,7 +1007,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'One of the Char Dham pilgrimage sites, dedicated to Lord Jagannath, a form of Lord Vishnu, with his siblings Balabhadra and Subhadra. Renowned for its monumental 65-meter sikhara tower, sacred Mahaprasad cooked in earthen pots, and the annual world-famous Ratha Yatra chariot festival.',
     architectureStyle: 'Kalinga Architecture (Deula Type)',
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1038,7 +1038,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Nestled in a remote valley of the Aravalli hills between Udaipur and Jodhpur, this 15th-century marble temple dedicated to Tirthankara Adinatha is celebrated for its extraordinary stone filigree. Supported by 1,444 uniquely carved marble pillars, no two pillars are alike.',
     architectureStyle: 'Maru-Gurjara Jain Classical',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1069,7 +1069,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'One of the very few living forts in the world, where nearly one-fourth of the old city population still resides inside its golden sandstone ramparts. Rising like a golden mirage out of the Thar Desert on Trikuta Hill, it glows with a brilliant honey hue at sunset.',
     architectureStyle: 'Rajput Golden Sandstone Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1100,7 +1100,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The richest religious institution in human history, located in the capital of Kerala. The sanctum holds the 18-foot idol of Lord Vishnu reclining on the serpent Anantha in the sacred Anantha Shayana posture, viewed through three carved granite doors.',
     architectureStyle: 'Chera & Dravidian Fusion',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1162,7 +1162,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Pattadakal on the Malaprabha River was the holy site for coronation (Pattabhisheka) of the Chalukyan monarchs. It is celebrated as the experimental laboratory of ancient Indian architecture, where northern Nagara and southern Dravidian styles met and synthesized into the hybrid Vesara style.',
     architectureStyle: 'Synthesis of Dravidian & Nagara (Vesara Prototype)',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1193,7 +1193,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'Commissioned by King Vishnuvardhana in 1117 CE to mark his victory over the Cholas, this Hoysala masterpiece is dedicated to Lord Chennakeshava (handsome Vishnu). Carved out of soft chloritic schist (soapstone), its microscopic detail in dancers, jewelry, and filigree is unmatched.',
     architectureStyle: 'Hoysala Stellate (Star-shaped Architecture)',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1255,7 +1255,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'A Mewar fortress in the Rajsamand district of Rajasthan, built by Rana Kumbha. Perched on a hilltop 1,100 meters above sea level, it features a perimeter defense wall extending 36 kilometers—the second-longest continuous wall in the world after the Great Wall of China.',
     architectureStyle: 'Rajput Mountain Fortress',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1286,7 +1286,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'A powerful 94-acre fortress of red sandstone located on the banks of the Yamuna River, serving as the primary imperial residence of the Mughal emperors until 1638. Contains the Jahangiri Mahal, Khas Mahal, Sheesh Mahal, and the Musamman Burj where Shah Jahan was imprisoned.',
     architectureStyle: 'Mughal Red Sandstone & Marble Fort',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1317,7 +1317,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'A concentration of largely unexcavated archaeological, historic, and living cultural heritage properties cradled in an impressive landscape. It includes prehistoric sites, a hill fortress of early Hindu capital, and remains of the 16th-century capital of the Gujarat Sultanate.',
     architectureStyle: 'Pre-Mughal Indo-Saracenic & Solanki',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1379,7 +1379,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1985,
     description: 'Spanning the gentle slopes of the Eastern Himalayas in Assam contiguous with Royal Manas in Bhutan. The sanctuary provides habitat for rare and endangered endemic wildlife such as the Assam roofed turtle, hispid hare, golden langur, and pygmy hog.',
     architectureStyle: 'Sub-Himalayan Alluvial Grasslands',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1410,7 +1410,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2003,
     description: 'Located at the foothills of the Vindhya range, Bhimbetka consists of seven hills and more than 750 rock shelters. The rock paintings display the earliest traces of human life on the Indian subcontinent, with vivid depictions of hunting, dancing, ritual masks, and elephant processions.',
     architectureStyle: 'Prehistoric Rock Art & Natural Cave Shelters',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1441,7 +1441,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'The ancient capital of Portuguese India, Old Goa houses magnificent Renaissance, Mannerist, and Baroque churches. Monuments include the Se Cathedral (largest church in Asia) with its Golden Bell, and the Church of St. Francis of Assisi with painted wood paneling.',
     architectureStyle: 'Manueline, Baroque & Tuscan Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1472,7 +1472,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2021,
     description: 'Located in Palampet village near Warangal, this temple was built in 1213 CE during the reign of Kakatiya ruler Ganapati Deva. Uniquely in Indian history, the temple is named after its chief sculptor Ramappa. It features floating porous brick superstructures and a sandbox foundation designed for earthquake resistance.',
     architectureStyle: 'Kakatiya Temple (Star-shaped Stellate Plan)',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1503,7 +1503,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2021,
     description: 'An ancient metropolitan city of the Bronze Age Indus Valley Civilization, located on Khadir Bet island in the Great Rann of Kutch. It is celebrated for its monumental stone fortification, tiered urban layout (Citadel, Middle Town, Lower Town), and the most sophisticated prehistoric rainwater harvesting and reservoir system in the ancient world.',
     architectureStyle: 'Harappan Stone Masonry & Hydraulic Engineering',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1534,7 +1534,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'Established by Nobel laureate poet-philosopher Rabindranath Tagore in rural West Bengal as an experimental residential school and centre of arts and humanity (Visva-Bharati). Based on ancient Indian Vedic hermitage (Ashram) ideals, it pioneer learning under the canopy of trees.',
     architectureStyle: 'Bengal Modernist & Pan-Asian Ecological',
-    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1565,7 +1565,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2014,
     description: 'Patan, the ancient capital of Gujarat (Anhilpur Patan), is celebrated worldwide for its monumental hydraulic engineering. Along with the UNESCO-listed Queen’s Stepwell, it houses the legendary Sahasralinga Talav reservoir that once accommodated 1,000 Shiva shrines.',
     architectureStyle: 'Solanki Dynastic Water Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1627,7 +1627,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'An impregnable medieval hill fortress built on a conical pyramid-like rock rising 200 meters above the Deccan plains. Constructed by the Yadava kings in 1187 CE and renamed Daulatabad by Muhammad bin Tughlaq who famously attempted to move his capital here from Delhi.',
     architectureStyle: 'Medieval Deccani Defense Citadel',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1658,7 +1658,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'One of the largest salt deserts in the world, spanning over 7,500 square kilometers in the Thar Desert. Under the full moon, the pure white salt crust shines like a boundless sheet of diamonds. Nearby Kala Dungar (Black Hill) offers panoramic views of the Indo-Pak border horizon.',
     architectureStyle: 'Natural White Salt Desert Biosphere',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1689,7 +1689,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'Built by Rajendra Chola I to celebrate his victorious military expedition to the sacred River Ganges in northern India, this city served as the capital of the Chola Empire for 250 years. The Brihadisvara Temple here features graceful concave curving lines on its 55-meter vimana tower.',
     architectureStyle: 'Chola Dravidian Classical',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1720,7 +1720,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'Built by Rajaraja Chola II at Darasuram near Kumbakonam, this temple is dedicated to Lord Shiva under the name of Airavata, the white celestial elephant of Indra who worshiped here. Known for its jewel-box proportions, stone chariot mandapa, and musical stone steps.',
     architectureStyle: 'Late Chola Dravidian Jewel',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1751,7 +1751,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Rising 125 meters above the Blue City of Jodhpur, Mehrangarh is one of the most magnificent hill forts in India. Enclosed by imposing thick sandstone walls, its courtyards contain the Sheesh Mahal, Phool Mahal, and one of the finest royal palace museums in the country.',
     architectureStyle: 'Rathore Rajput Sandstone Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1782,7 +1782,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Crowning the serene waters of Lake Pichola, the City Palace of Udaipur is the largest royal palace complex in Rajasthan. Built over four centuries by 22 successive Maharanas of Mewar, it blends granite and marble into a flamboyant palace of towers, domes, and glass mosaics.',
     architectureStyle: 'Mewar Rajput & European Classical',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1813,7 +1813,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Unlike most major Rajput forts built on high hills, Junagarh was constructed on the desert plains of Bikaner. Formidable 986-meter perimeter walls and 37 bastions protected a treasure house of courtly luxury, featuring the Anup Mahal with gold leaf lacquerwork and the Badal Mahal cloud room.',
     architectureStyle: 'Rajput & Mughal Desert Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1844,7 +1844,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Located in Kanyakumari district, this royal palace is an extraordinary masterpiece of traditional Kerala wooden architecture. Constructed of teak, rosewood, and jackfruit timber, it features sloped tiled roofs, intricately carved rosewood ceilings, and polished mirror-like black charcoal-coconut shell floors.',
     architectureStyle: 'Indigenous Kerala Timber Architecture (Tachushastra)',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1875,7 +1875,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'The twin Shiva temple of Hoysaleswara and Shantaleswara at Halebidu (ancient Dwarasamudra) was the capital of the Hoysala Empire. Renowned for its intricate chloritic soapstone carvings, the outer walls are lined with endless friezes of charging elephants, lions, mythological yalis, and epics.',
     architectureStyle: 'Hoysala Stellate Soapstone Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1906,7 +1906,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched atop Vindhyagiri Hill, this 57-foot-tall monolithic statue of Lord Bahubali is the world’s largest freestanding monolithic stone statue without external support. Carved from a single block of grey granite by general Chavundaraya, it has stood serenely for over 1,000 years.',
     architectureStyle: 'Classical Digambara Jain Monolith',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1937,7 +1937,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A historic village on the Malaprabha River containing more than 125 stone temples dating from the 5th to 12th centuries. Revered by art historians as the Cradle of Indian Rock Architecture, where Chalukyan master guild sculptors experimented with apsidal plans, pillared halls, and proto-spires.',
     architectureStyle: 'Experimental Chalukyan Prototype',
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -1999,7 +1999,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Built by King Rudra Deva in 1163 CE, this temple is dedicated to the Hindu trinity: Shiva, Vishnu, and Surya (Trikutalayam). Supported by hundreds of richly carved basalt pillars placed so tightly that they form a stone forest, it features a monolithic black basalt Nandi bull facing the shrine.',
     architectureStyle: 'Kakatiya Polished Basalt Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2030,7 +2030,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'Erected by Rana Kumbha to celebrate his monumental victory over the combined armies of Malwa and Gujarat sultanates. Standing 37.2 meters high with nine storeys, the Tower of Victory is completely covered in stone sculptures of every deity from the Hindu pantheon.',
     architectureStyle: 'Mewar Rajput Victory Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2061,7 +2061,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'A delicate white water palace surrounded by the waters of the Padmini Talav lake. Celebrated in Indian ballad and folklore as the pavilion where Sultan Alauddin Khalji was permitted to view the reflection of legendary Queen Padmini in a bronze mirror.',
     architectureStyle: 'Rajput Water Pavilion',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2092,7 +2092,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A 2,000-year-old temple dedicated to Lord Janardhana (Vishnu) standing on a hill overlooking the Arabian Sea at Varkala. Famous for its ancient bell brought from a shipwrecked Dutch vessel and the adjacent majestic red laterite cliffs of Papanasam Beach.',
     architectureStyle: 'Traditional Kerala Pagoda Timber & Laterite',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2123,7 +2123,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Modeled after the Potala Palace in Lhasa, Leh Palace rises nine storeys on the Tsemo ridge overlooking the high-altitude Himalayan town of Leh. Built of mud brick, stone, and wood, its rooftop offers breathtaking 360-degree vistas of the snow-clad Stok Kangri mountain range.',
     architectureStyle: 'Tibetan Himalayan Fortified Palace',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2154,7 +2154,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The largest and wealthiest Buddhist monastery in Ladakh, tucked inside a secluded mountain gorge south of Leh. Belonging to the Red Hat Drukpa lineage, it is internationally renowned for the vibrant annual Hemis Festival celebrating Guru Padmasambhava with sacred masked Cham dances.',
     architectureStyle: 'Tibetan Buddhist Mountain Gompa',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2185,7 +2185,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched high in the Sahyadri mountain range, Raigad Fort was chosen by Chhatrapati Shivaji Maharaj as the capital of the sovereign Maratha Empire. On June 6, 1674, Shivaji was crowned here as Chhatrapati. The fort features the coronation throne platform, Queens palaces, and the sheer Takmak Tok execution cliff.',
     architectureStyle: 'Maratha Mountain Fort',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2216,7 +2216,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched dramatically on a hill slope rising above the Indus Valley, Thiksey Gompa bears a striking resemblance to the Potala Palace of Lhasa. A 12-storey monastery complex, it houses the majestic two-storey (49-foot) statue of Maitreya Buddha, consecrated by the 14th Dalai Lama.',
     architectureStyle: 'Tibetan Buddhist Hilltop Monastic',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2247,7 +2247,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Surrounded on three sides by the Arabian Sea on Kanduka Hill, Murudeshwar boasts the world’s second tallest statue of Lord Shiva (123 feet). Its monumental 20-storey Raja Gopuram stands 237 feet tall, equipped with a high-speed elevator taking pilgrims to the top observation deck.',
     architectureStyle: 'Modern Dravidian & Coastal Gigantism',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -2278,7 +2278,7 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Spread over an astonishing 156 acres on an island formed by the Kaveri and Coleroon rivers, Srirangam is the largest functioning Hindu temple complex in the world. It is enclosed by seven concentric walled enclosures (prakarams) with 21 magnificent gopuram towers, crowned by the 239-foot Rajagopuram.',
     architectureStyle: 'Grand Dravidian Temple City',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1567591414240-e25bc20c587d?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
     ],

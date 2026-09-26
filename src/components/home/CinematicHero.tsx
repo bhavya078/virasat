@@ -189,7 +189,7 @@ export const CinematicHero: React.FC = () => {
           className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-gold-glow"
         >
           <Compass className="w-3.5 h-3.5 text-[#C49A3A] animate-spin-slow" />
-          <span>Smart India Hackathon 2026 • Virasat V4</span>
+          <span>Sovereign AI Heritage Platform • Bharat</span>
         </motion.div>
 
         {/* Hero Headline */}

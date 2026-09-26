@@ -359,6 +359,29 @@ export const StateDetailPage: React.FC = () => {
 
           {/* Right Column: Travel Logistics, Hotels & Dining */}
           <div className="lg:col-span-4 space-y-6">
+            {/* Sovereign Political Registry Card */}
+            <div className="bg-[#083B2D] text-white p-5 rounded-3xl border border-[#C49A3A]/40 shadow-luxury space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-[#DFB757] font-bold uppercase tracking-wider flex items-center space-x-1.5">
+                  <Compass className="w-3.5 h-3.5 text-[#C49A3A]" />
+                  <span>Sovereign Political Registry</span>
+                </span>
+                <span className="px-2 py-0.5 rounded-full bg-white/10 text-[9px] text-[#C49A3A] font-mono">
+                  State of Bharat
+                </span>
+              </div>
+              <p className="text-xs text-white/80 font-light leading-relaxed">
+                {state.name} is an authenticated sovereign administrative division of the Republic of India with administrative headquarters at {state.capital}.
+              </p>
+              <Link
+                to="/states"
+                className="w-full py-2 rounded-xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-1.5 hover:brightness-110 transition-all"
+              >
+                <span>View on National Political Map</span>
+                <ExternalLink className="w-3 h-3" />
+              </Link>
+            </div>
+
             {/* Daily Travel Budget Bracket */}
             <div className="bg-white p-6 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-4">
               <h4 className="font-serif text-lg font-bold text-[#083B2D]">

@@ -28,12 +28,12 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-[#FAF8F4]/80 leading-relaxed max-w-sm font-light">
-              India's Most Premium AI Heritage Platform built for Smart India Hackathon 2026. Empowering global travelers to discover 5,000 years of civilization through cinematic storytelling, predictive AI trip itineraries, and living cultural traditions.
+              India's Most Premium AI Heritage Platform. Empowering global travelers and citizens to discover 5,000 years of civilization through cinematic storytelling, predictive AI trip itineraries, and living cultural traditions.
             </p>
 
             <div className="flex items-center space-x-2 pt-2 text-xs text-[#C49A3A]">
               <Award className="w-4 h-4 text-[#C49A3A]" />
-              <span className="font-medium tracking-wide">Smart India Hackathon 2026 • National Finalist</span>
+              <span className="font-medium tracking-wide">National Digital Heritage Mission • Incredible India</span>
             </div>
 
             <div className="pt-2 text-xs font-serif text-[#DFB757] italic">
@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-[#FAF8F4]/60 gap-4">
-          <p>© 2026 VIRASAT V4. Built with pride for Smart India Hackathon 2026. Made with <Heart className="w-3.5 h-3.5 text-[#E67E22] inline mx-1 fill-[#E67E22]" /> for Bharat.</p>
+          <p>© 2026 VIRASAT. Sovereign AI Heritage Platform of Bharat. Made with <Heart className="w-3.5 h-3.5 text-[#E67E22] inline mx-1 fill-[#E67E22]" /> for Incredible India.</p>
           <div className="flex items-center space-x-6 text-[11px] text-[#C49A3A]">
             <span>10 Classical Languages</span>
             <span>•</span>

@@ -1,377 +1,858 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Search, MapPin, Sparkles, Filter, ChevronRight, Compass } from 'lucide-react';
-import { ALL_INDIAN_STATES, getStateData } from '../../data/statesData';
+import { Search, MapPin, Sparkles, Filter, ChevronRight, Compass, Shield, Award, Landmark, Layers, Star } from 'lucide-react';
+import { STATES_DATA } from '../../data/statesData';
 import { useLanguage } from '../../context/LanguageContext';
 import { heritageAudio } from '../../utils/audioService';
 
-// 36 Geographic Map Nodes covering all states and UTs with relative SVG coordinates
-const MAP_REGIONS = [
-  // Northern Region
-  { id: 'jammu-and-kashmir', name: 'Jammu & Kashmir', cx: 160, cy: 75, r: 18, category: 'mountain', topAttraction: 'Dal Lake & Gulmarg' },
-  { id: 'ladakh', name: 'Ladakh', cx: 205, cy: 55, r: 24, category: 'mountain', topAttraction: 'Pangong Tso & Hemis' },
-  { id: 'himachal-pradesh', name: 'Himachal Pradesh', cx: 175, cy: 110, r: 15, category: 'mountain', topAttraction: 'Spiti Valley & Great Himalayan NP' },
-  { id: 'punjab', name: 'Punjab', cx: 145, cy: 125, r: 14, category: 'spiritual', topAttraction: 'Golden Temple, Amritsar' },
-  { id: 'chandigarh', name: 'Chandigarh', cx: 165, cy: 125, r: 7, category: 'museum', topAttraction: 'Rock Garden & Capitol Complex' },
-  { id: 'uttarakhand', name: 'Uttarakhand', cx: 200, cy: 130, r: 15, category: 'spiritual', topAttraction: 'Chopta & Badrinath' },
-  { id: 'haryana', name: 'Haryana', cx: 160, cy: 145, r: 13, category: 'fort', topAttraction: 'Surajkund & Kurukshetra' },
-  { id: 'delhi', name: 'Delhi', cx: 175, cy: 150, r: 8, category: 'unesco', topAttraction: 'Red Fort & Qutub Minar' },
+interface PoliticalRegion {
+  id: string;
+  name: string;
+  capital: string;
+  isUT?: boolean;
+  zone: 'North' | 'South' | 'West' | 'East' | 'Central' | 'Northeast' | 'Islands';
+  cx: number;
+  cy: number;
+  labelX?: number;
+  labelY?: number;
+  path: string;
+  unescoCount: number;
+  topAttraction: string;
+}
 
-  // Western & Desert Region
-  { id: 'rajasthan', name: 'Rajasthan', cx: 120, cy: 190, r: 32, category: 'fort', topAttraction: 'Amer Fort, Chittor & Thar Desert' },
-  { id: 'gujarat', name: 'Gujarat', cx: 90, cy: 260, r: 26, category: 'unesco', topAttraction: 'Rani ki Vav, Modhera & White Rann' },
-  { id: 'dadra-nagar-haveli-daman-diu', name: 'Dadra & Nagar Haveli and Daman & Diu', cx: 95, cy: 300, r: 7, category: 'beach', topAttraction: 'Moti Daman Fort & Jampore Beach' },
+// Authentic Indian Political Regions with SVG polygon boundaries on 600x700 coordinate system
+const POLITICAL_REGIONS: PoliticalRegion[] = [
+  // NORTHERN INDIA & CROWN
+  {
+    id: 'ladakh',
+    name: 'Ladakh',
+    capital: 'Leh',
+    isUT: true,
+    zone: 'North',
+    cx: 235,
+    cy: 75,
+    path: 'M 200 40 L 235 25 L 270 45 L 290 85 L 260 115 L 225 110 L 205 90 Z',
+    unescoCount: 1,
+    topAttraction: 'Hemis & Pangong Tso'
+  },
+  {
+    id: 'jammu-kashmir',
+    name: 'Jammu & Kashmir',
+    capital: 'Srinagar / Jammu',
+    isUT: true,
+    zone: 'North',
+    cx: 175,
+    cy: 85,
+    path: 'M 160 65 L 200 40 L 205 90 L 195 115 L 165 110 L 150 90 Z',
+    unescoCount: 1,
+    topAttraction: 'Dal Lake & Mughal Gardens'
+  },
+  {
+    id: 'himachal-pradesh',
+    name: 'Himachal Pradesh',
+    capital: 'Shimla',
+    zone: 'North',
+    cx: 215,
+    cy: 135,
+    path: 'M 195 115 L 225 110 L 250 135 L 230 160 L 190 145 Z',
+    unescoCount: 2,
+    topAttraction: 'Great Himalayan National Park'
+  },
+  {
+    id: 'punjab',
+    name: 'Punjab',
+    capital: 'Chandigarh',
+    zone: 'North',
+    cx: 165,
+    cy: 145,
+    path: 'M 150 120 L 190 125 L 185 160 L 155 165 L 140 140 Z',
+    unescoCount: 1,
+    topAttraction: 'Golden Temple, Amritsar'
+  },
+  {
+    id: 'chandigarh',
+    name: 'Chandigarh',
+    capital: 'Chandigarh',
+    isUT: true,
+    zone: 'North',
+    cx: 188,
+    cy: 142,
+    path: 'M 184 139 L 192 139 L 192 145 L 184 145 Z',
+    unescoCount: 1,
+    topAttraction: 'Capitol Complex'
+  },
+  {
+    id: 'uttarakhand',
+    name: 'Uttarakhand',
+    capital: 'Dehradun',
+    zone: 'North',
+    cx: 245,
+    cy: 155,
+    path: 'M 225 130 L 265 145 L 275 180 L 240 185 L 225 155 Z',
+    unescoCount: 2,
+    topAttraction: 'Valley of Flowers & Nanda Devi'
+  },
+  {
+    id: 'haryana',
+    name: 'Haryana',
+    capital: 'Chandigarh',
+    zone: 'North',
+    cx: 185,
+    cy: 175,
+    path: 'M 170 155 L 205 160 L 200 195 L 165 190 Z',
+    unescoCount: 0,
+    topAttraction: 'Kurukshetra & Sultanpur'
+  },
+  {
+    id: 'delhi',
+    name: 'Delhi',
+    capital: 'New Delhi (National Capital)',
+    isUT: true,
+    zone: 'North',
+    cx: 202,
+    cy: 178,
+    path: 'M 197 173 L 207 173 L 207 183 L 197 183 Z',
+    unescoCount: 3,
+    topAttraction: 'Red Fort, Qutub Minar, Humayun Tomb'
+  },
 
-  // Central Region
-  { id: 'madhya-pradesh', name: 'Madhya Pradesh', cx: 195, cy: 235, r: 32, category: 'unesco', topAttraction: 'Khajuraho, Sanchi & Bhimbetka' },
-  { id: 'chhattisgarh', name: 'Chhattisgarh', cx: 260, cy: 260, r: 22, category: 'wildlife', topAttraction: 'Bastar Dussehra & Chitrakote Falls' },
+  // WESTERN REGION & DESERT
+  {
+    id: 'rajasthan',
+    name: 'Rajasthan',
+    capital: 'Jaipur',
+    zone: 'West',
+    cx: 135,
+    cy: 220,
+    path: 'M 110 180 L 170 170 L 195 210 L 180 265 L 130 270 L 95 230 Z',
+    unescoCount: 5,
+    topAttraction: 'Amer Fort, Thar Desert & Chittorgarh'
+  },
+  {
+    id: 'gujarat',
+    name: 'Gujarat',
+    capital: 'Gandhinagar',
+    zone: 'West',
+    cx: 95,
+    cy: 300,
+    path: 'M 75 260 L 135 265 L 140 320 L 105 345 L 60 330 L 45 295 L 65 285 Z',
+    unescoCount: 4,
+    topAttraction: 'Rani ki Vav & Dholavira'
+  },
+  {
+    id: 'dadra-nagar-haveli-daman-diu',
+    name: 'DNHDD',
+    capital: 'Daman',
+    isUT: true,
+    zone: 'West',
+    cx: 102,
+    cy: 350,
+    path: 'M 98 346 L 106 346 L 106 354 L 98 354 Z',
+    unescoCount: 0,
+    topAttraction: 'Moti Daman Fort & Jampore Beach'
+  },
 
-  // Eastern Region
-  { id: 'uttar-pradesh', name: 'Uttar Pradesh', cx: 225, cy: 175, r: 28, category: 'unesco', topAttraction: 'Taj Mahal & Kashi Vishwanath' },
-  { id: 'bihar', name: 'Bihar', cx: 290, cy: 190, r: 20, category: 'unesco', topAttraction: 'Mahabodhi Temple & Nalanda Mahavihara' },
-  { id: 'jharkhand', name: 'Jharkhand', cx: 310, cy: 235, r: 18, category: 'wildlife', topAttraction: 'Betla National Park & Parasnath' },
-  { id: 'odisha', name: 'Odisha', cx: 305, cy: 290, r: 24, category: 'temple', topAttraction: 'Konark Sun Temple & Puri Jagannath' },
-  { id: 'west-bengal', name: 'West Bengal', cx: 345, cy: 230, r: 20, category: 'unesco', topAttraction: 'Sundarbans, Victoria Memorial & Darjeeling' },
+  // CENTRAL REGION
+  {
+    id: 'madhya-pradesh',
+    name: 'Madhya Pradesh',
+    capital: 'Bhopal',
+    zone: 'Central',
+    cx: 220,
+    cy: 265,
+    path: 'M 175 220 L 265 215 L 290 260 L 265 305 L 195 300 L 170 260 Z',
+    unescoCount: 3,
+    topAttraction: 'Khajuraho, Sanchi & Bhimbetka'
+  },
+  {
+    id: 'chhattisgarh',
+    name: 'Chhattisgarh',
+    capital: 'Raipur',
+    zone: 'Central',
+    cx: 285,
+    cy: 305,
+    path: 'M 270 265 L 305 260 L 320 320 L 290 375 L 265 350 L 270 300 Z',
+    unescoCount: 0,
+    topAttraction: 'Bastar Palace & Chitrakote Falls'
+  },
 
-  // Northeast Region
-  { id: 'sikkim', name: 'Sikkim', cx: 350, cy: 165, r: 11, category: 'mountain', topAttraction: 'Khangchendzonga & Rumtek Monastery' },
-  { id: 'assam', name: 'Assam', cx: 420, cy: 175, r: 22, category: 'wildlife', topAttraction: 'Kaziranga Rhinos & Majuli Island' },
-  { id: 'arunachal-pradesh', name: 'Arunachal Pradesh', cx: 455, cy: 145, r: 22, category: 'mountain', topAttraction: 'Tawang Monastery & Ziro Valley' },
-  { id: 'nagaland', name: 'Nagaland', cx: 465, cy: 185, r: 12, category: 'hidden', topAttraction: 'Hornbill Festival & Dzukou Valley' },
-  { id: 'manipur', name: 'Manipur', cx: 455, cy: 215, r: 12, category: 'wildlife', topAttraction: 'Keibul Lamjao Floating Park & Loktak Lake' },
-  { id: 'mizoram', name: 'Mizoram', cx: 440, cy: 245, r: 12, category: 'hidden', topAttraction: 'Chapchar Kut & Blue Mountain' },
-  { id: 'tripura', name: 'Tripura', cx: 415, cy: 235, r: 11, category: 'temple', topAttraction: 'Unakoti Rock Colossi & Ujjayanta Palace' },
-  { id: 'meghalaya', name: 'Meghalaya', cx: 405, cy: 195, r: 13, category: 'hidden', topAttraction: 'Mawlynnong Cleanest Village & Dawki River' },
+  // EASTERN REGION & GANGA BASIN
+  {
+    id: 'uttar-pradesh',
+    name: 'Uttar Pradesh',
+    capital: 'Lucknow',
+    zone: 'North',
+    cx: 255,
+    cy: 205,
+    path: 'M 205 170 L 285 185 L 330 220 L 275 250 L 210 225 Z',
+    unescoCount: 3,
+    topAttraction: 'Taj Mahal, Agra Fort & Varanasi'
+  },
+  {
+    id: 'bihar',
+    name: 'Bihar',
+    capital: 'Patna',
+    zone: 'East',
+    cx: 335,
+    cy: 225,
+    path: 'M 320 200 L 375 205 L 380 245 L 325 245 Z',
+    unescoCount: 2,
+    topAttraction: 'Mahabodhi Temple & Nalanda'
+  },
+  {
+    id: 'jharkhand',
+    name: 'Jharkhand',
+    capital: 'Ranchi',
+    zone: 'East',
+    cx: 345,
+    cy: 265,
+    path: 'M 325 245 L 375 245 L 375 285 L 330 285 Z',
+    unescoCount: 0,
+    topAttraction: 'Baidyanath Dham & Parasnath'
+  },
+  {
+    id: 'odisha',
+    name: 'Odisha',
+    capital: 'Bhubaneswar',
+    zone: 'East',
+    cx: 335,
+    cy: 330,
+    path: 'M 315 290 L 370 280 L 380 335 L 335 375 L 305 340 Z',
+    unescoCount: 1,
+    topAttraction: 'Konark Sun Temple & Puri'
+  },
+  {
+    id: 'west-bengal',
+    name: 'West Bengal',
+    capital: 'Kolkata',
+    zone: 'East',
+    cx: 385,
+    cy: 260,
+    path: 'M 375 205 L 395 205 L 405 285 L 385 320 L 365 290 Z',
+    unescoCount: 2,
+    topAttraction: 'Sundarbans & Darjeeling Railway'
+  },
 
-  // Southern Region & Deccan
-  { id: 'maharashtra', name: 'Maharashtra', cx: 155, cy: 320, r: 30, category: 'unesco', topAttraction: 'Ajanta & Ellora Caves, Raigad Fort' },
-  { id: 'goa', name: 'Goa', cx: 125, cy: 400, r: 10, category: 'beach', topAttraction: 'Basilica of Bom Jesus & Dudhsagar Falls' },
-  { id: 'karnataka', name: 'Karnataka', cx: 160, cy: 420, r: 28, category: 'unesco', topAttraction: 'Hampi Vijayanagara & Mysore Palace' },
-  { id: 'telangana', name: 'Telangana', cx: 220, cy: 335, r: 22, category: 'unesco', topAttraction: 'Ramappa Temple, Charminar & Golconda' },
-  { id: 'andhra-pradesh', name: 'Andhra Pradesh', cx: 225, cy: 395, r: 25, category: 'hidden', topAttraction: 'Gandikota Canyon & Lepakshi Hanging Pillar' },
-  { id: 'tamil-nadu', name: 'Tamil Nadu', cx: 200, cy: 490, r: 28, category: 'temple', topAttraction: 'Brihadeeswara & Meenakshi Amman Temple' },
-  { id: 'kerala', name: 'Kerala', cx: 170, cy: 505, r: 20, category: 'beach', topAttraction: 'Alleppey Backwaters & Padmanabhaswamy' },
-  { id: 'puducherry', name: 'Puducherry', cx: 235, cy: 485, r: 7, category: 'beach', topAttraction: 'Auroville & French White Town' },
+  // NORTHEAST REGION (SEVEN SISTERS + SIKKIM)
+  {
+    id: 'sikkim',
+    name: 'Sikkim',
+    capital: 'Gangtok',
+    zone: 'Northeast',
+    cx: 395,
+    cy: 185,
+    path: 'M 388 175 L 405 175 L 405 195 L 388 195 Z',
+    unescoCount: 1,
+    topAttraction: 'Khangchendzonga National Park'
+  },
+  {
+    id: 'assam',
+    name: 'Assam',
+    capital: 'Dispur',
+    zone: 'Northeast',
+    cx: 460,
+    cy: 205,
+    path: 'M 420 195 L 490 190 L 515 210 L 465 230 L 420 220 Z',
+    unescoCount: 2,
+    topAttraction: 'Kaziranga & Majuli River Island'
+  },
+  {
+    id: 'arunachal-pradesh',
+    name: 'Arunachal Pradesh',
+    capital: 'Itanagar',
+    zone: 'Northeast',
+    cx: 490,
+    cy: 165,
+    path: 'M 430 170 L 490 135 L 540 160 L 515 195 L 460 190 Z',
+    unescoCount: 0,
+    topAttraction: 'Tawang Monastery & Ziro Valley'
+  },
+  {
+    id: 'nagaland',
+    name: 'Nagaland',
+    capital: 'Kohima',
+    zone: 'Northeast',
+    cx: 515,
+    cy: 215,
+    path: 'M 505 200 L 525 200 L 530 235 L 505 230 Z',
+    unescoCount: 0,
+    topAttraction: 'Hornbill Festival & Dzukou'
+  },
+  {
+    id: 'manipur',
+    name: 'Manipur',
+    capital: 'Imphal',
+    zone: 'Northeast',
+    cx: 505,
+    cy: 245,
+    path: 'M 495 235 L 525 235 L 520 270 L 495 265 Z',
+    unescoCount: 0,
+    topAttraction: 'Loktak Floating Lake'
+  },
+  {
+    id: 'mizoram',
+    name: 'Mizoram',
+    capital: 'Aizawl',
+    zone: 'Northeast',
+    cx: 490,
+    cy: 280,
+    path: 'M 480 265 L 505 265 L 500 305 L 475 295 Z',
+    unescoCount: 0,
+    topAttraction: 'Blue Mountain & Reiek'
+  },
+  {
+    id: 'tripura',
+    name: 'Tripura',
+    capital: 'Agartala',
+    zone: 'Northeast',
+    cx: 455,
+    cy: 265,
+    path: 'M 445 250 L 470 250 L 465 285 L 445 280 Z',
+    unescoCount: 0,
+    topAttraction: 'Unakoti Rock Colossi'
+  },
+  {
+    id: 'meghalaya',
+    name: 'Meghalaya',
+    capital: 'Shillong',
+    zone: 'Northeast',
+    cx: 440,
+    cy: 225,
+    path: 'M 420 215 L 465 215 L 460 240 L 420 235 Z',
+    unescoCount: 0,
+    topAttraction: 'Mawlynnong & Living Root Bridges'
+  },
 
-  // Island Territories
-  { id: 'lakshadweep', name: 'Lakshadweep', cx: 110, cy: 510, r: 10, category: 'beach', topAttraction: 'Agatti Island Coral Lagoons' },
-  { id: 'andaman-and-nicobar', name: 'Andaman & Nicobar Islands', cx: 440, cy: 470, r: 14, category: 'beach', topAttraction: 'Cellular Jail & Radhanagar Beach' }
-];
+  // DECCAN & SOUTHERN PENINSULA
+  {
+    id: 'maharashtra',
+    name: 'Maharashtra',
+    capital: 'Mumbai',
+    zone: 'West',
+    cx: 165,
+    cy: 350,
+    path: 'M 125 295 L 210 295 L 245 350 L 190 410 L 130 380 Z',
+    unescoCount: 5,
+    topAttraction: 'Ajanta, Ellora, Elephanta & Maratha Forts'
+  },
+  {
+    id: 'goa',
+    name: 'Goa',
+    capital: 'Panaji',
+    zone: 'South',
+    cx: 132,
+    cy: 430,
+    path: 'M 126 422 L 138 422 L 138 440 L 126 440 Z',
+    unescoCount: 1,
+    topAttraction: 'Churches of Old Goa'
+  },
+  {
+    id: 'karnataka',
+    name: 'Karnataka',
+    capital: 'Bengaluru',
+    zone: 'South',
+    cx: 175,
+    cy: 460,
+    path: 'M 140 380 L 205 385 L 220 480 L 175 520 L 145 440 Z',
+    unescoCount: 4,
+    topAttraction: 'Hampi, Pattadakal & Hoysala Temples'
+  },
+  {
+    id: 'telangana',
+    name: 'Telangana',
+    capital: 'Hyderabad',
+    zone: 'South',
+    cx: 235,
+    cy: 375,
+    path: 'M 205 330 L 265 330 L 270 395 L 220 405 Z',
+    unescoCount: 1,
+    topAttraction: 'Ramappa Kakatiya Temple & Golconda'
+  },
+  {
+    id: 'andhra-pradesh',
+    name: 'Andhra Pradesh',
+    capital: 'Amaravati',
+    zone: 'South',
+    cx: 250,
+    cy: 445,
+    path: 'M 245 390 L 305 350 L 275 490 L 225 470 L 225 410 Z',
+    unescoCount: 0,
+    topAttraction: 'Gandikota Canyon & Lepakshi'
+  },
+  {
+    id: 'tamil-nadu',
+    name: 'Tamil Nadu',
+    capital: 'Chennai',
+    zone: 'South',
+    cx: 220,
+    cy: 535,
+    path: 'M 195 480 L 265 480 L 245 585 L 195 565 Z',
+    unescoCount: 5,
+    topAttraction: 'Great Chola Temples & Mahabalipuram'
+  },
+  {
+    id: 'kerala',
+    name: 'Kerala',
+    capital: 'Thiruvananthapuram',
+    zone: 'South',
+    cx: 180,
+    cy: 550,
+    path: 'M 160 480 L 195 480 L 195 585 L 180 595 L 165 520 Z',
+    unescoCount: 1,
+    topAttraction: 'Western Ghats & Padmanabhaswamy'
+  },
+  {
+    id: 'puducherry',
+    name: 'Puducherry',
+    capital: 'Puducherry',
+    isUT: true,
+    zone: 'South',
+    cx: 255,
+    cy: 520,
+    path: 'M 252 516 L 258 516 L 258 524 L 252 524 Z',
+    unescoCount: 0,
+    topAttraction: 'Auroville & French Colony'
+  },
 
-const FILTERS = [
-  { id: 'all', label: 'All 36 States & UTs' },
-  { id: 'unesco', label: 'UNESCO World Heritage' },
-  { id: 'temple', label: 'Sacred Temples' },
-  { id: 'fort', label: 'Imperial Forts & Palaces' },
-  { id: 'mountain', label: 'Himalayan Valleys' },
-  { id: 'beach', label: 'Coastal Paradises' },
-  { id: 'wildlife', label: 'Wildlife Sanctuaries' },
-  { id: 'hidden', label: 'Secret Hidden Gems' },
-  { id: 'spiritual', label: 'Spiritual Sanctuaries' }
+  // ISLAND TERRITORIES
+  {
+    id: 'lakshadweep',
+    name: 'Lakshadweep',
+    capital: 'Kavaratti',
+    isUT: true,
+    zone: 'Islands',
+    cx: 110,
+    cy: 540,
+    path: 'M 105 525 L 115 525 L 115 555 L 105 555 Z',
+    unescoCount: 0,
+    topAttraction: 'Agatti & Coral Lagoons'
+  },
+  {
+    id: 'andaman-nicobar',
+    name: 'Andaman & Nicobar',
+    capital: 'Port Blair',
+    isUT: true,
+    zone: 'Islands',
+    cx: 475,
+    cy: 485,
+    path: 'M 470 430 L 485 430 L 485 540 L 470 540 Z',
+    unescoCount: 0,
+    topAttraction: 'Cellular Jail & Radhanagar Beach'
+  }
 ];
 
 export const InteractiveIndiaMap: React.FC = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedZone, setSelectedZone] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [hoveredRegion, setHoveredRegion] = useState<typeof MAP_REGIONS[0] | null>(null);
+  const [activeRegion, setActiveRegion] = useState<PoliticalRegion>(POLITICAL_REGIONS[8]); // Default to Rajasthan
+  const [mapMode, setMapMode] = useState<'political' | 'unesco' | 'zones'>('political');
 
-  // Filtered list of regions
-  const filteredRegions = MAP_REGIONS.filter((region) => {
-    const matchesFilter = selectedFilter === 'all' || region.category === selectedFilter;
-    const matchesSearch = region.name.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesFilter && matchesSearch;
+  const filteredRegions = POLITICAL_REGIONS.filter((region) => {
+    const matchesZone = selectedZone === 'all' || region.zone === selectedZone;
+    const matchesSearch =
+      region.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      region.capital.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      region.topAttraction.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesZone && matchesSearch;
   });
 
-  const handleStateClick = (slug: string) => {
+  const handleStateClick = (regionId: string) => {
     heritageAudio.playTempleBell();
-    navigate(`/state/${slug}`);
+    navigate(`/state/${regionId}`);
   };
 
-  return (
-    <section id="interactive-map" className="py-24 bg-[#083B2D] text-[#FAF8F4] relative overflow-hidden">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#C49A3A]/10 rounded-full filter blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#E67E22]/10 rounded-full filter blur-[120px] pointer-events-none" />
+  const selectedStateData = STATES_DATA[activeRegion.id] || STATES_DATA['rajasthan'];
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  return (
+    <section id="interactive-map" className="py-24 bg-[#05261D] text-[#FAF8F4] relative overflow-hidden">
+      {/* Background ambient royal lighting */}
+      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-[#C49A3A]/10 rounded-full filter blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#083B2D]/50 rounded-full filter blur-[130px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         {/* Header Title */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-semibold uppercase tracking-[0.25em] mb-4 shadow-gold-glow">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-semibold uppercase tracking-[0.25em] shadow-gold-glow">
             <Compass className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Interactive Heritage Atlas of India</span>
+            <span>Sovereign Cartographic Atlas</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#FAF8F4] font-bold tracking-tight mb-4">
-            {t('sectionMapTitle', 'The Living Map of Bharat')}
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#FAF8F4] font-bold tracking-tight">
+            Political Map of Sovereign Bharat
           </h2>
-          <p className="font-subheading text-lg sm:text-xl text-[#FAF8F4]/80 italic">
-            {t('sectionMapSubtitle', 'Hover over any of the 36 clickable states & UTs to reveal its living cultural soul, or click to enter its state portal.')}
+          <p className="font-subheading text-base sm:text-lg text-[#FAF8F4]/80 italic">
+            Explore all 28 States and 8 Union Territories with authentic political boundaries, administrative capitals, UNESCO monuments, and state dossiers.
           </p>
         </div>
 
-        {/* Search & Filter Bar Controls */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 bg-white/5 backdrop-blur-xl p-4 rounded-2xl border border-white/10">
-          {/* Direct Search Bar with autocomplete */}
-          <div className="relative w-full md:w-80">
+        {/* Toolbar: Map Modes, Search & Zones */}
+        <div className="bg-white/5 backdrop-blur-xl p-4 sm:p-5 rounded-3xl border border-[#C49A3A]/25 shadow-luxury flex flex-col lg:flex-row items-center justify-between gap-4">
+          {/* Mode Switcher */}
+          <div className="flex items-center bg-black/40 p-1 rounded-2xl border border-white/10 w-full sm:w-auto">
+            <button
+              onClick={() => {
+                setMapMode('political');
+                heritageAudio.playTempleBell();
+              }}
+              className={`flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 ${
+                mapMode === 'political'
+                  ? 'bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] shadow-gold-glow'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              <Landmark className="w-3.5 h-3.5" />
+              <span>Political Boundaries</span>
+            </button>
+            <button
+              onClick={() => {
+                setMapMode('unesco');
+                heritageAudio.playTempleBell();
+              }}
+              className={`flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 ${
+                mapMode === 'unesco'
+                  ? 'bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] shadow-gold-glow'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              <Award className="w-3.5 h-3.5" />
+              <span>UNESCO Sites</span>
+            </button>
+            <button
+              onClick={() => {
+                setMapMode('zones');
+                heritageAudio.playTempleBell();
+              }}
+              className={`flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-1.5 ${
+                mapMode === 'zones'
+                  ? 'bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] shadow-gold-glow'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>Zonal Atlas</span>
+            </button>
+          </div>
+
+          {/* Search Bar */}
+          <div className="relative w-full lg:w-80">
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#C49A3A]" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search any of 36 States & UTs..."
+              placeholder="Search 28 States & 8 UTs..."
               className="w-full pl-10 pr-4 py-2 rounded-xl bg-black/30 border border-[#C49A3A]/30 text-xs text-white placeholder-white/50 focus:outline-none focus:border-[#C49A3A] transition-colors"
             />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-xs"
-              >
-                ✕
-              </button>
-            )}
           </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
-            {FILTERS.slice(0, 6).map((f) => (
+          {/* Zone Selector Pills */}
+          <div className="flex items-center space-x-1.5 overflow-x-auto w-full lg:w-auto pb-1 no-scrollbar">
+            {['all', 'North', 'South', 'West', 'East', 'Central', 'Northeast', 'Islands'].map((z) => (
               <button
-                key={f.id}
-                onClick={() => setSelectedFilter(f.id)}
-                className={`px-3 py-1.5 rounded-full text-xs transition-all duration-300 font-medium whitespace-nowrap border ${
-                  selectedFilter === f.id
-                    ? 'bg-[#C49A3A] text-[#083B2D] border-[#C49A3A] font-bold shadow-gold-glow'
-                    : 'bg-white/5 text-white/70 border-white/10 hover:border-[#C49A3A]/40 hover:text-white'
+                key={z}
+                onClick={() => {
+                  setSelectedZone(z);
+                  heritageAudio.playTempleBell();
+                }}
+                className={`px-3 py-1.5 rounded-full text-[11px] font-mono whitespace-nowrap transition-all border ${
+                  selectedZone === z
+                    ? 'bg-[#083B2D] text-[#C49A3A] border-[#C49A3A] font-bold shadow-sm'
+                    : 'bg-white/5 text-white/70 border-white/10 hover:border-white/30'
                 }`}
               >
-                {f.label}
+                {z === 'all' ? 'All Zones' : z}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Map Centerpiece Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left/Center: Interactive SVG Map Canvas */}
-          <div className="lg:col-span-8 relative flex items-center justify-center bg-black/20 rounded-3xl border border-[#C49A3A]/25 p-4 sm:p-8 backdrop-blur-md min-h-[580px]">
-            {/* SVG India Map Visual Canvas */}
-            <svg
-              viewBox="0 0 520 580"
-              className="w-full max-w-[500px] h-auto filter drop-shadow-[0_0_30px_rgba(8,59,45,0.8)]"
-            >
-              {/* Outer boundary of India silhouette */}
-              <path
-                d="M 170 30 
-                   Q 220 15, 250 45 
-                   Q 290 35, 340 75 
-                   Q 380 95, 430 135 
-                   Q 470 145, 490 175 
-                   Q 460 215, 430 225 
-                   Q 370 235, 345 270 
-                   Q 335 320, 310 355 
-                   Q 275 420, 230 510 
-                   Q 215 545, 205 555 
-                   Q 195 545, 175 510 
-                   Q 145 420, 130 355 
-                   Q 80 300, 65 260 
-                   Q 45 220, 75 180 
-                   Q 110 160, 140 120 
-                   Z"
-                fill="rgba(8, 59, 45, 0.6)"
-                stroke="#C49A3A"
-                strokeWidth="1.8"
-                strokeDasharray="4 2"
-                className="opacity-40"
-              />
+        {/* Map Canvas and State Dossier Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Main Map Box */}
+          <div className="lg:col-span-8 bg-black/30 rounded-3xl border border-[#C49A3A]/30 p-4 sm:p-6 backdrop-blur-md relative overflow-hidden flex flex-col items-center">
+            {/* Map Header with Geographic Coordinates */}
+            <div className="w-full flex items-center justify-between text-[11px] font-mono text-white/50 pb-3 border-b border-white/10">
+              <span className="flex items-center space-x-1.5">
+                <Shield className="w-3.5 h-3.5 text-[#C49A3A]" />
+                <span>Survey of India Projection • Sovereign Territory</span>
+              </span>
+              <span>8°4′N to 37°6′N • 68°7′E to 97°25′E</span>
+            </div>
 
-              {/* Geographic Connection Web Lines */}
-              {filteredRegions.slice(0, 20).map((r, i) => (
+            {/* SVG Indian Political Map */}
+            <div className="w-full relative flex items-center justify-center py-4">
+              <svg
+                viewBox="0 0 580 620"
+                className="w-full max-w-[540px] h-auto filter drop-shadow-[0_0_35px_rgba(8,59,45,0.9)] select-none"
+              >
+                <defs>
+                  {/* Subtle Grid Pattern for cartographic realism */}
+                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(196,154,58,0.06)" strokeWidth="0.5" />
+                  </pattern>
+
+                  {/* Gold Linear Gradient for Selected State */}
+                  <linearGradient id="activeStateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.85" />
+                    <stop offset="100%" stopColor="#083B2D" stopOpacity="0.95" />
+                  </linearGradient>
+                </defs>
+
+                {/* Background Grid */}
+                <rect width="580" height="620" fill="url(#grid)" />
+
+                {/* Tropic of Cancer 23.5°N dotted line across India */}
                 <line
-                  key={`line-${i}`}
-                  x1={r.cx}
-                  y1={r.cy}
-                  x2={195}
-                  y2={235}
-                  stroke="rgba(196, 154, 58, 0.12)"
-                  strokeWidth="0.8"
+                  x1="30"
+                  y1="265"
+                  x2="550"
+                  y2="265"
+                  stroke="#E67E22"
+                  strokeWidth="1"
+                  strokeDasharray="5 4"
+                  opacity="0.45"
                 />
-              ))}
+                <text x="35" y="260" fill="#E67E22" fontSize="9px" fontFamily="monospace" opacity="0.75">
+                  Tropic of Cancer (23.5° N)
+                </text>
 
-              {/* 36 Clickable Regional Nodes */}
-              {MAP_REGIONS.map((region) => {
-                const isFiltered = filteredRegions.some((fr) => fr.id === region.id);
-                const isHovered = hoveredRegion?.id === region.id;
+                {/* Indian Standard Meridian (82.5° E) */}
+                <line
+                  x1="300"
+                  y1="20"
+                  x2="300"
+                  y2="600"
+                  stroke="#C49A3A"
+                  strokeWidth="0.8"
+                  strokeDasharray="4 4"
+                  opacity="0.3"
+                />
+                <text x="305" y="595" fill="#C49A3A" fontSize="9px" fontFamily="monospace" opacity="0.6">
+                  Standard Meridian (82.5° E)
+                </text>
 
-                return (
-                  <g
-                    key={region.id}
-                    onClick={() => handleStateClick(region.id)}
-                    onMouseEnter={() => setHoveredRegion(region)}
-                    className="cursor-pointer group"
-                  >
-                    {/* Hover Pulse Ripple */}
-                    {isHovered && (
+                {/* Authentic Sovereign Indian Outer Boundary Contour */}
+                <path
+                  d="M 195 25
+                     L 235 25 L 270 45 L 290 85 L 260 115 L 275 140 L 320 180 L 375 185
+                     L 430 170 L 490 135 L 540 160 L 530 235 L 500 305 L 465 285 L 420 235
+                     L 405 285 L 385 320 L 370 280 L 380 335 L 335 375 L 305 350 L 275 490
+                     L 265 480 L 245 585 L 195 595 L 180 595 L 165 520 L 145 440 L 126 440
+                     L 130 380 L 105 345 L 60 330 L 45 295 L 65 285 L 95 230 L 110 180
+                     L 140 140 L 150 90 L 160 65 Z"
+                  fill="rgba(8, 59, 45, 0.4)"
+                  stroke="#C49A3A"
+                  strokeWidth="2.2"
+                  strokeLinejoin="round"
+                  className="filter drop-shadow-[0_0_15px_rgba(196,154,58,0.3)]"
+                />
+
+                {/* State Regions Paths */}
+                {POLITICAL_REGIONS.map((region) => {
+                  const isSelected = activeRegion.id === region.id;
+                  const isFiltered = filteredRegions.some((fr) => fr.id === region.id);
+
+                  // Zone colors
+                  const zoneColor =
+                    region.zone === 'North'
+                      ? 'rgba(65, 117, 164, 0.25)'
+                      : region.zone === 'South'
+                      ? 'rgba(230, 126, 34, 0.25)'
+                      : region.zone === 'West'
+                      ? 'rgba(196, 154, 58, 0.28)'
+                      : region.zone === 'East'
+                      ? 'rgba(39, 174, 96, 0.25)'
+                      : region.zone === 'Central'
+                      ? 'rgba(155, 89, 182, 0.25)'
+                      : region.zone === 'Northeast'
+                      ? 'rgba(26, 188, 156, 0.25)'
+                      : 'rgba(241, 196, 15, 0.25)';
+
+                  return (
+                    <g
+                      key={region.id}
+                      onClick={() => {
+                        setActiveRegion(region);
+                        heritageAudio.playTempleBell();
+                      }}
+                      className="cursor-pointer transition-all duration-300 group"
+                    >
+                      {/* State Polygon Shape */}
+                      <path
+                        d={region.path}
+                        fill={
+                          isSelected
+                            ? 'url(#activeStateGrad)'
+                            : mapMode === 'zones'
+                            ? zoneColor
+                            : isFiltered
+                            ? 'rgba(8, 59, 45, 0.75)'
+                            : 'rgba(255, 255, 255, 0.05)'
+                        }
+                        stroke={isSelected ? '#FAF8F4' : isFiltered ? '#C49A3A' : 'rgba(255,255,255,0.15)'}
+                        strokeWidth={isSelected ? '2' : '1'}
+                        className="transition-colors duration-200 hover:brightness-125"
+                      />
+
+                      {/* State Capital Star Node */}
                       <circle
                         cx={region.cx}
                         cy={region.cy}
-                        r={region.r + 14}
-                        fill="none"
-                        stroke="#C49A3A"
-                        strokeWidth="1.5"
-                        className="animate-ping"
+                        r={isSelected ? 5.5 : 3.5}
+                        fill={isSelected ? '#FFFFFF' : '#C49A3A'}
+                        stroke="#083B2D"
+                        strokeWidth="1.2"
+                        className="shadow-[0_0_8px_#C49A3A]"
                       />
-                    )}
 
-                    {/* Outer Glow Halo */}
-                    <circle
-                      cx={region.cx}
-                      cy={region.cy}
-                      r={region.r + (isHovered ? 4 : 0)}
-                      fill={isHovered ? 'rgba(196, 154, 58, 0.35)' : isFiltered ? 'rgba(196, 154, 58, 0.15)' : 'rgba(255, 255, 255, 0.04)'}
-                      stroke={isHovered ? '#DFB757' : isFiltered ? '#C49A3A' : 'rgba(255, 255, 255, 0.2)'}
-                      strokeWidth={isHovered ? 2.5 : 1.2}
-                      className="transition-all duration-300"
-                    />
+                      {/* UNESCO Badge Indicator on map if unesco mode is active */}
+                      {mapMode === 'unesco' && region.unescoCount > 0 && (
+                        <g transform={`translate(${region.cx + 5}, ${region.cy - 10})`}>
+                          <rect width="18" height="12" rx="3" fill="#C49A3A" />
+                          <text x="9" y="9" textAnchor="middle" fill="#083B2D" fontSize="8px" fontWeight="bold">
+                            {region.unescoCount}
+                          </text>
+                        </g>
+                      )}
 
-                    {/* Core Anchor Node */}
-                    <circle
-                      cx={region.cx}
-                      cy={region.cy}
-                      r={isHovered ? 5.5 : 3.5}
-                      fill={isHovered ? '#FFFFFF' : '#C49A3A'}
-                      className="transition-all duration-300 shadow-[0_0_10px_#C49A3A]"
-                    />
-
-                    {/* Regional Label on Node */}
-                    {(region.r >= 22 || isHovered) && (
+                      {/* State Name Label on Map */}
                       <text
-                        x={region.cx}
-                        y={region.cy + (region.r > 20 ? 14 : -10)}
+                        x={region.labelX || region.cx}
+                        y={(region.labelY || region.cy) + 12}
                         textAnchor="middle"
-                        fill={isHovered ? '#FFFFFF' : '#FAF8F4'}
-                        fontSize={isHovered ? '11px' : '9px'}
+                        fill={isSelected ? '#FFFFFF' : '#FAF8F4'}
+                        fontSize={isSelected ? '10px' : '8.5px'}
+                        fontWeight={isSelected ? '700' : '500'}
                         fontFamily="Playfair Display, serif"
-                        fontWeight={isHovered ? '700' : '500'}
-                        className="pointer-events-none select-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                        className="pointer-events-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] opacity-90"
                       >
                         {region.name}
                       </text>
-                    )}
-                  </g>
-                );
-              })}
-            </svg>
+                    </g>
+                  );
+                })}
+              </svg>
+            </div>
 
-            {/* Instruction Badge */}
-            <div className="absolute bottom-4 left-6 flex items-center space-x-2 text-xs text-[#C49A3A] font-mono">
-              <span className="w-2 h-2 rounded-full bg-[#C49A3A] animate-ping" />
-              <span>Click any node to zoom into that State’s Complete Experience</span>
+            {/* Cartographic Legend */}
+            <div className="w-full pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-white/70">
+              <div className="flex items-center space-x-2">
+                <span className="w-3 h-3 rounded-full border border-[#C49A3A] bg-[#C49A3A]/40 inline-block" />
+                <span>State Boundary</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 rounded-full bg-[#FFFFFF] border border-[#083B2D] inline-block" />
+                <span>State Capital</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-3 h-0.5 border-t border-dashed border-[#E67E22] inline-block" />
+                <span>Tropic of Cancer (23.5° N)</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="px-1.5 py-0.5 rounded bg-[#C49A3A] text-[#083B2D] font-bold text-[9px]">UT</span>
+                <span>Union Territory</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Live State Details Tooltip & Instant Navigator */}
-          <div className="lg:col-span-4 space-y-4">
-            {hoveredRegion ? (
-              // Live Hover Card
-              (() => {
-                const stateData = getStateData(hoveredRegion.id);
-                return (
-                  <motion.div
-                    key={hoveredRegion.id}
-                    initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="bg-white/10 backdrop-blur-xl border border-[#C49A3A]/40 rounded-3xl p-6 shadow-luxury"
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <span className="text-[10px] font-mono uppercase text-[#C49A3A] tracking-widest bg-black/40 px-2 py-0.5 rounded">
-                          Selected Region
-                        </span>
-                        <h3 className="font-serif text-2xl font-bold text-[#FAF8F4] mt-1">
-                          {stateData.name}
-                        </h3>
-                      </div>
-                      <span className="text-xs text-[#C49A3A] font-mono">
-                        Capital: {stateData.capital}
-                      </span>
-                    </div>
+          {/* Right: State Dossier Card */}
+          <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-7 text-[#111827] border border-[#C49A3A]/30 shadow-luxury space-y-5">
+            {/* Top State Badge & Zone */}
+            <div className="flex items-center justify-between">
+              <span className="px-3 py-1 rounded-full bg-[#083B2D] text-[#C49A3A] text-xs font-mono font-bold uppercase tracking-wider">
+                {activeRegion.zone} India Zone
+              </span>
+              <span className="text-xs font-mono text-gray-500">
+                {activeRegion.isUT ? 'Union Territory' : 'Constituent State'}
+              </span>
+            </div>
 
-                    <p className="text-xs text-white/80 line-clamp-2 leading-relaxed mb-4">
-                      {stateData.description}
-                    </p>
+            {/* State Name & Capital */}
+            <div>
+              <h3 className="font-serif text-3xl font-bold text-[#083B2D] leading-tight">
+                {activeRegion.name}
+              </h3>
+              <p className="text-xs text-gray-600 font-mono mt-1 flex items-center space-x-1.5">
+                <Star className="w-3.5 h-3.5 text-[#C49A3A] fill-[#C49A3A]" />
+                <span>Administrative Capital: <strong>{activeRegion.capital}</strong></span>
+              </p>
+            </div>
 
-                    {/* Metrics Grid */}
-                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-white/10 text-center my-4">
-                      <div className="bg-black/30 p-2 rounded-xl">
-                        <span className="block text-base font-bold text-[#C49A3A] font-serif">
-                          {stateData.heritageCount}
-                        </span>
-                        <span className="text-[10px] text-white/70 uppercase">Sites</span>
-                      </div>
-                      <div className="bg-black/30 p-2 rounded-xl">
-                        <span className="block text-base font-bold text-[#E67E22] font-serif">
-                          {stateData.festivalsCount}
-                        </span>
-                        <span className="text-[10px] text-white/70 uppercase">Festivals</span>
-                      </div>
-                      <div className="bg-black/30 p-2 rounded-xl">
-                        <span className="block text-base font-bold text-[#4F9E75] font-serif">
-                          {stateData.cultureCount}
-                        </span>
-                        <span className="text-[10px] text-white/70 uppercase">Cultures</span>
-                      </div>
-                    </div>
-
-                    {/* Key Attributes */}
-                    <div className="space-y-1.5 text-xs text-white/80 mb-5">
-                      <div>
-                        <strong className="text-[#C49A3A]">Top Attraction: </strong>
-                        {stateData.topAttraction}
-                      </div>
-                      <div>
-                        <strong className="text-[#C49A3A]">Languages: </strong>
-                        {stateData.languages.slice(0, 3).join(', ')}
-                      </div>
-                      <div>
-                        <strong className="text-[#C49A3A]">Best Time: </strong>
-                        {stateData.bestTime}
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={() => handleStateClick(hoveredRegion.id)}
-                      className="w-full py-3 rounded-full bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110"
-                    >
-                      <span>Explore Full {stateData.name} Portal</span>
-                      <ChevronRight className="w-4 h-4 text-[#083B2D]" />
-                    </button>
-                  </motion.div>
-                );
-              })()
-            ) : (
-              // Default Guide when no region is hovered
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 text-center">
-                <Compass className="w-10 h-10 text-[#C49A3A] mx-auto mb-3 animate-spin-slow" />
-                <h4 className="font-serif text-lg text-white font-bold mb-1">
-                  Explore 36 States & UTs
-                </h4>
-                <p className="text-xs text-white/70 mb-4 leading-relaxed">
-                  Hover over any node on the map to inspect its real-time population, languages, heritage count, and top attractions.
-                </p>
-                <div className="flex flex-wrap gap-1.5 justify-center">
-                  {ALL_INDIAN_STATES.slice(0, 8).map((s) => (
-                    <button
-                      key={s.id}
-                      onClick={() => handleStateClick(s.id)}
-                      className="px-2.5 py-1 rounded-lg bg-black/30 hover:bg-[#C49A3A]/20 text-[11px] text-white/80 hover:text-[#C49A3A] border border-white/10 transition-colors"
-                    >
-                      {s.name}
-                    </button>
-                  ))}
-                </div>
+            {/* State Photo Banner */}
+            <div className="relative h-44 rounded-2xl overflow-hidden shadow-sm group">
+              <img
+                src={selectedStateData.heroImage}
+                alt={activeRegion.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3 text-white">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#DFB757] block">
+                  Signature Wonder:
+                </span>
+                <span className="font-serif text-sm font-bold block truncate">
+                  {activeRegion.topAttraction}
+                </span>
               </div>
-            )}
+            </div>
+
+            {/* Key State Metrics */}
+            <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
+              <div className="p-2.5 rounded-xl bg-[#FAF8F4] border border-gray-200">
+                <span className="text-[10px] text-gray-500 block">Monuments</span>
+                <strong className="text-sm font-bold text-[#083B2D]">{selectedStateData.heritageCount}</strong>
+              </div>
+              <div className="p-2.5 rounded-xl bg-[#FAF8F4] border border-gray-200">
+                <span className="text-[10px] text-gray-500 block">Festivals</span>
+                <strong className="text-sm font-bold text-[#C49A3A]">{selectedStateData.festivalsCount}</strong>
+              </div>
+              <div className="p-2.5 rounded-xl bg-[#FAF8F4] border border-gray-200">
+                <span className="text-[10px] text-gray-500 block">UNESCO</span>
+                <strong className="text-sm font-bold text-[#E67E22]">{activeRegion.unescoCount}</strong>
+              </div>
+            </div>
+
+            {/* Languages & Population */}
+            <div className="space-y-2 text-xs bg-[#FAF8F4] p-3.5 rounded-2xl border border-gray-200">
+              <div className="flex justify-between text-gray-600">
+                <span>Population:</span>
+                <strong className="text-gray-900 font-mono">{selectedStateData.population}</strong>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Languages:</span>
+                <strong className="text-gray-900 truncate max-w-[170px] text-right">
+                  {selectedStateData.languages.slice(0, 3).join(', ')}
+                </strong>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Best Season:</span>
+                <strong className="text-[#083B2D]">{selectedStateData.weather.bestSeason}</strong>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="space-y-2 pt-2">
+              <button
+                onClick={() => handleStateClick(activeRegion.id)}
+                className="w-full py-3.5 rounded-2xl bg-[#083B2D] text-[#C49A3A] font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-gold-glow hover:bg-[#0D523F] transition-all"
+              >
+                <span>Enter {activeRegion.name} Sovereign Portal</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={() => {
+                  heritageAudio.speakGuide(
+                    `${activeRegion.name}. Capital: ${activeRegion.capital}. ${selectedStateData.description}`
+                  );
+                }}
+                className="w-full py-2.5 rounded-xl border border-gray-200 text-gray-700 font-semibold text-xs hover:border-[#C49A3A] transition-colors"
+              >
+                Listen to State Audio Brief
+              </button>
+            </div>
           </div>
         </div>
       </div>

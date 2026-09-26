@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { HERITAGE_SITES } from '../data/heritageSites';
 import { Volume2, VolumeX, MapPin, Award, Clock, DollarSign, Calendar, Compass, Shield, ArrowLeft, ExternalLink, CheckCircle } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
+import { PoliticalMapLocator } from '../components/map/PoliticalMapLocator';
 
 export const HeritageDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -221,6 +222,14 @@ export const HeritageDetailPage: React.FC = () => {
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
+
+            {/* Sovereign Political Map Locator */}
+            <PoliticalMapLocator
+              monumentName={site.name}
+              state={site.state}
+              latitude={site.latitude}
+              longitude={site.longitude}
+            />
 
             {/* Nearby Attractions */}
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-4">

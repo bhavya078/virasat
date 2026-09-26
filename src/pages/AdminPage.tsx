@@ -102,14 +102,14 @@ export const AdminPage: React.FC = () => {
       period: '12th Century CE',
       dynasty: newMonumentDynasty || 'Imperial Heritage Guild',
       category: 'temple' as const,
-      description: `Newly accredited heritage monument in ${newMonumentState} added via SIH 2026 Admin Portal.`,
+      description: `Newly accredited heritage monument in ${newMonumentState} added via National Heritage Registry Portal.`,
       architectureStyle: 'Traditional Stone Architecture',
       heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
       timings: '06:00 AM - 06:00 PM',
       entryFeeIndians: newMonumentFee,
       entryFeeForeigners: '₹500',
       bestMonths: 'October to March',
-      facts: ['Accredited monument in SIH 2026 National Heritage Directory.'],
+      facts: ['Accredited monument in National Digital Heritage Directory.'],
       audioGuideText: `Welcome to ${newMonumentName} in ${newMonumentState}.`,
       nearbyAttractions: ['Historic City Centre', 'Sacred Water Tank'],
       latitude: 26.9124,
@@ -131,7 +131,7 @@ export const AdminPage: React.FC = () => {
     localStorage.removeItem('virasat_custom_gems');
     setMonuments(HERITAGE_SITES);
     setGems(HIDDEN_GEMS);
-    showNotification('Restored to authenticated SIH 2026 factory dataset.');
+    showNotification('Restored to authenticated factory dataset.');
     heritageAudio.playTempleBell();
   };
 
@@ -149,7 +149,7 @@ export const AdminPage: React.FC = () => {
 
           <div>
             <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#C49A3A] font-bold block mb-1">
-              Smart India Hackathon 2026
+              National Digital Heritage Mission
             </span>
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#083B2D]">
               VIRASAT Admin Portal
@@ -189,7 +189,7 @@ export const AdminPage: React.FC = () => {
           </form>
 
           <div className="text-[11px] text-gray-400 font-mono">
-            Encrypted End-to-End • Ministry of Culture SIH 2026 Sandbox
+            Encrypted End-to-End • Ministry of Tourism & Culture Sovereign Registry
           </div>
         </motion.div>
       </div>
@@ -205,7 +205,7 @@ export const AdminPage: React.FC = () => {
             <div className="flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-widest">
-                Authenticated Operator: Ministry of Culture SIH 2026
+                Authenticated Operator: National Digital Heritage Registry
               </span>
             </div>
             <h1 className="font-serif text-3xl font-bold text-[#083B2D]">
@@ -303,7 +303,7 @@ export const AdminPage: React.FC = () => {
             {/* Architecture Highlights */}
             <div className="bg-white p-8 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-6">
               <h3 className="font-serif text-xl font-bold text-[#083B2D]">
-                VIRASAT Engine Architecture (SIH 2026 Certified)
+                VIRASAT Sovereign Engine Architecture (Ministry of Culture Certified)
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-gray-600">
                 <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-gray-100 space-y-2">

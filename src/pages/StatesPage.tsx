@@ -12,10 +12,12 @@ import {
   Calendar,
   CloudSun,
   Shield,
-  Users
+  Users,
+  Layers
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { heritageAudio } from '../utils/audioService';
+import { InteractiveIndiaMap } from '../components/map/InteractiveIndiaMap';
 
 const REGIONS = [
   { id: 'all', label: 'All 36 States & UTs' },
@@ -39,6 +41,7 @@ const ISLANDS_SLUGS = ['andaman-nicobar', 'lakshadweep', 'puducherry', 'chandiga
 export const StatesPage: React.FC = () => {
   const [activeRegion, setActiveRegion] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'both' | 'map' | 'grid'>('both');
 
   const statesList = useMemo(() => {
     return Object.values(STATES_DATA).filter((state) => {
@@ -122,10 +125,67 @@ export const StatesPage: React.FC = () => {
               </button>
             ))}
           </div>
+
+          {/* View Mode Switcher */}
+          <div className="flex flex-col sm:flex-row items-center justify-between pt-3 border-t border-gray-100 gap-3">
+            <div className="flex items-center space-x-2 text-xs font-mono text-gray-500">
+              <Layers className="w-3.5 h-3.5 text-[#C49A3A]" />
+              <span>Atlas Representation:</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => {
+                  setViewMode('both');
+                  heritageAudio.playTempleBell();
+                }}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  viewMode === 'both'
+                    ? 'bg-[#083B2D] text-[#C49A3A] font-bold shadow-sm'
+                    : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                ⚡ Unified Dual Atlas (Map & Cards)
+              </button>
+              <button
+                onClick={() => {
+                  setViewMode('map');
+                  heritageAudio.playTempleBell();
+                }}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  viewMode === 'map'
+                    ? 'bg-[#083B2D] text-[#C49A3A] font-bold shadow-sm'
+                    : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                🗺️ Sovereign Political Map
+              </button>
+              <button
+                onClick={() => {
+                  setViewMode('grid');
+                  heritageAudio.playTempleBell();
+                }}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  viewMode === 'grid'
+                    ? 'bg-[#083B2D] text-[#C49A3A] font-bold shadow-sm'
+                    : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                🏛️ 36 Regions Grid
+              </button>
+            </div>
+          </div>
         </div>
 
+        {/* Interactive Sovereign Political Map View */}
+        {(viewMode === 'both' || viewMode === 'map') && (
+          <div className="rounded-3xl overflow-hidden border border-[#C49A3A]/30 shadow-2xl">
+            <InteractiveIndiaMap />
+          </div>
+        )}
+
         {/* 36 States Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {(viewMode === 'both' || viewMode === 'grid') && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {statesList.map((state) => (
             <motion.div
               key={state.id}
@@ -210,6 +270,7 @@ export const StatesPage: React.FC = () => {
             </motion.div>
           ))}
         </div>
+        )}
       </div>
     </div>
   );

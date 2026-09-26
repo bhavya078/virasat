@@ -134,7 +134,7 @@ export const HomePage: React.FC = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10 space-y-6">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-semibold uppercase tracking-[0.25em]">
             <Sparkles className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Smart India Hackathon 2026 Core Feature</span>
+            <span>National Sovereign AI Trip Architect</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF8F4]">
             Plan Your Journey with Rishi AI

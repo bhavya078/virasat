@@ -71,25 +71,15 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
             viewBox="0 0 300 340"
             className="w-full h-full drop-shadow-[0_0_25px_rgba(196,154,58,0.5)]"
           >
-            {/* Outline of Indian Subcontinent Path */}
+            {/* Outline of Indian Political Sovereign Contour */}
             <motion.path
-              d="M 120 20 
-                 Q 145 10, 160 25 
-                 Q 180 15, 200 40 
-                 Q 230 60, 210 90 
-                 Q 235 110, 220 135 
-                 Q 260 120, 280 145 
-                 Q 265 170, 230 165 
-                 Q 220 185, 200 195 
-                 Q 185 240, 155 300 
-                 Q 145 325, 140 330 
-                 Q 135 325, 125 300 
-                 Q 95 240, 80 195 
-                 Q 50 170, 40 140 
-                 Q 25 110, 45 80 
-                 Q 75 70, 95 40 
-                 Z"
-              fill="rgba(196, 154, 58, 0.08)"
+              d="M 115 15 
+                 L 140 15 L 160 25 L 175 50 L 155 70 L 165 85 L 190 105 L 225 100 
+                 L 260 80 L 290 95 L 285 140 L 265 175 L 250 165 L 230 140 L 220 170 
+                 L 210 190 L 200 170 L 205 200 L 180 225 L 165 295 L 150 330 L 125 335 
+                 L 110 295 L 100 250 L 80 230 L 50 205 L 30 180 L 45 170 L 60 140 
+                 L 70 110 L 85 90 L 95 55 Z"
+              fill="rgba(196, 154, 58, 0.12)"
               stroke="#C49A3A"
               strokeWidth="2.5"
               strokeLinecap="round"
@@ -139,7 +129,7 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
               VIRASAT
             </span>
             <span className="text-[10px] md:text-xs tracking-[0.3em] text-[#FAF8F4]/80 uppercase mt-1">
-              V4 • SIH 2026
+              BHARAT HERITAGE OS
             </span>
           </motion.div>
         </div>

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import Lenis from 'lenis';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { ScrollToTop } from './components/common/ScrollToTop';
 import { LoaderExperience } from './components/home/LoaderExperience';
 import { SpotlightSearch } from './components/search/SpotlightSearch';
 import { AIHeritageGuide } from './components/ai/AIHeritageGuide';
+import { FloatingScrollToTop } from './components/common/FloatingScrollToTop';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -25,12 +28,43 @@ import { BudgetPlanner } from './components/budget/BudgetPlanner';
 
 export function App() {
   const [showLoader, setShowLoader] = useState(() => {
-    // Only show loader once per browser session
     return sessionStorage.getItem('virasat_intro_loaded') !== 'true';
   });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Listen for custom open_spotlight_search event dispatched by keyboard shortcut
+  // Scroll Progress tracking for top golden bar
+  const { scrollYProgress } = useScroll();
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 280,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  // Inertial smooth scrolling with Lenis
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 0.95
+    });
+
+    let animationFrameId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      animationFrameId = requestAnimationFrame(raf);
+    }
+    animationFrameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      lenis.destroy();
+    };
+  }, []);
+
+  // Keyboard shortcut Ctrl+K listener
   useEffect(() => {
     const handleOpenSearch = () => setIsSearchOpen(true);
     window.addEventListener('open_spotlight_search', handleOpenSearch);
@@ -47,6 +81,12 @@ export function App() {
       <ScrollToTop />
       {showLoader && <LoaderExperience onComplete={handleLoaderComplete} />}
 
+      {/* Royal Gold Global Scroll Depth Progress Bar */}
+      <motion.div
+        style={{ scaleX: smoothProgress }}
+        className="fixed top-0 left-0 right-0 h-[3.5px] bg-gradient-to-r from-[#083B2D] via-[#C49A3A] to-[#DFB757] z-50 origin-left pointer-events-none shadow-[0_0_12px_rgba(196,154,58,0.8)]"
+      />
+
       <div className="min-h-screen flex flex-col bg-[#FAF8F4] text-[#111827] selection:bg-[#C49A3A]/30 selection:text-[#083B2D]">
         {/* Persistent Luxury Glass Navbar */}
         <Navbar onOpenSearch={() => setIsSearchOpen(true)} />
@@ -59,6 +99,9 @@ export function App() {
 
         {/* Global Floating Dhara AI Heritage Guide Voice Assistant */}
         <AIHeritageGuide />
+
+        {/* Global Floating Scroll To Top with Radial Progress Indicator */}
+        <FloatingScrollToTop />
 
         {/* Page Routes */}
         <main className="flex-1">
@@ -79,7 +122,7 @@ export function App() {
           </Routes>
         </main>
 
-        {/* Sovereign SIH 2026 Luxury Footer */}
+        {/* Sovereign Luxury Footer */}
         <Footer />
       </div>
     </BrowserRouter>

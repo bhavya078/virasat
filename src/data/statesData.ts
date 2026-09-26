@@ -12,7 +12,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 14,
     cultureCount: 15,
     topAttraction: 'Amer Fort & Hawa Mahal',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Thar_Khuri.jpg/1920px-Thar_Khuri.jpg',
     description: 'The Land of Kings (Rajputana), Rajasthan is an immortal realm of soaring desert fortresses, mirror-work palaces, vibrant chivalric folklore, and desert camel trails against golden Thar sands.',
     historyOverview: 'Home to the valorous Rajput dynasties including the Sisodias of Mewar, Rathores of Marwar, and Kachwahas of Amer. Famed for historic battles, Rani Padmini’s defiance, and architectural marvels like Chittorgarh, Mehrangarh, and Kumbhalgarh.',
     dynasties: ['Mewar Sisodias', 'Marwar Rathores', 'Amer Kachwahas', 'Bhati Rajputs', 'Chauhans'],
@@ -35,9 +35,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Jaipur', 'Udaipur', 'Jodhpur', 'Jaisalmer', 'Bikaner', 'Pushkar', 'Mount Abu'],
     hiddenGems: ['Khimsar Dunes Village', 'Bundi Stepwells & Murals', 'Jawai Leopard Boulders', 'Kumbhalgarh Wall'],
     gallery: [
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Baroli_temple.jpg/1920px-Baroli_temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b2/A_sunset_on_the_dunes_of_the_Great_Indian_Thar_Desert_Rajasthan_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Amber_palace%2C_Jaipur.jpg/1920px-Amber_palace%2C_Jaipur.jpg'
     ],
     facts: [
       'Contains Kumbhalgarh’s 36-kilometer continuous wall, second only to the Great Wall of China.',
@@ -61,14 +61,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'Winter (Nov to Feb)'
     },
     hotels: [
-      { name: 'Rambagh Palace, Jaipur', type: 'Ultra Luxury Heritage', rating: 5.0, pricePerNight: '₹45,000+', location: 'Bhawani Singh Road, Jaipur', image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Taj Lake Palace, Udaipur', type: 'Island Palace', rating: 4.9, pricePerNight: '₹55,000+', location: 'Lake Pichola, Udaipur', image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Haveli Inn Pal, Jodhpur', type: 'Mid-range Heritage Haveli', rating: 4.7, pricePerNight: '₹4,500', location: 'Clock Tower, Jodhpur', image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Rambagh Palace, Jaipur', type: 'Ultra Luxury Heritage', rating: 5.0, pricePerNight: '₹45,000+', location: 'Bhawani Singh Road, Jaipur', image: 'https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Taj Lake Palace, Udaipur', type: 'Island Palace', rating: 4.9, pricePerNight: '₹55,000+', location: 'Lake Pichola, Udaipur', image: 'https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Haveli Inn Pal, Jodhpur', type: 'Mid-range Heritage Haveli', rating: 4.7, pricePerNight: '₹4,500', location: 'Clock Tower, Jodhpur', image: 'https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: '1135 AD, Amer Fort', cuisineType: 'Royal Rajput Thali', rating: 4.8, mustTry: 'Thaal-e-Jodhpur & Jungli Maas', priceRange: '₹₹₹₹', image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Rawat Mishthan Bhandar', cuisineType: 'Street Delicacies & Sweets', rating: 4.7, mustTry: 'Pyaaz Kachori & Mawa Jalebi', priceRange: '₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Chokhi Dhani Ethnic Resort', cuisineType: 'Rajasthani Village Feast', rating: 4.6, mustTry: 'Unlimited Bajra Roti & Dal Baati', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' }
+      { name: '1135 AD, Amer Fort', cuisineType: 'Royal Rajput Thali', rating: 4.8, mustTry: 'Thaal-e-Jodhpur & Jungli Maas', priceRange: '₹₹₹₹', image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Rawat Mishthan Bhandar', cuisineType: 'Street Delicacies & Sweets', rating: 4.7, mustTry: 'Pyaaz Kachori & Mawa Jalebi', priceRange: '₹', image: 'https://images.unsplash.com/photo-1587985064135-0366536eab42?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Chokhi Dhani Ethnic Resort', cuisineType: 'Rajasthani Village Feast', rating: 4.6, mustTry: 'Unlimited Bajra Roti & Dal Baati', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Jaipur Royal Citadel', description: 'Amer Fort, Sheesh Mahal, Panna Meena Stepwell, and evening shopping in Johari Bazaar.', highlights: ['Amer Fort', 'Hawa Mahal', 'Laxmi Mishthan Bhandar'] },
@@ -87,7 +87,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 12,
     cultureCount: 16,
     topAttraction: 'Backwaters of Alleppey & Padmanabhaswamy Temple',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Boathouse_%287063399547%29.jpg/1920px-Boathouse_%287063399547%29.jpg',
     description: "God’s Own Country, Kerala is a tropical paradise of serene emerald backwaters, spice-laden Western Ghats, ancient Ayurvedic sanctuaries, and timeless classical Kathakali traditions.",
     historyOverview: 'Ancient seafaring gateway of India for spice trade with Phoenicians, Romans, Arabs, and Chinese. Governed by the Chera Dynasty, Zamorins of Calicut, and Kings of Travancore.',
     dynasties: ['Chera Dynasty', 'Ay Dynasty', 'Zamorins of Kozhikode', 'Travancore Royal House', 'Kingdom of Cochin'],
@@ -110,9 +110,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Alleppey Backwaters', 'Munnar Tea Hills', 'Fort Kochi', 'Wayanad', 'Varkala Cliff Beach', 'Thekkady'],
     hiddenGems: ['Gavi Silent Rainforest', 'Aranmula Metal Mirror Guild', 'Athirapally Waterfalls', 'Marari Secret Beach'],
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/f/f6/Quilon_Syrian_copper_plates_%289th_century_AD%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/5_image_collage_of_floral_arrangement_during_the_Hindu_festival_of_Onam_Kerala.jpg/1920px-5_image_collage_of_floral_arrangement_during_the_Hindu_festival_of_Onam_Kerala.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/AnaimudiPeak_DSC_4834.jpg/1920px-AnaimudiPeak_DSC_4834.jpg'
     ],
     facts: [
       'Highest literacy rate and highest life expectancy among all states in India.',
@@ -136,14 +136,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'October to February'
     },
     hotels: [
-      { name: 'Kumarakom Lake Resort', type: 'Luxury Backwater Resort', rating: 4.9, pricePerNight: '₹28,000+', location: 'Vembanad Lake, Kumarakom', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Brunton Boatyard - CGH Earth', type: 'Colonial Heritage Hotel', rating: 4.8, pricePerNight: '₹22,000', location: 'Fort Kochi harbour', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Spice Tree Munnar', type: 'Mountain Eco Spa', rating: 4.8, pricePerNight: '₹14,000', location: 'Munnar Hills', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Kumarakom Lake Resort', type: 'Luxury Backwater Resort', rating: 4.9, pricePerNight: '₹28,000+', location: 'Vembanad Lake, Kumarakom', image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Brunton Boatyard - CGH Earth', type: 'Colonial Heritage Hotel', rating: 4.8, pricePerNight: '₹22,000', location: 'Fort Kochi harbour', image: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Spice Tree Munnar', type: 'Mountain Eco Spa', rating: 4.8, pricePerNight: '₹14,000', location: 'Munnar Hills', image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Paragon Restaurant, Calicut / Kochi', cuisineType: 'Malabar Coastal', rating: 4.9, mustTry: 'Malabar Mutton Biryani & Fish Mango Curry', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Dhe Puttu, Ernakulam', cuisineType: 'Traditional Puttu Specialties', rating: 4.6, mustTry: 'Erachi Puttu & Chemmeen Puttu', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Kashi Art Cafe, Fort Kochi', cuisineType: 'Artistic Cafe & Bakery', rating: 4.7, mustTry: 'Cold brewed coffee & Chocolate Cake', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Paragon Restaurant, Calicut / Kochi', cuisineType: 'Malabar Coastal', rating: 4.9, mustTry: 'Malabar Mutton Biryani & Fish Mango Curry', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Dhe Puttu, Ernakulam', cuisineType: 'Traditional Puttu Specialties', rating: 4.6, mustTry: 'Erachi Puttu & Chemmeen Puttu', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Kashi Art Cafe, Fort Kochi', cuisineType: 'Artistic Cafe & Bakery', rating: 4.7, mustTry: 'Cold brewed coffee & Chocolate Cake', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Fort Kochi Heritage Walk', description: 'Chinese fishing nets, St. Francis Church, Mattancherry Jewish Synagogue and Spice Market.', highlights: ['Chinese Nets', 'Jew Town', 'Kathakali Performance'] },
@@ -162,7 +162,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 14,
     cultureCount: 18,
     topAttraction: 'Brihadeeswara Temple & Meenakshi Amman Temple',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Mamallapuram_view.jpg',
     description: 'The ancient cradle of Dravidian civilization, Tamil Nadu is famous for its towering stone temple gopurams, millennia-old Sangam literary heritage, Kanjeevaram silks, and Carnatic music.',
     historyOverview: 'Home of the great Tamil triumvirate: Cholas, Cheras, and Pandyas, later succeeded by Pallavas and Nayakas. Built the Great Living Chola Temples and naval fleets that conquered Southeast Asia.',
     dynasties: ['Chola Dynasty', 'Pandya Dynasty', 'Pallava Dynasty', 'Chera Dynasty', 'Madurai Nayakas'],
@@ -185,9 +185,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Chennai', 'Mahabalipuram', 'Madurai', 'Thanjavur', 'Kumbakonam', 'Ooty Hills', 'Kanyakumari', 'Rameshwaram'],
     hiddenGems: ['Dhanushkodi Ghost Town', 'Valparai 40 Hairpins', 'Hogenakkal Falls', 'Chettinad Palaces'],
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/2019_kolam_decoration_for_Pongal_festival%2C_South_India.jpg/1920px-2019_kolam_decoration_for_Pongal_festival%2C_South_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/9113jpg.jpg/1920px-9113jpg.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_Magnificient_Evening_Sunset_With_Pamban_Railway_Bridge_and_Boat_Mail_Express_Passes_Through_this_Pamban_Railway_Bridge_%21-.jpg/1920px-A_Magnificient_Evening_Sunset_With_Pamban_Railway_Bridge_and_Boat_Mail_Express_Passes_Through_this_Pamban_Railway_Bridge_%21-.jpg'
     ],
     facts: [
       'Tamil is recognized as the oldest surviving classical language in the world, with literature dating back over 2,500 years.',
@@ -211,14 +211,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'November to February'
     },
     hotels: [
-      { name: 'Taj Connemara, Chennai', type: 'Colonial Luxury Heritage', rating: 4.8, pricePerNight: '₹16,000', location: 'Binny Road, Chennai', image: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Heritage Madurai', type: 'Geoffrey Bawa Architecture Resort', rating: 4.8, pricePerNight: '₹12,000', location: 'Kochadai, Madurai', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Chidambara Vilas, Chettinad', type: '110-Year-Old Chettiar Mansion', rating: 4.9, pricePerNight: '₹11,500', location: 'Kadiapatti, Pudukkottai', image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Taj Connemara, Chennai', type: 'Colonial Luxury Heritage', rating: 4.8, pricePerNight: '₹16,000', location: 'Binny Road, Chennai', image: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Heritage Madurai', type: 'Geoffrey Bawa Architecture Resort', rating: 4.8, pricePerNight: '₹12,000', location: 'Kochadai, Madurai', image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Chidambara Vilas, Chettinad', type: '110-Year-Old Chettiar Mansion', rating: 4.9, pricePerNight: '₹11,500', location: 'Kadiapatti, Pudukkottai', image: 'https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Murugan Idli Shop, Madurai / Chennai', cuisineType: 'Traditional South Indian', rating: 4.8, mustTry: 'Ghee Podi Idli & Jigarthanda', priceRange: '₹', image: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=800&q=80' },
-      { name: 'The Bangala, Karaikudi', cuisineType: 'Authentic 7-Course Chettinad Feast', rating: 4.9, mustTry: 'Chettinad Pepper Crab & Uppu Kari', priceRange: '₹₹₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Saravana Bhavan, Chennai', cuisineType: 'Pure Vegetarian Tamil Meals', rating: 4.6, mustTry: 'Special Meals on Banana Leaf', priceRange: '₹', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Murugan Idli Shop, Madurai / Chennai', cuisineType: 'Traditional South Indian', rating: 4.8, mustTry: 'Ghee Podi Idli & Jigarthanda', priceRange: '₹', image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'The Bangala, Karaikudi', cuisineType: 'Authentic 7-Course Chettinad Feast', rating: 4.9, mustTry: 'Chettinad Pepper Crab & Uppu Kari', priceRange: '₹₹₹', image: 'https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Saravana Bhavan, Chennai', cuisineType: 'Pure Vegetarian Tamil Meals', rating: 4.6, mustTry: 'Special Meals on Banana Leaf', priceRange: '₹', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Chennai & Shore Temple Mahabalipuram', description: 'Visit San Thome Basilica, drive ECR to Mahabalipuram to explore Shore Temple and Arjuna’s Penance.', highlights: ['Shore Temple', 'Pancha Rathas', 'Marina Beach'] },
@@ -237,7 +237,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 15,
     cultureCount: 17,
     topAttraction: 'Taj Mahal & Varanasi Ghats',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Grus_antigone_Luc_viatour.jpg/1920px-Grus_antigone_Luc_viatour.jpg',
     description: 'The spiritual heartland of India, Uttar Pradesh is blessed with the holy rivers Ganga and Yamuna, the sacred cities of Varanasi, Ayodhya, and Mathura, and the sublime architectural glory of the Mughal Empire in Agra and Awadhi Nawabs in Lucknow.',
     historyOverview: 'Center of Vedic philosophy, epic events of the Ramayana and Mahabharata, Buddha’s first sermon at Sarnath, and the capital of the Mughal Empire under Akbar and Shah Jahan.',
     dynasties: ['Mughal Empire', 'Nawabs of Awadh', 'Gupta Empire', 'Mauryan Empire', 'Harsha Vardhana Empire'],
@@ -260,9 +260,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Agra', 'Varanasi', 'Lucknow', 'Ayodhya', 'Mathura & Vrindavan', 'Fatehpur Sikri', 'Sarnath', 'Prayagraj'],
     hiddenGems: ['Bateshwar 101 Shiva Temples', 'Chunar Fort on the Ganges', 'Dudhwa Tiger Reserve', 'Sravasti Buddhist Caves'],
     gallery: [
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Allahabad_high_court.jpg/1920px-Allahabad_high_court.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/9/9d/Ashoka_%28Polyalthia_longifolia%29_flowers_W_IMG_7050.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Bada_Imambara_aka_Bhool_Bhulaiya.jpg/1920px-Bada_Imambara_aka_Bhool_Bhulaiya.jpg'
     ],
     facts: [
       'If Uttar Pradesh were an independent country, it would be the fifth most populous nation in the world.',
@@ -286,14 +286,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'October to March'
     },
     hotels: [
-      { name: 'The Oberoi Amarvilas, Agra', type: 'Ultra Luxury Taj View', rating: 5.0, pricePerNight: '₹55,000+', location: '600m from Taj Mahal, Agra', image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80' },
-      { name: 'BrijRama Palace, Varanasi', type: 'Heritage Palace on Ganges Ghats', rating: 4.9, pricePerNight: '₹28,000', location: 'Darbhanga Ghat, Varanasi', image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Taj Mahal Hotel, Lucknow', type: 'Nawabi Luxury', rating: 4.8, pricePerNight: '₹14,000', location: 'Gomti Nagar, Lucknow', image: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=800&q=80' }
+      { name: 'The Oberoi Amarvilas, Agra', type: 'Ultra Luxury Taj View', rating: 5.0, pricePerNight: '₹55,000+', location: '600m from Taj Mahal, Agra', image: 'https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'BrijRama Palace, Varanasi', type: 'Heritage Palace on Ganges Ghats', rating: 4.9, pricePerNight: '₹28,000', location: 'Darbhanga Ghat, Varanasi', image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Taj Mahal Hotel, Lucknow', type: 'Nawabi Luxury', rating: 4.8, pricePerNight: '₹14,000', location: 'Gomti Nagar, Lucknow', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Tunday Kababi, Lucknow', cuisineType: 'Original Awadhi Kebabs', rating: 4.9, mustTry: 'Melt-in-mouth Galouti Kebab with Sheermal', priceRange: '₹', image: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Kashi Chaat Bhandar, Varanasi', cuisineType: 'Banarasi Street Chaat', rating: 4.8, mustTry: 'Tamatar Chaat & Palak Patta Chaat', priceRange: '₹', image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Pinch of Spice, Agra', cuisineType: 'North Indian Mughlai', rating: 4.7, mustTry: 'Murg Boti Masala & Dal Makhani', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Tunday Kababi, Lucknow', cuisineType: 'Original Awadhi Kebabs', rating: 4.9, mustTry: 'Melt-in-mouth Galouti Kebab with Sheermal', priceRange: '₹', image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Kashi Chaat Bhandar, Varanasi', cuisineType: 'Banarasi Street Chaat', rating: 4.8, mustTry: 'Tamatar Chaat & Palak Patta Chaat', priceRange: '₹', image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Pinch of Spice, Agra', cuisineType: 'North Indian Mughlai', rating: 4.7, mustTry: 'Murg Boti Masala & Dal Makhani', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Agra Imperial Splendor', description: 'Sunrise at Taj Mahal, explore Agra Fort, afternoon excursion to red sandstone city of Fatehpur Sikri.', highlights: ['Taj Mahal', 'Agra Fort', 'Buland Darwaza'] },
@@ -312,7 +312,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 15,
     cultureCount: 16,
     topAttraction: 'Ajanta & Ellora Caves and Mumbai Heritage Precinct',
-    heroImage: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Cave_26%2C_Ajanta.jpg/1920px-Cave_26%2C_Ajanta.jpg',
     description: 'The powerhouse of India, Maharashtra stretches from the Arabian Sea coastline of Konkan through the volcanic basalt cliffs of the Sahyadri mountains to the Deccan plateau, crowned by over 350 hill forts built by Chhatrapati Shivaji Maharaj.',
     historyOverview: 'Birthplace of the Maratha Empire founded by Chhatrapati Shivaji Maharaj in the 17th century. Preserves world-renowned rock-cut cave art created under the Satavahana, Vakataka, and Rashtrakuta dynasties.',
     dynasties: ['Maratha Empire (Shivaji Maharaj)', 'Rashtrakuta Dynasty', 'Satavahana Dynasty', 'Vakataka Dynasty', 'Yadavas of Devagiri'],
@@ -335,9 +335,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Mumbai', 'Pune', 'Ajanta & Ellora (Chhatrapati Sambhajinagar)', 'Mahabaleshwar', 'Lonavala', 'Nashik Wine Valley', 'Kolhapur'],
     hiddenGems: ['Lonar Meteorite Crater Lake', 'Kaas Plateau (Valley of Flowers)', 'Murud Janjira Sea Fort', 'Daulatabad Dark Maze'],
     gallery: [
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/AFMC_Main_Building.jpg/1920px-AFMC_Main_Building.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/BAPS_Swaminarayan_Mandir%2C_Pune.jpg/1920px-BAPS_Swaminarayan_Mandir%2C_Pune.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bhamhagiri_hill_Nasik.jpg/1920px-Bhamhagiri_hill_Nasik.jpg'
     ],
     facts: [
       'Cave 16 at Ellora (Kailasa Temple) is the largest single monolithic rock excavation in the world, carved top-down from a single basalt cliff.',
@@ -361,14 +361,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'October to March'
     },
     hotels: [
-      { name: 'The Taj Mahal Palace, Mumbai', type: 'Iconic Grand Luxury Heritage', rating: 5.0, pricePerNight: '₹35,000+', location: 'Apollo Bunder, Gateway of India', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Sula Vineyards - The Source', type: 'Wine Resort', rating: 4.8, pricePerNight: '₹14,000', location: 'Nashik Valley', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Vivanta Aurangabad', type: 'Palatial Hotel', rating: 4.7, pricePerNight: '₹8,500', location: 'Chhatrapati Sambhajinagar', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' }
+      { name: 'The Taj Mahal Palace, Mumbai', type: 'Iconic Grand Luxury Heritage', rating: 5.0, pricePerNight: '₹35,000+', location: 'Apollo Bunder, Gateway of India', image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Sula Vineyards - The Source', type: 'Wine Resort', rating: 4.8, pricePerNight: '₹14,000', location: 'Nashik Valley', image: 'https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Vivanta Aurangabad', type: 'Palatial Hotel', rating: 4.7, pricePerNight: '₹8,500', location: 'Chhatrapati Sambhajinagar', image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Britannia & Co. Restaurant, Mumbai', cuisineType: 'Parsi Heritage Diner', rating: 4.8, mustTry: 'Berry Pulao & Caramel Custard', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Sardar Pav Bhaji, Tardeo', cuisineType: 'Famous Mumbai Street Pav Bhaji', rating: 4.7, mustTry: 'Extra Butter Cheese Pav Bhaji', priceRange: '₹', image: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Shabree, FC Road, Pune', cuisineType: 'Traditional Maharashtrian Thali', rating: 4.8, mustTry: 'Maharashtrian Thali with Pithla Bhakri', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Britannia & Co. Restaurant, Mumbai', cuisineType: 'Parsi Heritage Diner', rating: 4.8, mustTry: 'Berry Pulao & Caramel Custard', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Sardar Pav Bhaji, Tardeo', cuisineType: 'Famous Mumbai Street Pav Bhaji', rating: 4.7, mustTry: 'Extra Butter Cheese Pav Bhaji', priceRange: '₹', image: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Shabree, FC Road, Pune', cuisineType: 'Traditional Maharashtrian Thali', rating: 4.8, mustTry: 'Maharashtrian Thali with Pithla Bhakri', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1578774204375-826dc5d996ed?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Mumbai Colonial & Art Deco', description: 'Gateway of India, heritage walk through Fort and Kala Ghoda, sunset at Marine Drive.', highlights: ['Gateway of India', 'CSMT Station', 'Marine Drive'] },
@@ -387,7 +387,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 13,
     cultureCount: 15,
     topAttraction: 'Hampi Vijayanagara & Mysore Palace',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Hampi_virupaksha_temple.jpg/1920px-Hampi_virupaksha_temple.jpg',
     description: 'One State, Many Worlds. Karnataka is home to the colossal stone ruins of Hampi, the intricate Hoysala soapstone temples of Belur and Halebidu, the golden coffee hills of Coorg and Chikmagalur, and the tech hub of Bengaluru.',
     historyOverview: 'Ruled by mighty empires: Badami Chalukyas, Rashtrakutas, Hoysalas, Vijayanagara monarchs, and the Wadiyars of Mysore who patronized literature, classical Carnatic music, and stone arts.',
     dynasties: ['Vijayanagara Empire', 'Hoysala Dynasty', 'Badami Chalukya Dynasty', 'Rashtrakuta Dynasty', 'Wadiyars of Mysore'],
@@ -410,9 +410,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Bengaluru', 'Hampi', 'Mysuru', 'Belur & Halebidu', 'Badami & Pattadakal', 'Coorg Coffee Hills', 'Gokarna Beaches'],
     hiddenGems: ['Yana Karst Monoliths', 'Agumbe King Cobra Rainforest', 'St. Mary’s Basalt Islands', 'Halebidu Rural Artisan Guilds'],
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/0/07/Gomateswara.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/7th_-_9th_century_Hindu_and_Jain_temples%2C_Pattadakal_monuments_Karnataka_2.jpg/1920px-7th_-_9th_century_Hindu_and_Jain_temples%2C_Pattadakal_monuments_Karnataka_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/GolGumbaz2.jpg/1920px-GolGumbaz2.jpg'
     ],
     facts: [
       'Hampi was the second largest city in the medieval world after Beijing around 1500 CE.',
@@ -436,14 +436,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'October to March'
     },
     hotels: [
-      { name: 'Evolve Back, Kamalapura Palace, Hampi', type: 'Vijayanagara Palace Architecture', rating: 5.0, pricePerNight: '₹32,000+', location: 'Kamalapura, Hampi', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'The Tamara Coorg', type: 'Luxury Coffee Plantation Retreat', rating: 4.9, pricePerNight: '₹24,000', location: 'Kabbinakad Estate, Coorg', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Royal Orchid Metropole, Mysore', type: 'Heritage Hotel', rating: 4.7, pricePerNight: '₹7,500', location: 'J.L.B Road, Mysore', image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Evolve Back, Kamalapura Palace, Hampi', type: 'Vijayanagara Palace Architecture', rating: 5.0, pricePerNight: '₹32,000+', location: 'Kamalapura, Hampi', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'The Tamara Coorg', type: 'Luxury Coffee Plantation Retreat', rating: 4.9, pricePerNight: '₹24,000', location: 'Kabbinakad Estate, Coorg', image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Royal Orchid Metropole, Mysore', type: 'Heritage Hotel', rating: 4.7, pricePerNight: '₹7,500', location: 'J.L.B Road, Mysore', image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Vidyarthi Bhavan, Gandhi Bazaar, Bengaluru', cuisineType: 'Legendary Breakfast Heritage', rating: 4.8, mustTry: 'Crispy Benne Masala Dosa & Filter Coffee', priceRange: '₹', image: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Mylari Hotel, Mysore', cuisineType: 'Original Soft Butter Dosa', rating: 4.9, mustTry: 'Mylari Special Dosa with butter', priceRange: '₹', image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Giri Manja’s, Mangalore', cuisineType: 'Authentic Coastal Seafood', rating: 4.9, mustTry: 'Anjal Fish Fry & Crab Ghee Roast', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Vidyarthi Bhavan, Gandhi Bazaar, Bengaluru', cuisineType: 'Legendary Breakfast Heritage', rating: 4.8, mustTry: 'Crispy Benne Masala Dosa & Filter Coffee', priceRange: '₹', image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Mylari Hotel, Mysore', cuisineType: 'Original Soft Butter Dosa', rating: 4.9, mustTry: 'Mylari Special Dosa with butter', priceRange: '₹', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Giri Manja’s, Mangalore', cuisineType: 'Authentic Coastal Seafood', rating: 4.9, mustTry: 'Anjal Fish Fry & Crab Ghee Roast', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Mysore Royal Heritage', description: 'Explore Mysore Palace, climb Chamundi Hill, visit Devaraja spice and flower market.', highlights: ['Mysore Palace', 'Chamundi Hill', 'Devaraja Market'] },
@@ -462,7 +462,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 14,
     cultureCount: 16,
     topAttraction: 'Statue of Unity, Sun Temple Modhera & Rani ki Vav',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/0081323_Arasuri_Ambaji_mandir%2C_Shakti_Peeth%2C_north_Gujarat_037.jpg/1920px-0081323_Arasuri_Ambaji_mandir%2C_Shakti_Peeth%2C_north_Gujarat_037.jpg',
     description: 'Jewel of Western India, Gujarat is the birthplace of Mahatma Gandhi and Sardar Patel. Boasts the longest coastline in India (1,600 km), the world’s only wild habitat of Asiatic lions in Gir, the white salt desert of Kutch, and UNESCO World Heritage City Ahmedabad.',
     historyOverview: 'Ancient Indus Valley port at Lothal and Harappan metropolis Dholavira; medieval Solanki golden age that built Rani ki Vav and Modhera; and the epicenter of India’s freedom movement.',
     dynasties: ['Indus Valley Civilization (Dholavira/Lothal)', 'Maitraka Dynasty', 'Solanki (Chaulukya) Dynasty', 'Gujarat Sultanate', 'Maratha Gaekwads of Baroda'],
@@ -485,9 +485,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Ahmedabad', 'Rann of Kutch', 'Gir National Park', 'Dwarka & Somnath', 'Vadodara (Laxmi Vilas Palace)', 'Statue of Unity'],
     hiddenGems: ['Dholavira Harappan City', 'Patan Double Ikat Weavers', 'Champaner-Pavagadh', 'Flamingo City in Kutch'],
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Ahmedabad_Synagogue.jpg/1920px-Ahmedabad_Synagogue.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Alang_Ship_Breaking_-_panoramio.jpg/1920px-Alang_Ship_Breaking_-_panoramio.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Asiatic_Lioness_with_around_30_days_old_cub.jpg/1920px-Asiatic_Lioness_with_around_30_days_old_cub.jpg'
     ],
     facts: [
       'Gir National Park is the only place on planet Earth where Asiatic Lions (Panthera leo persica) survive in the wild.',
@@ -511,14 +511,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'October to March'
     },
     hotels: [
-      { name: 'House of MG, Ahmedabad', type: 'UNESCO Heritage Haveli', rating: 4.8, pricePerNight: '₹8,500', location: 'Opposite Sidi Saiyyed Mosque', image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Rann Riders Eco Resort, Dasada', type: 'Safari Lodge Little Rann', rating: 4.8, pricePerNight: '₹12,000', location: 'Dasada, Little Rann of Kutch', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-      { name: 'The Gateway Hotel Gir Forest', type: 'Wilderness Sanctuary Resort', rating: 4.7, pricePerNight: '₹15,000', location: 'Sasan Gir', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' }
+      { name: 'House of MG, Ahmedabad', type: 'UNESCO Heritage Haveli', rating: 4.8, pricePerNight: '₹8,500', location: 'Opposite Sidi Saiyyed Mosque', image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Rann Riders Eco Resort, Dasada', type: 'Safari Lodge Little Rann', rating: 4.8, pricePerNight: '₹12,000', location: 'Dasada, Little Rann of Kutch', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'The Gateway Hotel Gir Forest', type: 'Wilderness Sanctuary Resort', rating: 4.7, pricePerNight: '₹15,000', location: 'Sasan Gir', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'Agashiye - The House of MG, Ahmedabad', cuisineType: 'Rooftop Gujarati Thali Feast', rating: 4.9, mustTry: 'Signature Gujarati Thali on bronze plate', priceRange: '₹₹₹', image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Das Khaman, Ahmedabad', cuisineType: 'Iconic Steamed Savories', rating: 4.8, mustTry: 'Vati Dal Khaman & Sev Khamani', priceRange: '₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Laxmi Ganthiya Rath, Rajkot', cuisineType: 'Crisp Ganthiya & Sambharo', rating: 4.7, mustTry: 'Vanela Ganthiya with fried papaya chutney', priceRange: '₹', image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80' }
+      { name: 'Agashiye - The House of MG, Ahmedabad', cuisineType: 'Rooftop Gujarati Thali Feast', rating: 4.9, mustTry: 'Signature Gujarati Thali on bronze plate', priceRange: '₹₹₹', image: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Das Khaman, Ahmedabad', cuisineType: 'Iconic Steamed Savories', rating: 4.8, mustTry: 'Vati Dal Khaman & Sev Khamani', priceRange: '₹', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Laxmi Ganthiya Rath, Rajkot', cuisineType: 'Crisp Ganthiya & Sambharo', rating: 4.7, mustTry: 'Vanela Ganthiya with fried papaya chutney', priceRange: '₹', image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Ahmedabad Heritage Pols', description: 'Early morning walking tour through historic pols, Sabarmati Ashram, Sidi Saiyyed Jali.', highlights: ['Sabarmati Ashram', 'Sidi Saiyyed Mosque', 'Adalaj Stepwell'] },
@@ -537,7 +537,7 @@ export const STATES_DATA: Record<string, StateData> = {
     festivalsCount: 11,
     cultureCount: 12,
     topAttraction: 'Pangong Tso Lake, Nubra Valley & Hemis Gompa',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Road_Padum_Zanskar_Range_Jun24_A7CR_00818.jpg/1920px-Road_Padum_Zanskar_Range_Jun24_A7CR_00818.jpg',
     description: 'The Land of High Passes, Ladakh is a high-altitude Himalayan moonscape of stark snow-crowned granite ranges, ancient cliffside Buddhist monasteries, turquoise glacier lakes, and cold desert double-humped camel caravans.',
     historyOverview: 'Independent Buddhist kingdom for over 900 years, established by King Nyima Gon in 842 CE. Vital caravan crossroads on the ancient Silk Route between Central Asia, Tibet, and Kashmir.',
     dynasties: ['Maryul Dynasty (King Nyima Gon)', 'Namgyal Dynasty (Sengge Namgyal)', 'Dogra Annexation under Zorawar Singh'],
@@ -560,9 +560,9 @@ export const STATES_DATA: Record<string, StateData> = {
     nearbyPlaces: ['Leh Old Town', 'Nubra Valley', 'Pangong Tso Lake', 'Tso Moriri', 'Zanskar Valley', 'Khardung La Pass', 'Aryan Valley'],
     hiddenGems: ['Turtuk (Balti Village on LOC)', 'Phugtal Cave Gompa', 'Uleytokpo Rock Carvings', 'Hemis Shukpachan'],
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/f/fd/Alchi_Rajputs.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Black_necked_crane_at_Hanle.jpg/1920px-Black_necked_crane_at_Hanle.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Buddhist_deity.jpg/1920px-Buddhist_deity.jpg'
     ],
     facts: [
       'Khardung La and Umling La passes in Ladakh are among the highest motorable roads in the world, with Umling La reaching 19,024 feet.',
@@ -586,14 +586,14 @@ export const STATES_DATA: Record<string, StateData> = {
       bestSeason: 'June to September'
     },
     hotels: [
-      { name: 'The Grand Dragon Ladakh, Leh', type: 'Solar Heated Luxury', rating: 4.9, pricePerNight: '₹22,000+', location: 'Old Road, Sheynam, Leh', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-      { name: 'The Ultimate Travelling Camp (TUTC), Chamba Camp Thiksey', type: 'Super Luxury Glamping', rating: 5.0, pricePerNight: '₹65,000+', location: 'Thiksey, Ladakh', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Desert Himalayas Resort, Nubra', type: 'Luxury Valley Glamping', rating: 4.7, pricePerNight: '₹9,500', location: 'Diskit, Nubra Valley', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' }
+      { name: 'The Grand Dragon Ladakh, Leh', type: 'Solar Heated Luxury', rating: 4.9, pricePerNight: '₹22,000+', location: 'Old Road, Sheynam, Leh', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'The Ultimate Travelling Camp (TUTC), Chamba Camp Thiksey', type: 'Super Luxury Glamping', rating: 5.0, pricePerNight: '₹65,000+', location: 'Thiksey, Ladakh', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Desert Himalayas Resort, Nubra', type: 'Luxury Valley Glamping', rating: 4.7, pricePerNight: '₹9,500', location: 'Diskit, Nubra Valley', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80' }
     ],
     restaurants: [
-      { name: 'The Tibetan Kitchen, Leh', cuisineType: 'Authentic Himalayan & Tibetan', rating: 4.8, mustTry: 'Gyako hot pot & Shaphalay', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Bon Appetit, Leh', cuisineType: 'Continental & Ladakhi Organic', rating: 4.7, mustTry: 'Apricot crumble & wood-fired pizza', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Alchi Kitchen, Alchi', cuisineType: 'Traditional Ladakhi Artisan Eatery', rating: 4.9, mustTry: 'Fresh Khambir with walnut dip & Churphey', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' }
+      { name: 'The Tibetan Kitchen, Leh', cuisineType: 'Authentic Himalayan & Tibetan', rating: 4.8, mustTry: 'Gyako hot pot & Shaphalay', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Bon Appetit, Leh', cuisineType: 'Continental & Ladakhi Organic', rating: 4.7, mustTry: 'Apricot crumble & wood-fired pizza', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Alchi Kitchen, Alchi', cuisineType: 'Traditional Ladakhi Artisan Eatery', rating: 4.9, mustTry: 'Fresh Khambir with walnut dip & Churphey', priceRange: '₹₹', image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80' }
     ],
     aiSuggestedRoute: [
       { day: 1, title: 'Acclimatization & Leh Palace', description: 'Rest in Leh morning; gentle evening walk to Shanti Stupa and Leh Palace for sunset.', highlights: ['Shanti Stupa', 'Leh Palace', 'Leh Market'] },
@@ -618,7 +618,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 14,
       "topAttraction": "Dal Lake & Shalimar Mughal Gardens",
-      "heroImage": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Pahalgam_Valley.jpg/1920px-Pahalgam_Valley.jpg",
       "description": "Revered across centuries as Paradise on Earth, Jammu & Kashmir is framed by snow-clad Pir Panjal ranges, shimmering Dal Lake shikaras, cedar forests, and saffron valleys.",
       "historyOverview": "Ancient seat of Shaivism under Abhinavagupta, Buddhist councils under Kanishka, Lalitaditya Muktapida of the Karkota dynasty who built Martand Sun Temple, and exquisite Persian garden artistry brought by Mughal Emperors.",
       "dynasties": [
@@ -683,9 +683,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Aru Valley"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Akhnoor_Fort_-_Jammu_-_Jammu_and_Kashmir_-_DSC_0001.jpg/1920px-Akhnoor_Fort_-_Jammu_-_Jammu_and_Kashmir_-_DSC_0001.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Banihal_Pass%2C_Jammu_and_Kashmir%2C_India.jpg/1920px-Banihal_Pass%2C_Jammu_and_Kashmir%2C_India.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Dal_Lake_Hazratbal_Srinagar.jpg/1920px-Dal_Lake_Hazratbal_Srinagar.jpg"
       ],
       "facts": [
           "Pampore in Kashmir is one of the only three places on Earth where world-class grade-one saffron (Kesar) is cultivated.",
@@ -715,7 +715,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹35,000",
               "location": "Gupkar Road, Srinagar",
-              "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sukoon Luxury Houseboat",
@@ -723,7 +723,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Dal Lake Gate 1, Srinagar",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Khyber Himalayan Resort, Gulmarg",
@@ -731,7 +731,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹38,000",
               "location": "Gulmarg Gondola Base",
-              "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -741,7 +741,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Rogan Josh & Gushtaba",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1497644083578-611b798c60f3?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Mughal Darbar, Residency Road",
@@ -749,7 +749,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Tarami Wazwan & Kahwa",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Chai Jaai Tea Room",
@@ -757,7 +757,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Pink Noon Chai & Sheermal",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -810,7 +810,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 12,
       "cultureCount": 13,
       "topAttraction": "Great Himalayan National Park & Spiti Valley",
-      "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kullu_Valley_near_Manali%2C_Himachal_Pradesh%2C_India.jpg/1920px-Kullu_Valley_near_Manali%2C_Himachal_Pradesh%2C_India.jpg",
       "description": "The Abode of Snow, Himachal Pradesh is a mountain paradise of ancient wooden Kath-Kuni temples, apple orchards, high-altitude cold deserts, and vibrant Tibetan Buddhist monasteries.",
       "historyOverview": "Inhabited since the Vedic era by the Khasas and Audumbaras. Rulers of Katoch dynasty of Kangra successfully defended against multiple invasions. Later home to the Dalai Lama in McLeod Ganj and colonial summer capital of the British Raj.",
       "dynasties": [
@@ -875,9 +875,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Barot Valley"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80"
+          "https://upload.wikimedia.org/wikipedia/commons/f/f6/Asian_Paradise_Flycatcher-_Male_at_Himachal_I2_IMG_2939.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/BaijNath.jpg/1920px-BaijNath.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Facade_of_Lakshana_Devi_Temple%2C_Bharmour_%28edited%29.jpg/1920px-Facade_of_Lakshana_Devi_Temple%2C_Bharmour_%28edited%29.jpg"
       ],
       "facts": [
           "Kalka-Shimla Toy Train is a UNESCO World Heritage railway featuring 102 tunnels across 96 kilometers of mountain curves.",
@@ -907,7 +907,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹38,000",
               "location": "Mashobra, Shimla",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Chhatrapati Heritage, Dharamshala",
@@ -915,7 +915,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "McLeod Ganj",
-              "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Echor Palm Bliss, Kasol",
@@ -923,7 +923,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹6,500",
               "location": "Parvati Valley",
-              "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -933,7 +933,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Kangri Dham Thali & Siddu",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Tiberi Restaurant, Dharamshala",
@@ -941,7 +941,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Steamed Tingmo & Shabalay",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Wake & Bake Cafe, Shimla",
@@ -949,7 +949,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Apple Cinnamon Pie & French Toast",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1000,7 +1000,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 13,
       "cultureCount": 16,
       "topAttraction": "Golden Temple (Harmandir Sahib), Amritsar",
-      "heroImage": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Golden_Temple%2C_Amritsar%2C_Punjab_UNAG.jpg/1920px-Golden_Temple%2C_Amritsar%2C_Punjab_UNAG.jpg",
       "description": "The Land of Five Rivers, Punjab is the vibrant cradle of Sikh heritage, heroic valor, lush golden mustard fields, energetic Bhangra beats, and unmatched hospitality at the Golden Temple Langar.",
       "historyOverview": "Root of ancient Indus Valley civilization at Ropar, birthplace of Sikhism founded by Guru Nanak Dev Ji, heroic resistance of Maharaja Ranjit Singh’s Sikh Empire, and freedom struggle milestones at Jallianwala Bagh.",
       "dynasties": [
@@ -1065,9 +1065,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Harike Wetlands"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Durgiana_Temple%2C_Amritsar.jpg/1920px-Durgiana_Temple%2C_Amritsar.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/8/86/Administrative_division_of_Punjab.png",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Aerial_view_of_agricultural_fields_in_Punjab%2C_India.jpg/1920px-Aerial_view_of_agricultural_fields_in_Punjab%2C_India.jpg"
       ],
       "facts": [
           "Harmandir Sahib (Golden Temple) operates the world’s largest free community kitchen, serving over 100,000 pilgrims every day regardless of religion.",
@@ -1097,7 +1097,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹14,000",
               "location": "Majitha Verka Bypass, Amritsar",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Welcomhotel by ITC, Amritsar",
@@ -1105,7 +1105,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Raja Sansi, Amritsar",
-              "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Ranjit’s Svaasa Heritage Boutique Hotel",
@@ -1113,7 +1113,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹8,500",
               "location": "Mall Road, Amritsar",
-              "image": "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -1123,7 +1123,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Dal Makhani & Thali with pure desi ghee",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bhai Kulwant Singh Kulchian Wale",
@@ -1131,7 +1131,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Crispy Amritsari Chur Chur Aloo Kulcha",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Makhan Fish & Chicken Corner",
@@ -1139,7 +1139,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Crispy Amritsari Fried Fish with ajwain",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1190,7 +1190,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 8,
       "cultureCount": 9,
       "topAttraction": "The Capitol Complex (UNESCO) & Nek Chand Rock Garden",
-      "heroImage": "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Open_Hand_monument%2C_Chandigarh.jpg/1920px-Open_Hand_monument%2C_Chandigarh.jpg",
       "description": "The City Beautiful, Chandigarh is India’s premier planned modernist metropolis designed by Swiss-French architect Le Corbusier, famous for its Capitol Complex, Nek Chand’s fantasy Rock Garden, and Sukhna Lake.",
       "historyOverview": "Commissioned post-1947 by Prime Minister Jawaharlal Nehru as a symbol of modern India’s unfettered future. Planned with broad avenues, dedicated green sectors, and concrete brutalist landmarks that earned UNESCO World Heritage status.",
       "dynasties": [
@@ -1246,9 +1246,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Kaimbwala Village"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Bus_queue_shelter_in_Chandigarh.jpg/1920px-Bus_queue_shelter_in_Chandigarh.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Chandigarh_Architecture_Museum%2C_Sector_10-C.jpg/1920px-Chandigarh_Architecture_Museum%2C_Sector_10-C.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Chandigarh_Railway_Junction.jpg/1920px-Chandigarh_Railway_Junction.jpg"
       ],
       "facts": [
           "The Capitol Complex (Palace of Assembly, Secretariat, High Court) is a UNESCO World Heritage Site.",
@@ -1278,7 +1278,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Block No. 9, Sector 17-A",
-              "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Lalit Chandigarh, IT Park",
@@ -1286,7 +1286,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹11,000",
               "location": "Rajiv Gandhi IT Park",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Hyatt Regency Chandigarh",
@@ -1294,7 +1294,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹10,500",
               "location": "Industrial Area Phase 1",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -1304,7 +1304,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Chole Bhature & Kulfi Falooda",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Pal Dhaba, Sector 28",
@@ -1312,7 +1312,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Mutton Curry & Keema Naan",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Virgin Courtyard, Sector 7",
@@ -1320,7 +1320,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Wood-fired Truffle Pizza & Tiramisu",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1587985064135-0366536eab42?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1363,7 +1363,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 12,
       "cultureCount": 14,
       "topAttraction": "Kedarnath Temple & Valley of Flowers (UNESCO)",
-      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Nanda_Devi_-_Hidden_Summit%2C_Uttarakhand_India_2013.jpg/1920px-Nanda_Devi_-_Hidden_Summit%2C_Uttarakhand_India_2013.jpg",
       "description": "Devbhoomi (Land of the Gods), Uttarakhand is a sacred Himalayan sanctuary of thunderous glacial rivers, ancient Char Dham pilgrimage shrines, pristine alpine meadows, and the birthplace of Mother Ganga.",
       "historyOverview": "Root of Vedic meditation and hermitage retreats. Ruled by the Katyuri kings, Garhwal Kingdom of the Panwars, and Chand dynasty of Kumaon who built the stone temple complexes of Jageshwar and Baijnath.",
       "dynasties": [
@@ -1427,9 +1427,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Mana last Indian village"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/%22Flowers_Blossom_at_Valley_of_Flowers_Chamoli%2C_India%22_58.jpg/1920px-%22Flowers_Blossom_at_Valley_of_Flowers_Chamoli%2C_India%22_58.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/0051823_3rd_century_CE_Ashwamedha_Yajna_archaeological_sites%2C_Jagatgram_Uttarakhand_019.jpg/1920px-0051823_3rd_century_CE_Ashwamedha_Yajna_archaeological_sites%2C_Jagatgram_Uttarakhand_019.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/AjitHota_BirthPlaceOfGanges.jpg/1920px-AjitHota_BirthPlaceOfGanges.jpg"
       ],
       "facts": [
           "Valley of Flowers and Nanda Devi National Parks are UNESCO World Heritage Sites harboring over 500 species of wildflowers.",
@@ -1459,7 +1459,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹52,000",
               "location": "Palace Estate, Narendra Nagar",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Taj Corbett Resort & Spa",
@@ -1467,7 +1467,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹22,000",
               "location": "Jim Corbett National Park",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Manu Maharani, Nainital",
@@ -1475,7 +1475,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹14,000",
               "location": "Grassmere Estate, Nainital",
-              "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -1485,7 +1485,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Garhwali Thali & Mango Lassi",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Kumaon Rasoi, Nainital",
@@ -1493,7 +1493,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Bhatt ki Churkani & Bal Mithai",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Sitting Elephant, Rishikesh",
@@ -1501,7 +1501,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Paneer Lababdar & Dal Tadka",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1553,7 +1553,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 9,
       "cultureCount": 11,
       "topAttraction": "Kurukshetra (Brahma Sarovar) & Sultanpur Bird Sanctuary",
-      "heroImage": "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Cyber_City_View.jpg/1920px-Cyber_City_View.jpg",
       "description": "The ancient cradle of Vedic enlightenment and the epic battlefield of the Mahabharata where the Bhagavad Gita was spoken at Jyotisar, Haryana is also known for its rustic agrarian spirit, Olympic wrestling champions, and historic crafts fairs.",
       "historyOverview": "Site of the Indus-Saraswati civilization at Rakhigarhi, decisive historical battles at Panipat, and sacred discourse of the Bhagavad Gita at Kurukshetra.",
       "dynasties": [
@@ -1617,9 +1617,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Firoz Shah Palace Hisar"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Academic_Block%2C_ESIC_Medical_College_and_Hospital%2C_Faridabad.jpg/1920px-Academic_Block%2C_ESIC_Medical_College_and_Hospital%2C_Faridabad.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/2/29/DLF_Gateway_Tower.png",
+          "https://upload.wikimedia.org/wikipedia/commons/0/04/Delhi_Faridabad_Skyway.png"
       ],
       "facts": [
           "Rakhigarhi in Haryana is officially proven to be the largest Harappan (Indus Valley) civilization city, spanning over 350 hectares.",
@@ -1649,7 +1649,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "NH8 Manesar",
-              "image": "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Oberoi, Gurugram",
@@ -1657,7 +1657,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹26,000",
               "location": "443 Udyog Vihar Phase V",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Yadavindra Gardens Heritage Hotel, Pinjore",
@@ -1665,7 +1665,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹6,500",
               "location": "Pinjore, Panchkula",
-              "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -1675,7 +1675,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Dal Makhani & Amritsari Kulcha",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1590053303666-31356f9661d1?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Gulab Rewri & Sweets, Rohtak",
@@ -1683,7 +1683,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Til Gajak, Rewari & Samosa",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Haveli, Murthal",
@@ -1691,7 +1691,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Stuffed Tandoori Parantha with white butter",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1733,7 +1733,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 16,
       "cultureCount": 19,
       "topAttraction": "Qutub Minar, Red Fort & Humayun’s Tomb (3 UNESCO Sites)",
-      "heroImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Jama_Masjid_2011.jpg/1920px-Jama_Masjid_2011.jpg",
       "description": "The historic capital of empires and the vibrant modern soul of India, Delhi spans seven ancient historic cities from the legendary Indraprastha of the Pandavas to Shahjahanabad and Edwin Lutyens’ imperial New Delhi.",
       "historyOverview": "Ruled by Tomaras, Chauhans, Delhi Sultanate dynasties (Mamluk, Khalji, Tughlaq, Sayyid, Lodi), the Mughal Empire under Shah Jahan, and crowned capital of independent democratic India in 1947.",
       "dynasties": [
@@ -1796,9 +1796,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "National Crafts Museum"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Anglo_Arabic_School%27s_Hostel_earlier_known_as_Ghaziuddin_Khan_Madrasa.jpg/1920px-Anglo_Arabic_School%27s_Hostel_earlier_known_as_Ghaziuddin_Khan_Madrasa.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6e/Basant_Celebrations_at_Dargah.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/7/70/Birla_Mandir_Delhi.jpg"
       ],
       "facts": [
           "Delhi possesses three distinct UNESCO World Heritage Sites: Qutub Minar Complex, Humayun’s Tomb, and the Red Fort.",
@@ -1828,7 +1828,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹28,000",
               "location": "Janpath, Connaught Place",
-              "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Taj Mahal Hotel, Mansingh Road",
@@ -1836,7 +1836,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹24,000",
               "location": "1 Mansingh Road",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Haveli Dharampura, Chandni Chowk",
@@ -1844,7 +1844,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹16,000",
               "location": "Gali Guliyan, Old Delhi",
-              "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -1854,7 +1854,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Mutton Burra & Shahi Rogan Josh",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bukhara, ITC Maurya",
@@ -1862,7 +1862,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Dal Bukhara (slow-cooked 18 hours) & Sikandari Raan",
               "priceRange": "₹₹₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Pandit Gaya Prasad Shiv Charan, Paranthe Wali Gali",
@@ -1870,7 +1870,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Kaju & Rabri Parantha with pumpkin sabzi",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -1923,7 +1923,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 7,
       "cultureCount": 8,
       "topAttraction": "Moti Daman Fort, Diu Fort & Nani Daman Lighthouse",
-      "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/en/a/ac/Emblem_of_Dadra_and_Nagar_Haveli_and_Daman_and_Diu.png",
       "description": "A tranquil coastal union territory steeped in 450 years of Portuguese maritime heritage, featuring stone seaside ramparts, canon-crested ramparts at Diu Fort, black-sand beaches, and tribal Warli craft traditions in Silvassa.",
       "historyOverview": "Administered by the Portuguese Estado da India from 1535 until liberation by the Indian Armed Forces during Operation Vijay in 1961. Merged into a unified Union Territory in 2020.",
       "dynasties": [
@@ -1982,9 +1982,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Vanganga Lake Garden Silvassa"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/DadraAndNagarHaveliAndDamanAndDiu2024OSM.png/1920px-DadraAndNagarHaveliAndDamanAndDiu2024OSM.png",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Dadra_and_Nagar_Haveli_Silvassa.jpg/1920px-Dadra_and_Nagar_Haveli_Silvassa.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/0/00/Diu%2CGujarat%2CIndia_%2826%29.jpg"
       ],
       "facts": [
           "Diu Fort was constructed in 1535 and defended in historic naval sieges against Ottoman and Gujarat fleets.",
@@ -2014,7 +2014,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹15,000",
               "location": "Vapi-Daman Main Road",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578774204375-826dc5d996ed?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Radhika Beach Resort, Diu",
@@ -2022,7 +2022,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹8,500",
               "location": "Nagoa Beach, Diu",
-              "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Pluz Resort, Silvassa",
@@ -2030,7 +2030,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹7,000",
               "location": "Khanvel Road, Silvassa",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2040,7 +2040,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Garlic Butter Lobster & Surmai Rava Fry",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "O Coqueiro, Diu",
@@ -2048,7 +2048,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Portuguese Grilled Fish & Caldo Verde",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Miramar Restaurant, Daman",
@@ -2056,7 +2056,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Crab Masala & Prawn Biryani",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -2100,7 +2100,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 15,
       "cultureCount": 18,
       "topAttraction": "Khajuraho Temples, Sanchi Stupa & Bhimbetka (3 UNESCO Sites)",
-      "heroImage": "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/India-5749_-_Visvanatha_Temple_-_Flickr_-_archer10_%28Dennis%29.jpg/1920px-India-5749_-_Visvanatha_Temple_-_Flickr_-_archer10_%28Dennis%29.jpg",
       "description": "The Heart of Incredible India, Madhya Pradesh is an epic treasure trove of 10,000-year-old Paleolithic cave art at Bhimbetka, Emperor Ashoka’s Buddhist Great Stupa at Sanchi, the erotically sculpted Chandela temples of Khajuraho, and dense tiger forests in Kanha and Bandhavgarh.",
       "historyOverview": "Ruled by the Mauryan Empire under Ashoka, the Gupta Golden Age, the Chandelas of Khajuraho, the Parmaras of Malwa under Raja Bhoj, the Bundela kings of Orchha, and Holkars of Indore.",
       "dynasties": [
@@ -2168,9 +2168,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Mandu Afghan ruined citadel"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden_-_Howrah_2011-01-08_9797.JPG/1920px-Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden_-_Howrah_2011-01-08_9797.JPG",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Betwa_in_Ashoknagar.JPG/1920px-Betwa_in_Ashoknagar.JPG",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bhopal_Junction_Railway_Station%2C_Bhopal.jpg/1920px-Bhopal_Junction_Railway_Station%2C_Bhopal.jpg"
       ],
       "facts": [
           "Madhya Pradesh is officially recognized as the \"Tiger State of India\", harboring over 785 wild Royal Bengal Tigers.",
@@ -2200,7 +2200,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Jayendraganj, Lashkar, Gwalior",
-              "image": "https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Lalit Temple View, Khajuraho",
@@ -2208,7 +2208,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Opposite Circuit House, Khajuraho",
-              "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Mahua Kothi, Bandhavgarh (Taj Safari)",
@@ -2216,7 +2216,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹48,000",
               "location": "Bandhavgarh National Park",
-              "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2226,7 +2226,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Bhutte ka Kees, Joshi Dahi Bada & Malpua",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Shaukat Mahal Restaurant, Bhopal",
@@ -2234,7 +2234,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Bhopali Gosht Korma & Biryani",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1497644083578-611b798c60f3?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Raja Cafe, Khajuraho",
@@ -2242,7 +2242,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Wood-fired Pizza & Dal Bafla",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -2295,7 +2295,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 15,
       "topAttraction": "Chitrakote Falls (Niagara of India) & Bastar Palace",
-      "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Bhoramdeo_Temple%2C_Kawardha.jpg/1920px-Bhoramdeo_Temple%2C_Kawardha.jpg",
       "description": "The ancient Dakshina Kosala, Chhattisgarh is a cradle of dense Sal forests, thunderous horseshoe waterfalls at Chitrakote, 4,000-year-old Bell Metal Dhokra lost-wax casting, and the world’s longest 75-day festival: Bastar Dussehra.",
       "historyOverview": "Maternal homeland of Lord Rama (Mata Kaushalya temple at Chandkhuri). Ruled by the Sarabhapuriya and Somavamshi dynasties of Sirpur, the Kalachuris of Ratanpur, and the royal Kakatiya kings of Bastar.",
       "dynasties": [
@@ -2358,9 +2358,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Chitradhara waterfalls"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/0010622_Ramgarh_hills_Puta_Sitabhenga_and_Jogimara_Caves_Chattisgarh_012.jpg/1920px-0010622_Ramgarh_hills_Puta_Sitabhenga_and_Jogimara_Caves_Chattisgarh_012.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/0012523_Siddheshwar_temple%2C_Palari%2C_Chhattisgarh_038.jpg/1920px-0012523_Siddheshwar_temple%2C_Palari%2C_Chhattisgarh_038.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/012_01_2022_Barsur_Mama_Banja_Temple_Chhattisgarh_033.jpg/1920px-012_01_2022_Barsur_Mama_Banja_Temple_Chhattisgarh_033.jpg"
       ],
       "facts": [
           "Chitrakote Falls on the Indravati River is the widest waterfall in India, spreading nearly 300 meters across during monsoons.",
@@ -2390,7 +2390,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹9,500",
               "location": "Near Kanger Valley, Jagdalpur",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Courtyard by Marriott, Raipur",
@@ -2398,7 +2398,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹8,500",
               "location": "NH-6, Labhandi, Raipur",
-              "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Dandami Luxury Cottages, Chitrakote",
@@ -2406,7 +2406,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹6,000",
               "location": "Chitrakote Falls Viewpoint",
-              "image": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2416,7 +2416,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Chila, Muthia, Fara & Dehrori",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Shamrock Greens Restaurant, Raipur",
@@ -2424,7 +2424,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Dal Tadka & Kebab Platter",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bastar Tribal Kitchen, Jagdalpur",
@@ -2432,7 +2432,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Aamat Bamboo Stew & Mahua Juice",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -2476,7 +2476,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 13,
       "cultureCount": 17,
       "topAttraction": "Mahabodhi Temple Bodh Gaya & Nalanda Mahavihara (2 UNESCO Sites)",
-      "heroImage": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/%22_Tomb_of_Sher_Shah_Suri_%22.jpg/1920px-%22_Tomb_of_Sher_Shah_Suri_%22.jpg",
       "description": "The ancient intellectual and spiritual fulcrum of Asia, Bihar is where Prince Siddhartha attained supreme enlightenment under the Bodhi Tree at Bodh Gaya, where Lord Mahavira was born, and where the world’s first residential international university flourished at Nalanda.",
       "historyOverview": "Center of India’s greatest classical empires: the Maurya Empire of Chandragupta and Ashoka the Great, and the Gupta Golden Age from imperial Pataliputra. Seat of master mathematicians Aryabhata and Chanakya.",
       "dynasties": [
@@ -2542,9 +2542,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Ghorakatora peaceful lotus lake Rajgir"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+          "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ara_Junction.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/9/95/Bapudham_Motihari_Station_Board.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Bengal_Tiger7.jpg/1920px-Bengal_Tiger7.jpg"
       ],
       "facts": [
           "Mahabodhi Temple marks the exact Vajrasana (Diamond Throne) where Gautama Buddha attained enlightenment in 528 BCE.",
@@ -2574,7 +2574,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Hariharpur, Bodh Gaya",
-              "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Hotel Maurya, Patna",
@@ -2582,7 +2582,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹9,500",
               "location": "Fraser Road, South Gandhi Maidan, Patna",
-              "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Indo Hokke Hotel, Rajgir",
@@ -2590,7 +2590,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹8,000",
               "location": "Near Aerial Ropeway, Rajgir",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2600,7 +2600,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Dal Khichdi, Tibetan Momos & Ginger Tea",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Old Champaran Meat House, Patna",
@@ -2608,7 +2608,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Clay Pot Mutton with Garlic Clove & Rice",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bawarchi Restaurant, Patna",
@@ -2616,7 +2616,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Litti Chokha & Sattu Cooler",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -2670,7 +2670,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 10,
       "cultureCount": 14,
       "topAttraction": "Baidyanath Jyotirlinga Dham (Deoghar) & Parasnath Jain Tirth",
-      "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Views_of_Shikharji_on_way_to_Anantnatha_Tonk_3.jpg/1920px-Views_of_Shikharji_on_way_to_Anantnatha_Tonk_3.jpg",
       "description": "The Land of Forests (Vananchal), Jharkhand is blessed with thunderous cascading waterfalls around Ranchi, the sacred 12 Jyotirlinga shrine at Baidyanath Dham, Shikharji at Parasnath (the holiest pilgrimage of Jainism), and indigenous Sohrai-Khovar mud art.",
       "historyOverview": "Homeland of Birsa Munda’s historic Ulgulan resistance against colonial oppression. Ancient trade and iron-smelting tribal culture of the Asurs, rule of the Nagvanshi kings of Chota Nagpur, and sacred Jain Tirthankara nirvanas at Shikharji.",
       "dynasties": [
@@ -2733,9 +2733,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Navratangarh fortified palace"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/17th_century_Jagannath_temple_Ranchi_Jharkhand_-_9.jpg/1920px-17th_century_Jagannath_temple_Ranchi_Jharkhand_-_9.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/A_Munda_tribesman_sitting_in_front_of_wall_decorated_with_Munda_style_Sohrai_Painting_at_Isko_Village%2C_Hazaribagh.jpg/1920px-A_Munda_tribesman_sitting_in_front_of_wall_decorated_with_Munda_style_Sohrai_Painting_at_Isko_Village%2C_Hazaribagh.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/b/b3/Baidyanathdham.jpg"
       ],
       "facts": [
           "Baidyanath Dham in Deoghar is one of the revered 51 Shakti Peethas and one of the 12 sacred Shiva Jyotirlingas in India.",
@@ -2765,7 +2765,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹11,000",
               "location": "Main Road, Kadru Diversion, Ranchi",
-              "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Sonnet, Jamshedpur",
@@ -2773,7 +2773,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹8,500",
               "location": "Bistupur, Jamshedpur",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Prabhat Vihar, Netarhat (Jharkhand Tourism)",
@@ -2781,7 +2781,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.5,
               "pricePerNight": "₹3,500",
               "location": "Sunset Point, Netarhat",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2791,7 +2791,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Dhuska with Chana Sabzi & Thali",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Yellow Sapphire, Ranchi",
@@ -2799,7 +2799,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Rugra Curry & Biryani",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Baidyanath Sweets, Deoghar",
@@ -2807,7 +2807,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Hot Khoya Peda & Kheer Kadam",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -2850,7 +2850,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 15,
       "cultureCount": 18,
       "topAttraction": "Konark Sun Temple (UNESCO) & Jagannath Temple Puri",
-      "heroImage": "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Brahmeswar_Temple%2C_Bhubaneswar.JPG/1920px-Brahmeswar_Temple%2C_Bhubaneswar.JPG",
       "description": "The Soul of Incredible India (Kalinga), Odisha is the sacred land of Lord Jagannath’s world-famous Ratha Yatra, the astronomical marvel of the Sun Temple at Konark designed as a celestial stone chariot, Chilika Lake’s Irrawaddy dolphins, and Odissi classical dance.",
       "historyOverview": "Ancient maritime empire of Kalinga whose naval merchants (Sadhabas) traded with Bali, Java, and Sumatra. Historic Kalinga War of 261 BCE transformed Emperor Ashoka from a ruthless conqueror into an apostle of Buddhist non-violence.",
       "dynasties": [
@@ -2915,9 +2915,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Dhauli Peace Pagoda"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Abhinaya.jpg/1920px-Abhinaya.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Barabati_Stadium_IPL_Match_Pune_Warriors_India_vs._Deccan_Chargers.jpg/1920px-Barabati_Stadium_IPL_Match_Pune_Warriors_India_vs._Deccan_Chargers.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Biju_Patnaik_International_Airport.jpg/1920px-Biju_Patnaik_International_Airport.jpg"
       ],
       "facts": [
           "Konark Sun Temple has 24 intricately carved stone wheels that function as precise sundials, calculating time accurately to the exact minute.",
@@ -2947,7 +2947,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹18,000",
               "location": "Chakratirtha Road, Puri Beach",
-              "image": "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1587985064135-0366536eab42?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Welcomhotel by ITC, Bhubaneswar",
@@ -2955,7 +2955,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Dumduma, Bhubaneswar",
-              "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Lotus Eco Resort, Konark",
@@ -2963,7 +2963,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹8,500",
               "location": "Ramchandi Beach, Konark",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -2973,7 +2973,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Pakhala Bhata Thali, Dalma & Crab Curry",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Raghu Dahi Bara Aloodum, Cuttack",
@@ -2981,7 +2981,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Dahi Bara soaked in spiced buttermilk with spicy aloodum",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Pahala Sweet Corner, Highway NH16",
@@ -2989,7 +2989,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Fresh Baked Chhena Poda & Pahala Rasagola",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3042,7 +3042,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 17,
       "cultureCount": 20,
       "topAttraction": "Sundarbans Mangrove Tiger Reserve & Darjeeling Himalayan Railway (UNESCO)",
-      "heroImage": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Howrah_bridge_betwixt_Lights.jpg/1920px-Howrah_bridge_betwixt_Lights.jpg",
       "description": "The cultural and intellectual heart of Renaissance India, West Bengal spans from the snow-capped Himalayan peaks of Kanchenjunga in Darjeeling to the tidal mangrove labyrinth of the Royal Bengal Tiger in the Sundarbans, and the grandeur of Kolkata’s Durga Puja (UNESCO Intangible Cultural Heritage).",
       "historyOverview": "Seat of the ancient Gauda and Pala Empires, the Bengal Renaissance spearheaded by Rabindranath Tagore, Swami Vivekananda, and Netaji Subhash Chandra Bose. Capital of British India until 1911.",
       "dynasties": [
@@ -3108,9 +3108,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Hazarduari Palace Murshidabad"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/%27Panchchura%27_temple%2C_Bishnupur.jpg/1920px-%27Panchchura%27_temple%2C_Bishnupur.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/7/7c/394_baul-singers-sml.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Alumni_Association_Building_and_Triguna_Sen_Auditorium_-_Jadavpur_University_-_Kolkata_2015-01-08_2376.JPG/1920px-Alumni_Association_Building_and_Triguna_Sen_Auditorium_-_Jadavpur_University_-_Kolkata_2015-01-08_2376.JPG"
       ],
       "facts": [
           "Durga Puja of Kolkata is inscribed on the UNESCO Representative List of Intangible Cultural Heritage of Humanity.",
@@ -3140,7 +3140,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹24,000",
               "location": "15 Jawaharlal Nehru Road, Esplanade",
-              "image": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Glenburn Tea Estate, Darjeeling",
@@ -3148,7 +3148,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹38,000",
               "location": "Glenburn Tea Estate, Darjeeling",
-              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Windamere Hotel, Darjeeling",
@@ -3156,7 +3156,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Observatory Hill, Darjeeling",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -3166,7 +3166,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Shorshe Ilish, Kosha Mangsho & Mishti Doi",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Peter Cat, Park Street",
@@ -3174,7 +3174,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Chelo Kebab Platter & Sizzlers",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Keventer’s, Darjeeling",
@@ -3182,7 +3182,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "English Breakfast & Darjeeling First Flush Tea",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3235,7 +3235,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 14,
       "topAttraction": "Khangchendzonga National Park (UNESCO Mixed Heritage) & Rumtek Monastery",
-      "heroImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Gurudongmar_Lake_Sikkim%2C_India_%28edit%29.jpg/1920px-Gurudongmar_Lake_Sikkim%2C_India_%28edit%29.jpg",
       "description": "India’s mystical Himalayan crown and the world’s first 100% organic state, Sikkim is sheltered under Mount Kanchenjunga (the world’s third-highest peak), famous for ancient cliffside Buddhist monasteries, crystal high-altitude lakes at Gurudongmar, and rhododendron sanctuaries.",
       "historyOverview": "Sacred hidden valley (Beyul) blessed by Guru Padmasambhava in the 8th century. Governed by the Buddhist Chogyal monarchs of the Namgyal dynasty from 1642 until peacefully integrating into the Republic of India as its 22nd state in 1975.",
       "dynasties": [
@@ -3296,9 +3296,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Tashiding holy hilltop monastery"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Buddha_statue_at_Buddha_Park_of_Ravangla%2C_Sikkim%2C_India_%281%29.jpg/1920px-Buddha_statue_at_Buddha_Park_of_Ravangla%2C_Sikkim%2C_India_%281%29.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Chardham_at_Namchi.jpg/1920px-Chardham_at_Namchi.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Cherry_Resort_inside_Temi_Tea_Garden%2C_Namchi%2C_Sikkim.jpg/1920px-Cherry_Resort_inside_Temi_Tea_Garden%2C_Namchi%2C_Sikkim.jpg"
       ],
       "facts": [
           "Khangchendzonga National Park is India’s first and only UNESCO World Heritage \"Mixed\" site, honoring both biodiversity and sacred spiritual culture.",
@@ -3328,7 +3328,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Ranipool, Gangtok",
-              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Elgin Nor-Khill, Gangtok",
@@ -3336,7 +3336,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹15,000",
               "location": "Paljor Stadium Road, Gangtok",
-              "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Yarlam Resort, Lachung",
@@ -3344,7 +3344,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹12,000",
               "location": "Lachung Valley, North Sikkim",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -3354,7 +3354,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Steamed Tingmo, Beef/Veg Momos & Thukpa",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Nimtho, MG Marg",
@@ -3362,7 +3362,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Gundruk Soup, Sel Roti & Kodo Millet Pancakes",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Baker’s Cafe, Gangtok",
@@ -3370,7 +3370,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Warm Cinnamon Rolls & Darjeeling Tea",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3423,7 +3423,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 13,
       "cultureCount": 16,
       "topAttraction": "Kaziranga National Park (UNESCO) & Kamakhya Shakti Temple",
-      "heroImage": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Assam.jpg",
       "description": "The Gateway to the Northeast, Assam is blessed by the mighty Brahmaputra River, rolling manicured emerald tea gardens producing world-class CTC and orthodox tea, the majestic Great Indian One-horned Rhinoceros in Kaziranga, and golden Muga silk.",
       "historyOverview": "Ruled for 600 unbroken years by the valorous Ahom Dynasty (1228–1826) who defeated the Mughal Empire in 17 battles, notably under General Lachit Borphukan at Saraighat in 1671. Ancient Kamarupa kingdom mentioned in the Mahabharata.",
       "dynasties": [
@@ -3486,9 +3486,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Sivasagar Rang Ghar amphitheater"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Assam_Cotton_College.jpg/1920px-Assam_Cotton_College.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Assam_Knahor_Knahi.jpg/1920px-Assam_Knahor_Knahi.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/67/Assam_Valley.JPG"
       ],
       "facts": [
           "Kaziranga National Park holds two-thirds of the world’s entire population of the Great Indian One-horned Rhinoceros.",
@@ -3518,7 +3518,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹28,000",
               "location": "Near Kohora Range, Kaziranga",
-              "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Vivanta Guwahati",
@@ -3526,7 +3526,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Khanapara, GS Road, Guwahati",
-              "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578774204375-826dc5d996ed?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Iora The Retreat, Kaziranga",
@@ -3534,7 +3534,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹9,500",
               "location": "Bokakhat, Kaziranga",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -3544,7 +3544,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Masor Tenga, Khar, Duck Roast & Payas",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Maihang, Guwahati",
@@ -3552,7 +3552,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Pork with Bamboo Shoot & Joha Rice",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Khorikaa Restaurant, GS Road",
@@ -3560,7 +3560,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Smoked Fish Khorikaa & Duck Curry",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3614,7 +3614,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 14,
       "cultureCount": 16,
       "topAttraction": "Tawang Monastery & Ziro Valley Cultural Landscape",
-      "heroImage": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/TawangMonastery-ArunachalPradesh-1.jpg/1920px-TawangMonastery-ArunachalPradesh-1.jpg",
       "description": "The Land of the Dawn-Lit Mountains, Arunachal Pradesh is the first place in India to welcome the sunrise, featuring the massive 400-year-old cliffside Tawang Monastery (second largest in the world), sacred high-altitude Sela Pass lakes, and the pine-scented UNESCO candidate landscape of Ziro Valley.",
       "historyOverview": "Mentioned in ancient Kalika Purana as the Prabhu Mountains where sage Parashurama washed away sins at Parshuram Kund. Ruled by indigenous Monpa, Apatani, Adi, and Nyishi village council democracies (Keba), with Tawang Monastery founded by Merak Lama Lodre Gyatso in 1681.",
       "dynasties": [
@@ -3676,9 +3676,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Namdapha rainforest tiger reserve"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/13%2C700_feet_Sela_Lake%2Cin_west_Kameng%2C_Arunachal_Pradesh.jpg/1920px-13%2C700_feet_Sela_Lake%2Cin_west_Kameng%2C_Arunachal_Pradesh.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/A_wintry_morning_in_Vijaynagar.jpg/1920px-A_wintry_morning_in_Vijaynagar.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/b/b6/BuddhaTwang.jpg"
       ],
       "facts": [
           "Tawang Monastery, situated at 10,000 feet, is the largest Buddhist monastery in India and the second largest in the world after the Potala Palace in Lhasa.",
@@ -3708,7 +3708,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹8,500",
               "location": "Near Tawang Monastery",
-              "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Dirang Boutique Cottages",
@@ -3716,7 +3716,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹7,500",
               "location": "Dirang Valley",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Ziro Valley Eco Resort",
@@ -3724,7 +3724,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹6,000",
               "location": "Hapoli, Ziro",
-              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -3734,7 +3734,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Thukpa, Chura Sabzi & Steamed Tingmo",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Woodland Restaurant, Bomdila",
@@ -3742,7 +3742,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Fried Momos, Egg Thukpa & Ginger Honey Tea",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Apatani Kitchen, Ziro",
@@ -3750,7 +3750,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Pike Pila, Bamboo Steamed Rice & Smoked Pork",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3794,7 +3794,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 16,
       "cultureCount": 18,
       "topAttraction": "Hornbill Festival (Kisama Heritage Village) & Dzukou Valley",
-      "heroImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Kapamodzu.jpg/1920px-Kapamodzu.jpg",
       "description": "The Land of Festivals, Nagaland is a magnificent realm of mist-blanketed emerald mountains, 16 distinct warrior tribes with elaborate woven shawls and feather headgear, the world-renowned Hornbill Festival held at Kisama, and the pristine rolling bamboo hills of Dzukou Valley.",
       "historyOverview": "Home to indigenous warrior clans with democratic village councils (Morung education systems). Famed for the historic Battle of Kohima in 1944, often called \"Stalingrad of the East\", where the Allied forces halted the Japanese advance into India during World War II.",
       "dynasties": [
@@ -3853,9 +3853,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Mopungchuket historic village"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Alnus_Olsza_2020-07-31_01.jpg/1920px-Alnus_Olsza_2020-07-31_01.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Ao_Naga_lady_in_her_traditional_attire.jpg/1920px-Ao_Naga_lady_in_her_traditional_attire.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Asian_Highway_1_passing_through_Viswema.jpg/1920px-Asian_Highway_1_passing_through_Viswema.jpg"
       ],
       "facts": [
           "The Hornbill Festival, held every December 1–10 at Kisama Heritage Village, brings together all 16 Naga tribes to showcase their music, traditional attire, and war dances.",
@@ -3885,7 +3885,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹8,500",
               "location": "NH-61, Kohima",
-              "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Niathu Resort, Chumukedima (Dimapur)",
@@ -3893,7 +3893,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Chathe River, Dimapur",
-              "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Dovecote Eco Homestay, Khonoma",
@@ -3901,7 +3901,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹4,500",
               "location": "Khonoma Green Village",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -3911,7 +3911,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Smoked Pork with Axone & Steamed Greens",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Orami Restaurant, Kohima",
@@ -3919,7 +3919,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Boiled Chicken with Naga Ginger & Rice",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "D Café, Kohima",
@@ -3927,7 +3927,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Artisan Pour-Over Naga Coffee & Carrot Cake",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -3970,7 +3970,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 12,
       "cultureCount": 16,
       "topAttraction": "Loktak Lake (Keibul Lamjao Floating National Park) & Kangla Fort",
-      "heroImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/commons/c/c1/%22PENA%22_a_musical_instrument.jpg",
       "description": "The Jewel of India, Manipur is surrounded by nine mountain ranges with emerald valleys, famous for Loktak Lake’s unique circular floating islands (Phumdis), the world’s only floating national park sheltering the endangered Sangai dancing deer, the classical Manipuri Raas Leela dance, and the Ima Keithel—the world’s largest all-women market.",
       "historyOverview": "Ancient Meitei kingdom governed from the historic royal citadel of Kangla Fort for over 2,000 years. Birthplace of modern polo (Sagol Kangjei), played on indigenous ponies since the 14th century.",
       "dynasties": [
@@ -4028,9 +4028,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Shirui Kashong peak"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/1_Loktak_Lake.jpg/1920px-1_Loktak_Lake.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/A_Manipuri_Dancer_in_traditional_Krishna_attire.jpg/1920px-A_Manipuri_Dancer_in_traditional_Krishna_attire.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Cervus_eldii4.jpg/1920px-Cervus_eldii4.jpg"
       ],
       "facts": [
           "Loktak Lake is the largest freshwater lake in Northeast India, featuring circular floating vegetation islands called \"Phumdis\".",
@@ -4060,7 +4060,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹9,500",
               "location": "Chingmeirong, Imphal",
-              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sendra Park & Resort, Loktak",
@@ -4068,7 +4068,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹7,500",
               "location": "Sendra Island, Loktak Lake",
-              "image": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Hotel Imphal by Classic",
@@ -4076,7 +4076,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹6,000",
               "location": "North AOC, Imphal",
-              "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4086,7 +4086,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Eromba, Singju, Kangshoi & Chak-Hao Kheer",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sannga Kitchen, Loktak Lake",
@@ -4094,7 +4094,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Steamed Loktak Fish in Banana Leaf",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Zaika Restaurant, Imphal",
@@ -4102,7 +4102,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Chilly Pork & Fried Rice",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1497644083578-611b798c60f3?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -4143,7 +4143,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 9,
       "cultureCount": 13,
       "topAttraction": "Reiek Tlang Heritage Peak & Vantawng Waterfalls",
-      "heroImage": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/ATC%2C_Mizoram.jpg/1920px-ATC%2C_Mizoram.jpg",
       "description": "The Land of the Highlanders (Mizoram) is perched upon dramatic emerald ridge hills with 21 mountain ranges, celebrated for the acrobatic Cheraw (Bamboo) dance, tranquil hilltop church hymns, and Vantawng Falls dropping 750 feet through dense virgin bamboo canopies.",
       "historyOverview": "Populated by Mizo clans who established harmonious village systems guided by the chivalric code of Tlawmngaihna (selfless service to community). Merged into independent India and celebrated as one of the most peaceful states in the country.",
       "dynasties": [
@@ -4202,9 +4202,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Falkawn heritage village"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Banner_of_Mizoram.png/1920px-Banner_of_Mizoram.png",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Burmese_Barred-backed_Pheasant_by_George_Edward_Lodge.png/1920px-Burmese_Barred-backed_Pheasant_by_George_Edward_Lodge.png",
+          "https://upload.wikimedia.org/wikipedia/commons/0/0b/First_Shell_Fired_At_Howsatta%27s_Village_-_ILN_1889.jpg"
       ],
       "facts": [
           "Cheraw is one of the oldest dances in Mizoram; four dancers step in and out of rhythmic clapping bamboo staves without missing a beat.",
@@ -4234,7 +4234,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹7,500",
               "location": "MacDonald Hill, Zarkawt, Aizawl",
-              "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Reiek Tourist Resort (Mizoram Tourism)",
@@ -4242,7 +4242,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹3,500",
               "location": "Reiek Peak Foot, Reiek",
-              "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Hmuifang Tourist Resort",
@@ -4250,7 +4250,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹3,800",
               "location": "Hmuifang Ridge",
-              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4260,7 +4260,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Smoked Pork with Bai & Mizo Fried Rice",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Red Pepper Restaurant, Chanmari",
@@ -4268,7 +4268,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Vawksa Rep (Smoked Pork) & Spicy Bamboo Shoot",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Mizoram Handloom Cafe, Aizawl",
@@ -4276,7 +4276,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Fresh Local Pour-Over Coffee & Banana Bread",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -4318,7 +4318,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 14,
       "topAttraction": "Ujjayanta Palace & Unakoti Rock-Cut Relief Carvings",
-      "heroImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ujjayanta_palace_Tripura_State_Museum_Agartala_India.jpg/1920px-Ujjayanta_palace_Tripura_State_Museum_Agartala_India.jpg",
       "description": "A regal realm of gilded royal palaces and mystical stone carvings, Tripura is home to the pristine neoclassical Ujjayanta Palace, the water fortress of Neermahal floating in Rudrasagar Lake, and the colossal 8th-century bas-relief rock carvings of Lord Shiva at Unakoti.",
       "historyOverview": "Ruled for over 2,000 unbroken years by the Manikya Dynasty, documented in the royal court chronicle Rajmala. Celebrated for patronizing Nobel laureate Rabindranath Tagore, who wrote multiple literary masterpieces during his stays at royal Tripura estates.",
       "dynasties": [
@@ -4377,9 +4377,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Chabimura rock carvings on Gomati river"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Durga_Puja_DS.jpg/1920px-Durga_Puja_DS.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/0/0c/Maharani_kanchan_prabhadevi.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mbb_airport.jpg/1920px-Mbb_airport.jpg"
       ],
       "facts": [
           "Unakoti features colossal stone relief carvings of Shiva and Ganesha carved into a lush mountain face, believed according to folklore to number one less than a crore (99,99,999).",
@@ -4409,7 +4409,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹10,500",
               "location": "Near VIP Road, Agartala",
-              "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sagar Mahal Tourist Lodge, Neermahal",
@@ -4417,7 +4417,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹3,500",
               "location": "Rudrasagar Lake, Melaghar",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Ginger Hotel, Agartala",
@@ -4425,7 +4425,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.5,
               "pricePerNight": "₹4,500",
               "location": "Khejur Bagan, Agartala",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4435,7 +4435,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Mui Borok, Ilish Paturi & Butter Naan",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Abhash Restaurant, Agartala",
@@ -4443,7 +4443,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Fish Kalia & Mutton Kosha",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bawarchi, VIP Road",
@@ -4451,7 +4451,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Biryani & Tandoori Platter",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -4493,7 +4493,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 12,
       "cultureCount": 16,
       "topAttraction": "Double Decker Living Root Bridges (Cherrapunji) & Dawki Umngot River",
-      "heroImage": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Dawki_River%2C_Meghalaya%2C_India.jpg/1920px-Dawki_River%2C_Meghalaya%2C_India.jpg",
       "description": "The Abode of the Clouds, Meghalaya is a geological wonderland of thunderous waterfalls plummeting off green plateaus at Nohkalikai, bio-engineered multi-generational Double Decker Living Root Bridges in Cherrapunji, crystal-clear emerald waters of the Umngot River in Dawki, and matrilineal Khasi traditions.",
       "historyOverview": "Homeland of the Khasi, Garo, and Jaintia tribes, governed by an ancient matrilineal societal system where lineage and property pass from mother to youngest daughter (Khadduh). Freedom struggle led by legendary warrior U Tirot Sing against British forces in 1829.",
       "dynasties": [
@@ -4552,9 +4552,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Laitlum Grand Canyon gorges"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Aerial_view_of_Shillong_Meghalaya_India.jpg/1920px-Aerial_view_of_Shillong_Meghalaya_India.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Agriculture_in_Kukon_Meghalaya_India.jpg/1920px-Agriculture_in_Kukon_Meghalaya_India.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Banner_of_Meghalaya.png/1920px-Banner_of_Meghalaya.png"
       ],
       "facts": [
           "The Living Root Bridges of Meghalaya are recognized by UNESCO on the tentative World Heritage list as marvels of living bio-engineering grown by the indigenous Khasi tribe across 15-30 years using rubber fig tree roots.",
@@ -4584,7 +4584,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹26,000",
               "location": "Umiam Lake, Ri Bhoi District",
-              "image": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Polo Orchid Resort, Cherrapunji",
@@ -4592,7 +4592,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹16,000",
               "location": "Mawsmai, Sohra",
-              "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Heritage Club - Tripura Castle, Shillong",
@@ -4600,7 +4600,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹12,000",
               "location": "Cleve Colony, Shillong",
-              "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4610,7 +4610,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Jadoh, Dohkhlieh & Tungrymbai",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Wok, Laitumkhrah",
@@ -4618,7 +4618,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Steamed Pork Momos & Crispy Chilli Chicken",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Dylan’s Cafe, Risa Colony",
@@ -4626,7 +4626,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Hot Chocolate, Pancakes & Roast Sandwiches",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -4679,7 +4679,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 14,
       "cultureCount": 17,
       "topAttraction": "Churches and Convents of Goa (UNESCO) & Dudhsagar Waterfalls",
-      "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Chamu%C3%A7as.jpg",
       "description": "The Pearl of the Orient, Goa is an idyllic coastal haven where Portuguese Baroque architecture meets Konkan palm fringes, famous for the Basilica of Bom Jesus sheltering the relics of St. Francis Xavier, the four-tiered milky torrents of Dudhsagar Falls, colorful Fontainhas Latin quarters, and spiced seafood vindaloo.",
       "historyOverview": "Flourished under the Kadamba Dynasty with temple hubs at Chandor, ruled by the Bahmani and Bijapur Sultanates, before Alfonso de Albuquerque established Portuguese Goa in 1510. Remained the capital of the Portuguese Empire in the East for 451 years until liberated in 1961.",
       "dynasties": [
@@ -4742,9 +4742,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Cabo de Rama sea fort"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Closeup_shot_of_Immaculate_Conception_Church%2C_Panaji.jpg/1920px-Closeup_shot_of_Immaculate_Conception_Church%2C_Panaji.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Donna_Paula%2C_Goa.jpg/1920px-Donna_Paula%2C_Goa.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Doodhsagar_Waterfalls.jpg/1280px-Doodhsagar_Waterfalls.jpg"
       ],
       "facts": [
           "The Churches and Convents of Goa are a UNESCO World Heritage Site; the Se Cathedral houses the Golden Bell, one of the largest and most resonant church bells in the world.",
@@ -4774,7 +4774,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹28,000",
               "location": "Sinquerim Beach, Candolim",
-              "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Heritage Village Resort & Spa, Arossim",
@@ -4782,7 +4782,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Arossim Beach, South Goa",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1587985064135-0366536eab42?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Panjim Inn, Fontainhas",
@@ -4790,7 +4790,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹7,500",
               "location": "Fontainhas, Panaji",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4800,7 +4800,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Kingfish Rava Fry, Crab Xacuti & Bebinca",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Viva Panjim, Fontainhas",
@@ -4808,7 +4808,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Pork Vindaloo, Prawn Curry Rice & Feni Cocktail",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sand Patches Beach Shack, Palolem",
@@ -4816,7 +4816,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Tandoori Red Snapper & Garlic Butter Calamari",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -4868,7 +4868,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 14,
       "cultureCount": 16,
       "topAttraction": "Charminar, Golconda Fort & Ramappa Temple (UNESCO)",
-      "heroImage": "https://images.unsplash.com/photo-1609137144820-745a33c0800b?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Kakatiyas_well_at_warangal.jpg",
       "description": "The Royal Deccan Heartland, Telangana is celebrated for the 400-year-old architectural grandeur of Hyderabad’s Charminar, the diamond-trading acoustic wonder of Golconda Fort, the UNESCO-inscribed floating-brick marvel of Kakatiya Ramappa Temple, and world-renowned Hyderabadi Dum Biryani.",
       "historyOverview": "Seat of the powerful Kakatiya Dynasty of Warangal who built great irrigation tanks and temples. Succeeded by the Qutb Shahi Sultanate of Golconda and the fabulous wealth of the Asaf Jahi Nizams of Hyderabad, once the richest men on Earth.",
       "dynasties": [
@@ -4932,9 +4932,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Bhuvanagiri monolithic rock fort"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1609137144820-745a33c0800b?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/7th_century_Vishwa_Brahma_Temples%2C_Alampur%2C_Telangana_India_-_3.jpg/1920px-7th_century_Vishwa_Brahma_Temples%2C_Alampur%2C_Telangana_India_-_3.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Coal_Handling_Ropeway_near_Pamulapalli.jpg/1920px-Coal_Handling_Ropeway_near_Pamulapalli.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Falaknuma_Palace_01.jpg/1920px-Falaknuma_Palace_01.jpg"
       ],
       "facts": [
           "Ramappa Temple in Mulugu district is a UNESCO World Heritage Site constructed using lightweight porous bricks that miraculously float on water.",
@@ -4964,7 +4964,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹48,000",
               "location": "Engine Bowli, Falaknuma, Hyderabad",
-              "image": "https://images.unsplash.com/photo-1609137144820-745a33c0800b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "ITC Kohenur, Hyderabad",
@@ -4972,7 +4972,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Hitec City, Madhapur",
-              "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Taj Krishna, Banjara Hills",
@@ -4980,7 +4980,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Road No. 1, Banjara Hills",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -4990,7 +4990,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Mutton Dum Biryani & Mirchi Ka Salan",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1609137144820-745a33c0800b?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Bawarchi, RTC X Roads",
@@ -4998,7 +4998,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Special Chicken Biryani & Boti Kebab",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Nimrah Cafe & Bakery, Charminar",
@@ -5006,7 +5006,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Special Irani Chai & Khari Biscuit",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1588096344356-9b626e255018?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -5058,7 +5058,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 14,
       "cultureCount": 17,
       "topAttraction": "Tirumala Venkateswara Temple & Lepakshi Veerabhadra Temple",
-      "heroImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tirumala_090615.jpg/1920px-Tirumala_090615.jpg",
       "description": "The Sunrise State of India, Andhra Pradesh possesses India’s second longest coastline (974 km), the world’s most visited pilgrimage shrine at Tirupati Balaji atop the sacred Seven Hills, the monolithic Nandi and hanging pillar marvel of 16th-century Lepakshi, Kuchipudi classical dance, and spicy coastal Andhra gastronomy.",
       "historyOverview": "Birthplace of the Satavahana Empire, the Buddhist councils of Nagarjunakonda and Amaravati stupas, the Eastern Chalukyas, and the golden Vijayanagara Empire whose Emperor Sri Krishnadevaraya patronized literature and arts.",
       "dynasties": [
@@ -5122,9 +5122,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Borra million-year-old limestone caves"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/A_View_of_Srisailam_Reservoir_from_the_backside.jpg/1920px-A_View_of_Srisailam_Reservoir_from_the_backside.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/2/21/Araku_valley_view.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/BanyanTreeinBelum.jpg/1920px-BanyanTreeinBelum.jpg"
       ],
       "facts": [
           "Tirumala Venkateswara Temple is the most visited religious shrine on Earth, welcoming up to 100,000 pilgrims daily and preparing the GI-tagged Tirupati Laddu.",
@@ -5154,7 +5154,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Beach Road, Vizag",
-              "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Marasa Sarovar Premiere, Tirupati",
@@ -5162,7 +5162,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹9,500",
               "location": "Upadhyayanagar, Karakambadi Road, Tirupati",
-              "image": "https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Haritha Resort, Gandikota (APTDC)",
@@ -5170,7 +5170,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.5,
               "pricePerNight": "₹3,500",
               "location": "Gandikota Fort Foot, Jammalamadugu",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1578774204375-826dc5d996ed?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -5180,7 +5180,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Gongura Rice, Pulusu & Pootharekulu",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Minerva Grand, Tirupati",
@@ -5188,7 +5188,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Ghee Podi Dosa & Filter Coffee",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sea Inn (Raju Gari Dhaba), Vizag",
@@ -5196,7 +5196,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Royyala Vepudu (Prawn fry) & Crab Curry",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -5249,7 +5249,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 14,
       "topAttraction": "French Quarter (White Town), Sri Aurobindo Ashram & Auroville Matrimandir",
-      "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Pondicherry-Rock_beach_aerial_view.jpg/1920px-Pondicherry-Rock_beach_aerial_view.jpg",
       "description": "The French Riviera of the East, Puducherry is a poetic seaside union territory where sun-drenched mustard-yellow colonial villas, bougainvillea-draped archways, French street names (Rues), and chic artisan bakeries harmoniously blend with ancient Tamil heritage and the universal spiritual city of Auroville.",
       "historyOverview": "Ancient Roman trade port of Poduke (Arikamedu). Purchased by François Martin in 1674, serving as the headquarters of the French East India Company (Compagnie des Indes) until the treaty of transfer to the Indian Union in 1954.",
       "dynasties": [
@@ -5310,9 +5310,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Serenity Beach surfing breaks"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/A_camel_on_the_beach_in_Puducherry%2C_Tamil_Nadu%2C_India.jpg/1920px-A_camel_on_the_beach_in_Puducherry%2C_Tamil_Nadu%2C_India.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/7/7c/Banner_of_Puducherry.png",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Image_pondicherry.jpg/1920px-Image_pondicherry.jpg"
       ],
       "facts": [
           "Auroville, the City of Dawn, was founded in 1968 by Mirra Alfassa (The Mother) as a universal township where men and women of all countries live in peace and progressive harmony.",
@@ -5342,7 +5342,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Bussy Street, White Town",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "La Villa, White Town",
@@ -5350,7 +5350,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹18,000",
               "location": "Rue Surcouf, White Town",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "The Promenade, Pondicherry",
@@ -5358,7 +5358,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹11,000",
               "location": "Goubert Avenue, Promenade Beach",
-              "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -5368,7 +5368,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Creole Prawn Curry, Duck Confit & Crème Brûlée",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Baker Street, Bussy Street",
@@ -5376,7 +5376,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Almond Croissant, Quiche Lorraine & Eclairs",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Coromandel Cafe, Romain Rolland Street",
@@ -5384,7 +5384,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Wood-fired Sourdough Pizzas, Gnocchi & Cocktails",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -5426,7 +5426,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 8,
       "cultureCount": 11,
       "topAttraction": "Bangaram Atoll Coral Reefs & Agatti Island Turquoise Lagoons",
-      "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://upload.wikimedia.org/wikipedia/commons/7/72/A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg",
       "description": "India’s coral jewel in the Arabian Sea, Lakshadweep (One Hundred Thousand Islands) is an archipelago of 36 pristine coral atolls with shallow crystal-turquoise lagoons, vibrant coral gardens sheltering sea turtles and manta rays, swaying coconut groves, and traditional boat-building craftsmanship.",
       "historyOverview": "Settled by seafaring Arab merchants and migrants from the Malabar coast in the 7th century. Governed by the Arakkal Kingdom of Cannanore (the only Muslim royal house of Kerala) until taken over by the British and integrated as a Union Territory in 1956.",
       "dynasties": [
@@ -5485,9 +5485,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Pitti Bird Sanctuary oceanic islet"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=1200&q=80"
+          "https://upload.wikimedia.org/wikipedia/en/6/61/Lakshadweep_Banner.png",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Anemone_fish_Lakshadweep.jpg/1920px-Anemone_fish_Lakshadweep.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/BSNL_Office_at_Kalpeni_Island_IMG_20190930_114924.jpg/1920px-BSNL_Office_at_Kalpeni_Island_IMG_20190930_114924.jpg"
       ],
       "facts": [
           "Lakshadweep is India’s only coral atoll territory, composed entirely of biogenic calcium carbonate formations built over millennia by living coral polyps.",
@@ -5517,7 +5517,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "pricePerNight": "₹22,000",
               "location": "Bangaram Atoll",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Agatti Island Beach Resort",
@@ -5525,7 +5525,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹14,000",
               "location": "Agatti Beach, Agatti",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Kadmat Island Beach Resort",
@@ -5533,7 +5533,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "pricePerNight": "₹11,000",
               "location": "Kadmat Lagoon",
-              "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -5543,7 +5543,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Grilled Skipjack Tuna, Coconut Rayereha & Rice",
               "priceRange": "₹₹₹",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Agatti Coral Cafe",
@@ -5551,7 +5551,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.6,
               "mustTry": "Mus Kavaab & Fresh Coconut Water",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Kavaratti Harbor Restaurant",
@@ -5559,7 +5559,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.5,
               "mustTry": "Fish Fry Thali & Appam",
               "priceRange": "₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [
@@ -5604,7 +5604,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "festivalsCount": 11,
       "cultureCount": 14,
       "topAttraction": "Cellular Jail (National Memorial) & Radhanagar Beach (Havelock)",
-      "heroImage": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=1600&q=80",
+      "heroImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Coral_Reef_at_the_Andaman_Islands.jpg/1920px-The_Coral_Reef_at_the_Andaman_Islands.jpg",
       "description": "An emerald archipelago of 572 tropical islands bridging the Bay of Bengal and Andaman Sea, renowned for the poignant freedom struggle pilgrimage at the historic Cellular Jail (Kala Pani), the world-acclaimed turquoise powder sands of Radhanagar Beach on Havelock Island (Swaraj Dweep), vibrant coral wall scuba diving, and pristine rainforest canopies.",
       "historyOverview": "Inhabited for 60,000 years by indigenous Negrito and Mongoloid tribes (Great Andamanese, Onge, Jarawa, Sentinelese, Shompen). Naval base for the Chola Empire in the 11th century. Site of the British penal settlement where thousands of Indian freedom fighters endured harsh solitary confinement at Cellular Jail. Netaji Subhash Chandra Bose hoisted the first Indian flag here on December 30, 1943.",
       "dynasties": [
@@ -5665,9 +5665,9 @@ export const STATES_DATA: Record<string, StateData> = {
           "Mount Harriet (Mount Manipur) National Park"
       ],
       "gallery": [
-          "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          "https://upload.wikimedia.org/wikipedia/commons/8/80/Andaman.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Andaman_Law_College.jpg/1920px-Andaman_Law_College.jpg",
+          "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Andeman_padauk_05.jpg/1920px-Andeman_padauk_05.jpg"
       ],
       "facts": [
           "Cellular Jail (Kala Pani) was engineered with individual solitary confinement cells so that no prisoner could ever see or speak to another, holding legendary heroes like Veer Savarkar.",
@@ -5697,7 +5697,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 5,
               "pricePerNight": "₹45,000",
               "location": "Radhanagar Beach No. 7, Havelock",
-              "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Symphony Palms Beach Resort, Havelock",
@@ -5705,7 +5705,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "pricePerNight": "₹14,000",
               "location": "Govind Nagar Beach No. 5",
-              "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Sinclairs Bayview, Port Blair",
@@ -5713,7 +5713,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "pricePerNight": "₹9,500",
               "location": "Corbyn’s Cove Road, Port Blair",
-              "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "restaurants": [
@@ -5723,7 +5723,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.9,
               "mustTry": "Grilled Lobster with Garlic Butter, Prawn Curry & Smoothies",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "Something Different - A Beachside Cafe",
@@ -5731,7 +5731,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.8,
               "mustTry": "Crispy Calamari, Thin Crust Pizza & Cocktails",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=1200&q=80"
           },
           {
               "name": "New Lighthouse Restaurant, Port Blair",
@@ -5739,7 +5739,7 @@ export const STATES_DATA: Record<string, StateData> = {
               "rating": 4.7,
               "mustTry": "Tandoori Crab, Tiger Prawns & Fish Curry",
               "priceRange": "₹₹",
-              "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80"
           }
       ],
       "aiSuggestedRoute": [

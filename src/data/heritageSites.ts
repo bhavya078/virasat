@@ -12,11 +12,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'An immense mausoleum of ivory-white marble on the south bank of the Yamuna river, commissioned by Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal. Renowned globally as the jewel of Muslim art in India and one of the universally admired masterpieces of the world heritage.',
     architectureStyle: 'Indo-Islamic & Mughal Classical',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1920px-Taj_Mahal_%28Edited%29.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Taj_Mahal_Mosque%2C_Agra.jpg/1920px-Taj_Mahal_Mosque%2C_Agra.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Agra-Taj_Mahal-38-Inkrustation-2018-gje.jpg/1920px-Agra-Taj_Mahal-38-Inkrustation-2018-gje.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Dome_Chhatris_Spires_-_Taj_Mahal_-_Agra_2014-05-14_3805.JPG/1920px-Dome_Chhatris_Spires_-_Taj_Mahal_-_Agra_2014-05-14_3805.JPG'
     ],
     timings: 'Sunrise to Sunset (Closed on Fridays)',
     entryFeeIndians: '₹50 (₹250 for Mausoleum access)',
@@ -45,10 +45,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'The austere, grandiose site of Hampi was the last capital of the great Hindu Kingdom of Vijayanagara. Set amidst boulder-strewn hills and the Tungabhadra River, Hampi comprises over 1,600 surviving monuments including the famed Stone Chariot and musical pillars of Vittala Temple.',
     architectureStyle: 'Dravidian (Vijayanagara School)',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/1920px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/15th-16th_century_ruins_of_market_and_Vaishnavism_Achyutaraya_Tiruvengalanatha_temple%2C_Hampi_Hindu_monuments_Karnataka_3.jpg/1920px-15th-16th_century_ruins_of_market_and_Vaishnavism_Achyutaraya_Tiruvengalanatha_temple%2C_Hampi_Hindu_monuments_Karnataka_3.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/15th-16th_century_ruins_of_market_and_Vaishnavism_Vitthala_temple%2C_Hampi_Hindu_monuments_Karnataka.jpg/1920px-15th-16th_century_ruins_of_market_and_Vaishnavism_Vitthala_temple%2C_Hampi_Hindu_monuments_Karnataka.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/15th_century_aqua_duct_to_Mahanavami_platform_Pushkarani_step_well%2C_Hampi_Hindu_monuments_Karnataka_3.jpg/1920px-15th_century_aqua_duct_to_Mahanavami_platform_Pushkarani_step_well%2C_Hampi_Hindu_monuments_Karnataka_3.jpg'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -77,9 +78,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1984,
     description: 'On the shores of the Bay of Bengal, bathed in the rays of the rising sun, the temple at Konark is a monumental representation of the chariot of Surya, the sun god. Its 24 wheels are adorned with symbolic motifs and led by seven galloping stone horses.',
     architectureStyle: 'Kalinga Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Konarka_Temple.jpg/1920px-Konarka_Temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/24_Chariot_Wheels%2C_illustrative_intricate_carving_in_one_at_the_Konarka_Sun_Temple.jpg/1920px-24_Chariot_Wheels%2C_illustrative_intricate_carving_in_one_at_the_Konarka_Sun_Temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f6/2_musicians_a_bansuri_player_and_ghana_player_at_Konark_Sun_Temple_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Back_Side_View_of_Konark_Sun_Temple.jpg/1920px-Back_Side_View_of_Konark_Sun_Temple.jpg'
     ],
     timings: '6:00 AM – 8:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -108,9 +111,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'Thirty rock-hewn Buddhist cave monuments carved into a sheer horse-shoe shaped volcanic cliff overlooking the Waghur river. Renowned for supreme masterpieces of Buddhist religious art, containing expressive frescoes and rock sculptures illustrating Jataka tales.',
     architectureStyle: 'Ancient Buddhist Rock-Cut',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Ajanta_%2863%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/9/9f/%2APlate_3%2A_%3D%3D_Ajunta--_Interior_of_Chaitya_Cave%2C_No._10.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/003_Cave_16%2C_Main_Shrine_%2834298723855%29.jpg/1920px-003_Cave_16%2C_Main_Shrine_%2834298723855%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/008_Cave_1%2C_In_the_Forest_%2834239644366%29.jpg/1920px-008_Cave_1%2C_In_the_Forest_%2834239644366%29.jpg'
     ],
     timings: '9:00 AM – 5:00 PM (Closed on Mondays)',
     entryFeeIndians: '₹40',
@@ -139,9 +144,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'An astonishing complex of 34 rock-cut monasteries and temples carved side by side into the basalt cliffs of the Charanandri hills. Cave 16—the Kailasa Temple—is the world’s largest single monolithic rock excavation, chiselled top-down out of a single mountain cliff.',
     architectureStyle: 'Dravidian & Nagara Monolithic Rock-Cut',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/en/f/fc/Kailash_temple_%28Ellora_cave_no_15%29_at_Verul.png',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Amriteshwar_temple.jpg/1920px-Amriteshwar_temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b1/Aurangabad%2Cellora_kailash_temple.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Ellora-10-Kailasa-Tempel-Skulpturengruppe-1976-gje.jpg/1920px-Ellora-10-Kailasa-Tempel-Skulpturengruppe-1976-gje.jpg'
     ],
     timings: '6:00 AM – 6:00 PM (Closed on Tuesdays)',
     entryFeeIndians: '₹40',
@@ -170,9 +177,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'The temples of Khajuraho represent one of the crowning pinnacles of Indian temple sculpture. Built between 950 and 1050 CE by the Chandela dynasty, only about 20 temples remain of the original 85, striking a perfect balance between architecture and sculpture.',
     architectureStyle: 'Nagara Style (Sandhara Type)',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/1_Khajuraho.jpg/1920px-1_Khajuraho.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Khajuraho_Dulhadeo_2010.jpg/1920px-Khajuraho_Dulhadeo_2010.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/7/71/2_Erotic_Kama_statues_of_Khajuraho_Hindu_Temple_de_Lakshmana_Khajur%C3%A2ho_India_2013.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/26/A_Khajuraho_Temple_ceiling_design.jpg'
     ],
     timings: 'Sunrise to Sunset Daily',
     entryFeeIndians: '₹40',
@@ -201,9 +210,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1989,
     description: 'The oldest stone structure in India, commissioned by Emperor Ashoka in the 3rd century BCE. Its nucleus is a hemispherical brick dome containing sacred relics of the Buddha, crowned by the chhatri umbrella signifying high spiritual rank, flanked by four intricately carved Torana gateways.',
     architectureStyle: 'Classical Mauryan Buddhist',
-    heroImage: 'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/East_Gateway_-_Stupa_1_-_Sanchi_Hill_2013-02-21_4398.JPG/1920px-East_Gateway_-_Stupa_1_-_Sanchi_Hill_2013-02-21_4398.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/003_Front_View_%2833709016166%29.jpg/1920px-003_Front_View_%2833709016166%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/005_Stairway_Railing_%2833364948500%29.jpg/1920px-005_Stairway_Railing_%2833364948500%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/006_Floral_Design_%2833749716585%29.jpg/1920px-006_Floral_Design_%2833749716585%29.jpg'
     ],
     timings: '6:30 AM – 6:30 PM Daily',
     entryFeeIndians: '₹40',
@@ -232,9 +243,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'Built during the second half of the 16th century by Emperor Akbar, Fatehpur Sikri (the City of Victory) served as the capital of the Mughal Empire for only 14 years. It is an ensemble of red sandstone palaces, courtly halls, and the gigantic Buland Darwaza.',
     architectureStyle: 'Mughal Fusion (Persian & Hindu synthesis)',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg/1920px-Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Taj_Mahal_in_March_2004.jpg/1920px-Taj_Mahal_in_March_2004.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Fatehpur_Sikiri_Salim_Chishti_Tomb_2010.jpg/1920px-Fatehpur_Sikiri_Salim_Chishti_Tomb_2010.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/4/47/Fatehpur_Sikri_042.JPG'
     ],
     timings: 'Sunrise to Sunset Daily',
     entryFeeIndians: '₹50',
@@ -263,9 +276,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2007,
     description: 'The Lal Qila was built as the palace fort of Shahjahanabad, the new capital of the fifth Mughal Emperor Shah Jahan. Named for its massive enclosing walls of red sandstone, the fort synthesizes Mughal architecture with Persian, Timurid, and Hindu design elements.',
     architectureStyle: 'Classical Mughal Sandstone',
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/1920px-Delhi_fort.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1592635196078-9fe32a26079d?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/20191203_Naubat_Khana%2C_Red_Fort%2C_Delhi_0453_6340_DxO.jpg/1920px-20191203_Naubat_Khana%2C_Red_Fort%2C_Delhi_0453_6340_DxO.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Covered_market_past_the_Lahore_gate_entrance_in_Red_Fort.jpg/1920px-Covered_market_past_the_Lahore_gate_entrance_in_Red_Fort.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Diwan-e-Khas-2022.jpg/1920px-Diwan-e-Khas-2022.jpg'
     ],
     timings: '9:30 AM – 4:30 PM (Closed on Mondays)',
     entryFeeIndians: '₹50',
@@ -294,9 +309,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1993,
     description: 'Towering 72.5 meters high, Qutub Minar is the tallest brick minaret in the world. Built in 1192 by Qutb-ud-din Aibak, the complex contains the mysterious 1,600-year-old rust-resistant Iron Pillar of Chandragupta II and the Quwwat-ul-Islam Mosque.',
     architectureStyle: 'Indo-Islamic Afghan Style',
-    heroImage: 'https://images.unsplash.com/photo-1545232979-fbf6786c2e39?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/3/31/Qutb_minar_ruins.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Qutb_Minar_Complex_Tomb_of_Imam_Zamin.jpg/1920px-Qutb_Minar_Complex_Tomb_of_Imam_Zamin.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Alai_Darwaza_-_Qutb_Complex.jpg/1920px-Alai_Darwaza_-_Qutb_Complex.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Alai_Minar_2022.jpg/1920px-Alai_Minar_2022.jpg'
     ],
     timings: '7:00 AM – 9:00 PM Daily',
     entryFeeIndians: '₹50',
@@ -325,9 +342,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The preeminent spiritual sanctuary of Sikhism, situated in the holy city of Amritsar. Surrounded by the sacred Amrit Sarovar tank, the sanctum sanctorum is plated with 500 kilograms of pure gold foil. It operates the largest free community kitchen (Langar) on Earth.',
     architectureStyle: 'Sikh Architecture (Synthesis of Rajput & Mughal)',
-    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/1920px-The_Golden_Temple_of_Amrithsar_7.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/7/79/%22A_Priest_of_the_Golden_Temple%2C%22_from_a_stereoscopic_viewing_set%2C_1908.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/bc/1860s_photo_of_the_Amritsar_Golden_Temple_with_the_British_style_Gothic_Clock_Tower.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/9/90/1880_photograph_of_the_Golden_Temple%2C_Darbar_Sahib%2C_sacred_pool_and_nearby_buildings%2C_Amritsar.jpg'
     ],
     timings: 'Open 24 Hours Daily',
     entryFeeIndians: 'Free (All Welcome)',
@@ -356,9 +375,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Built by King Rajaraja Chola I, this temple is one of the Great Living Chola Temples. Known as the Big Temple, it showcases the pinnacle of Dravidian stone craftsmanship. Its soaring vimana tower reaches 66 meters, topped by a monolithic 80-tonne granite kumbam dome.',
     architectureStyle: 'Pure Dravidian Chola Classical',
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg/1920px-Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/1000_years_Old_Thanjavur_Brihadeeshwara_Temple_View_at_Sunrise.jpg/1920px-1000_years_Old_Thanjavur_Brihadeeshwara_Temple_View_at_Sunrise.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/1010_CE_Brihadishwara_Shiva_Temple%2C_inscription%2C_built_by_Rajaraja_I%2C_Thanjavur_Tamil_Nadu_India.jpg/1920px-1010_CE_Brihadishwara_Shiva_Temple%2C_inscription%2C_built_by_Rajaraja_I%2C_Thanjavur_Tamil_Nadu_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/1010_CE_Brihadishwara_Shiva_Temple%2C_wall_relief%2C_built_by_Rajaraja_I%2C_Thanjavur_Tamil_Nadu_India.jpg/1920px-1010_CE_Brihadishwara_Shiva_Temple%2C_wall_relief%2C_built_by_Rajaraja_I%2C_Thanjavur_Tamil_Nadu_India.jpg'
     ],
     timings: '6:00 AM – 12:30 PM & 4:00 PM – 8:30 PM',
     entryFeeIndians: 'Free',
@@ -387,9 +408,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Situated on the banks of the Pushpavati river, this Sun Temple was built by King Bhima I of the Chaulukya/Solanki dynasty. It consists of the Gudhamandapa (shrine hall), Sabhamandapa (assembly hall), and the breathtaking stepped water reservoir known as Surya Kund.',
     architectureStyle: 'Maru-Gurjara Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Surya_mandhir.jpg/1920px-Surya_mandhir.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Kathak_Danseuse_Namrta_Rai_at_Modhera_Dance_Festival.jpg/1920px-Kathak_Danseuse_Namrta_Rai_at_Modhera_Dance_Festival.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Massive_Pillors.JPG/1920px-Massive_Pillors.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Modhera%2C_Sun_Temple_and_Reservoir%2C_Gujarat_%281967%29.jpg/1920px-Modhera%2C_Sun_Temple_and_Reservoir%2C_Gujarat_%281967%29.jpg'
     ],
     timings: '7:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -418,9 +441,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2014,
     description: 'An exceptional example of an inverted temple subterranean water management architecture on the banks of the Saraswati River. Built as an elaborate memorial by Queen Udayamati for King Bhima I, it descends through seven levels of stone-sculpted pillared pavilions.',
     architectureStyle: 'Maru-Gurjara Subterranean',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Rani_ki_vav_02.jpg/1920px-Rani_ki_vav_02.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Rani_ki_vav_-_Patan_-_Gujarat_-_Wall_Decorations.jpg/1920px-Rani_ki_vav_-_Patan_-_Gujarat_-_Wall_Decorations.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a5/Gujarat_heritage.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/d/d3/India_new_100_INR%2C_Mahatma_Gandhi_New_Series%2C_2018%2C_reverse.png'
     ],
     timings: '8:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -449,9 +474,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The monumental heart and global symbol of Hyderabad, Charminar was built in 1591 to commemorate the eradication of a devastating plague. Constructed of granite, lime, mortar, and pulverized marble, its four majestic minarets soar 48.7 meters into the sky.',
     architectureStyle: 'Indo-Islamic (Qutb Shahi School)',
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Charminar_Hyderabad_1.jpg/1920px-Charminar_Hyderabad_1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/f/f7/A_typical_charminar_evening.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Char_Kaman.jpg/1920px-Char_Kaman.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Charminar_-_May_2023.jpg/1920px-Charminar_-_May_2023.jpg'
     ],
     timings: '9:30 AM – 5:30 PM Daily',
     entryFeeIndians: '₹25',
@@ -480,9 +507,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The royal residence of the Wadiyar dynasty, the Mysore Palace is one of India’s most visited royal palaces. Designed by British architect Henry Irwin after the previous wooden palace caught fire, it features dome ceilings of imported Scottish stained glass and ornate mosaic marble floors.',
     architectureStyle: 'Indo-Saracenic (Hindu, Mughal, Rajput & Gothic blend)',
-    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Mysore_Palace_Morning.jpg/1920px-Mysore_Palace_Morning.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/A_Courtyard_of_Amba_Vilas_Palace_%28Mysuru_Palace%29%2C_during_day.jpg/1920px-A_Courtyard_of_Amba_Vilas_Palace_%28Mysuru_Palace%29%2C_during_day.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/A_very_well_lit_Durbar_Hall_%28ceremonial_meeting_hall_of_the_royal_court%29_of_Amba_Vilas_Palace_%28Mysuru_Palace%29%2C_during_day.jpg/1920px-A_very_well_lit_Durbar_Hall_%28ceremonial_meeting_hall_of_the_royal_court%29_of_Amba_Vilas_Palace_%28Mysuru_Palace%29%2C_during_day.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Arches_inside_Mysore_Palace_10.jpg/1920px-Arches_inside_Mysore_Palace_10.jpg'
     ],
     timings: '10:00 AM – 5:30 PM (Illumination on Sundays 7-8 PM)',
     entryFeeIndians: '₹100',
@@ -511,9 +540,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A historic Hindu temple located on the southern bank of the Vaigai River in the 2,500-year-old city of Madurai. Dedicated to Goddess Meenakshi (Parvati) and Sundareswarar (Shiva), it is famous for its 14 towering gopuram gateway towers adorned with thousands of polychrome stone sculptures.',
     architectureStyle: 'Dravidian (Nayaka Epoch)',
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg/1920px-An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/3/3a/01MaduraiMeenakshiAmmanTemple%26IndoorCorridorView.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Figures_with_Pigeons_-_Ivory_Sculpture_-_Sri_Meenakshi-Sundareshwarar_Temple_-_Madurai_-_India.JPG/1920px-Figures_with_Pigeons_-_Ivory_Sculpture_-_Sri_Meenakshi-Sundareshwarar_Temple_-_Madurai_-_India.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/India_Meenakshi_Temple.jpg/1920px-India_Meenakshi_Temple.jpg'
     ],
     timings: '5:00 AM – 12:30 PM & 4:00 PM – 10:00 PM',
     entryFeeIndians: 'Free (Special darshan ₹50 - ₹100)',
@@ -542,9 +573,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A large white marble monument located in the heart of Kolkata, designed by William Emerson. Built using Makrana marble from Rajasthan, it houses 25 galleries containing rare oil paintings, historical manuscripts, weapons, and colonial artifacts set across 64 acres of landscaped gardens.',
     architectureStyle: 'Indo-Saracenic & British Renaissance',
-    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1920px-Victoria_Memorial_situated_in_Kolkata.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Angel_of_Kolkata_Victoria_Memorial.jpg/1920px-Angel_of_Kolkata_Victoria_Memorial.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/India_-_Kolkata_Victorian_museum_-_4258.jpg/1920px-India_-_Kolkata_Victorian_museum_-_4258.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ketan_donate5.jpg/1920px-Ketan_donate5.jpg'
     ],
     timings: '10:00 AM – 6:00 PM (Gardens 5:30 AM – 6:15 PM)',
     entryFeeIndians: '₹50 (Museum)',
@@ -573,9 +606,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2019,
     description: 'A five-storey palace in Jaipur constructed of red and pink sandstone. Designed by Lal Chand Ustad, its unique facade resembles the crown of Lord Krishna and features 953 intricately carved jharokhas (small casements) engineered to circulate cool mountain breeze through the Venturi effect.',
     architectureStyle: 'Rajput & Mughal Synthesis',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/1920px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_03.jpg/1920px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_03.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a2/Fountain_Inside_Hawa_Mahal.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Hawa-mahal-from-window.JPG/1920px-Hawa-mahal-from-window.JPG'
     ],
     timings: '9:00 AM – 5:00 PM Daily',
     entryFeeIndians: '₹50',
@@ -604,9 +639,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'Perched high on the Cheel ka Teela (Hill of Eagles) overlooking Maota Lake, Amer Fort is celebrated for its artistic Rajput style elements. Cobbled paths, formidable battlements, series of grand gates, and the world-renowned Sheesh Mahal (Mirror Palace) dazzle millions of travelers.',
     architectureStyle: 'Rajput Military & Mughal Courtly',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/1920px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Amber_Fort%2C_Baradhari_Pavilion_at_Man_Singh_Palace_Square%2C_2010.jpg/1920px-Amber_Fort%2C_Baradhari_Pavilion_at_Man_Singh_Palace_Square%2C_2010.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Amber_Fort-Jaipur-India0007.JPG/1920px-Amber_Fort-Jaipur-India0007.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Amber_Fort_-_Sheesh_Mahal_Interior.jpg/1920px-Amber_Fort_-_Sheesh_Mahal_Interior.jpg'
     ],
     timings: '8:00 AM – 5:30 PM & 6:30 PM – 9:15 PM (Night Viewing)',
     entryFeeIndians: '₹100',
@@ -635,9 +672,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2002,
     description: 'One of the four sacred sites related to the life of Gautama Buddha, and the most supreme: the place where Siddhartha Gautama attained supreme Enlightenment (Bodhi) beneath the sacred Bodhi Tree. The 55-meter grand pyramidal temple is among the earliest brick temples surviving in eastern India.',
     architectureStyle: 'Classical Gupta Brick Temple',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Mahabodhitemple.jpg/1920px-Mahabodhitemple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/011_Pillar%2C_Chariot_Scene.jpg/1920px-011_Pillar%2C_Chariot_Scene.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/024_Horse_Man.jpg/1920px-024_Horse_Man.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/026_Elephant.jpg/1920px-026_Elephant.jpg'
     ],
     timings: '5:00 AM – 9:00 PM Daily',
     entryFeeIndians: 'Free (Camera ₹100)',
@@ -666,9 +705,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2016,
     description: 'The premier center of higher learning in the ancient world, operating for over 700 consecutive years. At its peak, Nalanda accommodated over 10,000 international scholars and 2,000 teachers from China, Korea, Japan, Tibet, and Persia, featuring a legendary nine-storey library named Dharmaganja.',
     architectureStyle: 'Ancient Buddhist Monastic Brickwork',
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Temple_No.-_3%2C_Nalanda_Archaeological_Site.jpg/1920px-Temple_No.-_3%2C_Nalanda_Archaeological_Site.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/2/2f/Astasahasrika_Prajnaparamita_Avalokitesvara_Bodhisattva_Nalanda.jpeg',
+      'https://upload.wikimedia.org/wikipedia/commons/c/ca/Astasahasrika_Prajnaparamita_Queen_Maya_Birth.jpeg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f1/Astasahasrika_Prajnaparamita_Sravasti_Miracle.jpeg'
     ],
     timings: '9:00 AM – 5:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -697,9 +738,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Located on Gharapuri Island in Mumbai Harbour, the Elephanta Caves contain a collection of rock-cut temples predominantly dedicated to Lord Shiva. The centerpiece is the celebrated 7-meter Sadashiva / Maheshmurti sculpture portraying Shiva as the Creator, Preserver, and Destroyer.',
     architectureStyle: 'Shaivite Rock-Cut Classical',
-    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Elephanta_Caves_Trimurti.jpg/1920px-Elephanta_Caves_Trimurti.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/8/88/Aquatint_of_the_Stone_Elephant.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Ardhanari%40_Elephanta_Caves.jpg/1920px-Ardhanari%40_Elephanta_Caves.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Brahma_statue_%286th_century_CE%29.jpg/1920px-Brahma_statue_%286th_century_CE%29.jpg'
     ],
     timings: '9:30 AM – 5:30 PM (Closed on Mondays)',
     entryFeeIndians: '₹40 (Ferry extra ₹200-₹250)',
@@ -728,9 +771,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1985,
     description: 'In the heart of Assam on the southern bank of the Brahmaputra River, Kaziranga is home to the world’s largest population of great one-horned rhinoceroses. Its tall elephant grass marshes, tropical moist broadleaf forests, and riverine water bodies also harbor tigers, elephants, and wild water buffalo.',
     architectureStyle: 'Pristine Wetland Ecosystem',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Beauty_of_Kaziranga_National_Park.jpg/1920px-Beauty_of_Kaziranga_National_Park.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/A_hog_deer_%28Axis_porcinus%29_at_Kaziranga_National_Park%2C_Assam%2C_India_1.jpg/1920px-A_hog_deer_%28Axis_porcinus%29_at_Kaziranga_National_Park%2C_Assam%2C_India_1.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/A_wild_water_buffalo_%28Bubalus_arnee%29_at_Kaziranga_National_Park%2C_Assam%2C_India.jpg/1920px-A_wild_water_buffalo_%28Bubalus_arnee%29_at_Kaziranga_National_Park%2C_Assam%2C_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/An_Indian_rhinoceros_%28Rhinoceros_unicornis%29%2C_also_known_as_the_greater_one-horned_rhinoceros%2C_at_Kaziranga_National_Park%2C_Assam%2C_India_2.jpg/1920px-An_Indian_rhinoceros_%28Rhinoceros_unicornis%29%2C_also_known_as_the_greater_one-horned_rhinoceros%2C_at_Kaziranga_National_Park%2C_Assam%2C_India_2.jpg'
     ],
     timings: 'Jeep Safari: 7:30 AM & 1:30 PM (Nov to Apr)',
     entryFeeIndians: '₹100 (Jeep safari extra ₹2,500-₹3,500)',
@@ -759,9 +804,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'The largest mangrove forest in the world, covering the coastal delta of the Ganges, Brahmaputra, and Meghna rivers. Famed for its legendary population of swimming Royal Bengal Tigers, saltwater crocodiles, and complex labyrinth of tidal waterways.',
     architectureStyle: 'World Largest Mangrove Delta',
-    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Cyclonic_Storm_Aila_on_May_24_2009_at_0723_Z.jpg/1920px-Cyclonic_Storm_Aila_on_May_24_2009_at_0723_Z.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Dobanki_Camp.JPG/1920px-Dobanki_Camp.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Leopard_cat_India.jpg/1920px-Leopard_cat_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Sudhanyakhali_Jetty.JPG/1920px-Sudhanyakhali_Jetty.JPG'
     ],
     timings: 'Boat Safari 7:00 AM – 5:00 PM',
     entryFeeIndians: '₹60 (Boat cruise extra)',
@@ -790,9 +837,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1993,
     description: 'The first substantial example of monumental Mughal architecture in India, built under the patronage of Empress Bega Begum for Emperor Humayun. Designed by Persian architect Mirak Mirza Ghiyas, it introduced the Charbagh garden tomb concept that directly inspired the Taj Mahal six decades later.',
     architectureStyle: 'Early Classical Mughal Charbagh',
-    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tomb_of_Humayun%2C_Delhi.jpg/1920px-Tomb_of_Humayun%2C_Delhi.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/A_side_view_of_Humayun%27s_Tomb.jpg/1920px-A_side_view_of_Humayun%27s_Tomb.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Afsarwala_tomb_-_Landscape_view.JPG/1920px-Afsarwala_tomb_-_Landscape_view.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Bu_Halima%27s_Garden_and_Tomb_view.jpg/1920px-Bu_Halima%27s_Garden_and_Tomb_view.jpg'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -821,9 +870,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2010,
     description: 'An astronomical observation site built in the early 18th century, featuring 19 monumental stone architectural instruments. It contains the world’s largest stone sundial—the Vrihat Samrat Yantra—which calculates local Jaipur solar time with an accuracy of two seconds.',
     architectureStyle: 'Astronomical Stone Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Jantar_Mantar_at_Jaipur.jpg/1920px-Jantar_Mantar_at_Jaipur.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/1920px-Crab_Nebula.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Bhairav_Temple_Jantar_Mantar_Jaipur.jpg/1920px-Bhairav_Temple_Jantar_Mantar_Jaipur.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Earth-moon.jpg/1920px-Earth-moon.jpg'
     ],
     timings: '9:00 AM – 5:00 PM Daily',
     entryFeeIndians: '₹50',
@@ -852,9 +903,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'The largest fort complex in India, spanning nearly 700 acres atop a 180-meter hill. The historic capital of Mewar, Chittorgarh resonates with epic legends of Rajput valor, the sacrifices of Rani Padmini and Meera Bai, and the monumental Vijay Stambha (Tower of Victory).',
     architectureStyle: 'Medieval Rajput Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Chittorgarh_fort.JPG/1920px-Chittorgarh_fort.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/A_Painting_of_the_Fort_1857.jpg/1920px-A_Painting_of_the_Fort_1857.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/ChittorgarhFortWaterReflection.JPG/1920px-ChittorgarhFortWaterReflection.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Interiors_of_Padmini_Palace.jpg/1920px-Interiors_of_Padmini_Palace.jpg'
     ],
     timings: '9:45 AM – 5:45 PM Daily',
     entryFeeIndians: '₹40',
@@ -883,9 +936,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Described by Mughal Emperor Babur as the pearl among the fortresses of Hind, Gwalior Fort sits atop an isolated sandstone hill. Its Man Mandir Palace is famous for its vibrant turquoise and yellow enameled tile mosaics depicting ducks, elephants, and peacocks.',
     architectureStyle: 'Medieval Indian Hill Fort & Tomar Palace',
-    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Gwalior_Fort_front.jpg/1920px-Gwalior_Fort_front.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/246_Gwalior.jpg/1920px-246_Gwalior.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/247_Gwalior.jpg/1920px-247_Gwalior.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/A_View_of_the_Fortress_of_Gwalior%2C_1780.jpg/1920px-A_View_of_the_Fortress_of_Gwalior%2C_1780.jpg'
     ],
     timings: '6:00 AM – 5:30 PM Daily',
     entryFeeIndians: '₹25',
@@ -914,9 +969,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A fortified citadel on the western outskirts of Hyderabad, Golconda was the capital of the medieval Golconda Sultanate. Renowned for its ingenious acoustic engineering, hydraulic systems, and as the diamond capital that produced the Koh-i-Noor and Hope Diamond.',
     architectureStyle: 'Deccani Military Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Golconda_Fort_005.jpg/1920px-Golconda_Fort_005.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Aerial_view_of_Golconda_fort.jpg/1920px-Aerial_view_of_Golconda_fort.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Architect_in_golconda_fort.jpg/1920px-Architect_in_golconda_fort.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/4/41/Arty_Centre_Hyderabad.jpg'
     ],
     timings: '9:00 AM – 5:30 PM Daily (Sound & Light Show 6:30 PM)',
     entryFeeIndians: '₹25',
@@ -945,9 +1002,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1984,
     description: 'Perched right on the coast of the Bay of Bengal, the Shore Temple is one of the oldest structural stone temples of Southern India. Built by the Pallava King Rajasimha, its two granite towers house shrines dedicated to Lord Shiva and reclining Vishnu.',
     architectureStyle: 'Dravidian (Early Pallava Structural)',
-    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg/1920px-Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/en/thumb/f/fb/Shore_temple_2.JPG/1920px-Shore_temple_2.JPG',
+      'https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/Shore_temple_3.JPG/1920px-Shore_temple_3.JPG',
+      'https://thumb.wikimedia.org/wikipedia/en/thumb/a/a9/Shore_temple_lion.jpg/1920px-Shore_temple_lion.jpg'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -976,9 +1035,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The first and foremost of the twelve holy Jyotirlinga shrines of Lord Shiva, situated at the confluence of the mythical Saraswati, Kapila, and Hiran rivers on the coast of Saurashtra. Known as the Shrine Eternal, it was reconstructed repeatedly following historic invasions.',
     architectureStyle: 'Chalukya / Kailash Mahameru Prasad',
-    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Somanath_mandir_%28cropped%29.jpg/1920px-Somanath_mandir_%28cropped%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/19th_century_archive_photos_of_Somanatha_temple%2C_Veraval_Prabhas_Patan%2C_Gujarat.jpg/1920px-19th_century_archive_photos_of_Somanatha_temple%2C_Veraval_Prabhas_Patan%2C_Gujarat.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Ancient_Somnath_temple%2C_Veraval_Gujarat.jpg/1920px-Ancient_Somnath_temple%2C_Veraval_Gujarat.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Red_Fort%2C_Ghazni_gate_%28photographic_restoration%29.jpg/1920px-Red_Fort%2C_Ghazni_gate_%28photographic_restoration%29.jpg'
     ],
     timings: '6:00 AM – 10:00 PM Daily (Aarti at 7:00 AM, 12:00 PM, 7:00 PM)',
     entryFeeIndians: 'Free',
@@ -1007,9 +1068,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'One of the Char Dham pilgrimage sites, dedicated to Lord Jagannath, a form of Lord Vishnu, with his siblings Balabhadra and Subhadra. Renowned for its monumental 65-meter sikhara tower, sacred Mahaprasad cooked in earthen pots, and the annual world-famous Ratha Yatra chariot festival.',
     architectureStyle: 'Kalinga Architecture (Deula Type)',
-    heroImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Shri_Jagannath_temple.jpg/1920px-Shri_Jagannath_temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ABX_SHRI_PURUSHOTTAMA_KSHETRA_PURI.jpg/1920px-ABX_SHRI_PURUSHOTTAMA_KSHETRA_PURI.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Ashwadwara_%28Horse_Gate%29_of_Jagannath_temple%2C_Puri.JPG/1920px-Ashwadwara_%28Horse_Gate%29_of_Jagannath_temple%2C_Puri.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/f/fa/Badrinath_Temple_-_OCT_2014.jpg'
     ],
     timings: '6:00 AM – 9:00 PM Daily',
     entryFeeIndians: 'Free (Hindus only in sanctum by tradition)',
@@ -1038,9 +1101,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Nestled in a remote valley of the Aravalli hills between Udaipur and Jodhpur, this 15th-century marble temple dedicated to Tirthankara Adinatha is celebrated for its extraordinary stone filigree. Supported by 1,444 uniquely carved marble pillars, no two pillars are alike.',
     architectureStyle: 'Maru-Gurjara Jain Classical',
-    heroImage: 'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Chaumukha_Jain_temple_at_Ranakpur_in_Aravalli_range_near_Udaipur_Rajasthan_India.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/India_-_Udaipur_-_041_-_beautifully_carved_ceiling_at_the_Ranakpur_Jain_Temple_%281059176705%29.jpg/1920px-India_-_Udaipur_-_041_-_beautifully_carved_ceiling_at_the_Ranakpur_Jain_Temple_%281059176705%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Interior_of_Ranakpur_Jain_Temple%2C_Rajasthan.jpg/1920px-Interior_of_Ranakpur_Jain_Temple%2C_Rajasthan.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Jain_Temple_Ranakpur.jpg/1920px-Jain_Temple_Ranakpur.jpg'
     ],
     timings: '12:00 PM – 5:00 PM for tourists',
     entryFeeIndians: 'Free (Audio guide ₹200)',
@@ -1069,9 +1134,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'One of the very few living forts in the world, where nearly one-fourth of the old city population still resides inside its golden sandstone ramparts. Rising like a golden mirage out of the Thar Desert on Trikuta Hill, it glows with a brilliant honey hue at sunset.',
     architectureStyle: 'Rajput Golden Sandstone Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jaisalmer_forteresse.jpg/1920px-Jaisalmer_forteresse.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/20170309_094915_Jaisalmer_fort_anagoria.jpg/1920px-20170309_094915_Jaisalmer_fort_anagoria.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Cannon_at_Jaisalmer_Fort.jpg/1920px-Cannon_at_Jaisalmer_Fort.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Corridor_of_Jain_temple_-_Jaisalmer_Fort.jpg/1920px-Corridor_of_Jain_temple_-_Jaisalmer_Fort.jpg'
     ],
     timings: '9:00 AM – 6:00 PM Daily',
     entryFeeIndians: 'Free for fort; Palace Museum ₹100',
@@ -1100,9 +1167,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The richest religious institution in human history, located in the capital of Kerala. The sanctum holds the 18-foot idol of Lord Vishnu reclining on the serpent Anantha in the sacred Anantha Shayana posture, viewed through three carved granite doors.',
     architectureStyle: 'Chera & Dravidian Fusion',
-    heroImage: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Sree_Padmanabhaswamy_temple_01.jpg/1920px-Sree_Padmanabhaswamy_temple_01.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/en/5/50/Interior_of_the_Padmanabhaswamy_Temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/6/69/Aaratu3.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Padmanabhaswamy_Temple_Gopuram.jpg/1920px-Padmanabhaswamy_Temple_Gopuram.jpg'
     ],
     timings: '3:30 AM – 12:00 PM & 5:00 PM – 7:20 PM',
     entryFeeIndians: 'Free (Strict traditional dress code: Mundu/Dhoti for men, Saree for women)',
@@ -1131,9 +1200,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Carved out of soft red sandstone cliffs flanking the Agastya Lake, the four cave temples of Badami represent early examples of South Indian rock-cut Hindu and Jain architecture. Cave 1 houses an iconic 18-armed Nataraja sculpture portraying 81 classical dance mudras.',
     architectureStyle: 'Badami Chalukya Rock-Cut',
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Vishnu_image_inside_cave_number_3_in_Badami.jpg/1920px-Vishnu_image_inside_cave_number_3_in_Badami.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/b/b5/Temple_troglodytique_d%C3%A9di%C3%A9_%C3%A0_Shiva_%28Badami%2C_Inde%29_%2814146091479%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/6th_-_7th_century_Badami_cave_temples_layout_exterior_annotated.jpg/1920px-6th_-_7th_century_Badami_cave_temples_layout_exterior_annotated.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/6th_century_amorous_couple_on_pillar_top_looking_below_in_Cave_3%2C_Badami_Hindu_cave_temple_Karnataka_1.jpg/1920px-6th_century_amorous_couple_on_pillar_top_looking_below_in_Cave_3%2C_Badami_Hindu_cave_temple_Karnataka_1.jpg'
     ],
     timings: '9:00 AM – 5:30 PM Daily',
     entryFeeIndians: '₹25',
@@ -1162,9 +1233,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1987,
     description: 'Pattadakal on the Malaprabha River was the holy site for coronation (Pattabhisheka) of the Chalukyan monarchs. It is celebrated as the experimental laboratory of ancient Indian architecture, where northern Nagara and southern Dravidian styles met and synthesized into the hybrid Vesara style.',
     architectureStyle: 'Synthesis of Dravidian & Nagara (Vesara Prototype)',
-    heroImage: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Pattadakal_000.JPG/1920px-Pattadakal_000.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/7th_-_8th_century_Sangameswara_temple%2C_Pattadakal_monuments_Karnataka_3.jpg/1920px-7th_-_8th_century_Sangameswara_temple%2C_Pattadakal_monuments_Karnataka_3.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/7th_-_8th_century_Vishna_avatar_Varaha_relief_at_the_Sangameswara_Shaivism_temple%2C_Pattadakal_Hindu_monuments_Karnataka.jpg/1920px-7th_-_8th_century_Vishna_avatar_Varaha_relief_at_the_Sangameswara_Shaivism_temple%2C_Pattadakal_Hindu_monuments_Karnataka.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/7th_century_Ardhanarishvara_%28left_half_Shiva%2C_right_half_Parvati%29_at_the_Kadasiddheswara_Shaivism_temple%2C_Pattadakal_monuments_Karnataka.jpg/1920px-7th_century_Ardhanarishvara_%28left_half_Shiva%2C_right_half_Parvati%29_at_the_Kadasiddheswara_Shaivism_temple%2C_Pattadakal_monuments_Karnataka.jpg'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -1193,9 +1266,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'Commissioned by King Vishnuvardhana in 1117 CE to mark his victory over the Cholas, this Hoysala masterpiece is dedicated to Lord Chennakeshava (handsome Vishnu). Carved out of soft chloritic schist (soapstone), its microscopic detail in dancers, jewelry, and filigree is unmatched.',
     architectureStyle: 'Hoysala Stellate (Star-shaped Architecture)',
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/The_Courtyard_of_Chennakesava_Temple_-_Belur.jpg/1920px-The_Courtyard_of_Chennakesava_Temple_-_Belur.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/12th-century_sculpture_at_Belur_Hindu_temple_inner_mandala%2C_woman_tending_her_hair_2.jpg/1920px-12th-century_sculpture_at_Belur_Hindu_temple_inner_mandala%2C_woman_tending_her_hair_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/A_Close_up_of_decorative_moulding_frieze_on_outer_wall_of_mandapa%2C_Chennakeshava_Temple%2C_Belur%2C_Karnataka.jpg/1920px-A_Close_up_of_decorative_moulding_frieze_on_outer_wall_of_mandapa%2C_Chennakeshava_Temple%2C_Belur%2C_Karnataka.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/87/Belur4.jpg'
     ],
     timings: '7:30 AM – 7:30 PM Daily',
     entryFeeIndians: 'Free',
@@ -1224,9 +1299,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'One of the oldest churches in India and a landmark of Baroque architecture, located in Old Goa. It holds the mortal relics of Saint Francis Xavier, the co-founder of the Society of Jesus. The unplastered laterite stone exterior makes it unique among colonial monuments in India.',
     architectureStyle: 'Mannerist Baroque Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Front_Elevation_of_Basilica_of_Bom_Jesus.jpg/1920px-Front_Elevation_of_Basilica_of_Bom_Jesus.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Basilica_of_Bom_Jesus_and_vehicles_parked_infront.jpg/1920px-Basilica_of_Bom_Jesus_and_vehicles_parked_infront.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Basilica_of_Bom_Jesus_captured_through_fence.jpg/1920px-Basilica_of_Bom_Jesus_captured_through_fence.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/1/10/IHS_Basilica_of_Bom_Jesus_IMG_20141222_120103165.jpg'
     ],
     timings: '9:00 AM – 6:30 PM (Sundays 10:30 AM – 6:30 PM)',
     entryFeeIndians: 'Free',
@@ -1255,9 +1332,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'A Mewar fortress in the Rajsamand district of Rajasthan, built by Rana Kumbha. Perched on a hilltop 1,100 meters above sea level, it features a perimeter defense wall extending 36 kilometers—the second-longest continuous wall in the world after the Great Wall of China.',
     architectureStyle: 'Rajput Mountain Fortress',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Aerial_view_of_Kumbhalgarh.jpg/1920px-Aerial_view_of_Kumbhalgarh.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Gate_of_kumbhalgarh_fort.jpg/1920px-Gate_of_kumbhalgarh_fort.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/1/13/Kumbhalgarh_055.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Kumbhalgarh_11.jpg/1920px-Kumbhalgarh_11.jpg'
     ],
     timings: '9:00 AM – 6:00 PM (Light & Sound Show 6:45 PM)',
     entryFeeIndians: '₹40',
@@ -1286,9 +1365,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1983,
     description: 'A powerful 94-acre fortress of red sandstone located on the banks of the Yamuna River, serving as the primary imperial residence of the Mughal emperors until 1638. Contains the Jahangiri Mahal, Khas Mahal, Sheesh Mahal, and the Musamman Burj where Shah Jahan was imprisoned.',
     architectureStyle: 'Mughal Red Sandstone & Marble Fort',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Agra_03-2016_16_Agra_Fort.jpg/1920px-Agra_03-2016_16_Agra_Fort.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20191204_Czerwony_Fort_w_Agrze_1014_6679_DxO.jpg/1920px-20191204_Czerwony_Fort_w_Agrze_1014_6679_DxO.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Agra_Fort_Rempart.jpg/1920px-Agra_Fort_Rempart.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Agra_castle_India_persian_poem.jpg/1920px-Agra_castle_India_persian_poem.jpg'
     ],
     timings: 'Sunrise to Sunset Daily',
     entryFeeIndians: '₹50',
@@ -1317,9 +1398,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'A concentration of largely unexcavated archaeological, historic, and living cultural heritage properties cradled in an impressive landscape. It includes prehistoric sites, a hill fortress of early Hindu capital, and remains of the 16th-century capital of the Gujarat Sultanate.',
     architectureStyle: 'Pre-Mughal Indo-Saracenic & Solanki',
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/CHAMPNER_GUJARAT.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Champaner%2C_Lila_Gumbaj_Ki_Masjid_%289840188055%29.jpg/1920px-Champaner%2C_Lila_Gumbaj_Ki_Masjid_%289840188055%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Champaner_citadel_walls.jpg/1920px-Champaner_citadel_walls.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Champaner_eastern_gate.jpg/1920px-Champaner_eastern_gate.jpg'
     ],
     timings: '8:30 AM – 5:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -1348,9 +1431,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2014,
     description: 'In the western part of the Himalayan mountains in Himachal Pradesh, this park is characterized by high alpine peaks, alpine meadows, and riverine forests. It is globally recognized for protecting diverse endangered fauna including the snow leopard, Himalayan brown bear, and Western Tragopan.',
     architectureStyle: 'Pristine Alpine Himalayan Ecosystem',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Himalayn_National_Park_01.jpg/1920px-Himalayn_National_Park_01.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Deerincage356.JPG/1920px-Deerincage356.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Great_Himalayan_National_Park%2C_Kullu%2C_Himachal.jpg/1920px-Great_Himalayan_National_Park%2C_Kullu%2C_Himachal.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Great_Himlayan_National_Park%2C_Himachal_Pradesh%2C_India.jpg/1920px-Great_Himlayan_National_Park%2C_Himachal_Pradesh%2C_India.jpg'
     ],
     timings: 'Entry by permit (Tirthan Valley checkpost)',
     entryFeeIndians: '₹100 (Guide & trekking permit extra)',
@@ -1379,9 +1464,10 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1985,
     description: 'Spanning the gentle slopes of the Eastern Himalayas in Assam contiguous with Royal Manas in Bhutan. The sanctuary provides habitat for rare and endangered endemic wildlife such as the Assam roofed turtle, hispid hare, golden langur, and pygmy hog.',
     architectureStyle: 'Sub-Himalayan Alluvial Grasslands',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Manas_landscape_rhino.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Blue_hill.jpg/1920px-Blue_hill.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Manas_National_Park_entrance_gate.jpg/1920px-Manas_National_Park_entrance_gate.jpg'
     ],
     timings: '5:30 AM – 5:00 PM (Nov to Apr)',
     entryFeeIndians: '₹100',
@@ -1410,9 +1496,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2003,
     description: 'Located at the foothills of the Vindhya range, Bhimbetka consists of seven hills and more than 750 rock shelters. The rock paintings display the earliest traces of human life on the Indian subcontinent, with vivid depictions of hunting, dancing, ritual masks, and elephant processions.',
     architectureStyle: 'Prehistoric Rock Art & Natural Cave Shelters',
-    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Rock_Shelter_8%2C_Bhimbetka_02.jpg/1920px-Rock_Shelter_8%2C_Bhimbetka_02.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/en/3/3e/Bhimbetka_Natraj_painting.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/9/94/Bhimbetka.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Dancing_painting_at_Bhimbetka.jpg/1920px-Dancing_painting_at_Bhimbetka.jpg'
     ],
     timings: '7:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -1441,9 +1529,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 1986,
     description: 'The ancient capital of Portuguese India, Old Goa houses magnificent Renaissance, Mannerist, and Baroque churches. Monuments include the Se Cathedral (largest church in Asia) with its Golden Bell, and the Church of St. Francis of Assisi with painted wood paneling.',
     architectureStyle: 'Manueline, Baroque & Tuscan Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Old_Goa%2C_Se_Cathedral%2C_Panoramic_view.jpg/1920px-Old_Goa%2C_Se_Cathedral%2C_Panoramic_view.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Capela_de_Santa_Catarina%2C_Velha_Goa%2C_2.jpg/1920px-Capela_de_Santa_Catarina%2C_Velha_Goa%2C_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Church_and_Convent_of_St._Francis_Assisi_04.jpg/1920px-Church_and_Convent_of_St._Francis_Assisi_04.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Church_and_Convent_of_St._Francis_Assisi_05.jpg/1920px-Church_and_Convent_of_St._Francis_Assisi_05.jpg'
     ],
     timings: '7:30 AM – 6:00 PM Daily',
     entryFeeIndians: 'Free',
@@ -1472,9 +1562,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2021,
     description: 'Located in Palampet village near Warangal, this temple was built in 1213 CE during the reign of Kakatiya ruler Ganapati Deva. Uniquely in Indian history, the temple is named after its chief sculptor Ramappa. It features floating porous brick superstructures and a sandbox foundation designed for earthquake resistance.',
     architectureStyle: 'Kakatiya Temple (Star-shaped Stellate Plan)',
-    heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Bhadrachalam_temple_View_from_Lord_Narasimha_Temple.JPG/1920px-Bhadrachalam_temple_View_from_Lord_Narasimha_Temple.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Sangameshwar_Temple_at_Alampur.JPG/1920px-Sangameshwar_Temple_at_Alampur.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sri_Chaya_Someswara_Temple_at_Pangal.jpg/1920px-Sri_Chaya_Someswara_Temple_at_Pangal.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Temple_-_Front_view.JPG/1920px-Temple_-_Front_view.JPG'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -1503,9 +1595,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2021,
     description: 'An ancient metropolitan city of the Bronze Age Indus Valley Civilization, located on Khadir Bet island in the Great Rann of Kutch. It is celebrated for its monumental stone fortification, tiered urban layout (Citadel, Middle Town, Lower Town), and the most sophisticated prehistoric rainwater harvesting and reservoir system in the ancient world.',
     architectureStyle: 'Harappan Stone Masonry & Hydraulic Engineering',
-    heroImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/DHOLAVIRA_SITE_%2824%29.jpg/1920px-DHOLAVIRA_SITE_%2824%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/1/19/Dholavira1.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Cicular_houses_Dholavira.jpg/1920px-Cicular_houses_Dholavira.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Well_at_ancient_Harappan_city_of_Dholavira.jpg/1920px-Well_at_ancient_Harappan_city_of_Dholavira.jpg'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -1534,9 +1628,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'Established by Nobel laureate poet-philosopher Rabindranath Tagore in rural West Bengal as an experimental residential school and centre of arts and humanity (Visva-Bharati). Based on ancient Indian Vedic hermitage (Ashram) ideals, it pioneer learning under the canopy of trees.',
     architectureStyle: 'Bengal Modernist & Pan-Asian Ecological',
-    heroImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1920px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/f/fa/Amar_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Ananda_Khyapa_and_Tarun_Khyapa_with_Group_-_Baul_Song_Performance_-_Saturday_Haat_-_Sonajhuri_-_Birbhum_2014-06-28_5281.JPG/1920px-Ananda_Khyapa_and_Tarun_Khyapa_with_Group_-_Baul_Song_Performance_-_Saturday_Haat_-_Sonajhuri_-_Birbhum_2014-06-28_5281.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Doorway_-_Sinha_Sadan_-_1926_CE_-_Santiniketan_2014-06-29_5525.JPG/1920px-Doorway_-_Sinha_Sadan_-_1926_CE_-_Santiniketan_2014-06-29_5525.JPG'
     ],
     timings: '10:00 AM – 5:00 PM (Closed on Wednesdays)',
     entryFeeIndians: '₹40',
@@ -1565,9 +1661,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2014,
     description: 'Patan, the ancient capital of Gujarat (Anhilpur Patan), is celebrated worldwide for its monumental hydraulic engineering. Along with the UNESCO-listed Queen’s Stepwell, it houses the legendary Sahasralinga Talav reservoir that once accommodated 1,000 Shiva shrines.',
     architectureStyle: 'Solanki Dynastic Water Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Antique_Patan_Patola_Double_Ikat_Trade_Textile_courtesy_Wovensouls_Collection%2C_Singapore.jpg/1920px-Antique_Patan_Patola_Double_Ikat_Trade_Textile_courtesy_Wovensouls_Collection%2C_Singapore.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/e/ef/Chaulukyas_of_Anahillapataka_King_Kumarapala_Circa_1145-1171.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/GMERS_PATAN.jpg/1920px-GMERS_PATAN.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Patan_Municipal_Corporation.png/1920px-Patan_Municipal_Corporation.png'
     ],
     timings: '8:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹40',
@@ -1596,9 +1694,10 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'In the oldest continuously inhabited living city in the world, the Kashi Vishwanath Temple stands on the western bank of the sacred Ganges River. Reconstructed in 1780 by the saintly Queen Ahilyabai Holkar of Indore, its golden spire watches over the 84 timeless bathing ghats.',
     architectureStyle: 'Nagara Hindu Spire with Gold Plating',
-    heroImage: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Kashi_Vishwanath.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/b/b0/Benares_well.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/The_Prime_Minister%2C_Shri_Narendra_Modi_addressing_at_the_inauguration_of_Kashi_Vishwanath_Dham%2C_in_Varanasi%2C_Uttar_Pradesh_on_December_13%2C_2021_%28105966%29.jpg/1920px-The_Prime_Minister%2C_Shri_Narendra_Modi_addressing_at_the_inauguration_of_Kashi_Vishwanath_Dham%2C_in_Varanasi%2C_Uttar_Pradesh_on_December_13%2C_2021_%28105966%29.jpg'
     ],
     timings: '3:00 AM – 11:00 PM Daily',
     entryFeeIndians: 'Free (Sugam darshan ₹300)',
@@ -1627,9 +1726,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'An impregnable medieval hill fortress built on a conical pyramid-like rock rising 200 meters above the Deccan plains. Constructed by the Yadava kings in 1187 CE and renamed Daulatabad by Muhammad bin Tughlaq who famously attempted to move his capital here from Delhi.',
     architectureStyle: 'Medieval Deccani Defense Citadel',
-    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Daulatabad_Fort_a_view.JPG/1920px-Daulatabad_Fort_a_view.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Aurangabad_-_Daulatabad_Fort_%2830%29.JPG/1920px-Aurangabad_-_Daulatabad_Fort_%2830%29.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Aurangabad_-_Daulatabad_Fort_%2869%29.JPG/1920px-Aurangabad_-_Daulatabad_Fort_%2869%29.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Aurangabad_-_Daulatabad_Fort_%2875%29.JPG/1920px-Aurangabad_-_Daulatabad_Fort_%2875%29.JPG'
     ],
     timings: '6:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -1658,9 +1759,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'One of the largest salt deserts in the world, spanning over 7,500 square kilometers in the Thar Desert. Under the full moon, the pure white salt crust shines like a boundless sheet of diamonds. Nearby Kala Dungar (Black Hill) offers panoramic views of the Indo-Pak border horizon.',
     architectureStyle: 'Natural White Salt Desert Biosphere',
-    heroImage: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Rann_of_Kutch_-_White_Desert.jpg/1920px-Rann_of_Kutch_-_White_Desert.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dholavira_East_Gate.jpg/1920px-Dholavira_East_Gate.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Greater_Flamingos_at_Rann_of_Kutch.jpg/1920px-Greater_Flamingos_at_Rann_of_Kutch.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Nilgai_group_at_Little_Rann_of_kutch.JPG/1920px-Nilgai_group_at_Little_Rann_of_kutch.JPG'
     ],
     timings: 'Sunrise to 10:00 PM (Permit required from Bhirandiyara)',
     entryFeeIndians: '₹100 (Online or Bhirandiyara checkpoint)',
@@ -1689,9 +1792,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'Built by Rajendra Chola I to celebrate his victorious military expedition to the sacred River Ganges in northern India, this city served as the capital of the Chola Empire for 250 years. The Brihadisvara Temple here features graceful concave curving lines on its 55-meter vimana tower.',
     architectureStyle: 'Chola Dravidian Classical',
-    heroImage: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/GangaiKonda_Cholapuram%28Front_View%29.JPG/1920px-GangaiKonda_Cholapuram%28Front_View%29.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/c/c0/%2823%29_Half_Male_Half_Female_Androgynous_Shiva_Gangaikonda_Cholapuram_Hindu_Temple_Pragatishwara_Tamil_Nadu_India_2014.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Gangaikonda_Cholapuram_Temple_Entrance.JPG/1920px-Gangaikonda_Cholapuram_Temple_Entrance.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Maligai-Medu.jpg/1920px-Maligai-Medu.jpg'
     ],
     timings: '6:00 AM – 8:30 PM Daily',
     entryFeeIndians: 'Free',
@@ -1720,9 +1825,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'Built by Rajaraja Chola II at Darasuram near Kumbakonam, this temple is dedicated to Lord Shiva under the name of Airavata, the white celestial elephant of Indra who worshiped here. Known for its jewel-box proportions, stone chariot mandapa, and musical stone steps.',
     architectureStyle: 'Late Chola Dravidian Jewel',
-    heroImage: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/A_different_view_of_Airavatesvara_Temple.jpg/1920px-A_different_view_of_Airavatesvara_Temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/%22An_inscriptions_in_Airavatesvara_Temple%22.JPG/1920px-%22An_inscriptions_in_Airavatesvara_Temple%22.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/%22Entrance_of_Airavatesvara_Temple_1%22.JPG/1920px-%22Entrance_of_Airavatesvara_Temple_1%22.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/12th_century_Airavatesvara_Temple_at_Darasuram%2C_dedicated_to_Shiva%2C_built_by_the_Chola_king_Rajaraja_II_Tamil_Nadu_India_%28114%29.jpg/1920px-12th_century_Airavatesvara_Temple_at_Darasuram%2C_dedicated_to_Shiva%2C_built_by_the_Chola_king_Rajaraja_II_Tamil_Nadu_India_%28114%29.jpg'
     ],
     timings: '6:00 AM – 12:00 PM & 4:00 PM – 8:00 PM',
     entryFeeIndians: 'Free',
@@ -1751,9 +1858,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Rising 125 meters above the Blue City of Jodhpur, Mehrangarh is one of the most magnificent hill forts in India. Enclosed by imposing thick sandstone walls, its courtyards contain the Sheesh Mahal, Phool Mahal, and one of the finest royal palace museums in the country.',
     architectureStyle: 'Rathore Rajput Sandstone Hill Fort',
-    heroImage: 'https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Jodhpur%2C_India%2C_Gates_of_Mehrangarh_Fort.jpg/1920px-Jodhpur%2C_India%2C_Gates_of_Mehrangarh_Fort.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Jodhpur%2C_India%2C_Mehrangarh_Fort%2C_Palace_2.jpg/1920px-Jodhpur%2C_India%2C_Mehrangarh_Fort%2C_Palace_2.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/d/d7/Jodhpur_Palace_Market_Gate.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Jodhpur_mehrangarh_fort_%28enhanced%29.jpg/1920px-Jodhpur_mehrangarh_fort_%28enhanced%29.jpg'
     ],
     timings: '9:00 AM – 5:00 PM Daily',
     entryFeeIndians: '₹100 (Museum)',
@@ -1782,9 +1891,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Crowning the serene waters of Lake Pichola, the City Palace of Udaipur is the largest royal palace complex in Rajasthan. Built over four centuries by 22 successive Maharanas of Mewar, it blends granite and marble into a flamboyant palace of towers, domes, and glass mosaics.',
     architectureStyle: 'Mewar Rajput & European Classical',
-    heroImage: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Udaipur_City_Palace.jpg/1920px-Udaipur_City_Palace.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/7/7e/City_Palace_Aerial_View_by_Pranshu_Dubey.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/City_Palace_Udaipur_Front.jpg/1920px-City_Palace_Udaipur_Front.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/4/45/City_Palace_Udaipur_Rajasthan.jpg'
     ],
     timings: '9:00 AM – 9:00 PM Daily',
     entryFeeIndians: '₹300 (Palace Museum)',
@@ -1813,9 +1924,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Unlike most major Rajput forts built on high hills, Junagarh was constructed on the desert plains of Bikaner. Formidable 986-meter perimeter walls and 37 bastions protected a treasure house of courtly luxury, featuring the Anup Mahal with gold leaf lacquerwork and the Badal Mahal cloud room.',
     architectureStyle: 'Rajput & Mughal Desert Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/India_Bikaner_Junagarh_Fort.jpg/1920px-India_Bikaner_Junagarh_Fort.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Gardens_Junagarh_Fort_2007.jpg/1920px-Gardens_Junagarh_Fort_2007.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Inner_view_of_bikaner_fort.jpg/1920px-Inner_view_of_bikaner_fort.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Junagarth_Fort%2C_Bikaner.jpg/1920px-Junagarth_Fort%2C_Bikaner.jpg'
     ],
     timings: '10:00 AM – 4:30 PM Daily',
     entryFeeIndians: '₹50',
@@ -1844,9 +1957,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Located in Kanyakumari district, this royal palace is an extraordinary masterpiece of traditional Kerala wooden architecture. Constructed of teak, rosewood, and jackfruit timber, it features sloped tiled roofs, intricately carved rosewood ceilings, and polished mirror-like black charcoal-coconut shell floors.',
     architectureStyle: 'Indigenous Kerala Timber Architecture (Tachushastra)',
-    heroImage: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Padmanabhapuram_main_entrance.jpg/1920px-Padmanabhapuram_main_entrance.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Bed_64_Woods_Padmanabhapuram_Mar24_A7C_10140.jpg/1920px-Bed_64_Woods_Padmanabhapuram_Mar24_A7C_10140.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Chinese_Jars_Padmanabhapuram_Palace_Mar24_A7C_10123.jpg/1920px-Chinese_Jars_Padmanabhapuram_Palace_Mar24_A7C_10123.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Clock_Tower_Padmanabhapuram_Palace_Mar24_A7C_10102.jpg/1920px-Clock_Tower_Padmanabhapuram_Palace_Mar24_A7C_10102.jpg'
     ],
     timings: '9:00 AM – 4:30 PM (Closed on Mondays)',
     entryFeeIndians: '₹35',
@@ -1875,9 +1990,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2023,
     description: 'The twin Shiva temple of Hoysaleswara and Shantaleswara at Halebidu (ancient Dwarasamudra) was the capital of the Hoysala Empire. Renowned for its intricate chloritic soapstone carvings, the outer walls are lined with endless friezes of charging elephants, lions, mythological yalis, and epics.',
     architectureStyle: 'Hoysala Stellate Soapstone Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Hoysaleshwara_temple_in_Monsoon.JPG/1920px-Hoysaleshwara_temple_in_Monsoon.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Gajasurasamhara_Shiva.jpg/1920px-1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Gajasurasamhara_Shiva.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Inscription%2C_Dancing_Saraswati_2.jpg/1920px-1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Inscription%2C_Dancing_Saraswati_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Inscription%2C_Harihara_half_Shiva_half_Vishnu.jpg/1920px-1150_CE_Hoysaleswara_temple_Halebidu_Karnataka%2C_Inscription%2C_Harihara_half_Shiva_half_Vishnu.jpg'
     ],
     timings: '6:30 AM – 6:30 PM Daily',
     entryFeeIndians: 'Free',
@@ -1906,9 +2023,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched atop Vindhyagiri Hill, this 57-foot-tall monolithic statue of Lord Bahubali is the world’s largest freestanding monolithic stone statue without external support. Carved from a single block of grey granite by general Chavundaraya, it has stood serenely for over 1,000 years.',
     architectureStyle: 'Classical Digambara Jain Monolith',
-    heroImage: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gommateshwara%2C_Shravanabelagola.jpg/1920px-Gommateshwara%2C_Shravanabelagola.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Gomateshwar_Perspective.jpg/1920px-Gomateshwar_Perspective.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Gomatesvara_Statue_3.jpg/1920px-Gomatesvara_Statue_3.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Gomateswara%2C_Shravanabelagola.jpg/1920px-Gomateswara%2C_Shravanabelagola.jpg'
     ],
     timings: '6:30 AM – 6:30 PM (650 rock-cut steps to climb)',
     entryFeeIndians: 'Free',
@@ -1937,9 +2056,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A historic village on the Malaprabha River containing more than 125 stone temples dating from the 5th to 12th centuries. Revered by art historians as the Cradle of Indian Rock Architecture, where Chalukyan master guild sculptors experimented with apsidal plans, pillared halls, and proto-spires.',
     architectureStyle: 'Experimental Chalukyan Prototype',
-    heroImage: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/8th_century_Durga_temple_exterior_view%2C_Aihole_Hindu_temples_and_monuments_3.jpg/1920px-8th_century_Durga_temple_exterior_view%2C_Aihole_Hindu_temples_and_monuments_3.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/6th_century_Ladkhan_temple%2C_Nandi_watching_Shiva_Linga%2C_Aihole_Hindu_monuments_Karnataka.jpg/1920px-6th_century_Ladkhan_temple%2C_Nandi_watching_Shiva_Linga%2C_Aihole_Hindu_monuments_Karnataka.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/6th_century_Ravanaphadi_cave_temple%2C_Ardhanarishvara_%28half_Shiva%2C_half_Parvati%29%2C_Aihole_Hindu_monuments_Karnataka.jpg/1920px-6th_century_Ravanaphadi_cave_temple%2C_Ardhanarishvara_%28half_Shiva%2C_half_Parvati%29%2C_Aihole_Hindu_monuments_Karnataka.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/6th_century_Ravanaphadi_cave_temple_ceiling_Vaishnavism_art%2C_Vishnu_and_Lakshmi_flying_on_Garuda%2C_Aihole_Hindu_monuments_Karnataka.jpg/1920px-6th_century_Ravanaphadi_cave_temple_ceiling_Vaishnavism_art%2C_Vishnu_and_Lakshmi_flying_on_Garuda%2C_Aihole_Hindu_monuments_Karnataka.jpg'
     ],
     timings: '9:00 AM – 5:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -1968,9 +2089,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2004,
     description: 'An outstanding example of Victorian Gothic Revival architecture in India, blended with themes deriving from traditional Indian courtly architecture. Designed by British architect F. W. Stevens, its stone dome, turrets, pointed arches, and eccentric ground plan symbolize Bombay as the premier port of the East.',
     architectureStyle: 'Victorian High Gothic & Indian Saracenic',
-    heroImage: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Shivaji_British_Museum.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/en/f/fd/JoppenSouthIndia1605max.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/9/9c/Death_of_Afzal_Khan.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Deccan%2C_ritratto_di_chhatrapati_shivaji_maharaj%2C_bijapur_1675_ca.jpg/1920px-Deccan%2C_ritratto_di_chhatrapati_shivaji_maharaj%2C_bijapur_1675_ca.jpg'
     ],
     timings: 'Operating railway station 24 Hours (Heritage Gallery 2:00 PM – 5:00 PM)',
     entryFeeIndians: 'Free (Heritage Gallery tour ₹200)',
@@ -1999,9 +2122,10 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Built by King Rudra Deva in 1163 CE, this temple is dedicated to the Hindu trinity: Shiva, Vishnu, and Surya (Trikutalayam). Supported by hundreds of richly carved basalt pillars placed so tightly that they form a stone forest, it features a monolithic black basalt Nandi bull facing the shrine.',
     architectureStyle: 'Kakatiya Polished Basalt Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/1000pillar_temple_warangal.jpg/1920px-1000pillar_temple_warangal.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Nandi_Thousand_Pillar_Temple.jpg/1920px-Nandi_Thousand_Pillar_Temple.jpg',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80'
     ],
     timings: '6:00 AM – 8:00 PM Daily',
     entryFeeIndians: 'Free',
@@ -2030,9 +2154,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'Erected by Rana Kumbha to celebrate his monumental victory over the combined armies of Malwa and Gujarat sultanates. Standing 37.2 meters high with nine storeys, the Tower of Victory is completely covered in stone sculptures of every deity from the Hindu pantheon.',
     architectureStyle: 'Mewar Rajput Victory Architecture',
-    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Kirti_Stambha_%28Tower_of_Fame%29_%284571936260%29.jpg/1920px-Kirti_Stambha_%28Tower_of_Fame%29_%284571936260%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_Jaina_tower_at_Chittor.jpg/1920px-A_Jaina_tower_at_Chittor.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Jain_mandir_%2C_Chittorgarh.JPG/1920px-Jain_mandir_%2C_Chittorgarh.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Jain_temple_inside_Chittorgarh_Fort.jpg/1920px-Jain_temple_inside_Chittorgarh_Fort.jpg'
     ],
     timings: '9:30 AM – 5:30 PM Daily',
     entryFeeIndians: '₹40 (Fort entry)',
@@ -2061,9 +2187,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: 2013,
     description: 'A delicate white water palace surrounded by the waters of the Padmini Talav lake. Celebrated in Indian ballad and folklore as the pavilion where Sultan Alauddin Khalji was permitted to view the reflection of legendary Queen Padmini in a bronze mirror.',
     architectureStyle: 'Rajput Water Pavilion',
-    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/8/88/22Princess_Padmavati_ca._1765_Biblioth%C3%A8que_nationale_de_France%2C_Paris.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Oil_painting_of_Padmini%27s_palace_in_the_fort_in_the_midst_of_the_tank.jpg/1920px-Oil_painting_of_Padmini%27s_palace_in_the_fort_in_the_midst_of_the_tank.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Padmini_Palace%2C_Chittorgarh%2C_Rajasthan.jpg/1920px-Padmini_Palace%2C_Chittorgarh%2C_Rajasthan.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e9/Queen_Nagamati_talks_to_her_parrot%2C_Padmavat%2C_c1750.jpg'
     ],
     timings: '9:30 AM – 5:30 PM Daily',
     entryFeeIndians: 'Included in Chittorgarh Fort entry',
@@ -2092,9 +2220,10 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'A 2,000-year-old temple dedicated to Lord Janardhana (Vishnu) standing on a hill overlooking the Arabian Sea at Varkala. Famous for its ancient bell brought from a shipwrecked Dutch vessel and the adjacent majestic red laterite cliffs of Papanasam Beach.',
     architectureStyle: 'Traditional Kerala Pagoda Timber & Laterite',
-    heroImage: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Janardhana_swamy_temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=80'
     ],
     timings: '5:30 AM – 12:00 PM & 5:00 PM – 8:00 PM',
     entryFeeIndians: 'Free',
@@ -2123,9 +2252,10 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Modeled after the Potala Palace in Lhasa, Leh Palace rises nine storeys on the Tsemo ridge overlooking the high-altitude Himalayan town of Leh. Built of mud brick, stone, and wood, its rooftop offers breathtaking 360-degree vistas of the snow-clad Stok Kangri mountain range.',
     architectureStyle: 'Tibetan Himalayan Fortified Palace',
-    heroImage: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Leh_Palace_2011.jpg/1920px-Leh_Palace_2011.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Leh_Palace_Morning_View.jpg/1920px-Leh_Palace_Morning_View.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Leh_Palace_in_night.jpg/1920px-Leh_Palace_in_night.jpg'
     ],
     timings: '7:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹25',
@@ -2154,9 +2284,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'The largest and wealthiest Buddhist monastery in Ladakh, tucked inside a secluded mountain gorge south of Leh. Belonging to the Red Hat Drukpa lineage, it is internationally renowned for the vibrant annual Hemis Festival celebrating Guru Padmasambhava with sacred masked Cham dances.',
     architectureStyle: 'Tibetan Buddhist Mountain Gompa',
-    heroImage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Hemis_Monastery_02.jpg/1920px-Hemis_Monastery_02.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/17th_century_Hemis_Monastery_in_Ladakh.jpg/1920px-17th_century_Hemis_Monastery_in_Ladakh.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f4/Hemis_Gompa_Guru_Rinpoche_%28208%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Hemis_Mahasiddhas_1.jpg/1920px-Hemis_Mahasiddhas_1.jpg'
     ],
     timings: '8:00 AM – 6:00 PM Daily',
     entryFeeIndians: '₹50 (Museum)',
@@ -2185,9 +2317,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched high in the Sahyadri mountain range, Raigad Fort was chosen by Chhatrapati Shivaji Maharaj as the capital of the sovereign Maratha Empire. On June 6, 1674, Shivaji was crowned here as Chhatrapati. The fort features the coronation throne platform, Queens palaces, and the sheer Takmak Tok execution cliff.',
     architectureStyle: 'Maratha Mountain Fort',
-    heroImage: 'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Nagarkhana%2C_Raigad_Fort%2C_India.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Chatrapati_Shivaji_Maharaj_on_his_throne.jpg/1920px-Chatrapati_Shivaji_Maharaj_on_his_throne.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/7/7a/Chhatrapati_Shivaji_Maharaj_Samadhi_Raigad.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Inscripted_name_of_the_architect_of_Raigad.JPG/1920px-Inscripted_name_of_the_architect_of_Raigad.JPG'
     ],
     timings: '6:00 AM – 6:00 PM Daily (Ropeway available)',
     entryFeeIndians: '₹25 (Ropeway extra ₹300-₹400)',
@@ -2216,9 +2350,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Perched dramatically on a hill slope rising above the Indus Valley, Thiksey Gompa bears a striking resemblance to the Potala Palace of Lhasa. A 12-storey monastery complex, it houses the majestic two-storey (49-foot) statue of Maitreya Buddha, consecrated by the 14th Dalai Lama.',
     architectureStyle: 'Tibetan Buddhist Hilltop Monastic',
-    heroImage: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Exquisite_Thiksey_Monestry-Ladakh-DSC_0405.jpg/1920px-Exquisite_Thiksey_Monestry-Ladakh-DSC_0405.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Thiksey%2C_Indus_River_Valley%2C_Landscape_of_Ladakh%2C_North_India.jpg/1920px-Thiksey%2C_Indus_River_Valley%2C_Landscape_of_Ladakh%2C_North_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Thiksey_Monastery%2C_Ladakh_03.jpg/1920px-Thiksey_Monastery%2C_Ladakh_03.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Thiksey_Monastery%2C_Ladakh_08.jpg/1920px-Thiksey_Monastery%2C_Ladakh_08.jpg'
     ],
     timings: '7:00 AM – 7:00 PM (Morning prayers at 6:00 AM)',
     entryFeeIndians: '₹30',
@@ -2247,9 +2383,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Surrounded on three sides by the Arabian Sea on Kanduka Hill, Murudeshwar boasts the world’s second tallest statue of Lord Shiva (123 feet). Its monumental 20-storey Raja Gopuram stands 237 feet tall, equipped with a high-speed elevator taking pilgrims to the top observation deck.',
     architectureStyle: 'Modern Dravidian & Coastal Gigantism',
-    heroImage: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Shiva_Statue_Murdeshwara_Temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Karwar_Pictures_-_Yogesa_08.JPG/1920px-Karwar_Pictures_-_Yogesa_08.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lord_Shiva_statue_at_Murudeshwara.jpg/1920px-Lord_Shiva_statue_at_Murudeshwara.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Lord_Shiva_the_tallest_statue_%40_Murudeswar.jpg/1920px-Lord_Shiva_the_tallest_statue_%40_Murudeswar.jpg'
     ],
     timings: '3:00 AM – 1:00 PM & 3:00 PM – 8:00 PM (Gopuram Lift: 6:00 AM - 6:00 PM)',
     entryFeeIndians: 'Free (Lift to 18th floor ₹20)',
@@ -2278,9 +2416,11 @@ export const HERITAGE_SITES: HeritageSite[] = [
     unescoYear: undefined,
     description: 'Spread over an astonishing 156 acres on an island formed by the Kaveri and Coleroon rivers, Srirangam is the largest functioning Hindu temple complex in the world. It is enclosed by seven concentric walled enclosures (prakarams) with 21 magnificent gopuram towers, crowned by the 239-foot Rajagopuram.',
     architectureStyle: 'Grand Dravidian Temple City',
-    heroImage: 'https://images.unsplash.com/photo-1567591414240-e25bc20c587d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Ranganathaswamy_temple_tiruchirappalli.jpg/1920px-Ranganathaswamy_temple_tiruchirappalli.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Aerial_view_of_Sri_Rangam_temple_near_Tiruchirapalli_1.jpg/1920px-Aerial_view_of_Sri_Rangam_temple_near_Tiruchirapalli_1.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/KITLV_92170_-_Unknown_-_Ranganatha_temple_complex_at_Srirangam_in_India_-_Around_1870.tif/lossy-page1-1920px-KITLV_92170_-_Unknown_-_Ranganatha_temple_complex_at_Srirangam_in_India_-_Around_1870.tif.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f8/Le_temple_de_Srirangam_%28Tiruchirapalli%2C_Inde%29_%2813903661293%29.jpg'
     ],
     timings: '6:00 AM – 9:00 PM Daily',
     entryFeeIndians: 'Free (Quick darshan ₹100-₹250)',

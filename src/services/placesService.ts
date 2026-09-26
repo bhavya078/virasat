@@ -40,7 +40,7 @@ export class PlacesService {
           priceRange: '₹30,000 - ₹45,000',
           distanceKm: '3.8 km from Virupaksha Temple',
           address: 'Kamalapura - P.K. Halli Road, Hampi, Karnataka 583221',
-          image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Evolve+Back+Kamalapura+Palace+Hampi',
           phone: '+91 80 4115 2200'
         },
@@ -54,7 +54,7 @@ export class PlacesService {
           priceRange: '₹8,500 - ₹12,000',
           distanceKm: '5.2 km from Vittala Temple',
           address: 'Hosapete - Hampi Road, Kamalapur, Karnataka 583221',
-          image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Heritage+Resort+Hampi',
           phone: '+91 8394 241777'
         },
@@ -68,7 +68,7 @@ export class PlacesService {
           priceRange: '₹4,000 - ₹6,000',
           distanceKm: '1.5 km from Anegundi Historic Gate',
           address: 'Near Sanapur Lake, Anegundi, Gangavathi, Karnataka 583234',
-          image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Kishkinda+Heritage+Resort+Anegundi',
           phone: '+91 8533 287890'
         },
@@ -82,7 +82,7 @@ export class PlacesService {
           priceRange: '₹1,800 - ₹2,800',
           distanceKm: '400 m from Virupaksha Temple Ghats',
           address: 'Janata Plot, Hampi Bazaar, Karnataka 583239',
-          image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Archana+Guest+House+Hampi',
           phone: '+91 9448 958223'
         },
@@ -96,7 +96,7 @@ export class PlacesService {
           priceRange: '₹2,800 - ₹4,000',
           distanceKm: '800 m from Archaeological Museum Kamalapura',
           address: 'Opposite ASI Museum, Kamalapur, Hampi, Karnataka 583221',
-          image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Clarks+Inn+Hampi',
           phone: '+91 8394 241900'
         }
@@ -115,7 +115,7 @@ export class PlacesService {
           priceRange: '₹32,000 - ₹50,000',
           distanceKm: 'Directly on Darbhanga Ghat (150m to Dashashwamedh)',
           address: 'Darbhanga Ghat, Dashashwamedh, Varanasi, Uttar Pradesh 221001',
-          image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=BrijRama+Palace+Varanasi',
           phone: '+91 542 245 5555'
         },
@@ -129,7 +129,7 @@ export class PlacesService {
           priceRange: '₹19,000 - ₹32,000',
           distanceKm: '4.5 km from Kashi Vishwanath Corridor',
           address: 'Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002',
-          image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Taj+Ganges+Varanasi',
           phone: '+91 542 666 0001'
         },
@@ -143,7 +143,7 @@ export class PlacesService {
           priceRange: '₹3,500 - ₹5,500',
           distanceKm: 'On Scindhia Ghat overlooking Manikarnika',
           address: 'Scindhia Ghat, Varanasi, Uttar Pradesh 221001',
-          image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Scindhia+Guest+House+Varanasi',
           phone: '+91 542 242 0319'
         },
@@ -157,7 +157,7 @@ export class PlacesService {
           priceRange: '₹2,000 - ₹3,500',
           distanceKm: 'Meer Ghat, 200m from Kashi Vishwanath Corridor',
           address: 'D 3/24 Meer Ghat, Varanasi, Uttar Pradesh 221001',
-          image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Ganpati+Guest+House+Varanasi',
           phone: '+91 542 239 0057'
         },
@@ -171,7 +171,7 @@ export class PlacesService {
           priceRange: '₹2,800 - ₹4,000',
           distanceKm: '150 m from Assi Ghat aarti pavilion',
           address: 'Nagwa Road, Assi Ghat, Varanasi, Uttar Pradesh 221005',
-          image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+          image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Assi+Ghat+Homestay+Varanasi',
           phone: '+91 9415 224411'
         }
@@ -193,7 +193,7 @@ export class PlacesService {
         priceRange: h.pricePerNight,
         distanceKm: `${1.2 + i * 1.5} km from ${matchedState.topAttraction.split('&')[0].trim()}`,
         address: `${matchedState.capital}, ${matchedState.name}`,
-        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
+        image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80',
         mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + matchedState.capital)}`,
         phone: '+91 1800 102 3333'
       };
@@ -213,7 +213,7 @@ export class PlacesService {
           distanceKm: '800 m from Virupaksha Temple',
           priceLevel: '₹₹ (₹350/person)',
           timings: '07:30 AM - 10:00 PM',
-          image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
           address: 'Kamalapur Road, Next to Mango Tree Garden, Hampi, Karnataka 583239',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Mango+Tree+Restaurant+Hampi',
           phone: '+91 9448 895444',
@@ -229,7 +229,7 @@ export class PlacesService {
           distanceKm: '1.2 km from Tungabhadra River Crossing, Anegundi',
           priceLevel: '₹₹ (₹400/person)',
           timings: '08:00 AM - 10:30 PM',
-          image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=1200&q=80',
           address: 'Across the River, Anegundi, Gangavathi, Karnataka 583234',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Laughing+Buddha+Cafe+Hampi',
           mustTry: 'Fresh Wood-fired Pesto Pizza & Ginger Mint Lemonade'
@@ -244,7 +244,7 @@ export class PlacesService {
           distanceKm: '150 m from Virupaksha Gopuram',
           priceLevel: '₹ (₹120/person)',
           timings: '06:30 AM - 03:00 PM',
-          image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1200&q=80',
           address: 'Hampi Bazaar Street, Hampi, Karnataka 583239',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Suresh+Restaurant+Hampi+Bazaar',
           mustTry: 'Ghee Podi Masala Dosa with piping hot Coconut Chutney'
@@ -259,7 +259,7 @@ export class PlacesService {
           distanceKm: '200 m from Hemakuta Hill Steps',
           priceLevel: '₹ (₹60/person)',
           timings: '04:00 PM - 09:30 PM',
-          image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=1200&q=80',
           address: 'Main Bazaar Car Street, Hampi, Karnataka 583239',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Hampi+Street+Food+Bazaar',
           mustTry: 'Crisp Mirchi Bajji with spicy onion filling and Mandakki Susla'
@@ -279,7 +279,7 @@ export class PlacesService {
           distanceKm: '400 m from Dashashwamedh Ghat',
           priceLevel: '₹ (₹150/person)',
           timings: '02:00 PM - 11:00 PM',
-          image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
           address: 'D.37/49 Godowlia Crossing, Varanasi, Uttar Pradesh 221001',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Kashi+Chaat+Bhandar+Varanasi',
           phone: '+91 542 245 4488',
@@ -295,7 +295,7 @@ export class PlacesService {
           distanceKm: '300 m from Manikarnika Ghat',
           priceLevel: '₹ (₹120/person)',
           timings: '08:00 AM - 10:00 PM',
-          image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1587985064135-0366536eab42?auto=format&fit=crop&w=1200&q=80',
           address: 'CK 12/1 Kunj Gali, Bangali Tola, Varanasi, Uttar Pradesh 221001',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Blue+Lassi+Shop+Varanasi',
           mustTry: 'Pomegranate & Pista Rabri Lassi topped with clotted Malai'
@@ -311,7 +311,7 @@ export class PlacesService {
           address: 'Anand Mandir Cinema Complex, Teliyabag, Varanasi, Uttar Pradesh 221002',
           priceLevel: '₹₹ (₹350/person)',
           timings: '11:00 AM - 11:00 PM',
-          image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Baati+Chokha+Varanasi',
           phone: '+91 542 220 5544',
           mustTry: 'Charcoal-baked Baati dipped in Desi Ghee with Brinjal Chokha & Kheer'
@@ -327,7 +327,7 @@ export class PlacesService {
           address: 'Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002',
           priceLevel: '₹₹₹₹ (₹2,200/person)',
           timings: '12:30 PM - 03:00 PM, 07:30 PM - 11:00 PM',
-          image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80',
           mapUrl: 'https://www.google.com/maps/search/?api=1&query=Varuna+Taj+Ganges+Varanasi',
           phone: '+91 542 666 0001',
           mustTry: 'Dum Ki Nalli, Subz Banarasi Kofta & Saffron Sheermal'
@@ -352,7 +352,7 @@ export class PlacesService {
         distanceKm: `${0.5 + i * 0.8} km from ${matchedState.capital} Center`,
         priceLevel: r.priceRange,
         timings: '11:00 AM - 10:30 PM',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80',
         address: `${matchedState.capital}, ${matchedState.name}`,
         mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name + ' ' + matchedState.capital)}`,
         phone: '+91 1800 200 4545',

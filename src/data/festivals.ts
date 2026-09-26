@@ -16,14 +16,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol', 'Dholak', 'Shehnai', 'Harmonium'],
     bestLocations: ['Ahmedabad (GMDC Ground)', 'Vadodara (United Way)', 'Surat', 'Rajkot'],
     countdownTargetDate: '2026-10-11T18:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Shardiya_Navratri_Festival_in_Pune_2020.jpg/1920px-Shardiya_Navratri_Festival_in_Pune_2020.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/2017_Maha_Saptami_Behala_area_of_Kolkata_Durga_Puja_26.jpg/1920px-2017_Maha_Saptami_Behala_area_of_Kolkata_Durga_Puja_26.jpg',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -41,14 +37,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhaak drum', 'Kanshor bell', 'Shankha (Conch shell)'],
     bestLocations: ['Kolkata (Bagbazar, Maddox Square, Kumartuli)', 'Howrah', 'Siliguri'],
     countdownTargetDate: '2026-10-16T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A8_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97%E0%A7%8B%E0%A7%8E%E0%A6%B8%E0%A6%AC_%E0%A7%A8%E0%A7%A6%E0%A7%A7%E0%A7%AE.jpg/1920px-%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A8_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97%E0%A7%8B%E0%A7%8E%E0%A6%B8%E0%A6%AC_%E0%A7%A8%E0%A7%A6%E0%A7%A7%E0%A7%AE.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/2010_Durga_Puja_Barisha_Pandal.jpg/1920px-2010_Durga_Puja_Barisha_Pandal.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/2011_Durga_Puja_Pandal.jpg/1920px-2011_Durga_Puja_Pandal.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/20170930_065217000_iOS.jpg/1920px-20170930_065217000_iOS.jpg'
     ]
   },
   {
@@ -66,14 +59,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Shehnai', 'Sitar', 'Tabla'],
     bestLocations: ['Ayodhya (Deepotsav Guinness Record)', 'Varanasi Ghats', 'Amritsar Golden Temple', 'Jaipur'],
     countdownTargetDate: '2026-11-08T18:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/The_Rangoli_of_Lights.jpg/1920px-The_Rangoli_of_Lights.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Diwali_Pujan_at_Haridwar.jpg/1920px-Diwali_Pujan_at_Haridwar.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/81/1867_CE_chromolithograph%2C_Diwali%2C_feast_of_lamps%2C_by_William_Simpson.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/3/38/Divalinagar.jpg'
     ]
   },
   {
@@ -91,14 +81,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dholak', 'Nagada', 'Dafli', 'Manjira'],
     bestLocations: ['Barsana & Nandgaon (Lathmar)', 'Vrindavan (Banke Bihari Temple)', 'Mathura', 'Shantiniketan (Basanta Utsav)'],
     countdownTargetDate: '2027-03-22T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/A_play_of_colors_then_a_dance_at_Holi_India.jpg/1920px-A_play_of_colors_then_a_dance_at_Holi_India.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Basanto_Utsav.jpg/1920px-Basanto_Utsav.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Basanto_Utsav_Performers.jpg/1920px-Basanto_Utsav_Performers.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Basantotsav.jpg/1920px-Basantotsav.jpg'
     ]
   },
   {
@@ -116,14 +103,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol-Tasha troop beats', 'Lezim cymbals', 'Zanj', 'Tutari horn'],
     bestLocations: ['Mumbai (Lalbaugcha Raja, GSB Seva Mandal)', 'Pune (Dagadusheth Halwai Ganpati)', 'Divar Island (Goa)'],
     countdownTargetDate: '2026-09-14T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1567591414240-e25bc20c587d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Khairathabad_Vinayakudu_2021.jpg/1920px-Khairathabad_Vinayakudu_2021.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1567591414240-e25bc20c587d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Chabbi_Ganapathi_2026_01.jpg/1920px-Chabbi_Ganapathi_2026_01.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Chitrashalagoa.jpg/1920px-Chitrashalagoa.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Clay_Ganesh_Murti%2C_Ganesh_Chaturthi.JPG/1920px-Clay_Ganesh_Murti%2C_Ganesh_Chaturthi.JPG'
     ]
   },
   {
@@ -141,14 +125,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Chenda melam', 'Maddalam', 'Ilathalam', 'Kombu horn'],
     bestLocations: ['Aranmula (Snake boat regatta)', 'Thrikkakara Temple', 'Thrissur Swaraj Round (Pulikkali)', 'Kochi'],
     countdownTargetDate: '2026-08-26T07:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Onapookkalam.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/An_Onam_boat_race_collage_Kerala_India.jpg/1920px-An_Onam_boat_race_collage_Kerala_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm/1920px--Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Athachamayam_3.JPG/1920px-Athachamayam_3.JPG'
     ]
   },
   {
@@ -166,14 +147,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Nadaswaram', 'Thavil', 'Parai drum'],
     bestLocations: ['Madurai (Alanganallur Jallikattu)', 'Thanjavur Big Temple grounds', 'Pollachi rural farms'],
     countdownTargetDate: '2027-01-14T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/%22Maatu_pongal_kolam%22.JPG/1920px-%22Maatu_pongal_kolam%22.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Pongal_offerings.jpg/1920px-Pongal_offerings.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/c/ca/Pongum_pongal.jpg'
     ]
   },
   {
@@ -191,14 +168,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol drum', 'Pepa (Buffalo horn pipe)', 'Gogona (Bamboo reed mouth harp)', 'Toka clapper'],
     bestLocations: ['Guwahati (Latasil Field)', 'Majuli Island', 'Sivasagar historic amphitheatres'],
     countdownTargetDate: '2027-04-14T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Bihu-Dance-assam.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/A_part_of_a_Bihu_song_performed_by_Lilimai_Sunuwal..webm/1920px--A_part_of_a_Bihu_song_performed_by_Lilimai_Sunuwal..webm.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Bihu_Dance_%2C_Festival_of_India.jpg/1920px-Bihu_Dance_%2C_Festival_of_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Bihu_Team.jpg/1920px-Bihu_Team.jpg'
     ]
   },
   {
@@ -216,14 +190,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Log drums (hollowed tree trunks)', 'Tati (single-string folk lute)', 'Bamboo flutes'],
     bestLocations: ['Kisama Naga Heritage Village', 'Kohima Night Market', 'Khonoma Green Village'],
     countdownTargetDate: '2026-12-01T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Hornbil_Festival%2C_Kohima_6.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Hornbill_Festival%2CNagaland.jpg/1920px-Hornbill_Festival%2CNagaland.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Hornbill_Festival%2CNagaland_2.jpg/1920px-Hornbill_Festival%2CNagaland_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Kisama_main_arena_Hornbill_Festival_2019.jpg/1920px-Kisama_main_arena_Hornbill_Festival_2019.jpg'
     ]
   },
   {
@@ -241,14 +212,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dungchen (10-foot long copper horn)', 'Gyaling (reed oboe)', 'Nga (temple drum)', 'Rolmo cymbals'],
     bestLocations: ['Leh (Hemis & Thiksey Gompas)', 'Tawang Monastery', 'Rumtek Monastery (Sikkim)'],
     countdownTargetDate: '2027-02-07T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Getting_ready_for_Losar.jpg/1920px-Getting_ready_for_Losar.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -266,14 +233,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Mardala drum', 'Kahali trumpet', 'Ghanta (Brass gong)', 'Bheri'],
     bestLocations: ['Puri (Bada Danda Grand Road)', 'Bhubaneswar', 'Baripada'],
     countdownTargetDate: '2026-07-16T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Balabhadra_Subhadra_Jagannath.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -291,14 +254,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Ravanahatha (Bowed fiddle)', 'Kamaicha', 'Dholak', 'Morchang (Jaw harp)'],
     bestLocations: ['Pushkar Mela Ground', 'Brahma Temple Ghat', 'Desert Dunes Camping Tents'],
     countdownTargetDate: '2026-11-20T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/%28A%29_Camel_Pushkar_fair.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/%281%29_Pushkar_Fair%2C_Camel_Festival%2C_I_love_my_camel.jpg/1920px-%281%29_Pushkar_Fair%2C_Camel_Festival%2C_I_love_my_camel.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%282%29_Faces_and_colours_at_Pushkar_Fair.jpg/1920px-%282%29_Faces_and_colours_at_Pushkar_Fair.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/6/68/Giant_wheels_at_Pushkar%2C_Rajasthan.jpg'
     ]
   },
   {
@@ -316,14 +276,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Shankha (Conch)', 'Damru', 'Brass bells', 'Pakhawaj'],
     bestLocations: ['Prayagraj Sangam', 'Haridwar Har Ki Pauri', 'Nashik Trimbakeshwar', 'Ujjain Ram Ghat'],
     countdownTargetDate: '2027-01-14T04:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Third_Shahi_Snan_in_Hari_Ki_Pauri.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/1674_CE_Prayag_Snana_Vidhi%2C_Puranas_manuscript%2C_Sanskrit%2C_Devanagari_sample_i.jpg/1920px-1674_CE_Prayag_Snana_Vidhi%2C_Puranas_manuscript%2C_Sanskrit%2C_Devanagari_sample_i.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Devotees_at_Kumbha.JPG/1920px-Devotees_at_Kumbha.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/7/7f/Evening_prayers_at_Har-Ki-Pairi_Ghat_in_Haridwar.jpg'
     ]
   },
   {
@@ -341,14 +298,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Bansuri (Bamboo flute)', 'Manjira', 'Mridangam', 'Dhol'],
     bestLocations: ['Mathura (Krishna Janmabhoomi)', 'Vrindavan (Banke Bihari)', 'Mumbai (Thane Dahi Handi)'],
     countdownTargetDate: '2026-09-04T23:59:00',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Dahi_Handi.JPG/1920px-Dahi_Handi.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Janmashtami_Puja.jpg/1920px-Janmashtami_Puja.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Krishnastami_Toddler_Dress_Up_2.jpg/1920px-Krishnastami_Toddler_Dress_Up_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Patan-Krishna_Mandir-02-Garudasaeule-Vishveshvara-Bhimsen-gje.jpg/1920px-Patan-Krishna_Mandir-02-Garudasaeule-Vishveshvara-Bhimsen-gje.jpg'
     ]
   },
   {
@@ -366,14 +320,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Bhojpuri folk singing', 'Shankha', 'Harmonium'],
     bestLocations: ['Patna (Ganga Ghats)', 'Varanasi', 'Muzaffarpur', 'Ranchi Sun Temple'],
     countdownTargetDate: '2026-11-15T17:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Bihar_Government_Banner.png/1920px-Bihar_Government_Banner.png',
     gallery: [
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Chat_Puja.jpg/1920px-Chat_Puja.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Chatt_7.jpg/1920px-Chatt_7.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Chatt_Puja_Celebration_1.jpg/1920px-Chatt_Puja_Celebration_1.jpg'
     ]
   },
   {
@@ -391,14 +342,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol-Tasha', 'Tutari horn', 'Lezim'],
     bestLocations: ['Girgaon (Mumbai Shobha Yatra)', 'Thane', 'Pune (Shaniwar Wada)'],
     countdownTargetDate: '2027-04-07T07:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/A_new_year_procession_on_Gudi_Padwa_festival%2C_Dombivli_Maharashtra.jpg/1920px-A_new_year_procession_on_Gudi_Padwa_festival%2C_Dombivli_Maharashtra.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://upload.wikimedia.org/wikipedia/en/f/fb/Gudipadwagudi.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Rangoli_of_Lights.jpg/1920px-Rangoli_of_Lights.jpg'
     ]
   },
   {
@@ -416,14 +363,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Chenda', 'Idakka', 'Nadaswaram'],
     bestLocations: ['Guruvayur Temple', 'Sabarimala Temple', 'Ambalappuzha Temple'],
     countdownTargetDate: '2027-04-14T05:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Vishu_Kani_foods.jpg/1920px-Vishu_Kani_foods.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Bisu_Kani_in_Tulunadu_Coastal_Karnataka_%2820%29.jpg/1920px-Bisu_Kani_in_Tulunadu_Coastal_Karnataka_%2820%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/ee/Konnamaram.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Vishu_Sadya_2013_135212.jpg/1920px-Vishu_Sadya_2013_135212.jpg'
     ]
   },
   {
@@ -441,14 +385,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Nadaswaram', 'Thavil', 'Veena'],
     bestLocations: ['Tirupati', 'Hyderabad', 'Bangalore', 'Hampi Virupaksha Temple'],
     countdownTargetDate: '2027-04-07T07:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/A_Happy_Ugadi_puja_tray_Telugu_Hindu_New_Year_Vaisakhi.jpg/1920px-A_Happy_Ugadi_puja_tray_Telugu_Hindu_New_Year_Vaisakhi.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/c/cd/Ugadi_Pacchadi.jpg',
+      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -466,14 +406,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dholak', 'Brass trumpets', 'Harmonium'],
     bestLocations: ['Ahmedabad (Riverfront Kite Festival)', 'Surat', 'Gangasagar (West Bengal)', 'Jaipur'],
     countdownTargetDate: '2027-01-14T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Photo_of_makar_sankranti_devootees.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/2017_Mysore_140.jpg/1920px-2017_Mysore_140.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Festive_bites.jpg/1920px-Festive_bites.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/It_called_makar_sankranti_or_a_festival_of_kite_flying._when_sun_go_to_north_pole_or_in_his_zodiac_sign_Capricorn.this_festival_organized_then_or_every_year_14_th_January._-_panoramio.jpg/1920px-thumbnail.jpg'
     ]
   },
   {
@@ -491,14 +428,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol drum', 'Chimta (Tongs with jingles)', 'Algoza (Double flute)', 'Bugchu'],
     bestLocations: ['Amritsar', 'Ludhiana', 'Chandigarh', 'Jalandhar'],
     countdownTargetDate: '2027-01-13T18:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Lohri_bonfire.png',
     gallery: [
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/%282%29_Raw_sugar_jaggery_gud_Punjab_India.jpg/1920px-%282%29_Raw_sugar_jaggery_gud_Punjab_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Eatables.jpg/1920px-Eatables.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Happy_Lohri..jpg/1920px-Happy_Lohri..jpg'
     ]
   },
   {
@@ -516,14 +450,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Daf drum', 'Sufi Qawwali harmonium and clapping'],
     bestLocations: ['Delhi (Jama Masjid & Chandni Chowk)', 'Hyderabad (Charminar)', 'Lucknow (Asfi Mosque)', 'Srinagar (Hazratbal)'],
     countdownTargetDate: '2027-03-31T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Eid_al_fitr_photo.jpg/1920px-Eid_al_fitr_photo.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/A_panorama_in_12_folds_showing_the_procession_of_the_Emperor_Bahadur_Shah_to_celebrate_the_feast_of_the_%27Id.%2C_1843.jpg/1920px-A_panorama_in_12_folds_showing_the_procession_of_the_Emperor_Bahadur_Shah_to_celebrate_the_feast_of_the_%27Id.%2C_1843.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/c/c5/Celebrating_Eid_in_Tajikistan_10-13-2007.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Commercial_Street%2C_Bangalore_%287870991636%29.jpg/1920px-Commercial_Street%2C_Bangalore_%287870991636%29.jpg'
     ]
   },
   {
@@ -541,14 +472,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Daf drum', 'Qawwali harmonium'],
     bestLocations: ['Hyderabad (Charminar and Toli Chowki)', 'Old Delhi', 'Bhopal Taj-ul-Masajid'],
     countdownTargetDate: '2026-06-07T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Eid_al_adha_compilation.jpg/1920px-Eid_al_adha_compilation.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Eid_al-Adha_cattle_market_in_Bangladesh_44.jpg/1920px-Eid_al-Adha_cattle_market_in_Bangladesh_44.jpg',
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -566,14 +493,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Violin', 'Guitar', 'Ghumot drum', 'Church pipe organs'],
     bestLocations: ['Old Goa (Se Cathedral & Bom Jesus)', 'Panaji (Our Lady of the Immaculate Conception)', 'Fontainhas', 'Anjuna & Colva beaches'],
     countdownTargetDate: '2026-12-25T00:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/BeachFun.jpg/1920px-BeachFun.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/1_Beach%2C_Goa_India%2C_March_2013.jpg/1920px-1_Beach%2C_Goa_India%2C_March_2013.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Boys_and_girls_at_Goa_beach.jpg/1920px-Boys_and_girls_at_Goa_beach.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Carmel%27s_College_for_Women%2C_Nuvem%2C_Goa%2C_India.jpg/1920px-Carmel%27s_College_for_Women%2C_Nuvem%2C_Goa%2C_India.jpg'
     ]
   },
   {
@@ -591,14 +515,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Singing bowls', 'Bronze temple bells', 'Bamboo flutes'],
     bestLocations: ['Bodh Gaya (Mahabodhi Temple)', 'Sarnath (Deer Park)', 'Dharamsala', 'Kushinagar'],
     countdownTargetDate: '2027-05-20T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/KOCIS_Korea_YeonDeungHoe_20130511_05_%288733836165%29.jpg/1920px-KOCIS_Korea_YeonDeungHoe_20130511_05_%288733836165%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Bouddhanath_Stupa_2015_01.JPG/1920px-Bouddhanath_Stupa_2015_01.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Buddha%27s_statue_near_Belum_Caves_Andhra_Pradesh_India.jpg/1920px-Buddha%27s_statue_near_Belum_Caves_Andhra_Pradesh_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Fahua_Temple_%2854579270445%29.jpg/1920px-Fahua_Temple_%2854579270445%29.jpg'
     ]
   },
   {
@@ -616,14 +537,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dungchen (Telescopic alpine copper horns)', 'Rolmo cymbals', 'Gyaling oboes', 'Nga drums'],
     bestLocations: ['Hemis Monastery courtyard (45 km from Leh)'],
     countdownTargetDate: '2026-06-25T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Hemis_Mahasiddhas_10.jpg/1920px-Hemis_Mahasiddhas_10.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Hemis_Mahasiddhas_11.jpg/1920px-Hemis_Mahasiddhas_11.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hemis_Mahasiddhas_12.jpg/1920px-Hemis_Mahasiddhas_12.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Hemis_Mahasiddhas_13.jpg/1920px-Hemis_Mahasiddhas_13.jpg'
     ]
   },
   {
@@ -641,14 +559,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Chenda drums', 'Elathalam cymbals', 'Kombu horns', 'Kuzhal flutes'],
     bestLocations: ['Vadakkunnathan Temple grounds (Thekkinkadu Maidan)', 'Thrissur Round'],
     countdownTargetDate: '2027-04-20T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Kudamatom_at_thrissur_pooram_2013_7618.JPG/1920px-Kudamatom_at_thrissur_pooram_2013_7618.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Pooram_Pandal.jpg/1920px-Pooram_Pandal.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/c/ce/Vadakkumnathan_Temple.jpg'
     ]
   },
   {
@@ -666,14 +580,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Jodiya Pawa (Double flutes)', 'Morchang', 'Surando violin', 'Ghadha'],
     bestLocations: ['Dhordo Tent City', 'White Rann viewpoint', 'Kalo Dungar'],
     countdownTargetDate: '2026-11-01T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -691,14 +601,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dholak', 'Chang', 'Harmonium'],
     bestLocations: ['Jaipur (City Palace procession)', 'Bundi (Kajari Teej carnival)', 'Jodhpur'],
     countdownTargetDate: '2026-08-16T15:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Teej.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Giddha_dance_Teeyan_Punjab_Teej_India_2.jpg/1920px-Giddha_dance_Teeyan_Punjab_Teej_India_2.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Indischer_Maler_um_1755_002.jpg/1920px-Indischer_Maler_um_1755_002.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/OpenSpeaks-lmn-Lambadi-Nenavath_Mohan-Meghavath_Sathish-Teej%2C_Seethla_%26_Gharegharer_Festivals.webm/1920px--OpenSpeaks-lmn-Lambadi-Nenavath_Mohan-Meghavath_Sathish-Teej%2C_Seethla_%26_Gharegharer_Festivals.webm.jpg'
     ]
   },
   {
@@ -716,14 +623,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dholak', 'Manjira', 'Ektara'],
     bestLocations: ['Deshnoke Karni Mata Temple (30 km south of Bikaner)'],
     countdownTargetDate: '2026-10-15T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/20191212_%C5%9Awi%C4%85tynia_Karni_Maty_w_De%C5%9Bnok_1031_8078_DxO.jpg/1920px-20191212_%C5%9Awi%C4%85tynia_Karni_Maty_w_De%C5%9Bnok_1031_8078_DxO.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://upload.wikimedia.org/wikipedia/en/7/78/Devotees_performing_aarti_at_Karni_Mata_Temple.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Deshnok%2C_Karni_Mata_Temple_%286271597223%29.jpg/1920px-Deshnok%2C_Karni_Mata_Temple_%286271597223%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/La_statue_de_la_d%C3%A9esse_entour%C3%A9e_des_rats_sacr%C3%A9s_%28Temple_de_Karni_Mata%29_%288423510937%29.jpg/1920px-La_statue_de_la_d%C3%A9esse_entour%C3%A9e_des_rats_sacr%C3%A9s_%28Temple_de_Karni_Mata%29_%288423510937%29.jpg'
     ]
   },
   {
@@ -741,14 +645,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Shehnai', 'Dholak', 'Bhojpuri folk instruments'],
     bestLocations: ['Sonepur Mela Grounds (25 km from Patna)'],
     countdownTargetDate: '2026-11-24T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Lord_Vishnu.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/f/f7/Sonepur_station.jpeg',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -766,14 +666,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Kodal drum', 'Mohri (oboe-like pipe)', 'Todi horn', 'Chitkul clappers'],
     bestLocations: ['Jagdalpur Palace grounds', 'Danteshwari Temple'],
     countdownTargetDate: '2026-10-18T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bastar_Dusshera_Unexplored_Bastar.jpg/1920px-Bastar_Dusshera_Unexplored_Bastar.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -791,14 +687,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dholak', 'Chang', 'Algoza'],
     bestLocations: ['Jaipur (City Palace procession to Talkatora)', 'Udaipur (Gangaur Ghat on Lake Pichola)'],
     countdownTargetDate: '2027-04-10T16:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Crowd_procession_gangaur.jpg/1920px-Crowd_procession_gangaur.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Gangore_Nritya_Malwa_India.jpg/1920px-Gangore_Nritya_Malwa_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gauri%27s_procession_commencing_from_the_Zanani-Deodhi_of_the_City_Palace.jpg/1920px-Gauri%27s_procession_commencing_from_the_Zanani-Deodhi_of_the_City_Palace.jpg'
     ]
   },
   {
@@ -816,14 +708,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dama (Long wooden drum)', 'Kram (Sacred drum)', 'Rang (Gong)', 'Adil (Buffalo horn trumpet)'],
     bestLocations: ['Asanang ground near Tura (West Garo Hills)'],
     countdownTargetDate: '2026-11-12T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Wangala_drummer_of_garo_tribe.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -841,14 +729,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Khuang (Mizo drum)', 'Dar (Brass gongs)', 'Rawchhem (Bamboo pipe organ)'],
     bestLocations: ['Aizawl (Lammual & AR Ground)'],
     countdownTargetDate: '2027-03-05T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Chapchar_Kut_2023.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Chapchar_Kut_cheraw_dance_2014.webm/1280px--Chapchar_Kut_cheraw_dance_2014.webm.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Performance_Chapchar_Kut_2025.jpg/1920px-Performance_Chapchar_Kut_2025.jpg'
     ]
   },
   {
@@ -866,14 +750,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dungchen horns', 'Gyaling oboes', 'Tibetan temple bells'],
     bestLocations: ['Gangtok (Tsuklakhang Palace Monastery)', 'Rumtek Monastery', 'Pemayangtse Monastery'],
     countdownTargetDate: '2026-06-03T07:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/2600_Sambuddhatva_jayanthi_in_Jetavana_02.jpg/1920px-2600_Sambuddhatva_jayanthi_in_Jetavana_02.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Bangkok_Vesak_-_2017-05-07_%28009%29.jpg/1920px-Bangkok_Vesak_-_2017-05-07_%28009%29.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Buddha_Day.jpg/1920px-Buddha_Day.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Buddha_Day_02.jpg/1920px-Buddha_Day_02.jpg'
     ]
   },
   {
@@ -891,14 +772,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Santoor', 'Rabab', 'Kashmiri Sitar', 'Tumbaknari drum'],
     bestLocations: ['Siraj Bagh, Zabarwan Foothills overlooking Dal Lake, Srinagar'],
     countdownTargetDate: '2027-04-01T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Tulip_Garden_india_%28cropped%29.jpg/1920px-Tulip_Garden_india_%28cropped%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Cultivated_Tulip_in_Tulip_Garden%2C_Srinagar.jpg/1920px-Cultivated_Tulip_in_Tulip_Garden%2C_Srinagar.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/More_purple_tulips.JPG/1920px-More_purple_tulips.JPG',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_and_White_Tulips.JPG/1920px-Red_and_White_Tulips.JPG'
     ]
   },
   {
@@ -916,14 +794,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Ksing drum', 'Bhiur flute', 'Duitara lute'],
     bestLocations: ['Jowai sacred Aitnar pool (64 km from Shillong)'],
     countdownTargetDate: '2026-07-11T11:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1626014303757-646522c09cb1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/1/14/BehdienKhlam_Festival.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1626014303757-646522c09cb1?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -941,14 +815,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Ektara', 'Khol drum', 'Manjira', 'Shankha'],
     bestLocations: ['Kamakhya Temple atop Nilachal Hill, Guwahati'],
     countdownTargetDate: '2026-06-22T06:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Kamakhya_Temple%2C_Guwahati.jpg/1920px-Kamakhya_Temple%2C_Guwahati.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Ambubachi_Mela_at_Kamakhya_Temple_by_Vikramjit_Kakati.jpg/1920px-Ambubachi_Mela_at_Kamakhya_Temple_by_Vikramjit_Kakati.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Ambubachi_Mela_by_Vikramjit_Kakati.jpg/1920px-Ambubachi_Mela_by_Vikramjit_Kakati.jpg'
     ]
   },
   {
@@ -966,14 +836,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Mandar (cylindrical clay drum)', 'Nagada', 'Dhumsa'],
     bestLocations: ['Ranchi rural villages', 'Khunti', 'Jamshedpur'],
     countdownTargetDate: '2026-09-22T17:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/%E0%A4%95%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%A7%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE.jpg/1920px-%E0%A4%95%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%A7%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Karam_Puja_Songs.webm/500px--Karam_Puja_Songs.webm.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/7/73/Karam_puja_in_jharkhand.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/%E0%A4%95%E0%A5%81%E0%A4%B0%E0%A5%82%E0%A4%96_%E0%A4%95%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE_%E0%A4%97%E0%A5%80%E0%A4%A4.webm/500px--%E0%A4%95%E0%A5%81%E0%A4%B0%E0%A5%82%E0%A4%96_%E0%A4%95%E0%A4%B0%E0%A4%AE%E0%A4%BE_%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE_%E0%A4%97%E0%A5%80%E0%A4%A4.webm.jpg'
     ]
   },
   {
@@ -991,14 +858,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dhol', 'Nishan drum', 'Tasa', 'Mahuri pipe'],
     bestLocations: ['Sambalpur (Maa Samaleswari Temple)', 'Bargarh', 'Sonepur'],
     countdownTargetDate: '2026-09-15T08:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Artists_Performing_%27Bhaijiuntia%27-_Dalkhai_in_the_NUAKHAI_BHETGHAT_occasion_at_Burla.jpg/1920px-Artists_Performing_%27Bhaijiuntia%27-_Dalkhai_in_the_NUAKHAI_BHETGHAT_occasion_at_Burla.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1016,14 +879,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Mardala drum', 'Flute', 'Violin', 'Cymbals'],
     bestLocations: ['Puri Golden Beach (Blue Flag Certified Beach)'],
     countdownTargetDate: '2026-11-23T16:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Puri_Sea_Beach_viewed_from_the_light_house.jpg/1920px-Puri_Sea_Beach_viewed_from_the_light_house.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/At_Puri_beach_05.jpg/1920px-At_Puri_beach_05.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Decorated_one-humped_Camel%2C_Camelus_dromedarius%2C_at_Puri_Sea_Beach%2C_Odisha%2C_India.jpg/1920px-Decorated_one-humped_Camel%2C_Camelus_dromedarius%2C_at_Puri_Sea_Beach%2C_Odisha%2C_India.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/PuriSea2.jpg/1920px-PuriSea2.jpg'
     ]
   },
   {
@@ -1041,14 +901,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Veena', 'Mridangam', 'Nadaswaram', 'Flute'],
     bestLocations: ['Vittala Temple Stone Chariot', 'Virupaksha Temple', 'Sasivekalu Ganesha stage'],
     countdownTargetDate: '2026-11-05T18:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Hampi%2C_India%2C_View_of_Hampi_Bazaar_from_Matanga_Hill.jpg/1920px-Hampi%2C_India%2C_View_of_Hampi_Bazaar_from_Matanga_Hill.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1626014303757-646522c09cb1?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1066,14 +922,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Pakhawaj', 'Tabla', 'Sitar', 'Flute', 'Vocal Carnatic & Hindustani'],
     bestLocations: ['Chitragupta and Vishwanatha Temple outdoor lawn amphitheater'],
     countdownTargetDate: '2027-02-20T18:30:00',
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Shinjini_kathak_dance_indian_classical_khajuraho_festival.jpg/1920px-Shinjini_kathak_dance_indian_classical_khajuraho_festival.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Arunima_Kumar_at_Khajuraho_Dance_Festival.jpg/1920px-Arunima_Kumar_at_Khajuraho_Dance_Festival.jpg',
+      'https://images.unsplash.com/photo-1626015509930-b39bc539665c?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1091,14 +943,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Various folk drums and wind instruments from all 28 states'],
     bestLocations: ['Surajkund Heritage Grounds, Faridabad'],
     countdownTargetDate: '2027-02-02T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Suraj_Kund.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/A_traditional_Bagh_Print_craftsman_Mohammed_Bilal_Khatri_from_Bagh%2C_Madhya_Pradesh%2C_at_Surajkund_International_Crafts_Mela_2015.jpg/1920px-A_traditional_Bagh_Print_craftsman_Mohammed_Bilal_Khatri_from_Bagh%2C_Madhya_Pradesh%2C_at_Surajkund_International_Crafts_Mela_2015.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/9/9f/Charminar_%22Surajkund%22.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Cyclists%2C_Suraj_Kund%2C_New_Delhi..JPG/1920px-Cyclists%2C_Suraj_Kund%2C_New_Delhi..JPG'
     ]
   },
   {
@@ -1116,14 +965,11 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Mardala', 'Bansuri', 'Sitar', 'Gini'],
     bestLocations: ['Konark Natya Mandir amphitheater'],
     countdownTargetDate: '2026-12-01T18:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Konark3.jpg/1920px-Konark3.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Konark4.jpg/1920px-Konark4.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Konark5.jpg/1920px-Konark5.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Konark6.jpg/1920px-Konark6.jpg'
     ]
   },
   {
@@ -1141,14 +987,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Loudspeakers, Dhol, whistles and bugles'],
     bestLocations: ['Sabarmati Riverfront', 'Old City Pols of Ahmedabad (Manek Chowk, Raipur)'],
     countdownTargetDate: '2027-01-14T07:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Colored_Kites.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1166,14 +1008,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Kamaicha', 'Ravanahatha', 'Khartal', 'Morchang'],
     bestLocations: ['Sam Sand Dunes', 'Shahgarh Bulge', 'Jaisalmer Fort courtyard'],
     countdownTargetDate: '2027-02-18T10:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Jaisalmer_Fort.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1622308644420-a60965381f26?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1191,14 +1029,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Nadaswaram', 'Thavil', 'Carnatic ensemble', 'Police brass band'],
     bestLocations: ['Mysore Palace grounds', 'Chamundi Hill Temple', 'Bannimantap'],
     countdownTargetDate: '2026-10-20T16:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Chamundeshwari_Temple_Mysore.jpg/1920px-Chamundeshwari_Temple_Mysore.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Nandi%2C_the_bull-Chamundi_hills.jpg/1920px-Nandi%2C_the_bull-Chamundi_hills.jpg',
+      'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1216,14 +1050,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Ghumot (clay pot drum with monitor lizard skin)', 'Kansallem cymbals', 'Guitars'],
     bestLocations: ['Siolim (St. Anthony Church river bank)', 'Curtorim', 'Benaulim'],
     countdownTargetDate: '2026-06-24T11:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Les_feux_de_la_Saint-Jean_en_Bretagne_%28Le_Petit_Journal_1-07-1893%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1600&q=80'
     ]
   },
   {
@@ -1241,14 +1071,10 @@ export const FESTIVALS: Festival[] = [
     musicInstruments: ['Dungchen horns', 'Gyaling oboes', 'Lepcha Tungbuk string instruments'],
     bestLocations: ['Phodong Monastery', 'Rumtek Monastery', 'Enchey Monastery near Gangtok'],
     countdownTargetDate: '2026-12-18T09:00:00',
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/6/65/Gumpa.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+      'https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80'
     ]
   }
 ];

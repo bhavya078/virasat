@@ -13,7 +13,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'September to April',
     adventureLevel: 'Easy',
     uncrowdedScore: 82,
-    heroImage: 'https://images.unsplash.com/photo-1626014303757-646522c09cb1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Mawlynnong_-_Cleanest_village_of_Asia.jpg/1920px-Mawlynnong_-_Cleanest_village_of_Asia.jpg',
     tags: ['Eco-Tourism', 'Cleanest Village', 'Root Bridges', 'Northeast'],
     coordinates: { lat: 25.2016, lng: 91.9056 }
   },
@@ -29,7 +29,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'March to October (Ziro Festival in late September)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/A_cross_section_of_luch_green_valley_of_Ziro.jpg/1920px-A_cross_section_of_luch_green_valley_of_Ziro.jpg',
     tags: ['Tribal Heritage', 'Music Festival', 'Pine Valleys', 'Sustainable Living'],
     coordinates: { lat: 27.5936, lng: 93.8340 }
   },
@@ -45,7 +45,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to February',
     adventureLevel: 'Moderate',
     uncrowdedScore: 85,
-    heroImage: 'https://images.unsplash.com/photo-1626015509930-b39bc539665c?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Camping_Banks_Pennar_River.jpg/1920px-Camping_Banks_Pennar_River.jpg',
     tags: ['Gorge', 'Canyon', 'Medieval Fort', 'Camping'],
     coordinates: { lat: 14.8143, lng: 78.2863 }
   },
@@ -61,7 +61,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 78,
-    heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Dhanushkodi_Old_Railway_Station_02.jpg/1920px-Dhanushkodi_Old_Railway_Station_02.jpg',
     tags: ['Ghost Town', 'Ram Setu', 'Coastal Wilderness', 'Ocean Confluence'],
     coordinates: { lat: 9.1763, lng: 79.4144 }
   },
@@ -77,7 +77,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'April to June (Spring flowers) & October to December (Snow peaks)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 84,
-    heroImage: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Chopta%2C_starting_point_for_treks_to_Tungnath_and_Chandrashila.jpg',
     tags: ['Highest Shiva Temple', 'Meadows', 'Himalayan Trekking', 'Chandrashila'],
     coordinates: { lat: 30.4873, lng: 79.1793 }
   },
@@ -93,7 +93,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'March to June & September to November',
     adventureLevel: 'Moderate',
     uncrowdedScore: 89,
-    heroImage: 'https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/View_from_Main_Banjar_Town.jpg/1920px-View_from_Main_Banjar_Town.jpg',
     tags: ['Trout Fishing', 'Eco-Tourism', 'National Park', 'Kathkuni Architecture'],
     coordinates: { lat: 31.6416, lng: 77.3496 }
   },
@@ -109,7 +109,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March (Raas Mahotsav in November)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 86,
-    heroImage: 'https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Doriya_River_of_Majuli.jpg/1920px-Doriya_River_of_Majuli.jpg',
     tags: ['River Island', 'Neo-Vaishnavism', 'Mask Making', 'Sattriya Culture'],
     coordinates: { lat: 26.9535, lng: 94.2185 }
   },
@@ -125,7 +125,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 76,
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Main_entry_to_the_Mahabaleshwar_Temple_at_Gokaran.jpg',
     tags: ['Atma Linga', 'Cliff Trek', 'Beach Coves', 'Soulful Sanctuary'],
     coordinates: { lat: 14.5479, lng: 74.3188 }
   },
@@ -141,7 +141,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'June to January (Post-monsoon is roaring)',
     adventureLevel: 'Easy',
     uncrowdedScore: 79,
-    heroImage: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Athirappilly_Waterfalls_1.jpg/1920px-Athirappilly_Waterfalls_1.jpg',
     tags: ['Waterfalls', 'Rainforest', 'Hornbill Sanctuary', 'Western Ghats'],
     coordinates: { lat: 10.2851, lng: 76.5698 }
   },
@@ -157,7 +157,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'May to October (Inaccessible in deep snow)',
     adventureLevel: 'High Altitude',
     uncrowdedScore: 92,
-    heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Temple_at_Chitkul.JPG/1920px-Temple_at_Chitkul.JPG',
     tags: ['Last Village', 'Border Post', 'Kinnaur', 'Turquoise River'],
     coordinates: { lat: 31.3533, lng: 78.4344 }
   },
@@ -173,7 +173,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to December (Crystal clear skies) & April to May (Rhododendrons)',
     adventureLevel: 'Challenging',
     uncrowdedScore: 87,
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Domestic_yak_in_Sandakpur.jpg/1920px-Domestic_yak_in_Sandakpur.jpg',
     tags: ['Everest View', 'Sleeping Buddha', 'Singalila Trek', 'Vintage Land Rovers'],
     coordinates: { lat: 27.1064, lng: 88.0016 }
   },
@@ -189,7 +189,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'July to March (Magical green during monsoon)',
     adventureLevel: 'Easy',
     uncrowdedScore: 84,
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/JahazMahal.jpg/1920px-JahazMahal.jpg',
     tags: ['Floating Palace', 'Afghan Architecture', 'Baz Bahadur & Roopmati', 'Baobab Trees'],
     coordinates: { lat: 22.3660, lng: 75.4055 }
   },
@@ -205,7 +205,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 81,
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Chaturbhuj_Temple%2C_Orchha.jpg/1920px-Chaturbhuj_Temple%2C_Orchha.jpg',
     tags: ['Bundela Palaces', 'Ram Raja Temple', 'Betwa River', 'Stone Cenotaphs'],
     coordinates: { lat: 25.3508, lng: 78.6416 }
   },
@@ -221,7 +221,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 82,
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Front_side_of_Veerabhadra_Temple%2C_Lepakshi.jpg/1920px-Front_side_of_Veerabhadra_Temple%2C_Lepakshi.jpg',
     tags: ['Hanging Pillar', 'Monolithic Nandi', 'Vijayanagara Frescoes', 'Jatayu Legend'],
     coordinates: { lat: 13.8042, lng: 77.6078 }
   },
@@ -237,7 +237,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'September to February',
     adventureLevel: 'Moderate',
     uncrowdedScore: 80,
-    heroImage: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Araku-valley.jpg',
     tags: ['Vistadome Train', 'Borra Caves', 'Organic Coffee', 'Tribal Culture'],
     coordinates: { lat: 18.3273, lng: 82.8775 }
   },
@@ -253,7 +253,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'June to September (Winter Spiti in Jan/Feb for snow leopards)',
     adventureLevel: 'High Altitude',
     uncrowdedScore: 94,
-    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg/1920px-Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg',
     tags: ['Highest Post Office', 'Fossil Village', 'Tibetan Buddhism', 'Trans-Himalayas'],
     coordinates: { lat: 32.2276, lng: 78.0711 }
   },
@@ -269,7 +269,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to April',
     adventureLevel: 'Moderate',
     uncrowdedScore: 87,
-    heroImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kumbhalgarh_06.jpg/1920px-Kumbhalgarh_06.jpg',
     tags: ['Indian Wolf', 'Leopard Safari', 'Aravalli Hills', 'Wildlife Trekking'],
     coordinates: { lat: 25.1500, lng: 73.5833 }
   },
@@ -285,7 +285,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to May',
     adventureLevel: 'Easy',
     uncrowdedScore: 89,
-    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Pangot.jpg/1920px-Pangot.jpg',
     tags: ['Birdwatching', 'Oak Forests', 'Kilbury Sanctuary', 'Himalayan Views'],
     coordinates: { lat: 29.4189, lng: 79.4314 }
   },
@@ -301,7 +301,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'April to November',
     adventureLevel: 'Moderate',
     uncrowdedScore: 85,
-    heroImage: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Txu-oclc-6614368-nm50-6.jpg/1920px-Txu-oclc-6614368-nm50-6.jpg',
     tags: ['Apple Orchards', 'Car-free Village', 'Parvati Valley', 'Slow Travel'],
     coordinates: { lat: 31.9861, lng: 77.4475 }
   },
@@ -317,7 +317,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Moderate',
     uncrowdedScore: 86,
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Yana_Rocks.jpg/1920px-Yana_Rocks.jpg',
     tags: ['Karst Monoliths', 'Rainforest Hike', 'Limestone Caves', 'Western Ghats'],
     coordinates: { lat: 14.5880, lng: 74.5614 }
   },
@@ -333,7 +333,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 84,
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Khajuraho_-_Kandariya_Mahadeo_Temple.jpg',
     tags: ['Artisan Guilds', 'Hoysala Legacy', 'Rural Heritage', 'Stone Craft'],
     coordinates: { lat: 13.2132, lng: 75.9941 }
   },
@@ -349,7 +349,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 83,
-    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1600&q=80',
     tags: ['Double Ikat Patola', 'Subterranean Wells', 'Ancient Capital', 'Silk Guilds'],
     coordinates: { lat: 23.8589, lng: 72.1017 }
   },
@@ -365,7 +365,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to April (Full moon boat rides are legendary)',
     adventureLevel: 'Easy',
     uncrowdedScore: 80,
-    heroImage: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/7/71/Bhedaghat_Jbp.jpg',
     tags: ['Marble Gorge', 'Dhuandhar Falls', 'Full Moon Boating', 'Narmada River'],
     coordinates: { lat: 23.1311, lng: 79.8003 }
   },
@@ -381,7 +381,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'August to February (Post-monsoon river volume is thunderous)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 79,
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/5/52/Hogenakkal_Falls_Close.jpg',
     tags: ['Coracle Boating', 'Ancient Carbonatite', 'Kaveri River', 'Herbal Massage'],
     coordinates: { lat: 12.1189, lng: 77.7766 }
   },
@@ -397,7 +397,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'March to June & September to November',
     adventureLevel: 'Easy',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Himalayan_range_Chaokori.jpg/1920px-Himalayan_range_Chaokori.jpg',
     tags: ['Panchachuli Peaks', 'Tea Gardens', 'Kumaon Himalayas', 'Solitude'],
     coordinates: { lat: 29.8700, lng: 80.0200 }
   },
@@ -413,7 +413,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'March to October (Losar and Torgya festivals)',
     adventureLevel: 'High Altitude',
     uncrowdedScore: 91,
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/100_tam_srang_back.jpg',
     tags: ['Monpa Tribe', 'Handmade Paper', 'Sela Pass', 'Himalayan Buddhism'],
     coordinates: { lat: 27.5861, lng: 91.8594 }
   },
@@ -429,7 +429,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to April',
     adventureLevel: 'Challenging',
     uncrowdedScore: 95,
-    heroImage: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Mechuka_overview_2.jpg/1920px-Mechuka_overview_2.jpg',
     tags: ['Shangri-La', 'Memba Tribe', 'Turquoise River', 'Border Frontier'],
     coordinates: { lat: 28.5997, lng: 94.1333 }
   },
@@ -445,7 +445,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to April',
     adventureLevel: 'Moderate',
     uncrowdedScore: 90,
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/CervusEldiAMNH.jpg',
     tags: ['Floating Park', 'Sangai Deer', 'Loktak Lake', 'Phumdis'],
     coordinates: { lat: 24.5000, lng: 93.8500 }
   },
@@ -461,7 +461,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'November to January (For winter chill and frost)',
     adventureLevel: 'Easy',
     uncrowdedScore: 84,
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Valley_near_lambasinghi.jpg/1920px-Valley_near_lambasinghi.jpg',
     tags: ['Southern Frost', 'Coffee Gardens', 'Tribal Hills', 'Winter Mist'],
     coordinates: { lat: 17.8183, lng: 82.5283 }
   },
@@ -477,7 +477,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to May',
     adventureLevel: 'Easy',
     uncrowdedScore: 89,
-    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Agatti_Airstrip.jpg/1920px-Agatti_Airstrip.jpg',
     tags: ['Coral Atoll', 'Turquoise Lagoon', 'Snorkeling', 'Island Paradise'],
     coordinates: { lat: 10.8533, lng: 72.1931 }
   },
@@ -493,7 +493,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'May to October (Pass blocked by deep snow in winter)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 93,
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Habba_Khatoon.jpg',
     tags: ['Habba Khatoon', 'Kishenganga River', 'Dard-Shin Tribe', 'Ancient Silk Route'],
     coordinates: { lat: 34.6333, lng: 74.8333 }
   },
@@ -509,7 +509,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to February',
     adventureLevel: 'Moderate',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Sunrise_at_Bhitarakanika.jpg/1920px-Sunrise_at_Bhitarakanika.jpg',
     tags: ['Giant Crocodiles', 'Mangrove Delta', 'Ramsar Wetland', 'Wildlife Safari'],
     coordinates: { lat: 20.7258, lng: 86.8719 }
   },
@@ -525,7 +525,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'November to April (Water is crystalline post-monsoon)',
     adventureLevel: 'Easy',
     uncrowdedScore: 79,
-    heroImage: 'https://images.unsplash.com/photo-1544735716-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Umngot_river%2C_Dawki.jpg/1920px-Umngot_river%2C_Dawki.jpg',
     tags: ['Crystal River', 'Glass Boats', 'Canyon Paddling', 'Border River'],
     coordinates: { lat: 25.1878, lng: 92.0239 }
   },
@@ -541,7 +541,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 87,
-    heroImage: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Khimsar_Fort_Pvt..jpg',
     tags: ['Desert Oasis', 'Sand Dunes', 'Heritage Fort', 'Star Gazing'],
     coordinates: { lat: 26.9856, lng: 73.4150 }
   },
@@ -557,7 +557,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March (Bundi Utsav in November)',
     adventureLevel: 'Easy',
     uncrowdedScore: 82,
-    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/BundiPan.jpg/1920px-BundiPan.jpg',
     tags: ['Chitrashala Murals', 'Stepwells', 'Hadoti Rajput', 'Taragarh'],
     coordinates: { lat: 25.4414, lng: 75.6441 }
   },
@@ -573,7 +573,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Easy',
     uncrowdedScore: 85,
-    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Chanderi_Fort_03.jpg/1920px-Chanderi_Fort_03.jpg',
     tags: ['Chanderi Saree', 'Handlooms', 'Koshak Mahal', 'Medieval Heritage'],
     coordinates: { lat: 24.7126, lng: 78.1344 }
   },
@@ -589,7 +589,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'May to October',
     adventureLevel: 'Moderate',
     uncrowdedScore: 81,
-    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Aerial_picture_of_Malana%2C_Himachal_Pradesh.jpg/1920px-Aerial_picture_of_Malana%2C_Himachal_Pradesh.jpg',
     tags: ['Ancient Republic', 'Jamlu Rishi', 'Kanashi Language', 'Parvati Valley'],
     coordinates: { lat: 32.0583, lng: 77.2667 }
   },
@@ -605,7 +605,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'April to November',
     adventureLevel: 'Moderate',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
     tags: ['Jalori Pass', 'Serolsar Lake', 'Deodar Forests', 'Serenity'],
     coordinates: { lat: 31.5622, lng: 77.3811 }
   },
@@ -621,7 +621,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'April to June & September to November',
     adventureLevel: 'Moderate',
     uncrowdedScore: 90,
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Barot_Valley_%2CMandi%2CHimachal_Pardesh.jpg',
     tags: ['Rainbow Trout', 'Uhl River', 'British Hydel Heritage', 'Cedar Forests'],
     coordinates: { lat: 32.0500, lng: 76.8500 }
   },
@@ -637,7 +637,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'March to June & September to November',
     adventureLevel: 'Moderate',
     uncrowdedScore: 89,
-    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Kartok_gumpa_-_yuksam.jpg/1920px-Kartok_gumpa_-_yuksam.jpg',
     tags: ['First Capital', 'Coronation Throne', 'Goechala Base', 'Sacred Forests'],
     coordinates: { lat: 27.3697, lng: 88.2217 }
   },
@@ -653,7 +653,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March',
     adventureLevel: 'Moderate',
     uncrowdedScore: 86,
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Tea_Estates_in_Valparai.jpg/1920px-Tea_Estates_in_Valparai.jpg',
     tags: ['Lion-tailed Macaque', '40 Hairpin Bends', 'Anamalai Reserve', 'Tea Hills'],
     coordinates: { lat: 10.3236, lng: 76.9558 }
   },
@@ -669,7 +669,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to April',
     adventureLevel: 'Moderate',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Breathtaking_Jawai.jpg/1920px-Breathtaking_Jawai.jpg',
     tags: ['Leopards of Jawai', 'Granite Boulders', 'Rabari Shepherds', 'Luxury Glamping'],
     coordinates: { lat: 25.1058, lng: 73.1558 }
   },
@@ -685,7 +685,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'Early February (Annual Sports Festival)',
     adventureLevel: 'Easy',
     uncrowdedScore: 78,
-    heroImage: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     tags: ['Rural Olympics', 'Bullock Cart Race', 'Punjabi Valor', 'Folk Sports'],
     coordinates: { lat: 30.7600, lng: 75.8300 }
   },
@@ -701,7 +701,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'November to February',
     adventureLevel: 'Easy',
     uncrowdedScore: 82,
-    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/A_man_dyeing_silk_red_in_boiling_water_in_Kumbakonam%2C_Tamil_Nadu.jpg/1920px-A_man_dyeing_silk_red_in_boiling_water_in_Kumbakonam%2C_Tamil_Nadu.jpg',
     tags: ['Bronze Casting', 'Degree Coffee', 'Mahamaham Tank', 'Chola Heartland'],
     coordinates: { lat: 10.9602, lng: 79.3845 }
   },
@@ -717,7 +717,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'August to September (Aranmula Uthrattathi Vallamkali / Onam season)',
     adventureLevel: 'Easy',
     uncrowdedScore: 85,
-    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Aranmula_Temple.JPG',
     tags: ['Metal Mirror', 'Snake Boat Race', 'Pamba River', 'GI Craft'],
     coordinates: { lat: 9.3333, lng: 76.6833 }
   },
@@ -733,7 +733,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'September to May',
     adventureLevel: 'Easy',
     uncrowdedScore: 88,
-    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Mawphlang_village.jpg/1920px-Mawphlang_village.jpg',
     tags: ['Sacred Grove', 'Khasi Megaliths', 'Living Taboo', 'Ancient Canopy'],
     coordinates: { lat: 25.4500, lng: 91.7500 }
   },
@@ -749,7 +749,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'November to February',
     adventureLevel: 'Moderate',
     uncrowdedScore: 92,
-    heroImage: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1600&q=80',
     tags: ['Flamingo City', 'Salt Flats', 'Bird Migration', 'White Rann'],
     coordinates: { lat: 24.1000, lng: 70.0000 }
   },
@@ -765,7 +765,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'September to February',
     adventureLevel: 'Moderate',
     uncrowdedScore: 94,
-    heroImage: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Gavi_Argentina_v_Spain_19_July_2026-013.jpg/1920px-Gavi_Argentina_v_Spain_19_July_2026-013.jpg',
     tags: ['Periyar Reserve', 'Shola Forests', 'Tribal Tracking', 'Silent Wilderness'],
     coordinates: { lat: 9.4358, lng: 77.1644 }
   },
@@ -781,7 +781,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'October to March (Ashokastami Mela in April)',
     adventureLevel: 'Moderate',
     uncrowdedScore: 93,
-    heroImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Unakoti_3.jpg/1920px-Unakoti_3.jpg',
     tags: ['Rock-Cut Colossi', 'One Less Than A Crore', 'Shaivite Art', 'Tripura Hills'],
     coordinates: { lat: 24.3167, lng: 92.0167 }
   },
@@ -797,7 +797,7 @@ export const HIDDEN_GEMS: HiddenGem[] = [
     bestTimeToVisit: 'June to September (Wildflowers and Dzukou Lilies) & October to December (Clear skies)',
     adventureLevel: 'Challenging',
     uncrowdedScore: 91,
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg/1920px-Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg',
     tags: ['Dzukou Lily', 'Velvet Hills', 'Naga Trekking', 'Pristine Wilderness'],
     coordinates: { lat: 25.5686, lng: 94.0667 }
   }

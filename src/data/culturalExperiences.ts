@@ -13,7 +13,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A devotional circular folk dance performed during the nine nights of Navratri around a perforated earthen pot containing an oil lamp (Garbha Deep) or an image of Goddess Amba. Symbolizes the cyclical nature of cosmic time, birth, and rebirth.',
     masterArtisansOrExponents: ['Traditional village guilds of Saurashtra & North Gujarat', 'Atul Purohit', 'Hemant Chauhan'],
     highlights: ['Recognized as UNESCO Intangible Cultural Heritage in 2023', 'Up to 50,000 dancers moving in mesmerizing synchrony in Vadodara', 'Two-beat, three-beat (Tran Tali), and revolving footwork'],
-    heroImage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bharatanatyam',
@@ -26,7 +34,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The oldest classical dance tradition of India, originally performed by Devadasis in Hindu temples of Tamil Nadu. Characterized by a fixed upper torso, bent knees (Aramandi), intricate rhythmic footwork (Adavus), and expressive eye and hand mudras (Abhinaya).',
     masterArtisansOrExponents: ['Rukmini Devi Arundale', 'Padma Subrahmanyam', 'Yamini Krishnamurthy'],
     highlights: ['Strictly follows the ancient treatise Natyashastra of Bharata Muni', 'Chidambaram Nataraja Temple features 108 Karanas carved in stone', 'Geometric lines, crisp footwork, and spiritual bhakti repertoire'],
-    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kathak',
@@ -39,7 +55,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Derived from the Sanskrit word Katha (story), Kathak originated with traveling bards in northern Indian temples who narrated epics using song and movement. Under Mughal and Awadh royal patronage, it developed breathtaking lightning spins (Chakkars) and delicate subtle expressions.',
     masterArtisansOrExponents: ['Pandit Birju Maharaj', 'Sitara Devi', 'Shambhu Maharaj', 'Saswati Sen'],
     highlights: ['Padhant: Reciting complex rhythmic syllables (bols) before dancing them', 'Dancers wear 150 to 200 brass bells on each ankle with precise micro-control', 'Gharana styles: Lucknow (grace & abhinaya), Jaipur (speed & spins), Banaras'],
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kathakali',
@@ -52,7 +76,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A stylized classical dance-drama noted for its elaborate face makeup (Chutti), towering headgear (Kireetam), billowing skirts, and non-verbal storytelling executed entirely through facial muscle control (Navarasas) and codified hand gestures (Mudras).',
     masterArtisansOrExponents: ['Kalamandalam Gopi', 'Kalamandalam Ramankutty Nair', 'Guru Kunju Kurup'],
     highlights: ['Makeup takes over 4 hours using natural mineral stones and rice paste', 'Character categories: Paccha (noble heroes), Kathi (villains), Thadi (bearded warriors), Kari (demons)', 'Actors communicate without speaking a single word on stage'],
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kuchipudi',
@@ -65,7 +97,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Originating in the village of Kuchelapuram, this classical dance-drama blends fast-paced footwork, dramatic character dialogue, and the famous Tarangam where the dancer balances gracefully on the rim of a raised brass plate holding a pot of water on the head.',
     masterArtisansOrExponents: ['Yamini Krishnamurthy', 'Raja and Radha Reddy', 'Vempati Chinna Satyam'],
     highlights: ['Tarangam: Dancing rhythmically while balancing on the edges of a brass plate', 'Bhamakalapam: Dramatic narrative piece portraying Queen Satyabhama’s love for Krishna', 'Historically performed by Brahmin male actors (Bhagavathalu)'],
-    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1628107082933-07b23594f735?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'mohiniyattam',
@@ -78,7 +118,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A solo classical dance performed exclusively by women, symbolizing Mohini, the celestial enchantress avatar of Lord Vishnu. Characterized by graceful, swaying body movements reminiscent of palm trees and ocean waves, draped in white and gold Kasavu sarees.',
     masterArtisansOrExponents: ['Kalamandalam Kalyanikutty Amma', 'Sunanda Nair', 'Bharati Shivaji'],
     highlights: ['Swaying movements evoking the backwaters and coconut fronds of Kerala', 'Performed exclusively in white Kasavu sarees with pleated gold borders', 'Accompanied by Sopana Sangeetham musical style and the Edakka hourglass drum'],
-    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'odissi',
@@ -91,7 +139,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Carved directly from the stone sculptures of Konark and Jagannath temples, Odissi is distinguished by its two foundational postures: Chowk (a square masculine stance) and Tribhanga (a three-bend feminine S-shaped curve of the head, torso, and hips).',
     masterArtisansOrExponents: ['Guru Kelucharan Mohapatra', 'Sanjukta Panigrahi', 'Madhavi Mudgal'],
     highlights: ['Tribhanga: S-curve posture mirroring classical sculptures on temple walls', 'Dancers wear traditional Tarakasi silver filigree crown (Tahia) made of sola pith', 'Rooted in the ancient temple service of the Mahari temple dancers and Gotipua boys'],
-    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'manipuri-dance',
@@ -104,7 +160,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A sacred Vaishnavite dance expressing the divine love of Radha, Krishna, and the Gopis. Dancers wear the Kumil—a stiff, bell-shaped embroidered skirt adorned with sequins and translucent veil—moving with serpentine, weightless grace.',
     masterArtisansOrExponents: ['Guru Bipin Singh', 'Jhaveri Sisters (Darshana, Nayana, Suverna, Ranjana)'],
     highlights: ['Dancers float without any stomping of feet, moving with ethereal lightness', 'Kumil: Barrel-shaped mirrored skirt engineered to hold its structure while revolving', 'Pung Cholom: Acrobatic drum dance where male dancers leap while playing drums'],
-    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bhangra',
@@ -117,7 +181,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An exuberant folk dance originally performed by Punjabi farmers to celebrate the spring harvest of wheat (Baisakhi). Features athletic leaps, shoulder shrugs, synchronized claps, and thunderous dhol percussion beats that have become a global music phenomenon.',
     masterArtisansOrExponents: ['Traditional village Akhadas of Punjab', 'Ustad Lal Chand Yamla Jatt'],
     highlights: ['Energetic boliyan verses sung to build crescendo tempos', 'Saap: Expanding and contracting wooden lattice clappers manipulated in unison', 'Universal symbol of Punjabi celebration, joy, and agricultural vigor'],
-    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'ghoomar',
@@ -130,7 +202,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A graceful royal dance performed by women wearing expansive circular ghagra skirts. Dancers twirl smoothly clockwise and anti-clockwise (ghoomna) while covering their faces with translucent veils (Ghoonghat), creating a kaleidoscopic blooming flower effect.',
     masterArtisansOrExponents: ['Rajmata Goverdhan Kumari of Santrampur', 'Maharani of Jaipur court traditions'],
     highlights: ['The 80-kali flowing ghagra skirt expands outward into a spinning umbrella', 'Perched water pots or brass plates balanced on head while spinning', 'Ranked 4th in the world’s top local dances by international travel surveys'],
-    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'chhau',
@@ -143,7 +223,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A semi-classical Indian dance that synthesizes martial arts, acrobatics, and athletic combat reenactments of scenes from the Mahabharata and Ramayana. Dancers in Purulia and Seraikela wear giant handcrafted paper-mâché masks adorned with feathers and tinsel.',
     masterArtisansOrExponents: ['Gambhir Singh Mura (Purulia mask master)', 'Guru Shashadhar Acharya'],
     highlights: ['Inscribed on UNESCO Representative List of Intangible Cultural Heritage', 'Purulia masks hand-molded using clay from Kasai river and papier-mâché', 'Combat movements mimic tigers, peacocks, and galloping war horses'],
-    heroImage: 'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'yakshagana',
@@ -156,7 +244,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An all-night traditional theatre form combining dance, music, improvised spoken dialogue, and dazzling face paint with towering headgear (Mundasu). Enacts mythological stories from the Puranas with high-energy footwork and acrobatic spins.',
     masterArtisansOrExponents: ['Keremane Shivarama Hegde', 'Kumble Sundar Rao', 'Chittani Ramachandra Hegde'],
     highlights: ['Performances traditionally begin at dusk and continue until dawn in open fields', 'Himmela (background musical troupe) and Mummela (foreground actors/dancers)', 'Distinguished styles: Badagutittu (Northern acrobatics) and Tenkutittu (Southern rhythm)'],
-    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1600100397985-35c918342ca2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'lavani',
@@ -169,7 +265,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A combination of traditional song and dance that is noted for its powerful rhythm and sensuous expressions, traditionally performed by women draped in nine-yard Nauvari sarees. Played a historic role in boosting morale of soldiers during Maratha military campaigns.',
     masterArtisansOrExponents: ['Surekha Punekar', 'Meghna Erande', 'Yamunabai Waikar'],
     highlights: ['Fast-paced 16-beat Dholki patterns matched with lightning-quick footwork', 'Baithakichi Lavani (Sitting contemplative style) and Phadachi Lavani (Theatrical public style)', 'Lyrical poetry tackling social critique, romance, and political commentary'],
-    heroImage: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kalaripayattu',
@@ -182,7 +286,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The oldest surviving martial art in the world, practiced in an earthen pit training hall called Kalari. Includes unarmed combat, strikes to 108 vital pressure points (Marmas), animal fighting postures, and razor-sharp flexible steel swords.',
     masterArtisansOrExponents: ['Meenakshi Amma (Padma Shri recipient)', 'CVN Kalari Sangham'],
     highlights: ['Legend records Buddhist monk Bodhidharma carried Kalaripayattu techniques to China to birth Shaolin Kung Fu', 'Marmavidya: Knowledge of 108 vital human pressure points for healing and self-defense', 'Urumi: Deadly 5-foot-long double-edged flexible steel ribbon sword'],
-    heroImage: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'theyyam',
@@ -195,7 +307,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient ritual dance where performers belonging to subaltern communities undergo hours of trance, elaborate natural face painting, and towering headgear up to 50 feet high. Once the makeup is completed and the mirror is held, the dancer is believed to become the living embodiment of the deity.',
     masterArtisansOrExponents: ['Vannathan, Malayan, and Mavilan hereditary lineages of Malabar'],
     highlights: ['Over 400 distinct Theyyams exist, including Muchilot Bhagavathi and Gulikan', 'Dancers leap through burning wood ember bonfires without receiving third-degree burns', 'Village folk flock to receive prophetic personal blessings from the dancing deity'],
-    heroImage: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'pattachitra',
@@ -208,7 +328,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient art form of cloth-based scroll painting noted for its intricate details, mythological narratives of Lord Jagannath and Krishna, sharp black ink outlines, and 100% natural organic mineral and vegetable dyes prepared using centuries-old recipes.',
     masterArtisansOrExponents: ['Chitrakar family guild of Raghurajpur', 'Raghunath Mohapatra'],
     highlights: ['Every family in the heritage village of Raghurajpur is an artisan practicing this craft', 'Canvas made by bonding layers of cotton cloth with tamarind seed gum and powdered chalk stone', 'Brushes crafted using fine hair from mongoose tails and mouse fur for microscopic detailing'],
-    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'madhubani-art',
@@ -221,7 +349,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Practiced by women in the Mithila region of Bihar, Madhubani paintings are characterized by complex geometric patterns, two-dimensional figures, absence of empty space (filled with birds, fish, and trees of life), and eye-popping natural pigment hues.',
     masterArtisansOrExponents: ['Ganga Devi', 'Sita Devi', 'Mahasundari Devi', 'Dulari Devi'],
     highlights: ['Originally painted directly on fresh mud and cow-dung plastered village walls (Kohbar)', 'Natural pigments: Yellow from turmeric, blue from indigo, black from chimney soot and cow dung', 'Five distinct styles: Bharni, Katchni, Tantrik, Godna, and Kohbar'],
-    heroImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kalamkari',
@@ -234,7 +370,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Kalamkari (Kalam = Pen, Kari = Craftsmanship) is an ancient style of hand-drawn or block-printed cotton textile art. Srikalahasti style uses a bamboo pen to draw temple tapestries freehand, while Machilipatnam uses hand-carved wooden blocks with natural indigo and madder dyes.',
     masterArtisansOrExponents: ['J. Niranjan', 'Srikalahasti Temple Artisan Guilds'],
     highlights: ['Requires up to 23 laborious treatment stages including buffalo milk washes to prevent color bleeding', 'Black outlines drawn using fermented rusted iron nails soaked in molasses and water', 'Dyes derived 100% from pomegranate rinds, madder roots, and indigo leaves'],
-    heroImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'warli-art',
@@ -247,7 +391,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An indigenous tribal art form created by the Warli tribe using rudimentary geometric shapes: circle (sun and moon), triangle (mountains and trees), and square (sacred enclosure of goddess Palaghat). Depicts daily agrarian life, fishing, Tarpa dances, and communal unity without linear perspective.',
     masterArtisansOrExponents: ['Jivya Soma Mashe (Padma Shri)', 'Balu Jivya Mashe'],
     highlights: ['Uses only three geometric shapes: circle, triangle, and square', 'Tarpa Dance is the centerpiece: Men and women holding hands in an infinite spiral around the trumpeter', 'Paintings do not depict mythological deities but human harmony with Mother Nature'],
-    heroImage: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'gond-art',
@@ -260,7 +412,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Practiced by the Gond tribe of central India, Gond art is founded on the animist belief that seeing a good image brings good luck. Every artist develops an individual signature filler pattern (dots, fine dashes, scales, or drops) that brings trees, birds, flying deer, and forest spirits to life.',
     masterArtisansOrExponents: ['Jangarh Singh Shyam (Pioneer of modern Gond art)', 'Venkat Raman Singh Shyam', 'Bhajju Shyam'],
     highlights: ['Signature patterns: Each master artisan has their own unique texture motif', 'Tree of Life: Central philosophical symbol linking underworld, earth, and heavens', 'Exhibited in premier museums including the Pompidou Centre in Paris and British Museum'],
-    heroImage: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'phulkari',
@@ -273,7 +433,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Phulkari (literally Flower Work) is a traditional embroidery technique practiced by Punjabi women where geometrically complex floral motifs are embroidered from the reverse side of coarse cotton Khaddar fabric using untwisted pure silk floss.',
     masterArtisansOrExponents: ['Artisan grandmother guilds of rural Punjab', 'Lajwanti (Padma Shri)'],
     highlights: ['Embroidered entirely from the reverse side of the cloth without tracing patterns', 'Bagh (Garden): The entire surface of the fabric is completely covered with silk stitches', 'Traditionally gifted by maternal grandmothers to brides during wedding ceremonies'],
-    heroImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bandhani',
@@ -286,7 +454,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'One of the oldest tie-and-dye techniques in the world, Bandhani (from Sanskrit Bandha = to tie) involves plucking thousands of tiny points on fabric with fingernails and tying them tightly with waxed thread before dyeing, producing patterns like Shikari, Ekdali, and Gharchola.',
     masterArtisansOrExponents: ['Khatri Muslim community of Kutch (Padma Shri Abduljabbar Khatri)', 'Rangrez guilds of Jaipur'],
     highlights: ['A single bridal Gharchola saree can contain over 50,000 individually hand-tied knots', 'Jamnagar is globally famous for its mineral-rich water that gives Bandhani exceptionally bright red and yellow dyes', 'Ajanta Cave 1 murals show queens wearing Bandhani textiles 1,500 years ago'],
-    heroImage: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'chikankari',
@@ -299,7 +475,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A delicate and artful shadow-work embroidery technique of Lucknow, traditionally executed in white thread on white sheer cotton muslin. Includes 32 distinct stitches such as Tepchi, Bakhiya (shadow work), Phanda (millet knot), and Jaali (open-mesh lattice made without cutting the fabric).',
     masterArtisansOrExponents: ['Master craftsmen of Chowk, Lucknow', 'Hasan Mirza', 'Ustad Faiyaz Khan'],
     highlights: ['Jaali stitch: The fabric threads are carefully parted with a blunt needle without cutting a single thread', 'Incorporates 32 unique stitches, of which 6 are foundational to Awadhi court aesthetics', 'Over 250,000 women artisans in rural Lucknow sustain their families through this craft'],
-    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'banarasi-weaving',
@@ -312,7 +496,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Considered among the finest handwoven silks in the world, Banarasi sarees are famous for their gold and silver brocade (Zari), fine silk, opulent embroidery, and Mughal-inspired floral motifs like Kalga and Bel, Jhallar fringes, and Mina work.',
     masterArtisansOrExponents: ['Weavers of Madanpura and Peelo Kothi, Varanasi', 'Haji Munna', 'Bismillah Khan weavers'],
     highlights: ['A masterwork bridal Katan silk saree can take up to six months of painstaking handloom work', 'Zari was historically forged from genuine beaten gold and silver wires', 'Combines Persian floral arabesques with ancient Hindu spiritual icons'],
-    heroImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kanjeevaram-silk',
@@ -325,7 +517,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Woven in the temple city of Kanchipuram, Kanjeevaram sarees are characterized by their heavy silk weight, vibrant contrasting borders, and motifs derived from temple stone carvings (Mayil peacock, Rudraksham, Temple towers, Malli moggu jasmine bud). Body and border are woven separately and joined seamlessly (Korvai).',
     masterArtisansOrExponents: ['Kanchipuram Cooperative Weavers Society', 'Padmashali and Devanga master weavers'],
     highlights: ['Korvai technique: The border and body are woven with separate shuttles and interlocked so tightly that if the saree tears, the border will not separate', 'Three-ply mulberry silk gives it exceptional lifetime durability and regal weight', 'Gold zari is tested for authenticity by burning a snippet to reveal pure silver residue'],
-    heroImage: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'blue-pottery-jaipur',
@@ -338,7 +538,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Unlike traditional pottery, Jaipur Blue Pottery uses no clay. The dough is formulated using crushed quartz stone powder, recycled glass, Multani Mitti, and natural gum. Glazed with brilliant cobalt blue and turquoise motifs of birds, peacocks, and floral arabesques.',
     masterArtisansOrExponents: ['Kripal Singh Shekhawat (Revival pioneer and Padma Shri)', 'Kripal Kumbh'],
     highlights: ['Does not use any clay whatsoever—made entirely of quartz powder and glass', 'Fired only once at low temperatures, creating delicate, translucent porcelain-like surfaces', 'Resurrected in the 1960s by master artist Kripal Singh Shekhawat'],
-    heroImage: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'dhokra-art',
@@ -351,7 +559,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient lost-wax brass casting technique (Cire Perdue) practiced by indigenous metal-smith tribes. Because the clay mold is broken after every single firing to retrieve the metal sculpture, no two Dhokra statues in the world are ever identical.',
     masterArtisansOrExponents: ['Ghadwa craftsmen of Bastar', 'Jaidev Baghel (Padma Shri)'],
     highlights: ['Direct descendant of the technique used to cast the 4,500-year-old Dancing Girl of Mohenjo-Daro', 'Features rustic, elongated tribal figurines, elephants, horses, and musicians decorated with wire-like coils', 'Every piece is a unique 1-of-1 original because the outer clay mold is shattered during casting'],
-    heroImage: 'https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bamboo-craft',
@@ -364,7 +580,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Bamboo is the green gold of Northeast India, woven into the fabric of daily life. Artisans transform indigenous bamboo into architectural bridges, floating fish traps (Polo), grain baskets (Dala), fine floor mats (Sitalpati), hats (Japi), and modern sustainable furniture.',
     masterArtisansOrExponents: ['Tribal guild villages across Tripura, Assam, and Meghalaya'],
     highlights: ['Assam’s iconic Japi hat is adorned with red and white felt and woven bamboo strips', 'Tripura leads India in crafting ultra-fine bamboo sliver screens and lampshades', 'Zero-waste eco-sustainable architecture capable of earthquake flexibility'],
-    heroImage: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'rogan-art',
@@ -377,7 +601,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A rare and miraculous textile painting technique preserved by a single family in Nirona village. Boiled castor oil is heated for two days until it forms a thick, sticky resinous paste mixed with mineral colors. The master artist uses a thin metal rod held above the fabric to pull glowing threads of paint into intricate floral and geometric motifs without touching the fabric.',
     masterArtisansOrExponents: ['Khatri Abdul Gafur (Padma Shri)', 'Khatri family of Nirona'],
     highlights: ['Preserved exclusively by one single family on the entire planet', 'The metal stylus never touches the cloth; the artist manipulates the thread of paint in mid-air', 'Folded in half to create an exact symmetrical mirror print on the opposite side of the cloth'],
-    heroImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bidriware',
@@ -390,7 +622,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A 600-year-old metal handicraft from Bidar where pure silver wire is inlaid into an alloy of zinc and copper, then blackened with a special soil found only in the unlit underground basements of the 15th-century Bidar Fort, resulting in a striking jet-black and shimmering silver contrast.',
     masterArtisansOrExponents: ['Shah Rasheed Ahmed Quadri (Padma Shri)', 'Artisan guilds of Bidar'],
     highlights: ['The jet black color is produced using soil collected only from inside the Bidar Fort ruins', 'Silver wire does not tarnish and retains its pristine white luster against the black zinc alloy forever', 'GI protected heritage handicraft admired globally for royal hookahs, vases, and jewelry boxes'],
-    heroImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'kolam',
@@ -403,7 +643,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A geometric threshold drawing drawn every morning by women outside front doors using white rice flour. Formed of dots (Pulli) connected by looping continuous lines, it functions as a welcoming blessing to Goddess Lakshmi, an act of charity feeding ants and birds, and a complex mathematical knot theory exercise.',
     masterArtisansOrExponents: ['Millions of traditional South Indian homemakers and classical Kolam researchers'],
     highlights: ['Drawn with dry rice flour so tiny ants and insects are fed daily as an act of Bhootha Yajna', 'Studied by global computer scientists for its recursive fractal algorithms and array grammars', 'Margazhi month features colossal street-spanning multi-color Kolams outside temples'],
-    heroImage: 'https://images.unsplash.com/photo-1514897575457-c4db467cf78e?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1514897575457-c4db467cf78e?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1514897575457-c4db467cf78e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'rangoli',
@@ -416,7 +664,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient decorative art drawn on courtyards and floors during Diwali and auspicious occasions. Designed with symmetrical floral, peacock, and geometric mandalas to channel positive cosmic energy and welcome deities into the household.',
     masterArtisansOrExponents: ['Sanskarti Bharati masters', 'Traditional home artists of India'],
     highlights: ['Sanskar Bharati style uses 5-finger powder dispersion to create giant vibrant street mandalas', 'Flower petal Rangolis (Pookkalam) are an integral centerpiece of Onam in Kerala', 'Never made with artificial plastics; relies on natural colored sands and flower petals'],
-    heroImage: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'mehendi',
@@ -429,7 +685,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient ceremonial art where paste made from the dried leaves of the henna shrub is applied in intricate lace-like patterns on hands and feet for weddings and festivals. As it oxidizes, it stains the skin a rich, cooling mahogany-crimson hue.',
     masterArtisansOrExponents: ['Sojat henna farming cooperatives', 'Master wedding henna artists of Rajasthan'],
     highlights: ['Sojat in Rajasthan supplies over 90% of India’s premium green henna powder', 'Cooling medicinal properties soothe nerves and lower body temperature during wedding stress', 'Popular belief holds that the darker the henna stain, the deeper the bond of love'],
-    heroImage: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'vedic-chanting',
@@ -442,7 +706,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Inscribed on the UNESCO Representative List of Intangible Cultural Heritage. The sacred verses of the Vedas have been preserved and transmitted purely through oral recitation for over 3,500 years without changing a single syllable, vowel length, or pitch accent.',
     masterArtisansOrExponents: ['Veda Pathashalas of Kanchipuram, Varanasi, Sringeri, and Kerala Nambudiri reciters'],
     highlights: ['Preserved word-for-word for 3,500 years through 11 mnemonic recitation techniques (Jatapatha, Ghanapatha)', 'UNESCO recognized it in 2003 as one of the most supreme achievements of human memory', 'Tonal pitch: Three fundamental tonal accents—Udatta (raised), Anudatta (unraised), and Svarita (circumflex)'],
-    heroImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'hindustani-classical',
@@ -455,7 +727,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The classical art music tradition of northern India, organized around the melodic framework of Ragas and rhythmic cycles of Taalas. Rooted in spiritual improvisation, each Raga is associated with a specific time of day, season, and emotional mood (Rasa).',
     masterArtisansOrExponents: ['Ustad Bismillah Khan', 'Pandit Ravi Shankar', 'Ustad Zakir Hussain', 'Pandit Bhimsen Joshi'],
     highlights: ['Time theory of Ragas: Morning ragas (Bhairav), afternoon ragas (Bhimpalasi), night ragas (Darbari Kanada)', 'Dhrupad is the oldest surviving meditative form, sung with pure microtonal precision (Shrutis)', 'The Tanpura drone establishes the acoustic harmonic field for pure modal improvisation'],
-    heroImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'carnatic-music',
@@ -468,7 +748,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The classical music system of Southern India, distinguished by its composition-centric structure (Kritis), complex mathematical rhythmic permutations (Solkattu and Konnakol), and the systematic 72 Melakarta parent scale framework formulated by Venkatamakhin.',
     masterArtisansOrExponents: ['M. S. Subbulakshmi', 'Semmangudi Srinivasa Iyer', 'Balamuralikrishna', 'L. Subramaniam'],
     highlights: ['Purandara Dasa is revered as the Pitamaha (grandfather) of Carnatic music who standardized the pedagogical exercises', 'The annual Chennai Music Season in December is the largest musical festival in the world with over 2,000 concerts', 'Mridangam and Ghatam percussionists play complex mathematical calculations (Korvai)'],
-    heroImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'baul-music',
@@ -481,7 +769,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Inscribed on the UNESCO Representative List of Intangible Cultural Heritage. The Bauls are mystic wandering minstrels of rural Bengal who renounce all organized religion and caste to seek the Divine inside the human body (Moner Manush—The Man of the Heart).',
     masterArtisansOrExponents: ['Lalon Fakir (Legendary 18th-century mystic)', 'Purna Das Baul', 'Parvathy Baul'],
     highlights: ['Lalon Fakir composed thousands of philosophical songs promoting communal harmony and oneness', 'Singers dance joyfully while simultaneously playing the Ektara with one hand and the Dubki drum with the other', 'Centered at the annual Kenduli Mela held on the banks of the sacred Ajay River'],
-    heroImage: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'folk-puppetry-rajasthan',
@@ -494,7 +790,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Traditional string puppet theater performed by the nomadic Bhat community of Rajasthan. Carved from a single piece of wood (Kath = wood, Putli = doll), the puppets have no legs but wear flowing pleated skirts manipulated through strings attached to the puppeteer’s fingers.',
     masterArtisansOrExponents: ['Bhat puppeteer families of Kathputli Colony and Nagaur', 'Puran Bhat'],
     highlights: ['Puppeteers communicate and narrate dialogues using a bamboo whistle called Boli that creates a bird-like squeaking voice', 'Enacts legends of medieval warrior Amar Singh Rathore of Nagaur and courtly intrigues', 'A single puppeteer can operate multiple puppets with incredible dexterity using finger loops'],
-    heroImage: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'bhavai-theatre',
@@ -507,7 +811,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A popular folk theatre form created by Asaita Thakar in the 14th century, blending humor, dance, music, and hard-hitting social commentary. Perched before village audiences, characters enter through a sacred circle (Chachar) announced by the piercing sound of long copper Bhungal trumpets.',
     masterArtisansOrExponents: ['Targala / Nayak traditional communities', 'Pransukh Nayak', 'Kailash Pandya'],
     highlights: ['Bhungal: The 7-foot copper trumpet produces a piercing drone heard across entire villages', 'The clown character Ranglo uses razor-sharp wit to satirize corrupt officials and social taboos', 'Female roles were historically played by male actors who balanced up to eight brass pots on their heads'],
-    heroImage: 'https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'ram-leela',
@@ -520,7 +832,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The traditional theatrical enactment of the epic Ramayana based on Tulsidas’s Ramcharitmanas. In Ramnagar (Varanasi), the entire town transforms into a 31-day open-air theatre stage where the audience walks along with the royal family from one location to another as scenes progress.',
     masterArtisansOrExponents: ['Maharaja of Kashi royal patronage in Ramnagar', 'Ayodhya Shodh Sansthan'],
     highlights: ['Inscribed on UNESCO’s Representative List of Intangible Cultural Heritage in 2008', 'Ramnagar Ramlila uses no microphones or modern electric lights, illuminated solely by flaming mashal torches', 'Concludes on Vijayadashami with the dramatic burning of 80-foot giant firecracker-filled effigies of Ravana'],
-    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'boat-races-kerala',
@@ -533,7 +853,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A traditional canoe racing sport held during the harvest season. The centerpiece is the Chundan Vallam (Snake Boat), measuring over 100 feet in length and manned by 100 to 120 synchronized oarsmen rowing in frantic tempo to the rhythm of fast-paced Vanchi Pattu songs.',
     masterArtisansOrExponents: ['Village boat clubs of Kuttanad and Aranmula', 'Master carpenter Koothali lineages'],
     highlights: ['Nehru Trophy Boat Race on Punnamada Lake is the world’s most competitive canoe race', 'The stern of the Chundan Vallam rises 20 feet into the air like a raised cobra hood', 'A full-sized Chundan takes over a year to hand-carve out of Anjili (wild jackfruit) timber'],
-    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'yoga-tradition',
@@ -546,7 +874,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'An ancient holistic science uniting mind, body, and consciousness through ethical observances (Yama & Niyama), physical postures (Asanas), breath control (Pranayama), and deep absorption (Samadhi). Inscribed on the UNESCO Representative List of Intangible Cultural Heritage.',
     masterArtisansOrExponents: ['Maharishi Patanjali', 'Swami Vivekananda', 'T. Krishnamacharya', 'B.K.S. Iyengar'],
     highlights: ['Celebrated worldwide on June 21 as the International Day of Yoga', 'Rooted in Patanjali’s classical Ashtanga (eight-limbed) spiritual framework', 'Rishikesh on the holy Ganges remains the undisputed global spiritual capital of Yoga'],
-    heroImage: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'ayurveda-tradition',
@@ -559,7 +895,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The ancient Indian system of holistic natural medicine, based on balancing the three fundamental biological energies or doshas (Vata, Pitta, and Kapha). Centers on preventive living, diet, Panchakarma rejuvenation therapies, and herbal pharmacology.',
     masterArtisansOrExponents: ['Charaka and Sushruta (Foundational sages)', 'Ashtavaidya hereditary families of Kerala'],
     highlights: ['Sushruta Samhita is the world’s oldest documented text on surgical techniques and plastic surgery', 'Panchakarma: Five-fold clinical detoxification therapies including Shirodhara and Abhyanga', 'Kerala is globally celebrated for preserving authentic Ayurvedic hospitals and herbal medicinal gardens'],
-    heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'tribal-cuisine',
@@ -572,7 +916,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'The hyper-local, organic culinary traditions of India’s 700+ indigenous tribes. Prepared without refined oils or processed chemicals, it harnesses wild forest tubers, bamboo shoots, fermented soybean, Mahua flowers, red ant chutney (Chaprah), and millet flatbreads cooked over wood embers.',
     masterArtisansOrExponents: ['Indigenous tribal grandmothers and forest foraging communities of Bastar and Northeast India'],
     highlights: ['Chaprah: Red ant chutney from Bastar awarded Geographical Indication (GI) tag for its high protein and formic acid benefits', 'Zero-oil cooking using steam inside bamboo hollows or wrapped in aromatic turmeric leaves', 'Preserves ancient drought-resistant millets like Kodo, Kutki, and Ragi'],
-    heroImage: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'temple-architecture',
@@ -585,7 +937,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'One of the crowning achievements of world architectural history, structured according to ancient Vastu Shastra manuals. Features three major schools: Northern Nagara (curved beehive Shikhara), Southern Dravida (pyramidal stepped Vimana with towering Gopurams), and hybrid Vesara.',
     masterArtisansOrExponents: ['Traditional Sompura architects of Gujarat', 'Stapathis of Tamil Nadu'],
     highlights: ['Garba Griha: The dark womb-chamber sanctum representing the inner heart of consciousness', 'Assembled without any cement or mortar using ingenious mortise-and-tenon interlocking stone masonry', 'Every decorative element is symbolically aligned with cosmic geometries and equinox solar alignments'],
-    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'mughal-architecture',
@@ -598,7 +958,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A splendid synthesis of Persian, Islamic, Turkish, and Hindu architectural forms. Characterized by monumental bulbous onion domes, symmetrical quadripartite Charbagh gardens, delicate white marble pavilions, and intricate floral Pietra Dura inlay using lapis lazuli, jasper, and jade.',
     masterArtisansOrExponents: ['Ustad Ahmad Lahori (Chief architect of Taj Mahal and Red Fort)', 'Mirak Mirza Ghiyas'],
     highlights: ['Pietra Dura (Parchin Kari): Over 28 semi-precious stones inlaid into polished marble with zero gap', 'Charbagh Garden: Quadripartite layout with four channels symbolizing paradise rivers', 'Jali work: Intricate geometric marble screens providing cooling cross-ventilation and privacy'],
-    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1600100397608-f010f443b7cf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'buddhist-monasteries',
@@ -611,7 +979,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Perched atop sheer Himalayan crags and mountain passes, Gompas are centers of Buddhist learning, meditation, and art. They preserve centuries-old fresco murals, vast libraries of woodblock-printed scriptures (Kangyur and Tengyur), and monumental gilded statues of the Buddha.',
     masterArtisansOrExponents: ['Hereditary Lama thangka painters of Ladakh and Tibet', 'Tawang monastic university'],
     highlights: ['Dukhang (assembly hall) walls are painted with murals of the Wheel of Life (Bhavachakra)', 'Mani wheels and prayer flags inscribed with the sacred mantra Om Mani Padme Hum', 'Monastic libraries preserve manuscripts written in pure gold and silver ink on handmade bark paper'],
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1576487247299-e22602422b4e?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'sikh-langar-tradition',
@@ -625,7 +1001,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'Instituted by Guru Nanak Dev, Langar is a revolutionary community kitchen where free vegetarian food is served to all people regardless of religion, caste, gender, economic status, or nationality. Everyone sits side by side on the floor (Pangat) in total equality.',
     masterArtisansOrExponents: ['Millions of dedicated voluntary Sikh volunteers (Sevadars) around the world'],
     highlights: ['The Golden Temple Langar serves over 100,000 hot meals every single day of the year for free', 'All cooking, serving, and cleaning is done entirely by selfless volunteers (Seva)', 'A historic blow against the medieval caste system by forcing kings and peasants to eat from the same kitchen'],
-    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'sufi-qawwali',
@@ -639,7 +1023,15 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'A devotional music tradition originating from the Chishti Sufi order in Delhi. Pioneered by poet Amir Khusrau, Qawwali uses soaring vocal improvisations, energetic hand clapping, and repetitive mystical poetry in Persian, Hindavi, and Urdu to induce spiritual ecstasy (Wajd).',
     masterArtisansOrExponents: ['Ustad Nusrat Fateh Ali Khan', 'Sabri Brothers', 'Wadali Brothers', 'Nizami Bandhu'],
     highlights: ['Performed live every Thursday evening at the historic Dargah of Hazrat Nizamuddin Auliya in Delhi', 'Amir Khusrau blended Persian musical scales with Indian classical ragas to invent modern Qawwali', 'Listeners experience trance-like ecstasy (Hal) through rhythmic clapping and intense lyrical repetitions'],
-    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80'
+    ]
   },
   {
     id: 'handloom-traditions',
@@ -653,6 +1045,14 @@ export const CULTURAL_EXPERIENCES: CulturalExperience[] = [
     description: 'India produces 95% of the world’s handwoven fabrics. From the golden Muga silks of Assam and fine Jamdani of Bengal to the Pochampally Ikats of Telangana and Pashmina shawls of Kashmir, India’s handloom heritage represents unmatched mathematical intricacy and artisanal pride.',
     masterArtisansOrExponents: ['Over 3.5 million handloom weavers across India organized into traditional weaver guilds'],
     highlights: ['India is the only country in the world that cultivates all four commercial silk varieties: Mulberry, Tussar, Eri, and golden Muga', 'Jamdani weaving was recognized by UNESCO as Intangible Cultural Heritage of Humanity', 'Every region has its own distinctive weave: Chanderi, Maheshwari, Paithani, Sambalpuri, Baluchari, and Kota Doria'],
-    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1601662528567-526cd06f6582?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
+    ]
   }
 ];

@@ -5,6 +5,7 @@ import { HERITAGE_SITES } from '../data/heritageSites';
 import { Volume2, VolumeX, MapPin, Award, Clock, DollarSign, Calendar, Compass, Shield, ArrowLeft, ExternalLink, CheckCircle } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
 import { PoliticalMapLocator } from '../components/map/PoliticalMapLocator';
+import { NearbyPlacesSection } from '../components/heritage/NearbyPlacesSection';
 
 export const HeritageDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -263,6 +264,9 @@ export const HeritageDetailPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Verified Hotels, Dining & AI Similar Recommendations */}
+        <NearbyPlacesSection currentSite={site} />
       </div>
     </div>
   );

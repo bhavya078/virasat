@@ -38,6 +38,14 @@ export interface HiddenGem {
   adventureLevel: 'Easy' | 'Moderate' | 'Challenging' | 'High Altitude';
   uncrowdedScore: number; // 1-100
   heroImage: string;
+  gallery?: string[];
+  story?: string;
+  budget?: string;
+  route?: string;
+  nearbyHotels?: { name: string; type: string; price: string }[];
+  nearbyRestaurants?: { name: string; cuisine: string; price: string }[];
+  localExperiences?: string[];
+  travelTips?: string[];
   tags: string[];
   coordinates: { lat: number; lng: number };
 }
@@ -58,6 +66,8 @@ export interface Festival {
   bestLocations: string[];
   countdownTargetDate: string; // ISO date for countdown
   heroImage: string;
+  gallery?: string[];
+  history?: string;
 }
 
 export interface CulturalExperience {
@@ -73,6 +83,9 @@ export interface CulturalExperience {
   masterArtisansOrExponents: string[];
   highlights: string[];
   heroImage: string;
+  gallery?: string[];
+  history?: string;
+  relatedFestivals?: string[];
 }
 
 export interface StateData {
@@ -158,12 +171,15 @@ export interface Language {
 export interface ItineraryRequest {
   destination: string;
   days: number;
-  budgetLevel: 'Backpacker' | 'Comfort' | 'Heritage Luxury' | 'Royal Maharaja';
-  season: 'Winter (Nov-Feb)' | 'Spring (Mar-Apr)' | 'Monsoon (Jul-Sep)' | 'Autumn (Oct-Nov)' | 'Summer (May-Jun)';
-  travelStyle: 'Spiritual & Sacred' | 'Royal Heritage & Forts' | 'Nature & Hidden Valleys' | 'Culinary & Art Trail' | 'Adventure & Trekking';
-  foodPreference: 'Pure Vegetarian' | 'Sattvic / Temple Feast' | 'Jain Friendly' | 'Authentic Regional Non-Veg' | 'Local Street Explorer';
-  companions: 'Solo Wanderer' | 'Romantic Couple' | 'Family with Elders & Kids' | 'Friends Expedition';
-  adventureLevel: 'Gentle & Relaxed' | 'Moderate Sightseeing' | 'High Energy & Trails';
+  budgetLevel: 'Backpacker' | 'Comfort' | 'Heritage Luxury' | 'Royal Maharaja' | string;
+  season?: 'Winter (Nov-Feb)' | 'Spring (Mar-Apr)' | 'Monsoon (Jul-Sep)' | 'Autumn (Oct-Nov)' | 'Summer (May-Jun)' | string;
+  travelStyle: 'Spiritual & Sacred' | 'Royal Heritage & Forts' | 'Nature & Hidden Valleys' | 'Culinary & Art Trail' | 'Adventure & Trekking' | 'Solo Wanderer' | 'Romantic Couple' | 'Family with Elders & Kids' | 'Friends Expedition' | string;
+  foodPreference?: 'Pure Vegetarian' | 'Sattvic / Temple Feast' | 'Jain Friendly' | 'Authentic Regional Non-Veg' | 'Local Street Explorer' | string;
+  companions?: 'Solo Wanderer' | 'Romantic Couple' | 'Family with Elders & Kids' | 'Friends Expedition' | string;
+  adventureLevel?: 'Gentle & Relaxed' | 'Moderate Sightseeing' | 'High Energy & Trails' | string;
+  interests?: string[]; // Heritage, Food, Nature, Spiritual, Adventure, Photography
+  monthOfTravel?: string;
+  languagePreference?: string;
 }
 
 export interface DayPlan {
@@ -200,4 +216,43 @@ export interface ItineraryResult {
   authenticEateries: { name: string; speciality: string; price?: string; priceRange?: string }[];
   hiddenGemsEnRoute: string[];
   emergencyHelplines: { agency: string; phone: string }[];
+  travelRoute?: { from: string; to: string; distance: string; duration: string; mode: string }[];
+  entryFees?: { site: string; indians: string; foreigners: string }[];
+  culturalEtiquette?: string[];
+  bestPhotoSpots?: { spot: string; bestTime: string; tip: string }[];
+  shoppingRecommendations?: { item: string; market: string; tip: string }[];
+  bestTimeToVisit?: string;
+}
+
+export interface HotelPlace {
+  id: string;
+  name: string;
+  category: 'luxury' | 'mid-range' | 'budget' | 'heritage' | 'homestay';
+  rating: number;
+  reviewsCount: number;
+  pricePerNight: string;
+  priceRange: string;
+  distanceKm: string;
+  address: string;
+  image: string;
+  mapUrl: string;
+  website?: string;
+  phone?: string;
+}
+
+export interface RestaurantPlace {
+  id: string;
+  name: string;
+  category: 'street-food' | 'vegetarian' | 'non-veg' | 'cafe' | 'fine-dining' | 'local-cuisine' | 'sweets';
+  rating: number;
+  reviewsCount: number;
+  cuisine: string;
+  distanceKm: string;
+  priceLevel: string;
+  timings: string;
+  image: string;
+  address: string;
+  mapUrl: string;
+  phone?: string;
+  mustTry: string;
 }

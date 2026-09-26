@@ -1,32 +1,43 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Mic, MicOff, Volume2, VolumeX, Send, Sparkles, Compass, HelpCircle } from 'lucide-react';
+import {
+  MessageSquare,
+  X,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Send,
+  Sparkles,
+  Compass,
+  HelpCircle,
+  MapPin,
+  Calendar,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  BookOpen
+} from 'lucide-react';
 import { heritageAudio } from '../../utils/audioService';
+import { HeritageAIQueryEngine, HeritageGuideAnswer } from '../../services/heritageAIQueryEngine';
 
 interface Message {
   id: string;
   sender: 'user' | 'dhara';
   text: string;
   time: string;
+  guideAnswer?: HeritageGuideAnswer;
 }
 
 const QUICK_PROMPTS = [
+  "History of Konark",
+  "Gujarat festivals in October",
+  "Hidden places in Kerala",
+  "Chola temples",
+  "Karnataka UNESCO sites",
   "Why do Taj Mahal minarets tilt outwards?",
-  "What is the secret of Brihadeeswara Temple dome?",
-  "Suggest 3 untouched hidden valleys in Himachal",
-  "Explain the 49-foot Maitreya Buddha in Ladakh",
-  "How are Aranmula metal mirrors forged without glass?"
+  "How are Aranmula metal mirrors forged?"
 ];
-
-// Rich knowledge responses for quick prompts & heritage queries
-const HERITAGE_KNOWLEDGE: Record<string, string> = {
-  "taj": "The four minarets of the Taj Mahal lean slightly outward by approximately 2 degrees. This architectural stroke of genius ensured that in the event of an earthquake, the towers would collapse outward onto the gardens rather than crashing onto the precious central marble crypt housing Mumtaz Mahal and Shah Jahan.",
-  "brihadeeswara": "The monolithic Kumbam dome atop the Brihadeeswara Temple in Thanjavur weighs approximately 80 tonnes and was carved from a single granite block. Because there were no granite quarries within 60 kilometers, King Rajaraja Chola’s master engineers built an inclined earthen ramp over 6 kilometers long, using elephants and log rollers to haul the massive crown stone 66 meters into the sky!",
-  "valleys": "Three of India's most pristine, uncrowded valleys are: 1) Tirthan Valley in Himachal (pristine trout river & gateway to Great Himalayan National Park), 2) Gurez Valley in Kashmir (nestled beneath Habba Khatoon peak along the Kishenganga), and 3) Mechuka in Arunachal Pradesh (often hailed as the Shangri-La of the Northeast with wooden suspension bridges).",
-  "buddha": "The two-storey, 49-foot high Maitreya Buddha at Thiksey Monastery in Ladakh took four years to sculpt and was consecrated by the 14th Dalai Lama in 1970. Seated in the lotus posture, it portrays the Buddha of the Future radiating serene compassion across the upper Indus valley.",
-  "aranmula": "The UNESCO-recognized Aranmula Kannadi metal mirror from Kerala contains no glass or reflective mercury coating! It is hand-cast by a single artisan family guild using an ancient metallurgical alloy of copper, tin, and secret medicinal herbs, polished over days with velvet cloth to achieve a 100% distortion-free front-surface reflection.",
-  "default": "Namaste! India's heritage spans over five millennia of continuous spiritual, architectural, and cultural evolution. Whether you are curious about Vedic temple mathematics, royal Rajput forts, or tribal art forms, I am here to guide your journey."
-};
 
 export const AIHeritageGuide: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +45,7 @@ export const AIHeritageGuide: React.FC = () => {
     {
       id: 'welcome',
       sender: 'dhara',
-      text: "Namaste! I am Dhara, your Virasat AI Heritage Guide. Ask me anything about India's 50 monuments, 50 hidden gems, rituals, or architecture.",
+      text: "Namaste! I am Dhara, your Virasat AI Cultural Guide. Ask me anything about India's 74 UNESCO monuments, 50 hidden gems, dynasties, sacred rituals, or temple mathematics.",
       time: 'Just now'
     }
   ]);
@@ -96,38 +107,24 @@ export const AIHeritageGuide: React.FC = () => {
     setMessages((prev) => [...prev, userMsg]);
     setInputText('');
 
-    // Formulate response
-    const qLower = queryText.toLowerCase();
-    let reply = HERITAGE_KNOWLEDGE['default'];
-
-    if (qLower.includes('taj') || qLower.includes('minaret')) {
-      reply = HERITAGE_KNOWLEDGE['taj'];
-    } else if (qLower.includes('brihadeeswara') || qLower.includes('dome') || qLower.includes('thanjavur')) {
-      reply = HERITAGE_KNOWLEDGE['brihadeeswara'];
-    } else if (qLower.includes('valley') || qLower.includes('himachal') || qLower.includes('untouched')) {
-      reply = HERITAGE_KNOWLEDGE['valleys'];
-    } else if (qLower.includes('buddha') || qLower.includes('ladakh') || qLower.includes('thiksey')) {
-      reply = HERITAGE_KNOWLEDGE['buddha'];
-    } else if (qLower.includes('mirror') || qLower.includes('aranmula')) {
-      reply = HERITAGE_KNOWLEDGE['aranmula'];
-    } else {
-      reply = `Thank you for asking about that facet of Bharat's heritage. In Indian tradition, this is linked to deep historical records and sacred geography. Our platform contains 50 detailed monument pages, 50 hidden gems, and 50 living cultural traditions exploring this in depth. Feel free to explore our Explore 50 and Hidden Gems directories!`;
-    }
+    // Generate rich response using sovereign engine
+    const answer = HeritageAIQueryEngine.answerQuery(queryText);
 
     setTimeout(() => {
       const dharaMsg: Message = {
         id: (Date.now() + 1).toString(),
         sender: 'dhara',
-        text: reply,
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        text: answer.summary,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        guideAnswer: answer
       };
       setMessages((prev) => [...prev, dharaMsg]);
 
       // Voice read aloud if user enabled
       if (isSpeaking) {
-        heritageAudio.speakGuide(reply);
+        heritageAudio.speakGuide(answer.headline + ". " + answer.summary);
       }
-    }, 600);
+    }, 400);
   };
 
   return (
@@ -160,17 +157,17 @@ export const AIHeritageGuide: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-20 right-4 sm:right-6 w-[94vw] sm:w-[420px] h-[550px] bg-[#083B2D]/95 backdrop-blur-2xl border border-[#C49A3A]/40 rounded-3xl shadow-luxury-hover z-50 flex flex-col overflow-hidden text-[#FAF8F4]"
+            className="fixed bottom-20 right-4 sm:right-6 w-[94vw] sm:w-[480px] h-[640px] max-h-[85vh] bg-[#083B2D]/95 backdrop-blur-2xl border border-[#C49A3A]/40 rounded-3xl shadow-luxury-hover z-50 flex flex-col overflow-hidden text-[#FAF8F4]"
           >
             {/* Header */}
-            <div className="px-5 py-4 bg-black/30 border-b border-white/10 flex items-center justify-between">
+            <div className="px-5 py-4 bg-black/40 border-b border-white/10 flex items-center justify-between shrink-0">
               <div className="flex items-center space-x-2.5">
-                <div className="w-8 h-8 rounded-full bg-[#C49A3A] text-[#083B2D] flex items-center justify-center font-serif font-bold">
+                <div className="w-8 h-8 rounded-full bg-[#C49A3A] text-[#083B2D] flex items-center justify-center font-serif font-bold text-sm shadow-gold-glow">
                   ध
                 </div>
                 <div>
                   <h4 className="font-serif text-sm font-bold text-[#C49A3A]">Dhara AI Heritage Guide</h4>
-                  <span className="text-[10px] text-white/70 block">Voice Enabled • Active Session Memory</span>
+                  <span className="text-[10px] text-white/70 block">Knowledge Engine • 74 Monuments & 50 Gems</span>
                 </div>
               </div>
 
@@ -183,7 +180,7 @@ export const AIHeritageGuide: React.FC = () => {
                       setIsSpeaking(false);
                     } else {
                       setIsSpeaking(true);
-                      heritageAudio.speakGuide("Voice narration active.");
+                      heritageAudio.speakGuide("Voice narration enabled.");
                     }
                   }}
                   className={`p-1.5 rounded-full border transition-colors ${
@@ -204,7 +201,7 @@ export const AIHeritageGuide: React.FC = () => {
             </div>
 
             {/* Quick Prompts Carousel */}
-            <div className="px-4 py-2 bg-black/20 border-b border-white/5 flex items-center space-x-1.5 overflow-x-auto text-[11px] no-scrollbar">
+            <div className="px-4 py-2 bg-black/25 border-b border-white/5 flex items-center space-x-1.5 overflow-x-auto text-[11px] no-scrollbar shrink-0">
               {QUICK_PROMPTS.map((p, i) => (
                 <button
                   key={i}
@@ -217,21 +214,128 @@ export const AIHeritageGuide: React.FC = () => {
             </div>
 
             {/* Message Thread */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.map((m) => (
                 <div
                   key={m.id}
                   className={`flex flex-col ${m.sender === 'user' ? 'items-end' : 'items-start'}`}
                 >
-                  <div
-                    className={`max-w-[85%] p-3 rounded-2xl text-xs leading-relaxed ${
-                      m.sender === 'user'
-                        ? 'bg-[#C49A3A] text-[#083B2D] font-medium rounded-br-none'
-                        : 'bg-white/10 text-[#FAF8F4] border border-white/10 rounded-bl-none shadow-sm'
-                    }`}
-                  >
-                    {m.text}
-                  </div>
+                  {m.sender === 'user' ? (
+                    <div className="max-w-[85%] p-3 rounded-2xl text-xs leading-relaxed bg-[#C49A3A] text-[#083B2D] font-medium rounded-br-none shadow-sm">
+                      {m.text}
+                    </div>
+                  ) : m.guideAnswer ? (
+                    /* Rich Structured Dhara Response Card */
+                    <div className="max-w-[95%] bg-black/40 border border-[#C49A3A]/30 rounded-2xl overflow-hidden shadow-luxury space-y-3 p-3.5 text-xs">
+                      {/* Badge & Headline */}
+                      <div className="flex items-center justify-between gap-2">
+                        {m.guideAnswer.badge && (
+                          <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#C49A3A]/20 text-[#C49A3A] font-semibold border border-[#C49A3A]/30">
+                            {m.guideAnswer.badge}
+                          </span>
+                        )}
+                        {m.guideAnswer.locationInfo && (
+                          <span className="text-[10px] text-white/60 flex items-center space-x-1">
+                            <MapPin className="w-3 h-3 text-[#C49A3A]" />
+                            <span>{m.guideAnswer.locationInfo.state}</span>
+                          </span>
+                        )}
+                      </div>
+
+                      <h4 className="font-serif text-sm font-bold text-[#FAF8F4] leading-snug">
+                        {m.guideAnswer.headline}
+                      </h4>
+
+                      {/* Photo Thumbnail if available */}
+                      {m.guideAnswer.image && (
+                        <div className="relative rounded-xl overflow-hidden aspect-video border border-white/10 group">
+                          <img
+                            src={m.guideAnswer.image}
+                            alt={m.guideAnswer.headline}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                          {m.guideAnswer.imageCaption && (
+                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-2 text-[10px] text-white/90">
+                              {m.guideAnswer.imageCaption}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Summary */}
+                      <p className="text-white/85 text-[11.5px] leading-relaxed">
+                        {m.guideAnswer.summary}
+                      </p>
+
+                      {/* Verified Facts */}
+                      {m.guideAnswer.facts && m.guideAnswer.facts.length > 0 && (
+                        <div className="bg-white/5 rounded-xl p-2.5 space-y-1.5 border border-white/5">
+                          <span className="text-[10px] font-mono uppercase text-[#C49A3A] font-bold block">
+                            Key Historical Facts
+                          </span>
+                          <ul className="space-y-1 text-[11px] text-white/80">
+                            {m.guideAnswer.facts.map((fact, idx) => (
+                              <li key={idx} className="flex items-start space-x-1.5">
+                                <CheckCircle className="w-3 h-3 text-[#C49A3A] shrink-0 mt-0.5" />
+                                <span>{fact}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Key Highlights */}
+                      {m.guideAnswer.keyHighlights && m.guideAnswer.keyHighlights.length > 0 && (
+                        <div className="grid grid-cols-2 gap-1.5 text-[10.5px]">
+                          {m.guideAnswer.keyHighlights.map((kh, idx) => (
+                            <div key={idx} className="bg-black/30 p-2 rounded-lg border border-white/5">
+                              <span className="block text-white/50 text-[9px] uppercase font-mono">{kh.title}</span>
+                              <span className="font-semibold text-white/90 truncate block">{kh.desc}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Related Items */}
+                      {m.guideAnswer.relatedItems && m.guideAnswer.relatedItems.length > 0 && (
+                        <div className="pt-1 border-t border-white/10 space-y-1">
+                          <span className="text-[10px] font-mono uppercase text-white/50 block">Nearby & Related</span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {m.guideAnswer.relatedItems.map((rel, idx) => (
+                              <span
+                                key={idx}
+                                className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10"
+                              >
+                                {rel.title}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Action Suggestions Chips */}
+                      {m.guideAnswer.actionSuggestions && (
+                        <div className="pt-1 flex flex-wrap gap-1.5">
+                          {m.guideAnswer.actionSuggestions.map((sug, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => handleUserSubmit(sug)}
+                              className="text-[10px] px-2 py-0.5 rounded-md bg-[#C49A3A]/15 hover:bg-[#C49A3A]/30 text-[#C49A3A] border border-[#C49A3A]/30 transition-colors flex items-center space-x-1"
+                            >
+                              <span>{sug}</span>
+                              <ChevronRight className="w-2.5 h-2.5" />
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="max-w-[85%] p-3 rounded-2xl text-xs leading-relaxed bg-white/10 text-[#FAF8F4] border border-white/10 rounded-bl-none shadow-sm">
+                      {m.text}
+                    </div>
+                  )}
+
                   <span className="text-[9px] text-white/40 mt-1 px-1 font-mono">{m.time}</span>
                 </div>
               ))}
@@ -244,7 +348,7 @@ export const AIHeritageGuide: React.FC = () => {
                 e.preventDefault();
                 handleUserSubmit(inputText);
               }}
-              className="p-3 bg-black/40 border-t border-white/10 flex items-center space-x-2"
+              className="p-3 bg-black/50 border-t border-white/10 flex items-center space-x-2 shrink-0"
             >
               <button
                 type="button"
@@ -263,7 +367,7 @@ export const AIHeritageGuide: React.FC = () => {
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
-                placeholder="Ask Dhara about monuments, temples, gems..."
+                placeholder="Ask Dhara about monuments, temples, dynasties..."
                 className="flex-1 px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-xs text-white placeholder-white/50 focus:outline-none focus:border-[#C49A3A]"
               />
 

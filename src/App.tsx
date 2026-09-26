@@ -19,6 +19,9 @@ import { FestivalsPage } from './pages/FestivalsPage';
 import { CulturePage } from './pages/CulturePage';
 import { StatesPage } from './pages/StatesPage';
 import { StateDetailPage } from './pages/StateDetailPage';
+import { HiddenGemDetailPage } from './pages/HiddenGemDetailPage';
+import { FestivalDetailPage } from './pages/FestivalDetailPage';
+import { CultureDetailPage } from './pages/CultureDetailPage';
 import { AdminPage } from './pages/AdminPage';
 
 // Components used as full-page experiences
@@ -110,8 +113,14 @@ export function App() {
             <Route path="/explore" element={<ExplorePage />} />
             <Route path="/heritage/:slug" element={<HeritageDetailPage />} />
             <Route path="/hidden-gems" element={<HiddenGemsPage />} />
+            <Route path="/hidden-gems/:slug" element={<HiddenGemDetailPage />} />
+            <Route path="/hidden-gem/:slug" element={<HiddenGemDetailPage />} />
             <Route path="/festivals" element={<FestivalsPage />} />
+            <Route path="/festivals/:slug" element={<FestivalDetailPage />} />
+            <Route path="/festival/:slug" element={<FestivalDetailPage />} />
             <Route path="/culture" element={<CulturePage />} />
+            <Route path="/culture/:slug" element={<CultureDetailPage />} />
+            <Route path="/culture-detail/:slug" element={<CultureDetailPage />} />
             <Route path="/states" element={<StatesPage />} />
             <Route path="/state/:slug" element={<StateDetailPage />} />
             <Route path="/ai-planner" element={<AITripPlanner />} />

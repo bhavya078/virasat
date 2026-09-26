@@ -156,7 +156,7 @@ export const HiddenGemsPage: React.FC = () => {
               className="bg-white rounded-3xl overflow-hidden border border-[#C49A3A]/25 shadow-luxury flex flex-col group"
             >
               {/* Image Frame with badges */}
-              <div className="relative h-60 overflow-hidden bg-gray-900">
+              <Link to={`/hidden-gems/${gem.slug}`} className="relative h-60 overflow-hidden bg-gray-900 block">
                 <img
                   src={gem.heroImage}
                   alt={gem.name}
@@ -183,11 +183,11 @@ export const HiddenGemsPage: React.FC = () => {
                   <span className="text-[11px] text-[#DFB757] font-serif italic block mb-0.5">
                     {gem.region}, {gem.state}
                   </span>
-                  <h3 className="font-serif text-xl font-bold text-[#FAF8F4] leading-snug drop-shadow-md">
+                  <h3 className="font-serif text-xl font-bold text-[#FAF8F4] leading-snug drop-shadow-md group-hover:text-[#DFB757] transition-colors">
                     {gem.name}
                   </h3>
                 </div>
-              </div>
+              </Link>
 
               {/* Body */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
@@ -221,23 +221,32 @@ export const HiddenGemsPage: React.FC = () => {
 
                 {/* Actions */}
                 <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                  <button
-                    onClick={() => handleOpenGem(gem)}
+                  <Link
+                    to={`/hidden-gems/${gem.slug}`}
                     className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
                   >
-                    <span>View Dossier & Route</span>
+                    <span>Explore Full Sanctuary</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </Link>
 
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${gem.coordinates.lat},${gem.coordinates.lng}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[11px] text-gray-400 hover:text-[#083B2D] p-1.5 rounded-full hover:bg-gray-100 transition-colors"
-                    title="Open in Google Maps"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  <div className="flex items-center space-x-1">
+                    <button
+                      onClick={() => handleOpenGem(gem)}
+                      className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
+                      title="Quick Dossier"
+                    >
+                      Quick Peek
+                    </button>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${gem.coordinates.lat},${gem.coordinates.lng}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[11px] text-gray-400 hover:text-[#083B2D] p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+                      title="Open in Google Maps"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>

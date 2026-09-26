@@ -197,7 +197,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
                       {gems.map((g) => (
                         <div
                           key={g.id}
-                          onClick={() => handleSelect(`/hidden-gems#${g.slug}`)}
+                          onClick={() => handleSelect(`/hidden-gems/${g.slug}`)}
                           className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/10 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center space-x-3">
@@ -226,7 +226,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
                       {festivals.map((f) => (
                         <div
                           key={f.id}
-                          onClick={() => handleSelect(`/festivals#${f.slug}`)}
+                          onClick={() => handleSelect(`/festivals/${f.slug}`)}
                           className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/10 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center space-x-3">
@@ -239,6 +239,35 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
                             </div>
                           </div>
                           <ChevronRight className="w-4 h-4 text-white/40 group-hover:text-[#C49A3A]" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Cultural Traditions */}
+                {cultures.length > 0 && (
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-purple-400 px-2 block mb-1">
+                      Living Traditions & Performing Arts ({cultures.length})
+                    </span>
+                    <div className="space-y-1">
+                      {cultures.map((c) => (
+                        <div
+                          key={c.id}
+                          onClick={() => handleSelect(`/culture/${c.slug}`)}
+                          className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/10 cursor-pointer transition-colors group"
+                        >
+                          <div className="flex items-center space-x-3">
+                            <img src={c.heroImage} alt="" className="w-10 h-10 rounded-lg object-cover" />
+                            <div>
+                              <strong className="text-xs text-white block group-hover:text-purple-300 transition-colors">
+                                {c.name}
+                              </strong>
+                              <span className="text-[11px] text-white/60">{c.originCentury} • {c.state}</span>
+                            </div>
+                          </div>
+                          <ChevronRight className="w-4 h-4 text-white/40 group-hover:text-purple-300" />
                         </div>
                       ))}
                     </div>

@@ -167,7 +167,7 @@ export const FestivalsPage: React.FC = () => {
                 className="bg-white rounded-3xl overflow-hidden border border-[#C49A3A]/25 shadow-luxury flex flex-col group"
               >
                 {/* Visual Header */}
-                <div className="relative h-60 overflow-hidden bg-gray-900">
+                <Link to={`/festivals/${fest.slug}`} className="relative h-60 overflow-hidden bg-gray-900 block">
                   <img
                     src={fest.heroImage}
                     alt={fest.name}
@@ -185,7 +185,7 @@ export const FestivalsPage: React.FC = () => {
 
                   {/* Title & Region */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-serif text-xl font-bold leading-tight drop-shadow-md text-[#FAF8F4]">
+                    <h3 className="font-serif text-xl font-bold leading-tight drop-shadow-md text-[#FAF8F4] group-hover:text-[#DFB757] transition-colors">
                       {fest.name}
                     </h3>
                     <div className="flex items-center space-x-1.5 text-xs text-white/80 mt-1">
@@ -193,7 +193,7 @@ export const FestivalsPage: React.FC = () => {
                       <span>{fest.state}</span>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Body Details */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
@@ -245,21 +245,30 @@ export const FestivalsPage: React.FC = () => {
 
                   {/* Actions */}
                   <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                    <button
-                      onClick={() => handleOpenFestival(fest)}
+                    <Link
+                      to={`/festivals/${fest.slug}`}
                       className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
                     >
-                      <span>Festival Rituals & Spots</span>
+                      <span>Explore Festival Protocol</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                    </Link>
 
-                    <button
-                      onClick={() => handleToggleNarration(fest.significance)}
-                      className="p-1.5 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
-                      title="Listen to Festival Significance"
-                    >
-                      <Volume2 className="w-4 h-4 text-[#C49A3A]" />
-                    </button>
+                    <div className="flex items-center space-x-1">
+                      <button
+                        onClick={() => handleOpenFestival(fest)}
+                        className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
+                        title="Quick Peek"
+                      >
+                        Quick Peek
+                      </button>
+                      <button
+                        onClick={() => handleToggleNarration(fest.significance)}
+                        className="p-1.5 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
+                        title="Listen to Festival Significance"
+                      >
+                        <Volume2 className="w-4 h-4 text-[#C49A3A]" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.div>

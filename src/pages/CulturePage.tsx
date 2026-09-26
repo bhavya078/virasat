@@ -186,7 +186,7 @@ export const CulturePage: React.FC = () => {
               className="bg-white rounded-3xl overflow-hidden border border-[#C49A3A]/25 shadow-luxury flex flex-col group"
             >
               {/* Image Banner */}
-              <div className="relative h-60 overflow-hidden bg-gray-900">
+              <Link to={`/culture/${exp.slug}`} className="relative h-60 overflow-hidden bg-gray-900 block">
                 <img
                   src={exp.heroImage}
                   alt={exp.name}
@@ -203,11 +203,11 @@ export const CulturePage: React.FC = () => {
                   <span className="text-[11px] text-[#DFB757] font-serif italic block mb-0.5">
                     {exp.originCentury}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-[#FAF8F4] leading-snug drop-shadow-md">
+                  <h3 className="font-serif text-lg font-bold text-[#FAF8F4] leading-snug drop-shadow-md group-hover:text-[#DFB757] transition-colors">
                     {exp.name}
                   </h3>
                 </div>
-              </div>
+              </Link>
 
               {/* Body */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
@@ -249,21 +249,30 @@ export const CulturePage: React.FC = () => {
 
                 {/* Actions */}
                 <div className="pt-3 flex items-center justify-between border-t border-gray-100">
-                  <button
-                    onClick={() => handleOpenExperience(exp)}
+                  <Link
+                    to={`/culture/${exp.slug}`}
                     className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
                   >
                     <span>Inspect Masterclass</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </Link>
 
-                  <button
-                    onClick={() => handleToggleNarration(exp.description)}
-                    className="p-2 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
-                    title="Listen to Tradition Summary"
-                  >
-                    <Volume2 className="w-4 h-4 text-[#C49A3A]" />
-                  </button>
+                  <div className="flex items-center space-x-1">
+                    <button
+                      onClick={() => handleOpenExperience(exp)}
+                      className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
+                      title="Quick Dossier"
+                    >
+                      Quick Peek
+                    </button>
+                    <button
+                      onClick={() => handleToggleNarration(exp.description)}
+                      className="p-1.5 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
+                      title="Listen to Tradition Summary"
+                    >
+                      <Volume2 className="w-4 h-4 text-[#C49A3A]" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>

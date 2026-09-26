@@ -286,7 +286,7 @@ export const StateDetailPage: React.FC = () => {
                   {linkedGems.map((g) => (
                     <Link
                       key={g.id}
-                      to={`/hidden-gems#${g.slug}`}
+                      to={`/hidden-gems/${g.slug}`}
                       className="bg-white rounded-2xl p-4 border border-[#C49A3A]/25 shadow-sm hover:shadow-md transition-all flex items-center space-x-4 group"
                     >
                       <img

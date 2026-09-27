@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { INDIA_OUTER_BOUNDARY } from '../../data/indiaMapPaths';
 
 const QUOTES = [
-  "Discovering India's timeless heritage...",
-  "Loading 50 monuments, 50 festivals and 50 hidden gems...",
-  "Preparing your AI journey through 5,000 years of civilization...",
-  "Tuning the sitars and lighting temple lamps...",
+  "Calibrating official Survey of India political boundaries...",
+  "Loading 50 UNESCO monuments, 50 sacred festivals, and 50 hidden gems...",
+  "Connecting 28 States and 8 Union Territories across Bharat...",
+  "Preparing AI cultural recommendation engine...",
   "Welcome to VIRASAT — India's Most Premium AI Heritage Platform."
+];
+
+// Key heritage coordinates across India calibrated to 768x768 canvas
+const HERITAGE_BEACONS = [
+  { name: 'Leh & Pangong', x: 263, y: 94, minProgress: 15 },
+  { name: 'Srinagar Valley', x: 222, y: 122, minProgress: 25 },
+  { name: 'Delhi & Amer Fort', x: 242, y: 236, minProgress: 40 },
+  { name: 'Varanasi Ghats', x: 380, y: 295, minProgress: 55 },
+  { name: 'Kaziranga & Assam', x: 589, y: 275, minProgress: 70 },
+  { name: 'Hampi & Deccan', x: 224, y: 595, minProgress: 85 },
+  { name: 'Cape Comorin', x: 256, y: 728, minProgress: 95 }
 ];
 
 interface LoaderProps {
@@ -30,18 +42,18 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
           setTimeout(() => {
             setIsVisible(false);
             onComplete();
-          }, 400);
+          }, 450);
           return 100;
         }
-        const increment = prev < 60 ? 4 : prev < 90 ? 2 : 1;
+        const increment = prev < 50 ? 3 : prev < 85 ? 2 : 1;
         return Math.min(100, prev + increment);
       });
-    }, 45);
+    }, 40);
 
     // Rotate quotes smoothly
     const quoteInterval = setInterval(() => {
       setQuoteIndex((prev) => (prev + 1) % QUOTES.length);
-    }, 1800);
+    }, 2000);
 
     return () => {
       clearInterval(interval);
@@ -55,83 +67,175 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 1 }}
-        exit={{ opacity: 0, scale: 1.05 }}
+        exit={{ opacity: 0, scale: 1.04 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#083B2D] text-[#FAF8F4] overflow-hidden selection:bg-[#C49A3A]"
       >
         {/* Ambient subtle background dust particles & gold aura */}
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C49A3A] rounded-full filter blur-[120px] animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#E67E22] rounded-full filter blur-[140px] animate-pulse-slow" />
+        <div className="absolute inset-0 pointer-events-none opacity-25">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C49A3A] rounded-full filter blur-[130px] animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#E67E22] rounded-full filter blur-[150px] animate-pulse-slow" />
         </div>
 
-        {/* Animated India Map Outline Drawing */}
-        <div className="relative w-64 h-64 md:w-80 md:h-80 mb-8 flex items-center justify-center">
+        {/* Central Official India Map Loading Canvas */}
+        <div className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96 mb-6 flex items-center justify-center">
+          {/* Rotating Celestial Golden Ring */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
+            className="absolute inset-0 rounded-full border border-dashed border-[#DFB757]/30 pointer-events-none"
+          />
+
           <svg
-            viewBox="0 0 300 340"
-            className="w-full h-full drop-shadow-[0_0_25px_rgba(196,154,58,0.5)]"
+            viewBox="0 0 768 768"
+            className="w-full h-full select-none filter drop-shadow-[0_0_35px_rgba(196,154,58,0.45)]"
           >
-            {/* Outline of Indian Political Sovereign Contour */}
-            <motion.path
-              d="M 115 15 
-                 L 140 15 L 160 25 L 175 50 L 155 70 L 165 85 L 190 105 L 225 100 
-                 L 260 80 L 290 95 L 285 140 L 265 175 L 250 165 L 230 140 L 220 170 
-                 L 210 190 L 200 170 L 205 200 L 180 225 L 165 295 L 150 330 L 125 335 
-                 L 110 295 L 100 250 L 80 230 L 50 205 L 30 180 L 45 170 L 60 140 
-                 L 70 110 L 85 90 L 95 55 Z"
-              fill="rgba(196, 154, 58, 0.12)"
-              stroke="#C49A3A"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ duration: 2.2, ease: "easeInOut" }}
+            <defs>
+              {/* Radial gradient mask for smooth map vignette blending */}
+              <radialGradient id="loaderMapVignette" cx="50%" cy="50%" r="50%">
+                <stop offset="60%" stopColor="#FFFFFF" stopOpacity="1" />
+                <stop offset="90%" stopColor="#FFFFFF" stopOpacity="0.7" />
+                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+              </radialGradient>
+              <mask id="mapMask">
+                <circle cx="384" cy="384" r="380" fill="url(#loaderMapVignette)" />
+              </mask>
+
+              {/* Laser Outline Golden Gradient */}
+              <linearGradient id="laserGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#E67E22" />
+                <stop offset="50%" stopColor="#DFB757" />
+                <stop offset="100%" stopColor="#FFF4B8" />
+              </linearGradient>
+
+              {/* Photonic Scanner Beam Gradient */}
+              <linearGradient id="scannerBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#DFB757" stopOpacity="0" />
+                <stop offset="50%" stopColor="#FFF2A7" stopOpacity="0.85" />
+                <stop offset="100%" stopColor="#DFB757" stopOpacity="0" />
+              </linearGradient>
+
+              {/* Glow Filter */}
+              <filter id="loaderGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            {/* Official Survey of India Map Image (Locked Source of Truth) */}
+            <image
+              href="/india_political_map_official.jpg"
+              x="0"
+              y="0"
+              width="768"
+              height="768"
+              preserveAspectRatio="xMidYMid meet"
+              mask="url(#mapMask)"
+              className="opacity-80"
             />
 
-            {/* Glowing Golden Ashoka Emblem / Lotus Core */}
-            <motion.circle
-              cx="140"
-              cy="165"
-              r="22"
-              fill="rgba(8, 59, 45, 0.8)"
-              stroke="#C49A3A"
-              strokeWidth="2"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.8, type: "spring" }}
+            {/* Traveling Laser Perimeter Trace Synced with Progress */}
+            <motion.path
+              d={INDIA_OUTER_BOUNDARY}
+              fill="none"
+              stroke="url(#laserGold)"
+              strokeWidth="3.2"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              filter="url(#loaderGlow)"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: Math.max(0.05, progress / 100) }}
+              transition={{ ease: "easeOut", duration: 0.3 }}
             />
-            {/* 24 Spoke rays */}
-            {[...Array(12)].map((_, i) => (
-              <motion.line
-                key={i}
-                x1="140"
-                y1="165"
-                x2={140 + 18 * Math.cos((i * 30 * Math.PI) / 180)}
-                y2={165 + 18 * Math.sin((i * 30 * Math.PI) / 180)}
-                stroke="#C49A3A"
-                strokeWidth="1.2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.8 }}
-                transition={{ delay: 1.2 + i * 0.04 }}
-              />
-            ))}
+
+            {/* Animated Photonic Radar Scanner Sweep */}
+            <motion.line
+              x1="64"
+              x2="704"
+              stroke="url(#scannerBeam)"
+              strokeWidth="2.5"
+              filter="url(#loaderGlow)"
+              animate={{
+                y1: [40, 720, 40],
+                y2: [40, 720, 40]
+              }}
+              transition={{
+                duration: 3.2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
+
+            {/* Active Milestone Heritage Beacons */}
+            {HERITAGE_BEACONS.map((beacon) => {
+              const isUnlocked = progress >= beacon.minProgress;
+              if (!isUnlocked) return null;
+
+              return (
+                <g key={beacon.name}>
+                  {/* Expanding Radar Ping */}
+                  <circle
+                    cx={beacon.x}
+                    cy={beacon.y}
+                    r="16"
+                    fill="none"
+                    stroke="#DFB757"
+                    strokeWidth="1.8"
+                    className="animate-ping opacity-75"
+                  />
+                  {/* Solid Glowing Core */}
+                  <circle
+                    cx={beacon.x}
+                    cy={beacon.y}
+                    r="4.5"
+                    fill="#FFFFFF"
+                    stroke="#DFB757"
+                    strokeWidth="2"
+                  />
+                  <circle
+                    cx={beacon.x}
+                    cy={beacon.y}
+                    r="2"
+                    fill="#083B2D"
+                  />
+                </g>
+              );
+            })}
           </svg>
 
-          {/* Logo emerges in center */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.6 }}
-            className="absolute flex flex-col items-center"
-          >
-            <span className="font-serif text-3xl md:text-4xl tracking-[0.25em] text-[#C49A3A] font-bold">
-              VIRASAT
-            </span>
-            <span className="text-[10px] md:text-xs tracking-[0.3em] text-[#FAF8F4]/80 uppercase mt-1">
-              BHARAT HERITAGE OS
-            </span>
-          </motion.div>
+          {/* Central Logo & Rotating Ashoka Chakra Relief */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+            {/* Soft dark backing pill for text contrast */}
+            <div className="px-5 py-3 rounded-2xl bg-black/70 border border-[#DFB757]/40 backdrop-blur-md flex flex-col items-center shadow-2xl">
+              {/* Rotating 24-Spoke Golden Chakra */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
+                className="w-10 h-10 mb-1.5 relative flex items-center justify-center"
+              >
+                <div className="w-9 h-9 rounded-full border border-[#DFB757] flex items-center justify-center shadow-[0_0_12px_rgba(223,183,87,0.7)]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#DFB757]" />
+                  {[...Array(12)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-full h-[1px] bg-[#DFB757]/70"
+                      style={{ transform: `rotate(${i * 15}deg)` }}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+
+              <span className="font-serif text-2xl md:text-3xl tracking-[0.25em] text-[#FFF2A7] font-bold drop-shadow-md">
+                VIRASAT
+              </span>
+              <span className="text-[9px] md:text-[10px] tracking-[0.3em] text-[#DFB757] uppercase font-mono mt-0.5">
+                BHARAT HERITAGE OS
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Changing Quotes */}
@@ -143,7 +247,7 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4 }}
-              className="font-subheading text-lg md:text-xl text-[#FAF8F4]/90 italic"
+              className="font-subheading text-base md:text-lg text-[#FAF8F4]/90 italic"
             >
               "{QUOTES[quoteIndex]}"
             </motion.p>
@@ -151,17 +255,20 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
         </div>
 
         {/* Golden Progress Bar */}
-        <div className="w-64 md:w-80 mt-6">
-          <div className="h-1.5 w-full bg-[#052A20] rounded-full overflow-hidden border border-[#C49A3A]/30">
+        <div className="w-64 md:w-80 mt-5">
+          <div className="h-1.5 w-full bg-[#052A20] rounded-full overflow-hidden border border-[#C49A3A]/40">
             <motion.div
-              className="h-full bg-gradient-to-r from-[#AA7F27] via-[#C49A3A] to-[#DFB757] rounded-full shadow-[0_0_12px_#C49A3A]"
+              className="h-full bg-gradient-to-r from-[#AA7F27] via-[#DFB757] to-[#FFF4B8] rounded-full shadow-[0_0_14px_#DFB757]"
               style={{ width: `${progress}%` }}
               transition={{ ease: "easeOut" }}
             />
           </div>
-          <div className="flex justify-between items-center text-xs text-[#C49A3A] font-mono mt-2 px-1">
-            <span>BHARAT HERITAGE OS</span>
-            <span>{progress}%</span>
+          <div className="flex justify-between items-center text-xs text-[#DFB757] font-mono mt-2 px-1">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635] animate-pulse" />
+              <span>INITIALIZING SYSTEM</span>
+            </span>
+            <span className="font-bold">{progress}%</span>
           </div>
         </div>
       </motion.div>

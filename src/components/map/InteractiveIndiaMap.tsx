@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 import { STATES_DATA } from '../../data/statesData';
 import { INDIA_REGIONS, type IndiaRegion, geoXY } from '../../data/indiaMapPaths';
-import { MAP_HERITAGE_MARKERS, ODYSSEY_STOPS, type MapMarker } from '../../data/mapOdysseyData';
+import { ODYSSEY_STOPS } from '../../data/mapOdysseyData';
 import { useLanguage } from '../../context/LanguageContext';
 import { heritageAudio } from '../../utils/audioService';
 
@@ -113,15 +113,6 @@ export const InteractiveIndiaMap: React.FC = () => {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
 
-  // Markers & Popups
-  const [selectedMarker, setSelectedMarker] = useState<MapMarker | null>(null);
-
-  // Map Visual Style Modes
-  // 'official': Authentically renders the user's uploaded map image with interactive lighting
-  // 'vector-pastel': Full vector fills using exact pastel hex palette from the uploaded map
-  // 'luxury-dark': Dark royal emerald aesthetic
-  const [mapStyle, setMapStyle] = useState<'official' | 'vector-pastel' | 'luxury-dark'>('official');
-
   // Visited States (Gamified Tracker)
   const [visitedStates, setVisitedStates] = useState<string[]>(() => {
     try {
@@ -158,8 +149,8 @@ export const InteractiveIndiaMap: React.FC = () => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    const rotateY = (x / (rect.width / 2)) * 4.5;
-    const rotateX = -(y / (rect.height / 2)) * 4.5;
+    const rotateY = (x / (rect.width / 2)) * 3.5;
+    const rotateX = -(y / (rect.height / 2)) * 3.5;
     setTilt({ rotateX, rotateY });
   };
 
@@ -206,21 +197,19 @@ export const InteractiveIndiaMap: React.FC = () => {
   const handleResetView = () => {
     setZoomLevel(1);
     setPanOffset({ x: 0, y: 0 });
-    setSelectedMarker(null);
     heritageAudio.playTempleBell();
   };
 
-  // State Click Behavior: Zoom smoothly toward state and activate it
+  // State Click Behavior: Zoom smoothly toward state and highlight its outline
   const handleStateClick = (region: IndiaRegion) => {
     setActiveRegion(region);
-    setSelectedMarker(null);
     heritageAudio.playTempleBell();
 
     // Smoothly scale and center camera on the clicked state
-    setZoomLevel(1.65);
+    setZoomLevel(1.6);
     setPanOffset({
-      x: (384 - region.cx) * 0.9,
-      y: (384 - region.cy) * 0.9
+      x: (384 - region.cx) * 0.85,
+      y: (384 - region.cy) * 0.85
     });
   };
 
@@ -361,12 +350,6 @@ export const InteractiveIndiaMap: React.FC = () => {
     return FILTER_STATE_MAP[activeFilter] || [];
   }, [activeFilter]);
 
-  // Visible markers based on active filter
-  const visibleMarkers = useMemo(() => {
-    if (activeFilter === 'all') return MAP_HERITAGE_MARKERS.slice(0, 8);
-    return MAP_HERITAGE_MARKERS.filter((m) => m.category === activeFilter);
-  }, [activeFilter]);
-
   return (
     <section
       id="interactive-map"
@@ -481,35 +464,18 @@ export const InteractiveIndiaMap: React.FC = () => {
             ))}
           </div>
 
-          {/* Quick Action Toggles: Display Mode Switcher & Odyssey Tour */}
+          {/* Quick Action Toggles: 3D Tilt, Odyssey Tour & AI Assistant */}
           <div className="flex items-center space-x-2 w-full lg:w-auto justify-end">
-            {/* Visual Style Switcher */}
-            <div className="flex items-center bg-black/40 p-1 rounded-2xl border border-white/15">
-              <button
-                onClick={() => setMapStyle('official')}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
-                  mapStyle === 'official'
-                    ? 'bg-[#C49A3A] text-[#083B2D]'
-                    : 'text-white/70 hover:text-white'
-                }`}
-                title="Official Uploaded Political Map"
-              >
-                <ImageIcon className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Official Map</span>
-              </button>
-              <button
-                onClick={() => setMapStyle('vector-pastel')}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
-                  mapStyle === 'vector-pastel'
-                    ? 'bg-[#C49A3A] text-[#083B2D]'
-                    : 'text-white/70 hover:text-white'
-                }`}
-                title="Vector Pastel Palette"
-              >
-                <Layers className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Pastel Vector</span>
-              </button>
-            </div>
+            {/* 3D Motion Toggle */}
+            <button
+              onClick={() => setIs3DEnabled(!is3DEnabled)}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
+                is3DEnabled ? 'bg-white/10 text-[#DFB757] border-[#C49A3A]/40' : 'bg-transparent text-white/50 border-white/10'
+              }`}
+              title="Toggle 3D Parallax Tilt"
+            >
+              3D Tilt: {is3DEnabled ? 'ON' : 'OFF'}
+            </button>
 
             {/* Odyssey Mode Button */}
             <button
@@ -517,7 +483,7 @@ export const InteractiveIndiaMap: React.FC = () => {
                 setIsOdysseyMode(!isOdysseyMode);
                 heritageAudio.playTempleBell();
               }}
-              className={`px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5 border ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5 border ${
                 isOdysseyMode
                   ? 'bg-[#E67E22] text-white border-[#E67E22] shadow-lg animate-pulse'
                   : 'bg-white/10 text-white border-white/20 hover:border-white/40'
@@ -533,7 +499,7 @@ export const InteractiveIndiaMap: React.FC = () => {
                 setIsAIOpen(!isAIOpen);
                 heritageAudio.playTempleBell();
               }}
-              className={`p-2.5 rounded-xl border border-white/20 transition-all ${
+              className={`p-2 rounded-xl border border-white/20 transition-all ${
                 isAIOpen ? 'bg-[#C49A3A] text-[#083B2D]' : 'bg-white/5 text-white hover:bg-white/15'
               }`}
               title="Open Rishi AI Map Assistant"
@@ -725,10 +691,11 @@ export const InteractiveIndiaMap: React.FC = () => {
             <div className="w-full flex items-center justify-between text-[11px] font-mono pb-3 border-b border-white/10 text-white/60">
               <div className="flex items-center space-x-2">
                 <Shield className="w-3.5 h-3.5 text-[#C49A3A]" />
-                <span>Survey of India Projection • Sovereign Republic of India</span>
+                <span>Survey of India Official Political Map • All 36 States & UTs Clickable</span>
               </div>
-              <div className="flex items-center space-x-3 text-[10px]">
-                <span className="text-[#DFB757]">36 Clickable Regions (28 States + 8 UTs)</span>
+              <div className="flex items-center space-x-2 text-[10px]">
+                <span className="w-2 h-2 rounded-full bg-[#A3E635] animate-pulse" />
+                <span className="text-[#DFB757]">Interactive Vector Layer Active</span>
               </div>
             </div>
 
@@ -760,6 +727,14 @@ export const InteractiveIndiaMap: React.FC = () => {
               </div>
             </div>
 
+            {/* Currently Active State Badge on Canvas */}
+            <div className="absolute top-16 left-6 z-20 hidden sm:flex items-center space-x-2 bg-black/75 border border-[#C49A3A]/40 px-3 py-1.5 rounded-2xl backdrop-blur-md">
+              <span className="w-6 h-5 rounded bg-[#C49A3A] text-[#083B2D] font-mono text-[10px] flex items-center justify-center font-bold">
+                {activeRegion.stateId}
+              </span>
+              <span className="text-xs font-serif font-bold text-[#DFB757]">{activeRegion.name}</span>
+            </div>
+
             {/* 3D SVG Map Canvas with Parallax Tilt */}
             <motion.div
               style={{
@@ -779,40 +754,36 @@ export const InteractiveIndiaMap: React.FC = () => {
                 }}
               >
                 <defs>
-                  {/* Selected State Gold-Emerald Shimmer */}
+                  {/* Subtle Shimmer Filters */}
                   <linearGradient id="selectedStateGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.8" />
-                    <stop offset="50%" stopColor="#083B2D" stopOpacity="0.85" />
-                    <stop offset="100%" stopColor="#C49A3A" stopOpacity="0.75" />
+                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.75" />
+                    <stop offset="50%" stopColor="#083B2D" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#C49A3A" stopOpacity="0.7" />
                   </linearGradient>
 
-                  {/* Visited State Green Gradient */}
                   <linearGradient id="visitedStateGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#2E7D32" stopOpacity="0.65" />
-                    <stop offset="100%" stopColor="#1B5E20" stopOpacity="0.8" />
+                    <stop offset="0%" stopColor="#2E7D32" stopOpacity="0.55" />
+                    <stop offset="100%" stopColor="#1B5E20" stopOpacity="0.7" />
                   </linearGradient>
 
-                  {/* Marker Radar Pulse Filter */}
-                  <radialGradient id="markerGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#E67E22" stopOpacity="0" />
-                  </radialGradient>
+                  <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
                 </defs>
 
                 {/* Base Layer: Official Uploaded India Map Image (Locked Source of Truth) */}
-                {mapStyle === 'official' && (
-                  <image
-                    href="/india_political_map_official.jpg"
-                    x="0"
-                    y="0"
-                    width="768"
-                    height="768"
-                    preserveAspectRatio="xMidYMid meet"
-                    className="pointer-events-none transition-opacity duration-300"
-                  />
-                )}
+                <image
+                  href="/india_political_map_official.jpg"
+                  x="0"
+                  y="0"
+                  width="768"
+                  height="768"
+                  preserveAspectRatio="xMidYMid meet"
+                  className="pointer-events-none transition-opacity duration-300"
+                />
 
-                {/* Vector Layer: All 36 Interactive Regions */}
+                {/* Vector Layer: Clean, Refined Interactive State Outlines */}
                 {INDIA_REGIONS.map((region) => {
                   const isSelected = activeRegion.slug === region.slug;
                   const isHovered = hoveredRegion?.slug === region.slug;
@@ -820,26 +791,16 @@ export const InteractiveIndiaMap: React.FC = () => {
                   const isFilteredMatch = filteredStateSlugs.includes(region.slug);
                   const isAIHighlighted = aiHighlightedStates.includes(region.slug);
 
-                  // Fill styling based on mode and interaction
+                  // Default outline styling: clean, unobtrusive
                   let pathFill = 'transparent';
-                  let strokeColor = 'transparent';
-                  let strokeWidth = '1';
+                  let strokeColor = 'rgba(255, 255, 255, 0.45)';
+                  let strokeWidth = '0.8';
 
-                  if (mapStyle === 'vector-pastel') {
-                    pathFill = region.originalColor;
-                    strokeColor = '#FFFFFF';
-                    strokeWidth = '1.2';
-                  } else if (mapStyle === 'luxury-dark') {
-                    pathFill = 'rgba(8, 59, 45, 0.35)';
-                    strokeColor = 'rgba(255, 255, 255, 0.25)';
-                    strokeWidth = '1';
-                  }
-
-                  // Overrides for interaction states
+                  // Interaction Overrides
                   if (isVisited) {
                     pathFill = 'url(#visitedStateGlow)';
                     strokeColor = '#A3E635';
-                    strokeWidth = '1.8';
+                    strokeWidth = '1.6';
                   }
                   if (isFilteredMatch) {
                     pathFill = 'rgba(230, 126, 34, 0.45)';
@@ -852,23 +813,30 @@ export const InteractiveIndiaMap: React.FC = () => {
                     strokeWidth = '2.5';
                   }
                   if (isHovered) {
-                    pathFill = 'rgba(196, 154, 58, 0.45)';
-                    strokeColor = '#FFFFFF';
-                    strokeWidth = '2.5';
+                    pathFill = 'rgba(196, 154, 58, 0.35)';
+                    strokeColor = '#DFB757';
+                    strokeWidth = '2.4';
                   }
                   if (isSelected) {
-                    pathFill = 'url(#selectedStateGlow)';
+                    pathFill = 'rgba(8, 59, 45, 0.55)';
                     strokeColor = '#DFB757';
                     strokeWidth = '3';
                   }
 
                   return (
-                    <g
+                    <path
                       key={region.slug}
                       id={`state-${region.slug}`}
                       data-state-id={region.stateId}
                       data-state-name={region.name}
                       data-slug={region.slug}
+                      d={region.path}
+                      fill={pathFill}
+                      stroke={strokeColor}
+                      strokeWidth={strokeWidth}
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      vectorEffect="non-scaling-stroke"
                       onClick={() => handleStateClick(region)}
                       onDoubleClick={() => handleNavigateToState(region.slug)}
                       onMouseEnter={(e) => {
@@ -882,51 +850,14 @@ export const InteractiveIndiaMap: React.FC = () => {
                         }
                       }}
                       className="cursor-pointer transition-all duration-300"
-                    >
-                      {/* State Polygon Boundary */}
-                      <path
-                        d={region.path}
-                        fill={pathFill}
-                        stroke={strokeColor}
-                        strokeWidth={strokeWidth}
-                        strokeLinejoin="round"
-                        className="transition-all duration-200"
-                        style={{
-                          filter: isHovered
-                            ? 'drop-shadow(0 0 14px rgba(196,154,58,0.95))'
-                            : isSelected
-                            ? 'drop-shadow(0 0 18px rgba(8,59,45,0.95))'
-                            : 'none'
-                        }}
-                      />
-
-                      {/* State Capital Star Beacon */}
-                      <circle
-                        cx={region.cx}
-                        cy={region.cy}
-                        r={isSelected ? 6.5 : isHovered ? 5.5 : 4}
-                        fill={isSelected ? '#DFB757' : isHovered ? '#FFFFFF' : '#C49A3A'}
-                        stroke="#083B2D"
-                        strokeWidth="1.5"
-                        className="transition-all duration-200"
-                      />
-
-                      {/* Vector Mode Labels (When image is hidden) */}
-                      {mapStyle !== 'official' && (
-                        <text
-                          x={region.cx}
-                          y={region.cy + 13}
-                          textAnchor="middle"
-                          fill={isSelected ? '#DFB757' : '#FFFFFF'}
-                          fontSize={isSelected ? '11px' : '9px'}
-                          fontWeight={isSelected ? '700' : '600'}
-                          fontFamily="sans-serif"
-                          className="pointer-events-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
-                        >
-                          {region.name}
-                        </text>
-                      )}
-                    </g>
+                      style={{
+                        filter: isHovered
+                          ? 'drop-shadow(0 0 10px rgba(223, 183, 87, 0.85))'
+                          : isSelected
+                          ? 'drop-shadow(0 0 14px rgba(8, 59, 45, 0.95))'
+                          : 'none'
+                      }}
+                    />
                   );
                 })}
 
@@ -948,114 +879,10 @@ export const InteractiveIndiaMap: React.FC = () => {
                         />
                       );
                     })}
-
-                    {/* Beacon on current stop */}
-                    <circle
-                      cx={currentOdyssey.x}
-                      cy={currentOdyssey.y}
-                      r="20"
-                      fill="url(#markerGlow)"
-                      className="animate-ping"
-                    />
-                    <circle
-                      cx={currentOdyssey.x}
-                      cy={currentOdyssey.y}
-                      r="7.5"
-                      fill="#E67E22"
-                      stroke="#FFFFFF"
-                      strokeWidth="2.5"
-                    />
                   </g>
                 )}
-
-                {/* Animated Filter Markers (UNESCO, Temples, Forts, Gems, Festivals) */}
-                {visibleMarkers.map((marker) => (
-                  <g
-                    key={marker.id}
-                    transform={`translate(${marker.x}, ${marker.y})`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedMarker(marker);
-                      heritageAudio.playTempleBell();
-                    }}
-                    className="cursor-pointer group"
-                  >
-                    <circle r="14" fill="url(#markerGlow)" className="animate-pulse" />
-                    <circle
-                      r="6.5"
-                      fill="#DFB757"
-                      stroke="#083B2D"
-                      strokeWidth="2"
-                      className="group-hover:scale-125 transition-transform"
-                    />
-                    <text
-                      y="-10"
-                      textAnchor="middle"
-                      fill="#FFFFFF"
-                      fontSize="9px"
-                      fontWeight="bold"
-                      className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] pointer-events-none"
-                    >
-                      {marker.name.slice(0, 11)}
-                    </text>
-                  </g>
-                ))}
               </svg>
             </motion.div>
-
-            {/* Selected Marker Popup Card */}
-            <AnimatePresence>
-              {selectedMarker && (
-                <motion.div
-                  initial={{ opacity: 0, y: 15, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 15, scale: 0.95 }}
-                  className="absolute bottom-6 left-6 right-6 sm:left-auto sm:right-6 sm:w-80 p-4 rounded-3xl bg-black/90 text-white border border-[#C49A3A] shadow-2xl backdrop-blur-xl z-40 space-y-3"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center space-x-2">
-                      <span className="px-2 py-0.5 rounded-full bg-[#C49A3A] text-[#083B2D] text-[10px] font-mono font-bold uppercase">
-                        {selectedMarker.category}
-                      </span>
-                      <span className="text-[11px] text-[#DFB757] font-mono">{selectedMarker.state}</span>
-                    </div>
-                    <button onClick={() => setSelectedMarker(null)} className="text-white/60 hover:text-white">
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
-
-                  <div className="flex space-x-3 items-center">
-                    <img
-                      src={selectedMarker.image}
-                      alt={selectedMarker.name}
-                      className="w-16 h-16 rounded-xl object-cover border border-white/20"
-                    />
-                    <div>
-                      <h4 className="font-serif text-sm font-bold text-white leading-tight">
-                        {selectedMarker.name}
-                      </h4>
-                      {selectedMarker.hindiName && (
-                        <span className="text-[11px] text-[#C49A3A] font-serif block">
-                          {selectedMarker.hindiName}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-white/80 line-clamp-2 leading-relaxed">
-                    {selectedMarker.description}
-                  </p>
-
-                  <Link
-                    to={selectedMarker.link}
-                    className="w-full py-2 rounded-xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs uppercase flex items-center justify-center space-x-1.5 hover:brightness-110 transition-all"
-                  >
-                    <span>Inspect Landmark Experience</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </Link>
-                </motion.div>
-              )}
-            </AnimatePresence>
 
             {/* Hover Tooltip Floating Card (Glassmorphic) */}
             <AnimatePresence>
@@ -1120,18 +947,18 @@ export const InteractiveIndiaMap: React.FC = () => {
             <div className="w-full pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-white/70">
               <div className="flex items-center space-x-2">
                 <span className="w-3 h-3 rounded bg-[#083B2D] border border-[#DFB757] inline-block" />
-                <span>Selected State</span>
+                <span>Selected Outline</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="w-3 h-3 rounded bg-[#2E7D32] border border-[#A3E635] inline-block" />
                 <span>Marked Visited</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#DFB757] inline-block animate-pulse" />
-                <span>Heritage Beacon</span>
+                <span className="w-3 h-3 rounded bg-[#E67E22] border border-[#DFB757] inline-block" />
+                <span>Filter Highlight</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-[#DFB757]">Source: Survey of India Official Map</span>
+                <span className="text-[#DFB757]">Official Political Map of India</span>
               </div>
             </div>
           </div>

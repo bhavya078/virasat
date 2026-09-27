@@ -1,7 +1,6 @@
 import React from 'react';
 import { CinematicHero } from '../components/home/CinematicHero';
 import { InteractiveIndiaMap } from '../components/map/InteractiveIndiaMap';
-import { CinematicStorytelling } from '../components/home/CinematicStorytelling';
 import { MonumentCard3D } from '../components/monument/MonumentCard3D';
 import { HERITAGE_SITES } from '../data/heritageSites';
 import { HIDDEN_GEMS } from '../data/hiddenGems';
@@ -22,9 +21,6 @@ export const HomePage: React.FC = () => {
 
       {/* CENTERPIECE: Interactive India Map */}
       <InteractiveIndiaMap />
-
-      {/* Sticky Cinematic Storytelling Timeline */}
-      <CinematicStorytelling />
 
       {/* Section: 50 Heritage Wonders Showcase Preview */}
       <section className="py-24 bg-[#FAF8F4] relative">

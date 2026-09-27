@@ -889,36 +889,24 @@ export const InteractiveIndiaMap: React.FC = () => {
                   const isFilteredMatch = filteredStateSlugs.includes(region.slug);
                   const isAIHighlighted = aiHighlightedStates.includes(region.slug);
 
-                  // Default outline styling: clean, unobtrusive
-                  let pathFill = 'transparent';
-                  let strokeColor = 'rgba(255, 255, 255, 0.45)';
+                  // Strict rule: ZERO area fill highlight — authentic map is 100% visible
+                  const pathFill = 'transparent';
+                  let strokeColor = 'rgba(255, 255, 255, 0.15)';
                   let strokeWidth = '0.8';
 
-                  // Interaction Overrides
-                  if (isVisited) {
-                    pathFill = 'url(#visitedStateGlow)';
-                    strokeColor = '#A3E635';
-                    strokeWidth = '1.6';
-                  }
-                  if (isFilteredMatch) {
-                    pathFill = 'rgba(230, 126, 34, 0.45)';
-                    strokeColor = '#E67E22';
-                    strokeWidth = '2';
-                  }
-                  if (isAIHighlighted) {
-                    pathFill = 'rgba(230, 126, 34, 0.65)';
-                    strokeColor = '#DFB757';
-                    strokeWidth = '2.5';
-                  }
+                  // Interaction Overrides (Outlines only, no area fill)
                   if (isHovered) {
-                    pathFill = 'rgba(196, 154, 58, 0.35)';
                     strokeColor = '#DFB757';
-                    strokeWidth = '2.4';
-                  }
-                  if (isSelected) {
-                    pathFill = 'rgba(8, 59, 45, 0.55)';
-                    strokeColor = '#DFB757';
-                    strokeWidth = '3';
+                    strokeWidth = '2.2';
+                  } else if (isSelected) {
+                    strokeColor = '#C49A3A';
+                    strokeWidth = '2';
+                  } else if (isFilteredMatch) {
+                    strokeColor = '#E67E22';
+                    strokeWidth = '1.6';
+                  } else if (isVisited) {
+                    strokeColor = '#A3E635';
+                    strokeWidth = '1.2';
                   }
 
                   return (
@@ -938,6 +926,8 @@ export const InteractiveIndiaMap: React.FC = () => {
                       onClick={() => handleStateClick(region)}
                       onDoubleClick={() => handleNavigateToState(region.slug)}
                       onMouseEnter={(e) => {
+                        // Immediately open state details in the dossier drawer
+                        setActiveRegion(region);
                         setHoveredRegion(region);
                         playHoverChime();
                         const rect = mapContainerRef.current?.getBoundingClientRect();
@@ -957,19 +947,19 @@ export const InteractiveIndiaMap: React.FC = () => {
                           });
                         }
                       }}
-                      className="cursor-pointer transition-all duration-300"
+                      className="cursor-pointer transition-all duration-200"
                       style={{
                         filter: isHovered
-                          ? 'drop-shadow(0 0 10px rgba(223, 183, 87, 0.85))'
+                          ? 'drop-shadow(0 0 8px rgba(223, 183, 87, 0.85))'
                           : isSelected
-                          ? 'drop-shadow(0 0 14px rgba(8, 59, 45, 0.95))'
+                          ? 'drop-shadow(0 0 10px rgba(196, 154, 58, 0.75))'
                           : 'none'
                       }}
                     />
                   );
                 })}
 
-                {/* National Sovereign Perimeter Trace (High-Precision Survey of India Outer Boundary) */}
+                {/* National Sovereign Perimeter Trace (Survey of India Outline) */}
                 <path
                   d={INDIA_OUTER_BOUNDARY}
                   fill="none"
@@ -984,71 +974,20 @@ export const InteractiveIndiaMap: React.FC = () => {
                   }}
                 />
 
-                {/* Dedicated Elevated Hover Layer (Renders on Top of All Paths for 100% Crisp Glow) */}
+                {/* Dedicated Elevated Hover Layer (Clean Outline Only — ZERO Area Highlight) */}
                 {hoveredRegion && (
                   <g className="pointer-events-none transition-all duration-200">
-                    {/* 1. Atmospheric Golden Ambient Aura */}
                     <path
                       d={hoveredRegion.path}
-                      fill="rgba(223, 183, 87, 0.20)"
+                      fill="none"
                       stroke="#DFB757"
-                      strokeWidth="7"
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      vectorEffect="non-scaling-stroke"
-                      className="opacity-50 blur-[3px]"
-                    />
-
-                    {/* 2. Precision Radiant Golden State Boundary with Shimmer Fill */}
-                    <path
-                      d={hoveredRegion.path}
-                      fill="url(#stateHoverShimmer)"
-                      stroke="#FFF6C8"
-                      strokeWidth="2.8"
+                      strokeWidth="2.4"
                       strokeLinejoin="round"
                       strokeLinecap="round"
                       vectorEffect="non-scaling-stroke"
                       style={{
-                        filter: 'drop-shadow(0 0 10px rgba(223, 183, 87, 0.95)) drop-shadow(0 0 22px rgba(196, 154, 58, 0.5))'
+                        filter: 'drop-shadow(0 0 6px rgba(223, 183, 87, 0.85))'
                       }}
-                    />
-
-                    {/* 3. Traveling Golden Photon Accent Line */}
-                    <path
-                      d={hoveredRegion.path}
-                      fill="none"
-                      stroke="#DFB757"
-                      strokeWidth="2.2"
-                      strokeDasharray="12 8"
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      vectorEffect="non-scaling-stroke"
-                      className="animate-map-dash opacity-90"
-                    />
-
-                    {/* 4. State Center Sonar Beacon Pulse */}
-                    <circle
-                      cx={hoveredRegion.cx}
-                      cy={hoveredRegion.cy}
-                      r="14"
-                      fill="none"
-                      stroke="#DFB757"
-                      strokeWidth="1.8"
-                      className="animate-ping opacity-75"
-                    />
-                    <circle
-                      cx={hoveredRegion.cx}
-                      cy={hoveredRegion.cy}
-                      r="5"
-                      fill="#FFFFFF"
-                      stroke="#DFB757"
-                      strokeWidth="2.2"
-                    />
-                    <circle
-                      cx={hoveredRegion.cx}
-                      cy={hoveredRegion.cy}
-                      r="2"
-                      fill="#083B2D"
                     />
                   </g>
                 )}

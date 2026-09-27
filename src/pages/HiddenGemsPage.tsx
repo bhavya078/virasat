@@ -13,30 +13,29 @@ import {
   X,
   Sparkles,
   Search,
-  Filter,
-  ShieldAlert,
-  ArrowRight,
-  Footprints
+  ArrowRight
 } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
 import { Link } from 'react-router-dom';
-
-const FILTER_TAGS = [
-  { id: 'all', label: 'All 50 Gems' },
-  { id: '90plus', label: '★ 90+ Serenity Score' },
-  { id: 'Easy', label: 'Easy Access' },
-  { id: 'Moderate', label: 'Moderate Trek' },
-  { id: 'Challenging', label: 'High Adventure' },
-  { id: 'Northeast', label: 'Seven Sisters' },
-  { id: 'Himalayan', label: 'Himalayas' },
-  { id: 'Coastal', label: 'Secret Coasts' }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export const HiddenGemsPage: React.FC = () => {
+  const { t, tState, tAdventure } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGem, setSelectedGem] = useState<HiddenGem | null>(null);
   const [isNarrating, setIsNarrating] = useState(false);
+
+  const filterTags = [
+    { id: 'all', label: t('gemTagAll', 'All 50 Gems') },
+    { id: '90plus', label: t('gemTag90', '★ 90+ Serenity Score') },
+    { id: 'Easy', label: t('gemTagEasy', 'Easy Access') },
+    { id: 'Moderate', label: t('gemTagModerate', 'Moderate Trek') },
+    { id: 'Challenging', label: t('gemTagChallenging', 'High Adventure') },
+    { id: 'Northeast', label: t('gemTagNE', 'Seven Sisters') },
+    { id: 'Himalayan', label: t('gemTagHimalaya', 'Himalayas') },
+    { id: 'Coastal', label: t('gemTagCoast', 'Secret Coasts') }
+  ];
 
   const filteredGems = useMemo(() => {
     return HIDDEN_GEMS.filter((gem) => {
@@ -84,6 +83,10 @@ export const HiddenGemsPage: React.FC = () => {
     }
   };
 
+  const counterText = t('showingGems', `Showing ${filteredGems.length} of ${HIDDEN_GEMS.length} Hidden Gems`)
+    .replace('{count}', String(filteredGems.length))
+    .replace('{total}', String(HIDDEN_GEMS.length));
+
   return (
     <div className="py-24 bg-[#FAF8F4] min-h-screen text-[#111827]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -91,13 +94,13 @@ export const HiddenGemsPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#E67E22]/10 border border-[#E67E22]/30 text-[#E67E22] text-xs font-semibold uppercase tracking-[0.25em]">
             <Compass className="w-3.5 h-3.5 text-[#E67E22]" />
-            <span>Beyond The Tourist Radar</span>
+            <span>{t('gemsBadge', 'Sovereign Untouched Sanctuaries')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#083B2D] tracking-tight">
-            50 Untouched Hidden Gems
+            {t('gemsTitle', '50 Untouched Hidden Gems of India')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-gray-700 italic">
-            Secret valleys, forgotten dynasties, bioluminescent shores, and ancient cliff villages across every corner of India.
+            {t('gemsSubtitle', 'Secret valleys, forgotten dynasties, bioluminescent shores, and ancient cliff villages across every corner of India.')}
           </p>
         </div>
 
@@ -111,14 +114,14 @@ export const HiddenGemsPage: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search by gem name, state, region, or tags..."
+                placeholder={t('gemsSearchPlaceholder', 'Search hidden gems by name, state, or region...')}
                 className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#FAF8F4] border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-[#C49A3A]"
               />
             </div>
 
             {/* Quick Stats */}
             <div className="flex items-center space-x-4 text-xs font-mono text-gray-500">
-              <span>Showing <strong className="text-[#083B2D]">{filteredGems.length}</strong> of 50 Gems</span>
+              <span>{counterText}</span>
               <span>•</span>
               <span className="text-[#E67E22] font-semibold">100% Non-Commercial</span>
             </div>
@@ -126,7 +129,7 @@ export const HiddenGemsPage: React.FC = () => {
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-            {FILTER_TAGS.map((pill) => (
+            {filterTags.map((pill) => (
               <button
                 key={pill.id}
                 onClick={() => {
@@ -169,73 +172,59 @@ export const HiddenGemsPage: React.FC = () => {
                 <div className="absolute top-4 left-4 bg-[#083B2D]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#C49A3A]/40 flex items-center space-x-1.5 shadow-sm">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-[11px] text-[#C49A3A] font-mono font-bold">
-                    Serenity {gem.uncrowdedScore}/100
+                    {t('serenityScore', 'Serenity')} {gem.uncrowdedScore}/100
                   </span>
                 </div>
 
                 {/* Adventure Level Pill */}
                 <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-mono text-white/90">
-                  {gem.adventureLevel}
+                  {tAdventure(gem.adventureLevel)}
                 </div>
 
                 {/* Header at bottom of photo */}
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-[11px] text-[#DFB757] font-serif italic block mb-0.5">
-                    {gem.region}, {gem.state}
+                    {gem.region}, {tState(gem.state)}
                   </span>
-                  <h3 className="font-serif text-xl font-bold text-[#FAF8F4] leading-snug drop-shadow-md group-hover:text-[#DFB757] transition-colors">
+                  <h3 className="font-serif text-lg font-bold leading-tight group-hover:text-[#DFB757] transition-colors">
                     {gem.name}
                   </h3>
                 </div>
               </Link>
 
-              {/* Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+              {/* Card Body */}
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed font-light">
                   {gem.description}
                 </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5">
-                  {gem.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2.5 py-0.5 rounded-md bg-[#FAF8F4] text-gray-600 text-[10px] font-mono border border-gray-100"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Quick Info Grid */}
-                <div className="grid grid-cols-2 gap-2 text-[11px] py-2 border-t border-gray-100 text-gray-600">
-                  <div className="flex items-center space-x-1.5 truncate">
-                    <Calendar className="w-3.5 h-3.5 text-[#C49A3A] flex-shrink-0" />
-                    <span className="truncate">{gem.bestTimeToVisit}</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 truncate">
-                    <MapPin className="w-3.5 h-3.5 text-[#E67E22] flex-shrink-0" />
-                    <span className="truncate">{gem.state}</span>
-                  </div>
+                {/* Highlights pill */}
+                <div className="bg-[#FAF8F4] p-3 rounded-2xl border border-gray-100 text-xs space-y-1">
+                  <span className="font-serif text-[11px] font-bold text-[#E67E22] block uppercase tracking-wider">
+                    {t('whyVisit', 'Why Visit')}
+                  </span>
+                  <p className="text-gray-700 text-[11px] line-clamp-2">
+                    {gem.whyVisit}
+                  </p>
                 </div>
 
                 {/* Actions */}
-                <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                  <Link
-                    to={`/hidden-gems/${gem.slug}`}
-                    className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
+                <div className="pt-2 border-t border-gray-100 flex items-center justify-between">
+                  <button
+                    onClick={() => handleOpenGem(gem)}
+                    className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1 transition-colors"
                   >
-                    <span>Explore Full Sanctuary</span>
+                    <span>{t('readFullStory', 'Read Full Story')}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  </button>
 
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-2">
                     <button
-                      onClick={() => handleOpenGem(gem)}
-                      className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
-                      title="Quick Dossier"
+                      onClick={() => handleToggleNarration(gem.description + ' Why visit? ' + gem.whyVisit)}
+                      className="p-1.5 rounded-full hover:bg-gray-100 text-gray-600 hover:text-[#083B2D] transition-colors"
+                      title={t('audioGuideListen', 'Listen to Audio Guide')}
                     >
-                      Quick Peek
+                      <Volume2 className="w-4 h-4 text-[#C49A3A]" />
                     </button>
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${gem.coordinates.lat},${gem.coordinates.lng}`}
@@ -300,7 +289,7 @@ export const HiddenGemsPage: React.FC = () => {
                 <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
                   <div className="flex items-center space-x-2">
                     <span className="px-2.5 py-0.5 rounded-full bg-[#C49A3A] text-[#083B2D] text-[10px] font-bold uppercase tracking-wider">
-                      {selectedGem.state}
+                      {tState(selectedGem.state)}
                     </span>
                     <span className="text-xs text-white/80 font-mono">
                       Coordinates: {selectedGem.coordinates.lat.toFixed(4)}° N, {selectedGem.coordinates.lng.toFixed(4)}° E
@@ -318,10 +307,10 @@ export const HiddenGemsPage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-[#083B2D] text-[#FAF8F4] flex items-center justify-between shadow-gold-glow">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[#C49A3A]">
-                      Audio Guide Synthesis
+                      {t('audioGuideListen', 'Audio Guide Synthesis')}
                     </span>
                     <p className="text-xs italic text-white/90">
-                      Listen to the verified lore and travel secrets of {selectedGem.name.split(':')[0]}
+                      {selectedGem.name}
                     </p>
                   </div>
                   <button
@@ -340,7 +329,7 @@ export const HiddenGemsPage: React.FC = () => {
                 {/* Narrative Details */}
                 <div className="space-y-2">
                   <h3 className="font-serif text-lg font-bold text-[#083B2D]">
-                    The Secret Lore
+                    {t('readFullStory', 'The Secret Lore')}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
                     {selectedGem.description}
@@ -351,7 +340,7 @@ export const HiddenGemsPage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-[#C49A3A]/25 space-y-1.5">
                   <h4 className="font-serif text-sm font-bold text-[#E67E22] flex items-center space-x-1.5">
                     <Sparkles className="w-4 h-4 text-[#E67E22]" />
-                    <span>Why You Must Experience This Place</span>
+                    <span>{t('whyVisit', 'Why You Must Experience This Place')}</span>
                   </h4>
                   <p className="text-xs text-gray-700 leading-relaxed font-light">
                     {selectedGem.whyVisit}
@@ -363,7 +352,7 @@ export const HiddenGemsPage: React.FC = () => {
                   <div className="p-4 rounded-2xl bg-white border border-gray-200 space-y-1.5">
                     <h5 className="font-serif text-xs font-bold text-[#083B2D] flex items-center space-x-1.5">
                       <Navigation className="w-3.5 h-3.5 text-[#C49A3A]" />
-                      <span>Expedition Route</span>
+                      <span>{t('howToReach', 'Expedition Route')}</span>
                     </h5>
                     <p className="text-xs text-gray-600 leading-relaxed font-light">
                       {selectedGem.howToReach}
@@ -373,13 +362,13 @@ export const HiddenGemsPage: React.FC = () => {
                   <div className="p-4 rounded-2xl bg-white border border-gray-200 space-y-1.5">
                     <h5 className="font-serif text-xs font-bold text-[#083B2D] flex items-center space-x-1.5">
                       <Calendar className="w-3.5 h-3.5 text-[#C49A3A]" />
-                      <span>Ideal Expedition Window</span>
+                      <span>{t('bestTimeToVisit', 'Ideal Expedition Window')}</span>
                     </h5>
                     <p className="text-xs text-[#083B2D] font-semibold">
                       {selectedGem.bestTimeToVisit}
                     </p>
                     <p className="text-[11px] text-gray-500 font-mono">
-                      Adventure Category: {selectedGem.adventureLevel}
+                      {t('adventureLevel', 'Adventure Level')}: {tAdventure(selectedGem.adventureLevel)}
                     </p>
                   </div>
                 </div>
@@ -406,7 +395,7 @@ export const HiddenGemsPage: React.FC = () => {
                     className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110 transition-all text-center"
                   >
                     <Sparkles className="w-3.5 h-3.5 text-[#083B2D]" />
-                    <span>Generate AI Itinerary with Rishi AI</span>
+                    <span>{t('btnPlanAI', 'Generate AI Itinerary with Rishi AI')}</span>
                   </Link>
                 </div>
               </div>

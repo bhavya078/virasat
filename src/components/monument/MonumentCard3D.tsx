@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { Volume2, MapPin, Award, Clock, ArrowRight, Star } from 'lucide-react';
 import { HeritageSite } from '../../types';
 import { heritageAudio } from '../../utils/audioService';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface CardProps {
   site: HeritageSite;
 }
 
 export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
+  const { t, tState, tCategory } = useLanguage();
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -87,14 +89,14 @@ export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
               </span>
             ) : (
               <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-mono uppercase tracking-wider">
-                <span>{site.category.toUpperCase()}</span>
+                <span>{tCategory(site.category).toUpperCase()}</span>
               </span>
             )}
 
             <button
               onClick={handlePlayAudio}
               className="p-2 rounded-full bg-white/20 hover:bg-[#C49A3A] backdrop-blur-md border border-white/30 text-white hover:text-[#083B2D] transition-colors shadow-md"
-              title="Listen to 60-second Audio Guide"
+              title={t('audioGuideListen', 'Listen to Audio Guide')}
             >
               <Volume2 className="w-3.5 h-3.5" />
             </button>
@@ -110,7 +112,7 @@ export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
             </h3>
             <div className="flex items-center space-x-1 text-xs text-white/80 mt-0.5">
               <MapPin className="w-3 h-3 text-[#C49A3A]" />
-              <span>{site.state}</span>
+              <span>{tState(site.state)}</span>
             </div>
           </div>
         </div>
@@ -124,15 +126,15 @@ export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
           {/* Quick Specifications */}
           <div className="pt-2 border-t border-gray-100 space-y-1.5 text-[11px] text-[#111827]/80 font-mono">
             <div className="flex justify-between">
-              <span className="text-gray-400">Dynasty:</span>
+              <span className="text-gray-400">{t('cardDynasty', 'Dynasty:')}</span>
               <span className="font-semibold text-[#083B2D] truncate max-w-[65%]">{site.dynasty}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">Timings:</span>
+              <span className="text-gray-400">{t('cardTimings', 'Timings:')}</span>
               <span className="text-gray-700 truncate max-w-[65%]">{site.timings}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">Best Season:</span>
+              <span className="text-gray-400">{t('cardBestSeason', 'Best Season:')}</span>
               <span className="text-[#C49A3A] font-medium">{site.bestMonths}</span>
             </div>
           </div>
@@ -142,7 +144,7 @@ export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
             to={`/heritage/${site.slug}`}
             className="w-full py-2.5 rounded-xl bg-[#FAF8F4] group-hover:bg-[#083B2D] border border-[#C49A3A]/30 text-[#083B2D] group-hover:text-[#C49A3A] text-xs font-semibold tracking-wide transition-all duration-300 flex items-center justify-center space-x-1.5"
           >
-            <span>Explore Monument Details</span>
+            <span>{t('cardExploreBtn', 'Explore Monument Details')}</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

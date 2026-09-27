@@ -68,6 +68,7 @@ export interface Festival {
   heroImage: string;
   gallery?: string[];
   history?: string;
+  ritualProtocol?: string;
 }
 
 export interface CulturalExperience {
@@ -86,6 +87,9 @@ export interface CulturalExperience {
   gallery?: string[];
   history?: string;
   relatedFestivals?: string[];
+  giTagCertified?: boolean;
+  historicalRoots?: string;
+  techniqueBreakdown?: string;
 }
 
 export interface StateData {

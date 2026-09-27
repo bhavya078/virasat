@@ -27,9 +27,11 @@ import {
   CloudSun
 } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
+import { useLanguage } from '../context/LanguageContext';
 
 export const StateDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t, tState } = useLanguage();
   const [isNarrating, setIsNarrating] = useState(false);
 
   // Look up state by slug, ID, or normalized name
@@ -82,7 +84,7 @@ export const StateDetailPage: React.FC = () => {
             className="inline-flex items-center space-x-2 text-xs font-semibold text-[#083B2D] hover:text-[#C49A3A] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to 28 States & 8 Union Territories</span>
+            <span>{t('backToStates', 'Back to 28 States & 8 Union Territories')}</span>
           </Link>
 
           {/* Quick Helplines */}
@@ -111,14 +113,14 @@ export const StateDetailPage: React.FC = () => {
             <div className="max-w-2xl space-y-2">
               <div className="flex items-center space-x-2">
                 <span className="px-3 py-1 rounded-full bg-[#C49A3A] text-[#083B2D] text-xs font-mono font-bold uppercase tracking-wider">
-                  State Capital: {state.capital}
+                  {t('stateCapital', 'Capital:')} {state.capital}
                 </span>
                 <span className="text-xs text-white/80 font-mono">
                   Population: {state.population}
                 </span>
               </div>
               <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF8F4]">
-                {state.name}
+                {tState(state.name)}
               </h1>
               <p className="text-xs sm:text-sm text-white/85 font-subheading italic max-w-xl">
                 {state.description}
@@ -394,19 +396,19 @@ export const StateDetailPage: React.FC = () => {
             {/* Daily Travel Budget Bracket */}
             <div className="bg-white p-6 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-4">
               <h4 className="font-serif text-lg font-bold text-[#083B2D]">
-                Estimated Daily Expenses
+                {t('dailyBudget', 'Estimated Daily Expenses')}
               </h4>
               <div className="space-y-2.5 text-xs font-mono">
                 <div className="p-2.5 rounded-xl bg-[#FAF8F4] flex justify-between items-center">
-                  <span className="text-gray-600">Backpacker / Budget:</span>
+                  <span className="text-gray-600">{t('tierBackpacker', 'Backpacker / Budget')}:</span>
                   <strong className="text-[#083B2D]">{state.estimatedDailyBudget.budget}</strong>
                 </div>
                 <div className="p-2.5 rounded-xl bg-[#FAF8F4] flex justify-between items-center">
-                  <span className="text-gray-600">Comfort / Mid-Range:</span>
+                  <span className="text-gray-600">{t('tierComfort', 'Comfort / Mid-Range')}:</span>
                   <strong className="text-[#C49A3A]">{state.estimatedDailyBudget.midRange}</strong>
                 </div>
                 <div className="p-2.5 rounded-xl bg-[#FAF8F4] flex justify-between items-center">
-                  <span className="text-gray-600">Heritage / Palace Stay:</span>
+                  <span className="text-gray-600">{t('tierLuxury', 'Heritage / Palace Stay')}:</span>
                   <strong className="text-[#E67E22]">{state.estimatedDailyBudget.luxury}</strong>
                 </div>
               </div>
@@ -416,7 +418,7 @@ export const StateDetailPage: React.FC = () => {
             <div className="bg-white p-6 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-4">
               <h4 className="font-serif text-lg font-bold text-[#083B2D] flex items-center space-x-2">
                 <Hotel className="w-4 h-4 text-[#C49A3A]" />
-                <span>Curated Heritage Stays</span>
+                <span>{t('nearbyHotelsTitle', 'Curated Heritage Stays')}</span>
               </h4>
               <div className="space-y-3">
                 {state.hotels.map((h, i) => (
@@ -436,7 +438,7 @@ export const StateDetailPage: React.FC = () => {
             <div className="bg-white p-6 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-4">
               <h4 className="font-serif text-lg font-bold text-[#083B2D] flex items-center space-x-2">
                 <Coffee className="w-4 h-4 text-[#C49A3A]" />
-                <span>Iconic Eateries</span>
+                <span>{t('nearbyFoodTitle', 'Iconic Eateries')}</span>
               </h4>
               <div className="space-y-3">
                 {state.restaurants.map((r, i) => (
@@ -455,7 +457,7 @@ export const StateDetailPage: React.FC = () => {
             {/* Verified Historical Facts */}
             <div className="bg-white p-6 rounded-3xl border border-[#C49A3A]/25 shadow-luxury space-y-3">
               <h4 className="font-serif text-base font-bold text-[#083B2D]">
-                Verified State Milestones
+                {t('verifiedFacts', 'Verified State Milestones')}
               </h4>
               <ul className="space-y-2 text-xs text-gray-600 font-light">
                 {state.facts.map((fact, idx) => (

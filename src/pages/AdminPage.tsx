@@ -29,8 +29,10 @@ import {
   Compass
 } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
+import { useLanguage } from '../context/LanguageContext';
 
 export const AdminPage: React.FC = () => {
+  const { t } = useLanguage();
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
     return sessionStorage.getItem('virasat_admin_auth') === 'true';
   });
@@ -205,14 +207,14 @@ export const AdminPage: React.FC = () => {
             <div className="flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-widest">
-                Authenticated Operator: National Digital Heritage Registry
+                {t('adminBadge', 'Authenticated Operator: National Digital Heritage Registry')}
               </span>
             </div>
             <h1 className="font-serif text-3xl font-bold text-[#083B2D]">
-              VIRASAT Platform Control Center
+              {t('adminTitle', 'VIRASAT Platform Control Center')}
             </h1>
             <p className="text-xs text-gray-500 font-mono">
-              Production Database v4.2 • Latency: 14ms • 28 States & 8 Union Territories Connected • Zero Mock Data
+              {t('adminSubtitle', 'Production Database v4.2 • Latency: 14ms • 28 States & 8 Union Territories Connected • Zero Mock Data')}
             </p>
           </div>
 
@@ -223,7 +225,7 @@ export const AdminPage: React.FC = () => {
               title="Reset any local mutations back to original 50-items datasets"
             >
               <RefreshCw className="w-3.5 h-3.5" />
-              <span>Restore Factory</span>
+              <span>{t('resetDataBtn', 'Restore Factory')}</span>
             </button>
 
             <button
@@ -274,27 +276,27 @@ export const AdminPage: React.FC = () => {
             {/* Metric KPI Cards */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
-                <span className="text-[10px] font-mono text-gray-500 uppercase">Monuments</span>
+                <span className="text-[10px] font-mono text-gray-500 uppercase">{t('statMonuments', 'Monuments')}</span>
                 <strong className="text-3xl font-bold font-serif text-[#083B2D] block">{monuments.length}</strong>
                 <span className="text-[10px] text-emerald-600 font-mono">100% Documented</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
-                <span className="text-[10px] font-mono text-gray-500 uppercase">Hidden Gems</span>
+                <span className="text-[10px] font-mono text-gray-500 uppercase">{t('statGems', 'Hidden Gems')}</span>
                 <strong className="text-3xl font-bold font-serif text-[#E67E22] block">{gems.length}</strong>
                 <span className="text-[10px] text-emerald-600 font-mono">Uncrowded Scores</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
-                <span className="text-[10px] font-mono text-gray-500 uppercase">Grand Festivals</span>
+                <span className="text-[10px] font-mono text-gray-500 uppercase">{t('statFestivals', 'Grand Festivals')}</span>
                 <strong className="text-3xl font-bold font-serif text-[#C49A3A] block">{FESTIVALS.length}</strong>
                 <span className="text-[10px] text-emerald-600 font-mono">Live Timers</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
-                <span className="text-[10px] font-mono text-gray-500 uppercase">Cultural Traditions</span>
+                <span className="text-[10px] font-mono text-gray-500 uppercase">{t('statTraditions', 'Cultural Traditions')}</span>
                 <strong className="text-3xl font-bold font-serif text-[#083B2D] block">{CULTURAL_EXPERIENCES.length}</strong>
                 <span className="text-[10px] text-emerald-600 font-mono">Living Crafts</span>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
-                <span className="text-[10px] font-mono text-gray-500 uppercase">States & UTs</span>
+                <span className="text-[10px] font-mono text-gray-500 uppercase">{t('statStates', 'States & UTs')}</span>
                 <strong className="text-3xl font-bold font-serif text-[#083B2D] block">{Object.keys(STATES_DATA).length}</strong>
                 <span className="text-[10px] text-emerald-600 font-mono">28 States & 8 UTs Covered</span>
               </div>

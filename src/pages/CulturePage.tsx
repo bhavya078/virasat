@@ -21,21 +21,23 @@ import {
 } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
 import { Link } from 'react-router-dom';
-
-const CATEGORIES = [
-  { id: 'all', label: 'All 50 Traditions' },
-  { id: 'dance', label: 'Dance & Sacred Theatre' },
-  { id: 'craft', label: 'Crafts & Royal Arts' },
-  { id: 'weaving', label: 'Handloom & Weaving' },
-  { id: 'martial', label: 'Martial Arts & Rituals' },
-  { id: 'sacred', label: 'Vedic & Sacred Living' }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export const CulturePage: React.FC = () => {
+  const { t, tState } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedExperience, setSelectedExperience] = useState<CulturalExperience | null>(null);
   const [isNarrating, setIsNarrating] = useState(false);
+
+  const categories = [
+    { id: 'all', label: t('cultureTagAll', 'All 50 Traditions') },
+    { id: 'dance', label: t('cultureTagDance', 'Classical Dance') },
+    { id: 'craft', label: t('cultureTagCraft', 'Ancient Crafts') },
+    { id: 'weaving', label: t('cultureTagTextile', 'Heritage Textiles') },
+    { id: 'martial', label: t('cultureTagMartial', 'Martial Arts') },
+    { id: 'sacred', label: t('catSpiritual', 'Vedic & Sacred Living') }
+  ];
 
   const filteredExperiences = useMemo(() => {
     return CULTURAL_EXPERIENCES.filter((item) => {
@@ -115,6 +117,10 @@ export const CulturePage: React.FC = () => {
     }
   };
 
+  const counterText = t('showingTraditions', `Showing ${filteredExperiences.length} of ${CULTURAL_EXPERIENCES.length} Living Traditions`)
+    .replace('{count}', String(filteredExperiences.length))
+    .replace('{total}', String(CULTURAL_EXPERIENCES.length));
+
   return (
     <div className="py-24 bg-[#FAF8F4] min-h-screen text-[#111827]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -122,13 +128,13 @@ export const CulturePage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em]">
             <Sparkles className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Living Heritage & Intangible Masterpieces</span>
+            <span>{t('cultureBadge', "Soul of Bharat's Civilization")}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#083B2D] tracking-tight">
-            50 Living Cultural Traditions of India
+            {t('cultureTitle', '50 Master Cultural Traditions')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-gray-700 italic">
-            From the 2,000-year-old mudras of Bharatanatyam to GI-tagged Pashmina loomcraft and UNESCO Garba — explore the soul of Indian civilization.
+            {t('cultureSubtitle', 'Immerse into the living soul of India: ancient classical dance mudras, Vedic metallurgy, rare GI-tagged handlooms, and timeless performing arts.')}
           </p>
         </div>
 
@@ -142,22 +148,22 @@ export const CulturePage: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search dance, craft, instruments, exponents, state..."
+                placeholder={t('cultureSearchPlaceholder', 'Search dance, craft, instruments, exponents, state...')}
                 className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#FAF8F4] border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-[#C49A3A]"
               />
             </div>
 
             {/* Counter */}
             <div className="flex items-center space-x-4 text-xs font-mono text-gray-500">
-              <span>Showing <strong className="text-[#083B2D]">{filteredExperiences.length}</strong> of 50 Traditions</span>
+              <span>{counterText}</span>
               <span>•</span>
-              <span className="text-[#083B2D] font-semibold">UNESCO & GI Recognized</span>
+              <span className="text-[#083B2D] font-semibold">{t('giTagCertified', 'GI Certified Heritage')}</span>
             </div>
           </div>
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-            {CATEGORIES.map((cat) => (
+            {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => {
@@ -185,7 +191,7 @@ export const CulturePage: React.FC = () => {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-3xl overflow-hidden border border-[#C49A3A]/25 shadow-luxury flex flex-col group"
             >
-              {/* Image Banner */}
+              {/* Image Frame */}
               <Link to={`/culture/${exp.slug}`} className="relative h-60 overflow-hidden bg-gray-900 block">
                 <img
                   src={exp.heroImage}
@@ -195,84 +201,73 @@ export const CulturePage: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                <div className="absolute top-4 left-4 bg-[#083B2D]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#C49A3A]/40 text-[10px] text-[#C49A3A] font-mono uppercase tracking-wider font-bold">
-                  {exp.state}
+                {/* State Tag */}
+                <div className="absolute top-4 left-4 bg-[#083B2D]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#C49A3A]/40 flex items-center space-x-1.5 shadow-sm">
+                  <MapPin className="w-3 h-3 text-[#C49A3A]" />
+                  <span className="text-[11px] text-[#C49A3A] font-mono font-bold">
+                    {tState(exp.state)}
+                  </span>
                 </div>
 
+                {/* GI Tag / Certified Pill */}
+                {exp.giTagCertified && (
+                  <div className="absolute top-4 right-4 bg-[#C49A3A] text-[#083B2D] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center space-x-1 shadow-md">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>GI Certified</span>
+                  </div>
+                )}
+
+                {/* Title & Region */}
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-[11px] text-[#DFB757] font-serif italic block mb-0.5">
-                    {exp.originCentury}
+                    {exp.historicalRoots}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-[#FAF8F4] leading-snug drop-shadow-md group-hover:text-[#DFB757] transition-colors">
+                  <h3 className="font-serif text-xl font-bold leading-tight group-hover:text-[#DFB757] transition-colors">
                     {exp.name}
                   </h3>
                 </div>
               </Link>
 
-              {/* Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+              {/* Card Body */}
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed font-light">
                   {exp.description}
                 </p>
 
-                {/* Key Instruments or Materials */}
-                <div className="space-y-1.5 bg-[#FAF8F4] p-3 rounded-2xl border border-gray-100">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-gray-500 block">
-                    Key Medium & Instruments:
+                {/* Key materials / instruments */}
+                <div className="bg-[#FAF8F4] p-3 rounded-2xl border border-gray-100 text-xs space-y-1">
+                  <span className="font-serif text-[11px] font-bold text-[#083B2D] block uppercase tracking-wider">
+                    {t('techniqueLabel', 'Key Medium / Instruments:')}
                   </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {exp.keyInstrumentsOrMaterials.map((inst, i) => (
+                  <div className="flex flex-wrap gap-1 pt-0.5">
+                    {exp.keyInstrumentsOrMaterials.map((m, idx) => (
                       <span
-                        key={i}
-                        className="px-2 py-0.5 rounded bg-white text-gray-700 text-[10px] font-medium border border-gray-200"
+                        key={idx}
+                        className="text-[10px] bg-white border border-gray-200 px-2 py-0.5 rounded-full text-gray-700"
                       >
-                        {inst}
+                        {m}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Highlights preview */}
-                <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#083B2D] font-bold block">
-                    Authentic Lineage:
-                  </span>
-                  <ul className="text-xs text-gray-600 space-y-1">
-                    {exp.highlights.slice(0, 2).map((h, i) => (
-                      <li key={i} className="flex items-start space-x-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#C49A3A] flex-shrink-0 mt-0.5" />
-                        <span className="line-clamp-1">{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Actions */}
-                <div className="pt-3 flex items-center justify-between border-t border-gray-100">
-                  <Link
-                    to={`/culture/${exp.slug}`}
-                    className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
+                {/* Bottom Actions */}
+                <div className="pt-2 border-t border-gray-100 flex items-center justify-between">
+                  <button
+                    onClick={() => handleOpenExperience(exp)}
+                    className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1 transition-colors"
                   >
-                    <span>Inspect Masterclass</span>
+                    <span>{t('exploreCultureDetails', 'Explore Masterclass')}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  </button>
 
-                  <div className="flex items-center space-x-1">
-                    <button
-                      onClick={() => handleOpenExperience(exp)}
-                      className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
-                      title="Quick Dossier"
-                    >
-                      Quick Peek
-                    </button>
-                    <button
-                      onClick={() => handleToggleNarration(exp.description)}
-                      className="p-1.5 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
-                      title="Listen to Tradition Summary"
-                    >
-                      <Volume2 className="w-4 h-4 text-[#C49A3A]" />
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => handleToggleNarration(exp.description + ' Technique: ' + exp.techniqueBreakdown)}
+                    className="p-1.5 rounded-full hover:bg-gray-100 text-gray-600 hover:text-[#083B2D] transition-colors"
+                    title={t('audioGuideListen', 'Listen to Audio Guide')}
+                  >
+                    <Volume2 className="w-4 h-4 text-[#C49A3A]" />
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -280,7 +275,7 @@ export const CulturePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Selected Experience Deep-Dive Modal */}
+      {/* Selected Culture Modal */}
       <AnimatePresence>
         {selectedExperience && (
           <motion.div
@@ -314,7 +309,7 @@ export const CulturePage: React.FC = () => {
                 <X className="w-4 h-4" />
               </button>
 
-              {/* Modal Hero Banner */}
+              {/* Modal Banner */}
               <div className="relative h-72 sm:h-80 overflow-hidden bg-gray-900">
                 <img
                   src={selectedExperience.heroImage}
@@ -326,10 +321,10 @@ export const CulturePage: React.FC = () => {
                 <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
                   <div className="flex items-center space-x-2">
                     <span className="px-2.5 py-0.5 rounded-full bg-[#C49A3A] text-[#083B2D] text-[10px] font-bold uppercase tracking-wider">
-                      {selectedExperience.state}
+                      {tState(selectedExperience.state)}
                     </span>
                     <span className="text-xs text-white/80 font-mono">
-                      Origins: {selectedExperience.originCentury}
+                      {selectedExperience.historicalRoots}
                     </span>
                   </div>
                   <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#FAF8F4]">
@@ -344,14 +339,14 @@ export const CulturePage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-[#083B2D] text-[#FAF8F4] flex items-center justify-between shadow-gold-glow">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[#C49A3A]">
-                      Tradition Master Audio
+                      {t('audioGuideListen', 'Audio Narration')}
                     </span>
                     <p className="text-xs italic text-white/90">
-                      Learn the philosophy and rhythmic grammar of {selectedExperience.name.split(':')[0]}
+                      {selectedExperience.name}
                     </p>
                   </div>
                   <button
-                    onClick={() => handleToggleNarration(selectedExperience.description + '. Key instruments and materials: ' + selectedExperience.keyInstrumentsOrMaterials.join(', '))}
+                    onClick={() => handleToggleNarration(selectedExperience.description + ' Technique: ' + selectedExperience.techniqueBreakdown)}
                     className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center space-x-1.5 transition-all ${
                       isNarrating
                         ? 'bg-red-600 text-white animate-pulse'
@@ -363,64 +358,37 @@ export const CulturePage: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Narrative Lore */}
+                {/* Description */}
                 <div className="space-y-2">
                   <h3 className="font-serif text-lg font-bold text-[#083B2D]">
-                    Living Heritage Philosophy & Technique
+                    {t('cultureTitle', 'Civilizational Heritage')}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
                     {selectedExperience.description}
                   </p>
                 </div>
 
-                {/* Exponents & Masters */}
-                {selectedExperience.masterArtisansOrExponents && (
-                  <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-[#C49A3A]/25 space-y-2">
-                    <h4 className="font-serif text-xs font-bold text-[#083B2D] uppercase tracking-wider">
-                      Renowned Masters & Living Exponents
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedExperience.masterArtisansOrExponents.map((master, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 rounded-full bg-white text-[#083B2D] text-xs font-medium border border-[#C49A3A]/30 shadow-xs"
-                        >
-                          {master}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Highlights List */}
-                <div className="space-y-3">
-                  <h4 className="font-serif text-sm font-bold text-[#083B2D]">
-                    Distinctive Markers & Codified Knowledge
+                {/* Technique Breakdown */}
+                <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-[#C49A3A]/25 space-y-1.5">
+                  <h4 className="font-serif text-sm font-bold text-[#083B2D] flex items-center space-x-1.5">
+                    <Scissors className="w-4 h-4 text-[#C49A3A]" />
+                    <span>{t('techniqueLabel', 'Anatomy of Technique')}</span>
                   </h4>
-                  <ul className="space-y-2">
-                    {selectedExperience.highlights.map((h, idx) => (
-                      <li key={idx} className="flex items-start space-x-2.5 text-xs text-gray-700">
-                        <CheckCircle2 className="w-4 h-4 text-[#C49A3A] flex-shrink-0 mt-0.5" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-xs text-gray-700 leading-relaxed font-light">
+                    {selectedExperience.techniqueBreakdown}
+                  </p>
                 </div>
 
-                {/* Materials & Regional Hub */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 space-y-1">
-                    <span className="text-gray-500 font-mono text-[10px] uppercase">Regional Stronghold</span>
-                    <p className="text-gray-900 font-medium">{selectedExperience.region}, {selectedExperience.state}</p>
-                  </div>
-                  <div className="p-3.5 rounded-2xl bg-white border border-gray-200 space-y-1">
-                    <span className="text-gray-500 font-mono text-[10px] uppercase">Origin Antiquity</span>
-                    <p className="text-gray-900 font-medium">{selectedExperience.originCentury}</p>
-                  </div>
-                </div>
+                {/* Action Button */}
+                <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to={`/culture/${selectedExperience.slug}`}
+                    className="flex-1 py-3 rounded-2xl bg-[#083B2D] text-[#C49A3A] font-bold text-xs flex items-center justify-center space-x-2 hover:bg-[#0D523F] transition-colors"
+                  >
+                    <span>{t('exploreCultureDetails', 'View Full Masterclass Dossier')}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
 
-                {/* Action button */}
-                <div className="pt-4 border-t border-gray-100 flex gap-3">
                   <Link
                     to="/ai-planner"
                     onClick={() => {
@@ -428,10 +396,10 @@ export const CulturePage: React.FC = () => {
                       setIsNarrating(false);
                       setSelectedExperience(null);
                     }}
-                    className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110 transition-all text-center"
+                    className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110 transition-all text-center"
                   >
-                    <Sparkles className="w-4 h-4 text-[#083B2D]" />
-                    <span>Include in Custom AI Cultural Expedition</span>
+                    <Sparkles className="w-3.5 h-3.5 text-[#083B2D]" />
+                    <span>{t('btnPlanAI', 'Plan Workshop Trip with Rishi AI')}</span>
                   </Link>
                 </div>
               </div>

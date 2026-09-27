@@ -27,6 +27,7 @@ import { ALL_INDIAN_STATES } from '../../data/statesData';
 import { ItineraryRequest, ItineraryResult } from '../../types';
 import { AITripPlannerService } from '../../services/aiItineraryEngine';
 import { heritageAudio } from '../../utils/audioService';
+import { useLanguage } from '../../context/LanguageContext';
 
 const POPULAR_DESTINATIONS = [
   'Hampi',
@@ -62,6 +63,8 @@ const LANGUAGES = [
 ];
 
 export const AITripPlanner: React.FC = () => {
+  const { t, tState } = useLanguage();
+
   // Wizard input state
   const [formData, setFormData] = useState<ItineraryRequest>({
     destination: 'Hampi',
@@ -197,13 +200,13 @@ export const AITripPlanner: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em] mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Sovereign AI Trip Architect • Bharat Engine</span>
+            <span>{t('plannerBadge', 'Sovereign AI Trip Architect • Bharat Engine')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#083B2D] font-bold tracking-tight mb-4">
-            AI Heritage Trip Architect
+            {t('plannerTitle', 'AI Heritage Trip Architect')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-[#111827]/75 italic">
-            Configure your personalized travel parameters to generate a 100% destination-specific itinerary, budget breakdown, ASI entry passes, and verified routes.
+            {t('plannerSubtitle', 'Configure your personalized travel parameters to generate a 100% destination-specific itinerary, budget breakdown, ASI entry passes, and verified routes.')}
           </p>
         </div>
 
@@ -426,7 +429,7 @@ export const AITripPlanner: React.FC = () => {
               className="w-full py-4 rounded-full bg-gradient-to-r from-[#C49A3A] via-[#DFB757] to-[#AA7F27] text-[#083B2D] font-bold text-sm tracking-wider uppercase shadow-gold-glow hover:brightness-110 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50"
             >
               <Sparkles className="w-4 h-4 text-[#083B2D] animate-spin-slow" />
-              <span>{isGenerating ? 'Synthesizing Itinerary...' : 'Generate Royal AI Itinerary'}</span>
+              <span>{isGenerating ? t('generatingItinerary', 'Synthesizing Itinerary...') : t('generateItineraryBtn', 'Generate Royal AI Itinerary')}</span>
             </button>
           </div>
 

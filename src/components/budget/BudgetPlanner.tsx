@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, Shield, Sparkles, Award, Lightbulb, PieChart, Info, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const BudgetPlanner: React.FC = () => {
+  const { t } = useLanguage();
   const [days, setDays] = useState(5);
   const [travelers, setTravelers] = useState(2);
   const [tier, setTier] = useState<'Backpacker' | 'Comfort' | 'Heritage Luxury' | 'Royal Maharaja'>('Heritage Luxury');
@@ -34,13 +36,13 @@ export const BudgetPlanner: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em] mb-4">
             <DollarSign className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Interactive Financial Architect</span>
+            <span>{t('budgetBadge', 'Interactive Financial Architect')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#083B2D] font-bold tracking-tight mb-4">
-            Heritage Travel Budget Calculator
+            {t('budgetTitle', 'Heritage Travel Budget Calculator')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-[#111827]/75 italic">
-            Simulate realistic costs across accommodation, regional cuisine, transport, ASI monument passes, and emergency reserves.
+            {t('budgetSubtitle', 'Simulate realistic costs across accommodation, regional cuisine, transport, ASI monument passes, and emergency reserves.')}
           </p>
         </div>
 
@@ -107,17 +109,22 @@ export const BudgetPlanner: React.FC = () => {
                 Comfort & Luxury Level
               </label>
               <div className="grid grid-cols-2 gap-2">
-                {(['Backpacker', 'Comfort', 'Heritage Luxury', 'Royal Maharaja'] as const).map((t) => (
+                {([
+                  { key: 'Backpacker', label: t('tierBackpacker', 'Backpacker') },
+                  { key: 'Comfort', label: t('tierComfort', 'Comfort') },
+                  { key: 'Heritage Luxury', label: t('tierLuxury', 'Heritage Luxury') },
+                  { key: 'Royal Maharaja', label: t('tierMaharaja', 'Royal Maharaja') }
+                ] as const).map((item) => (
                   <button
-                    key={t}
-                    onClick={() => setTier(t)}
+                    key={item.key}
+                    onClick={() => setTier(item.key)}
                     className={`p-3 rounded-2xl text-xs font-medium border text-center transition-all ${
-                      tier === t
+                      tier === item.key
                         ? 'bg-[#083B2D] text-[#C49A3A] border-[#C49A3A] font-bold shadow-md'
                         : 'border-gray-200 text-gray-700 hover:border-[#C49A3A]/40'
                     }`}
                   >
-                    {t}
+                    {item.label}
                   </button>
                 ))}
               </div>
@@ -127,7 +134,7 @@ export const BudgetPlanner: React.FC = () => {
             <div className="p-5 rounded-2xl bg-[#083B2D] text-[#FAF8F4] border border-[#C49A3A] shadow-gold-glow flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-mono uppercase text-[#C49A3A] tracking-widest block">
-                  Total Estimated Budget
+                  {t('estTotalBudget', 'Total Estimated Budget')}
                 </span>
                 <span className="text-2xl sm:text-3xl font-serif font-bold text-[#FAF8F4]">
                   ₹{totalBudget.toLocaleString('en-IN')}
@@ -152,7 +159,7 @@ export const BudgetPlanner: React.FC = () => {
                 {/* Accommodation */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="font-semibold text-[#083B2D]">Heritage Hotels & Havelis (42%)</span>
+                    <span className="font-semibold text-[#083B2D]">{t('stayExpenses', 'Heritage Hotels & Havelis')} (42%)</span>
                     <strong className="text-gray-900 font-mono">₹{breakdown.accommodation.toLocaleString()}</strong>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
@@ -163,7 +170,7 @@ export const BudgetPlanner: React.FC = () => {
                 {/* Food */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="font-semibold text-[#C49A3A]">Royal Thalis & Street Cuisine (23%)</span>
+                    <span className="font-semibold text-[#C49A3A]">{t('foodExpenses', 'Royal Thalis & Street Cuisine')} (23%)</span>
                     <strong className="text-gray-900 font-mono">₹{breakdown.food.toLocaleString()}</strong>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
@@ -174,7 +181,7 @@ export const BudgetPlanner: React.FC = () => {
                 {/* Transport */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="font-semibold text-[#E67E22]">Flights, Trains & Private Cabs (18%)</span>
+                    <span className="font-semibold text-[#E67E22]">{t('transitExpenses', 'Flights, Trains & Private Cabs')} (18%)</span>
                     <strong className="text-gray-900 font-mono">₹{breakdown.transport.toLocaleString()}</strong>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
@@ -185,7 +192,7 @@ export const BudgetPlanner: React.FC = () => {
                 {/* Monument Passes & Shopping */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="font-semibold text-emerald-600">ASI Passes, Guides & Handicrafts (11%)</span>
+                    <span className="font-semibold text-emerald-600">{t('guideExpenses', 'ASI Passes, Guides & Handicrafts')} (11%)</span>
                     <strong className="text-gray-900 font-mono">₹{breakdown.monumentsShopping.toLocaleString()}</strong>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">

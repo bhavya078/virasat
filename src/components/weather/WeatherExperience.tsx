@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Cloud, CloudRain, Wind, Droplets, Sunrise, Sunset, ShieldAlert, Sparkles, MapPin, Compass } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface WeatherCity {
   city: string;
@@ -132,6 +133,7 @@ const WEATHER_CITIES: WeatherCity[] = [
 ];
 
 export const WeatherExperience: React.FC = () => {
+  const { t, tState } = useLanguage();
   const [selectedCity, setSelectedCity] = useState(WEATHER_CITIES[0]);
 
   return (
@@ -141,13 +143,13 @@ export const WeatherExperience: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em] mb-4">
             <Sun className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Heritage Weather & Air Quality Intelligence</span>
+            <span>{t('weatherBadge', 'Heritage Weather & Air Quality Intelligence')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#083B2D] font-bold tracking-tight mb-4">
-            Live Heritage Weather Hub
+            {t('weatherTitle', 'Live Heritage Weather Hub')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-[#111827]/75 italic">
-            Check real-time meteorological conditions, AQI air quality indexes, golden hour sunrises, and optimal visiting seasons.
+            {t('weatherSubtitle', 'Check real-time meteorological conditions, AQI air quality indexes, golden hour sunrises, and optimal visiting seasons.')}
           </p>
         </div>
 
@@ -175,7 +177,7 @@ export const WeatherExperience: React.FC = () => {
             <div>
               <div className="flex items-center space-x-2 text-xs text-[#C49A3A] font-mono">
                 <MapPin className="w-3.5 h-3.5 text-[#C49A3A]" />
-                <span>{selectedCity.state}</span>
+                <span>{tState(selectedCity.state)}</span>
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#083B2D] mt-1">
                 {selectedCity.city}
@@ -204,7 +206,7 @@ export const WeatherExperience: React.FC = () => {
             <div className="bg-[#FAF8F4] p-4 rounded-2xl border border-[#C49A3A]/20">
               <div className="flex items-center space-x-2 text-xs text-gray-500 mb-1">
                 <Wind className="w-4 h-4 text-[#C49A3A]" />
-                <span>Air Quality (AQI)</span>
+                <span>{t('airQualityIndex', 'Air Quality (AQI)')}</span>
               </div>
               <strong className="text-xl font-serif text-[#083B2D] block">
                 {selectedCity.aqi} AQI
@@ -226,7 +228,7 @@ export const WeatherExperience: React.FC = () => {
             <div className="bg-[#FAF8F4] p-4 rounded-2xl border border-[#C49A3A]/20">
               <div className="flex items-center space-x-2 text-xs text-gray-500 mb-1">
                 <Droplets className="w-4 h-4 text-blue-500" />
-                <span>Humidity</span>
+                <span>{t('humidity', 'Humidity')}</span>
               </div>
               <strong className="text-xl font-serif text-[#083B2D] block">
                 {selectedCity.humidity}
@@ -238,7 +240,7 @@ export const WeatherExperience: React.FC = () => {
             <div className="bg-[#FAF8F4] p-4 rounded-2xl border border-[#C49A3A]/20">
               <div className="flex items-center space-x-2 text-xs text-gray-500 mb-1">
                 <CloudRain className="w-4 h-4 text-indigo-500" />
-                <span>Precipitation</span>
+                <span>{t('rainChance', 'Precipitation')}</span>
               </div>
               <strong className="text-xl font-serif text-[#083B2D] block">
                 {selectedCity.rainChance}
@@ -250,7 +252,7 @@ export const WeatherExperience: React.FC = () => {
             <div className="bg-[#FAF8F4] p-4 rounded-2xl border border-[#C49A3A]/20">
               <div className="flex items-center space-x-2 text-xs text-gray-500 mb-1">
                 <Sunrise className="w-4 h-4 text-[#E67E22]" />
-                <span>Dawn / Dusk</span>
+                <span>{t('sunrise', 'Dawn')} / {t('sunset', 'Dusk')}</span>
               </div>
               <strong className="text-sm font-serif text-[#083B2D] block">
                 ↑ {selectedCity.sunrise}
@@ -264,7 +266,7 @@ export const WeatherExperience: React.FC = () => {
           {/* Hourly Timeline */}
           <div>
             <h4 className="text-xs font-mono uppercase text-[#083B2D] tracking-wider mb-3 font-semibold">
-              Today's Hourly Temperature Progression
+              {t('hourlyForecast', "Today's Hourly Temperature Progression")}
             </h4>
             <div className="grid grid-cols-6 gap-2 text-center">
               {selectedCity.hourly.map((h, i) => (
@@ -282,7 +284,7 @@ export const WeatherExperience: React.FC = () => {
             <Sparkles className="w-5 h-5 text-[#C49A3A] flex-shrink-0 mt-0.5" />
             <div>
               <strong className="text-[#083B2D] block font-serif text-sm">
-                Architect's Best Visiting Window
+                {t('packingAdviceTitle', "Architect's Best Visiting Window")}
               </strong>
               <p className="text-gray-700 leading-relaxed mt-0.5">
                 {selectedCity.bestVisitingSeason}. Morning visits between 6:30 AM and 8:30 AM offer the most divine illumination for photography and comfortable temperatures.

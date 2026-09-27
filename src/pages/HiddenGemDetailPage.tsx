@@ -49,10 +49,12 @@ import { EntityDetailService, DetailedEntityData, GalleryPhoto } from '../servic
 import { HIDDEN_GEMS } from '../data/hiddenGems';
 import { heritageAudio } from '../utils/audioService';
 import { PoliticalMapLocator } from '../components/map/PoliticalMapLocator';
+import { useLanguage } from '../context/LanguageContext';
 
 export const HiddenGemDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { t, tState, tAdventure } = useLanguage();
 
   // State management
   const [gemData, setGemData] = useState<DetailedEntityData | null>(null);
@@ -251,7 +253,7 @@ export const HiddenGemDetailPage: React.FC = () => {
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/40 hover:bg-black/60 text-[#DFB757] backdrop-blur-md border border-[#C49A3A]/30 transition-all"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>All 50 Hidden Gems</span>
+              <span>{t('backToGems', 'All 50 Hidden Gems')}</span>
             </Link>
             <span className="text-white/40 hidden sm:inline">•</span>
             <Link
@@ -259,7 +261,7 @@ export const HiddenGemDetailPage: React.FC = () => {
               className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/90 backdrop-blur-md text-xs font-mono transition-all"
             >
               <MapPin className="w-3 h-3 text-[#E67E22]" />
-              <span>{gemData.state}</span>
+              <span>{tState(gemData.state)}</span>
             </Link>
           </div>
 
@@ -267,7 +269,7 @@ export const HiddenGemDetailPage: React.FC = () => {
             {/* Serenity Score Badge */}
             <div className="px-3 py-1.5 rounded-full bg-[#083B2D]/80 backdrop-blur-md border border-[#C49A3A]/50 text-[#C49A3A] text-xs font-mono font-bold flex items-center space-x-1.5 shadow-gold-glow">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Serenity {gemData.serenityScore || 92}/100</span>
+              <span>{t('serenityScore', 'Serenity')} {gemData.serenityScore || 92}/100</span>
             </div>
 
             {/* Share Dossier Button */}
@@ -290,7 +292,7 @@ export const HiddenGemDetailPage: React.FC = () => {
                   Secret Sanctuary
                 </span>
                 <span className="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-white/90 text-[11px] font-mono">
-                  {gemData.travelDifficulty} Access
+                  {tAdventure(gemData.travelDifficulty)} Access
                 </span>
                 <span className="px-3 py-1 rounded-full bg-[#C49A3A]/20 border border-[#C49A3A]/40 text-[#DFB757] text-[11px] font-mono">
                   Elevation {gemData.elevation}
@@ -316,7 +318,7 @@ export const HiddenGemDetailPage: React.FC = () => {
                   }`}
                 >
                   {isPlayingAudio ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                  <span>{isPlayingAudio ? 'Stop Narrator' : 'Play Audio Dossier'}</span>
+                  <span>{isPlayingAudio ? t('stopAudioGuide', 'Stop Narrator') : t('playAudioGuide', 'Play Audio Dossier')}</span>
                 </button>
 
                 <a

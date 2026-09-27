@@ -2,22 +2,24 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HERITAGE_SITES } from '../data/heritageSites';
 import { MonumentCard3D } from '../components/monument/MonumentCard3D';
-import { Search, Award, Filter, Compass } from 'lucide-react';
+import { Search, Award } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
-
-const CATEGORIES = [
-  { id: 'all', label: 'All 50 Monuments' },
-  { id: 'unesco', label: 'UNESCO World Heritage' },
-  { id: 'temple', label: 'Sacred Temples' },
-  { id: 'fort', label: 'Imperial Forts & Palaces' },
-  { id: 'cave', label: 'Rock-Cut Caves' },
-  { id: 'natural', label: 'Natural Biospheres' },
-  { id: 'spiritual', label: 'Spiritual Sanctuaries' }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export const ExplorePage: React.FC = () => {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+
+  const categories = [
+    { id: 'all', label: t('catAll', 'All 50 Monuments') },
+    { id: 'unesco', label: t('catUNESCO', 'UNESCO World Heritage') },
+    { id: 'temple', label: t('catTemple', 'Sacred Temples') },
+    { id: 'fort', label: t('catFort', 'Imperial Forts & Palaces') },
+    { id: 'cave', label: t('catCave', 'Rock-Cut Caves') },
+    { id: 'natural', label: t('catNatural', 'Natural Biospheres') },
+    { id: 'spiritual', label: t('catSpiritual', 'Spiritual Sanctuaries') }
+  ];
 
   const filteredSites = HERITAGE_SITES.filter((site) => {
     const matchesCategory =
@@ -33,6 +35,10 @@ export const ExplorePage: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
+  const counterText = t('showingMonuments', `Showing ${filteredSites.length} of ${HERITAGE_SITES.length} Heritage Sites`)
+    .replace('{count}', String(filteredSites.length))
+    .replace('{total}', String(HERITAGE_SITES.length));
+
   return (
     <div className="py-24 bg-[#FAF8F4] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,13 +46,13 @@ export const ExplorePage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em] mb-4">
             <Award className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Masterpieces of Architecture & UNESCO Glory</span>
+            <span>{t('exploreBadge', 'Masterpieces of Architecture & UNESCO Glory')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#083B2D] font-bold tracking-tight mb-4">
-            50 Heritage Wonders of India
+            {t('exploreTitle', '50 Heritage Wonders of India')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-[#111827]/75 italic">
-            Journey through 50 meticulously documented monuments with authentic dynastic history, 3D tilt interaction, visiting hours, and audio guides.
+            {t('exploreSubtitle', 'Journey through 50 meticulously documented monuments with authentic dynastic history, 3D tilt interaction, visiting hours, and audio guides.')}
           </p>
         </div>
 
@@ -59,14 +65,14 @@ export const ExplorePage: React.FC = () => {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search by monument name, state or dynasty..."
+              placeholder={t('exploreSearchPlaceholder', 'Search by monument name, state or dynasty...')}
               className="w-full pl-10 pr-4 py-2 rounded-2xl bg-[#FAF8F4] border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-[#C49A3A]"
             />
           </div>
 
           {/* Category Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar">
-            {CATEGORIES.map((c) => (
+            {categories.map((c) => (
               <button
                 key={c.id}
                 onClick={() => {
@@ -87,8 +93,8 @@ export const ExplorePage: React.FC = () => {
 
         {/* Counter Badge */}
         <div className="flex justify-between items-center text-xs text-gray-500 font-mono mb-6 px-1">
-          <span>Showing {filteredSites.length} of {HERITAGE_SITES.length} Heritage Sites</span>
-          <span>Zero Placeholders • 100% Authentic History</span>
+          <span>{counterText}</span>
+          <span>{t('zeroPlaceholders', 'Zero Placeholders • 100% Authentic History')}</span>
         </div>
 
         {/* 3D Monument Cards Grid */}

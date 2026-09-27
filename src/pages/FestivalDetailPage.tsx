@@ -38,9 +38,11 @@ import { EntityDetailService, DetailedEntityData } from '../services/entityDetai
 import { FESTIVALS } from '../data/festivals';
 import { heritageAudio } from '../utils/audioService';
 import { PoliticalMapLocator } from '../components/map/PoliticalMapLocator';
+import { useLanguage } from '../context/LanguageContext';
 
 export const FestivalDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t, tState } = useLanguage();
 
   // State
   const [festData, setFestData] = useState<DetailedEntityData | null>(null);
@@ -232,7 +234,7 @@ export const FestivalDetailPage: React.FC = () => {
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/40 hover:bg-black/60 text-[#DFB757] backdrop-blur-md border border-[#C49A3A]/30 transition-all"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>All 50 Grand Festivals</span>
+              <span>{t('backToFestivals', 'All 50 Grand Festivals')}</span>
             </Link>
             <span className="text-white/40 hidden sm:inline">•</span>
             <Link
@@ -240,7 +242,7 @@ export const FestivalDetailPage: React.FC = () => {
               className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/90 backdrop-blur-md text-xs font-mono transition-all"
             >
               <MapPin className="w-3 h-3 text-[#E67E22]" />
-              <span>{festData.state}</span>
+              <span>{tState(festData.state)}</span>
             </Link>
           </div>
 
@@ -293,7 +295,7 @@ export const FestivalDetailPage: React.FC = () => {
                   }`}
                 >
                   {isPlayingAudio ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                  <span>{isPlayingAudio ? 'Stop Recital' : 'Listen to Sacred Lore'}</span>
+                  <span>{isPlayingAudio ? t('stopAudioGuide', 'Stop Recital') : t('playAudioGuide', 'Listen to Sacred Lore')}</span>
                 </button>
 
                 <a

@@ -20,28 +20,30 @@ import {
 } from 'lucide-react';
 import { heritageAudio } from '../utils/audioService';
 import { Link } from 'react-router-dom';
-
-const MONTHS = [
-  'All Months',
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export const FestivalsPage: React.FC = () => {
+  const { t, tState } = useLanguage();
   const [selectedMonth, setSelectedMonth] = useState('All Months');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFestival, setSelectedFestival] = useState<Festival | null>(null);
   const [isNarrating, setIsNarrating] = useState(false);
+
+  const months = [
+    t('festMonthAll', 'All Celebrations'),
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
 
   const filteredFestivals = useMemo(() => {
     return FESTIVALS.filter((fest) => {
@@ -55,10 +57,10 @@ export const FestivalsPage: React.FC = () => {
 
       if (!matchesSearch) return false;
 
-      if (selectedMonth === 'All Months') return true;
+      if (selectedMonth === 'All Months' || selectedMonth === months[0]) return true;
       return fest.month.toLowerCase().includes(selectedMonth.toLowerCase());
     });
-  }, [selectedMonth, searchQuery]);
+  }, [selectedMonth, searchQuery, months]);
 
   const calculateTimeRemaining = (targetDate: string) => {
     const target = new Date(targetDate).getTime();
@@ -92,6 +94,10 @@ export const FestivalsPage: React.FC = () => {
     }
   };
 
+  const counterText = t('showingFestivals', `Showing ${filteredFestivals.length} of ${FESTIVALS.length} Celebrations`)
+    .replace('{count}', String(filteredFestivals.length))
+    .replace('{total}', String(FESTIVALS.length));
+
   return (
     <div className="py-24 bg-[#FAF8F4] min-h-screen text-[#111827]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -99,13 +105,13 @@ export const FestivalsPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em]">
             <Calendar className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Living Celebrations of Bharat</span>
+            <span>{t('festivalsBadge', '50 Grand Living Celebrations of Bharat')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#083B2D] tracking-tight">
-            50 Grand Festivals of India
+            {t('festivalsTitle', 'Sacred Festivals & Cultural Carnivals')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-gray-700 italic">
-            Witness the sacred fire of Chhath, the 50,000-strong circles of Navratri Garba, Hornbill tribal rhythms, and Losar monastic dances.
+            {t('festivalsSubtitle', 'Experience the rhythm, color, and devotion of India’s most iconic celebrations across all 28 states and 8 union territories.')}
           </p>
         </div>
 
@@ -119,14 +125,14 @@ export const FestivalsPage: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search festival, state, feast dishes, instruments..."
+                placeholder={t('festivalsSearchPlaceholder', 'Search festivals by name, state, deity, or tradition...')}
                 className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#FAF8F4] border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-[#C49A3A]"
               />
             </div>
 
             {/* Counter */}
             <div className="flex items-center space-x-4 text-xs font-mono text-gray-500">
-              <span>Showing <strong className="text-[#083B2D]">{filteredFestivals.length}</strong> of 50 Festivals</span>
+              <span>{counterText}</span>
               <span>•</span>
               <span className="text-[#E67E22] font-semibold">Live Countdown Clocks</span>
             </div>
@@ -134,7 +140,7 @@ export const FestivalsPage: React.FC = () => {
 
           {/* Month Tabs */}
           <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar justify-start sm:justify-center">
-            {MONTHS.map((m) => (
+            {months.map((m) => (
               <button
                 key={m}
                 onClick={() => {
@@ -178,97 +184,72 @@ export const FestivalsPage: React.FC = () => {
 
                   {/* Month Pill */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-[#083B2D]/90 backdrop-blur-md border border-[#C49A3A] text-[#C49A3A] text-[10px] font-mono font-bold uppercase tracking-wider">
+                    <span className="px-3 py-1 rounded-full bg-[#083B2D]/90 backdrop-blur-md border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-mono font-bold">
                       {fest.month}
                     </span>
                   </div>
 
-                  {/* Title & Region */}
+                  {/* Countdown Badge */}
+                  <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-white text-[11px] font-mono flex items-center space-x-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#C49A3A]" />
+                    <span>
+                      {timeLeft.passed
+                        ? 'Annual Cycle'
+                        : `${timeLeft.days}d ${timeLeft.hours}h`}
+                    </span>
+                  </div>
+
+                  {/* Title & Location at bottom */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-serif text-xl font-bold leading-tight drop-shadow-md text-[#FAF8F4] group-hover:text-[#DFB757] transition-colors">
+                    <span className="text-[11px] text-[#DFB757] font-serif italic block mb-0.5">
+                      {fest.region}, {tState(fest.state)}
+                    </span>
+                    <h3 className="font-serif text-xl font-bold leading-tight group-hover:text-[#DFB757] transition-colors">
                       {fest.name}
                     </h3>
-                    <div className="flex items-center space-x-1.5 text-xs text-white/80 mt-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#C49A3A]" />
-                      <span>{fest.state}</span>
-                    </div>
                   </div>
                 </Link>
 
-                {/* Body Details */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs text-[#111827]/75 line-clamp-3 leading-relaxed font-light">
+                {/* Card Body */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                  <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed font-light">
                     {fest.significance}
                   </p>
 
-                  {/* Live Countdown Timer */}
-                  <div className="bg-[#FAF8F4] p-3 rounded-2xl border border-[#C49A3A]/20 text-center">
-                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-1 flex items-center justify-center space-x-1">
-                      <Clock className="w-3 h-3 text-[#C49A3A]" />
-                      <span>Countdown to Grand Festivity</span>
-                    </div>
-                    <div className="flex justify-center items-center space-x-3 text-xs font-mono text-[#083B2D]">
-                      <div>
-                        <strong className="text-sm font-bold block">{timeLeft.days}</strong>
-                        <span className="text-[9px] text-gray-400">Days</span>
-                      </div>
-                      <span className="text-[#C49A3A] font-bold">:</span>
-                      <div>
-                        <strong className="text-sm font-bold block">{timeLeft.hours}</strong>
-                        <span className="text-[9px] text-gray-400">Hours</span>
-                      </div>
-                      <span className="text-[#C49A3A] font-bold">:</span>
-                      <div>
-                        <strong className="text-sm font-bold block">{timeLeft.mins}</strong>
-                        <span className="text-[9px] text-gray-400">Mins</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Feast & Rhythm */}
-                  <div className="space-y-2 text-xs border-t border-gray-100 pt-3">
-                    <div className="flex items-start space-x-2">
-                      <Utensils className="w-3.5 h-3.5 text-[#C49A3A] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">
-                        <strong className="text-[#083B2D]">Feast: </strong>
-                        {fest.authenticFood.slice(0, 2).join(', ')}
+                  {/* Protocol & Highlights */}
+                  <div className="space-y-2 border-t border-gray-100 pt-3 text-xs">
+                    <div className="flex items-start space-x-2 text-gray-700">
+                      <Sparkles className="w-4 h-4 text-[#C49A3A] flex-shrink-0 mt-0.5" />
+                      <span className="text-[11px] line-clamp-2">
+                        <strong className="text-[#083B2D]">{t('festivalDates', 'Celebration Dates:')}</strong> {fest.dateRange}
                       </span>
                     </div>
-                    <div className="flex items-start space-x-2">
-                      <Music className="w-3.5 h-3.5 text-[#E67E22] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">
-                        <strong className="text-[#083B2D]">Rhythm: </strong>
-                        {fest.musicInstruments.slice(0, 3).join(', ')}
+
+                    <div className="flex items-start space-x-2 text-gray-700">
+                      <Utensils className="w-4 h-4 text-[#E67E22] flex-shrink-0 mt-0.5" />
+                      <span className="text-[11px] line-clamp-1">
+                        <strong className="text-[#083B2D]">Prasadam:</strong> {fest.authenticFood.join(', ')}
                       </span>
                     </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className="pt-2 flex items-center justify-between border-t border-gray-100">
-                    <Link
-                      to={`/festivals/${fest.slug}`}
-                      className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1.5 transition-colors"
+                  {/* Bottom Action Footer */}
+                  <div className="pt-2 border-t border-gray-100 flex items-center justify-between">
+                    <button
+                      onClick={() => handleOpenFestival(fest)}
+                      className="text-xs font-bold text-[#083B2D] hover:text-[#C49A3A] flex items-center space-x-1 transition-colors"
                     >
-                      <span>Explore Festival Protocol</span>
+                      <span>{t('viewFestivalGuide', 'View Ritual Dossier')}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+                    </button>
 
-                    <div className="flex items-center space-x-1">
-                      <button
-                        onClick={() => handleOpenFestival(fest)}
-                        className="text-[11px] text-gray-500 hover:text-[#083B2D] px-2 py-1 rounded hover:bg-gray-100 font-mono"
-                        title="Quick Peek"
-                      >
-                        Quick Peek
-                      </button>
-                      <button
-                        onClick={() => handleToggleNarration(fest.significance)}
-                        className="p-1.5 rounded-full hover:bg-gray-100 text-[#083B2D] hover:text-[#C49A3A] transition-colors"
-                        title="Listen to Festival Significance"
-                      >
-                        <Volume2 className="w-4 h-4 text-[#C49A3A]" />
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => handleToggleNarration(fest.significance + ' Ritual protocol: ' + fest.ritualProtocol)}
+                      className="p-1.5 rounded-full hover:bg-gray-100 text-gray-600 hover:text-[#083B2D] transition-colors"
+                      title={t('audioGuideListen', 'Listen to Audio Guide')}
+                    >
+                      <Volume2 className="w-4 h-4 text-[#C49A3A]" />
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -323,10 +304,10 @@ export const FestivalsPage: React.FC = () => {
                 <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
                   <div className="flex items-center space-x-2">
                     <span className="px-2.5 py-0.5 rounded-full bg-[#C49A3A] text-[#083B2D] text-[10px] font-bold uppercase tracking-wider">
-                      {selectedFestival.state}
+                      {tState(selectedFestival.state)}
                     </span>
                     <span className="text-xs text-white/80 font-mono">
-                      Month: {selectedFestival.month}
+                      {selectedFestival.dateRange}
                     </span>
                   </div>
                   <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#FAF8F4]">
@@ -341,14 +322,14 @@ export const FestivalsPage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-[#083B2D] text-[#FAF8F4] flex items-center justify-between shadow-gold-glow">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[#C49A3A]">
-                      Festival Audio Chronicler
+                      {t('audioGuideListen', 'Festival Audio Guide')}
                     </span>
                     <p className="text-xs italic text-white/90">
-                      Listen to the sacred lore and mythic origins of {selectedFestival.name}
+                      {selectedFestival.name}
                     </p>
                   </div>
                   <button
-                    onClick={() => handleToggleNarration(selectedFestival.significance + ' Authentic feast includes: ' + selectedFestival.authenticFood.join(', '))}
+                    onClick={() => handleToggleNarration(selectedFestival.significance + ' Ritual protocol: ' + selectedFestival.ritualProtocol)}
                     className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center space-x-1.5 transition-all ${
                       isNarrating
                         ? 'bg-red-600 text-white animate-pulse'
@@ -363,48 +344,34 @@ export const FestivalsPage: React.FC = () => {
                 {/* Significance */}
                 <div className="space-y-2">
                   <h3 className="font-serif text-lg font-bold text-[#083B2D]">
-                    Spiritual & Mythological Significance
+                    {t('festivalsTitle', 'Sacred Significance & Legend')}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
                     {selectedFestival.significance}
                   </p>
                 </div>
 
-                {/* Authentic Feast & Prasad */}
-                <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-[#C49A3A]/25 space-y-2">
-                  <h4 className="font-serif text-xs font-bold text-[#E67E22] uppercase tracking-wider flex items-center space-x-1.5">
-                    <Utensils className="w-4 h-4 text-[#E67E22]" />
-                    <span>Sacred Prasad & Authentic Feast Delicacies</span>
+                {/* Ritual Protocol */}
+                <div className="p-4 rounded-2xl bg-[#FAF8F4] border border-[#C49A3A]/25 space-y-1.5">
+                  <h4 className="font-serif text-sm font-bold text-[#083B2D] flex items-center space-x-1.5">
+                    <Flame className="w-4 h-4 text-[#C49A3A]" />
+                    <span>{t('festivalRitual', 'Ritual Protocol & Ceremonies')}</span>
                   </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedFestival.authenticFood.map((dish, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 rounded-full bg-white text-[#083B2D] text-xs font-medium border border-[#C49A3A]/30 shadow-xs"
-                      >
-                        {dish}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-xs text-gray-700 leading-relaxed font-light">
+                    {selectedFestival.ritualProtocol}
+                  </p>
                 </div>
 
-                {/* Best Vantage Points */}
-                <div className="space-y-2">
-                  <h4 className="font-serif text-sm font-bold text-[#083B2D]">
-                    Best Locations & Epicenters to Witness
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    {selectedFestival.bestLocations.map((loc, i) => (
-                      <div key={i} className="p-3 rounded-xl bg-gray-50 border border-gray-100 flex items-center space-x-2 text-gray-700">
-                        <MapPin className="w-3.5 h-3.5 text-[#C49A3A]" />
-                        <span>{loc}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                {/* Action Button */}
+                <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to={`/festivals/${selectedFestival.slug}`}
+                    className="flex-1 py-3 rounded-2xl bg-[#083B2D] text-[#C49A3A] font-bold text-xs flex items-center justify-center space-x-2 hover:bg-[#0D523F] transition-colors"
+                  >
+                    <span>{t('viewFestivalGuide', 'View Full Festival Dossier')}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
 
-                {/* Action button */}
-                <div className="pt-4 border-t border-gray-100 flex gap-3">
                   <Link
                     to="/ai-planner"
                     onClick={() => {
@@ -412,10 +379,10 @@ export const FestivalsPage: React.FC = () => {
                       setIsNarrating(false);
                       setSelectedFestival(null);
                     }}
-                    className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110 transition-all text-center"
+                    className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-bold text-xs flex items-center justify-center space-x-2 shadow-gold-glow hover:brightness-110 transition-all text-center"
                   >
-                    <Sparkles className="w-4 h-4 text-[#083B2D]" />
-                    <span>Plan Festival Tour with Rishi AI</span>
+                    <Sparkles className="w-3.5 h-3.5 text-[#083B2D]" />
+                    <span>{t('btnPlanAI', 'Plan Trip with Rishi AI')}</span>
                   </Link>
                 </div>
               </div>

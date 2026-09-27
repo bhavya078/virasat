@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Compass, Shield, Award, Heart, Phone, Sparkles } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-[#052A20] text-[#FAF8F4] border-t border-[#C49A3A]/30 relative overflow-hidden pt-16 pb-12">
       {/* Background subtle golden glow */}
@@ -28,12 +31,12 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-[#FAF8F4]/80 leading-relaxed max-w-sm font-light">
-              India's Most Premium AI Heritage Platform. Empowering global travelers and citizens to discover 5,000 years of civilization through cinematic storytelling, predictive AI trip itineraries, and living cultural traditions.
+              {t('footerDesc', "India's premier AI-powered cultural intelligence platform. Preserving 5,000 years of civilization across all 28 states and 8 union territories.")}
             </p>
 
             <div className="flex items-center space-x-2 pt-2 text-xs text-[#C49A3A]">
               <Award className="w-4 h-4 text-[#C49A3A]" />
-              <span className="font-medium tracking-wide">National Digital Heritage Mission • Incredible India</span>
+              <span className="font-medium tracking-wide">{t('footerMinistry', 'Certified Digital Cultural Archive of Bharat')}</span>
             </div>
 
             <div className="pt-2 text-xs font-serif text-[#DFB757] italic">
@@ -44,7 +47,7 @@ export const Footer: React.FC = () => {
           {/* Heritage & Explore */}
           <div>
             <h4 className="font-serif text-sm tracking-wider text-[#C49A3A] font-semibold uppercase mb-4">
-              Explore Bharat
+              {t('footerQuickLinks', 'Explore Bharat')}
             </h4>
             <ul className="space-y-2.5 text-xs text-[#FAF8F4]/75">
               <li>
@@ -78,7 +81,7 @@ export const Footer: React.FC = () => {
           {/* AI Tools & Experience */}
           <div>
             <h4 className="font-serif text-sm tracking-wider text-[#C49A3A] font-semibold uppercase mb-4">
-              AI Tools & Guides
+              {t('footerAITools', 'AI Tools & Guides')}
             </h4>
             <ul className="space-y-2.5 text-xs text-[#FAF8F4]/75">
               <li>
@@ -128,7 +131,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-[#FAF8F4]/60 gap-4">
-          <p>© 2026 VIRASAT. Sovereign AI Heritage Platform of Bharat. Made with <Heart className="w-3.5 h-3.5 text-[#E67E22] inline mx-1 fill-[#E67E22]" /> for Incredible India.</p>
+          <p>© 2026 VIRASAT. {t('footerRights', 'All rights reserved. Developed with devotion for Bharat.')}</p>
           <div className="flex items-center space-x-6 text-[11px] text-[#C49A3A]">
             <span>10 Classical Languages</span>
             <span>•</span>

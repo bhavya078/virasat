@@ -18,17 +18,7 @@ import {
 import { Link } from 'react-router-dom';
 import { heritageAudio } from '../utils/audioService';
 import { InteractiveIndiaMap } from '../components/map/InteractiveIndiaMap';
-
-const REGIONS = [
-  { id: 'all', label: '28 States & 8 UTs' },
-  { id: 'north', label: 'North India' },
-  { id: 'south', label: 'South India' },
-  { id: 'west', label: 'West India' },
-  { id: 'east', label: 'East India' },
-  { id: 'northeast', label: 'Northeast (Seven Sisters + Sikkim)' },
-  { id: 'central', label: 'Central India' },
-  { id: 'islands', label: 'Union Territories & Islands' }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 const NORTH_SLUGS = ['rajasthan', 'uttar-pradesh', 'himachal-pradesh', 'punjab', 'haryana', 'uttarakhand', 'jammu-kashmir', 'ladakh', 'delhi', 'chandigarh'];
 const SOUTH_SLUGS = ['kerala', 'tamil-nadu', 'karnataka', 'andhra-pradesh', 'telangana', 'puducherry', 'lakshadweep'];
@@ -39,9 +29,21 @@ const CENTRAL_SLUGS = ['madhya-pradesh', 'chhattisgarh'];
 const ISLANDS_SLUGS = ['andaman-nicobar', 'lakshadweep', 'puducherry', 'chandigarh', 'delhi', 'ladakh', 'dadra-nagar-haveli-daman-diu', 'jammu-kashmir'];
 
 export const StatesPage: React.FC = () => {
+  const { t, tState } = useLanguage();
   const [activeRegion, setActiveRegion] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'both' | 'map' | 'grid'>('both');
+
+  const regions = [
+    { id: 'all', label: t('stateTabAll', '28 States & 8 UTs') },
+    { id: 'north', label: t('stateTabNorth', 'North India') },
+    { id: 'south', label: t('stateTabSouth', 'South India') },
+    { id: 'west', label: t('stateTabWest', 'West India') },
+    { id: 'east', label: t('stateTabEast', 'East India') },
+    { id: 'northeast', label: t('stateTabNE', 'Northeast (Seven Sisters + Sikkim)') },
+    { id: 'central', label: t('stateTabCentral', 'Central India') },
+    { id: 'islands', label: t('stateTabIslands', 'Union Territories & Islands') }
+  ];
 
   const statesList = useMemo(() => {
     return Object.values(STATES_DATA).filter((state) => {
@@ -66,6 +68,9 @@ export const StatesPage: React.FC = () => {
     });
   }, [activeRegion, searchQuery]);
 
+  const counterText = t('showingStates', `Showing ${statesList.length} of 28 States & 8 UTs`)
+    .replace('{count}', String(statesList.length));
+
   return (
     <div className="py-24 bg-[#FAF8F4] min-h-screen text-[#111827]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -73,13 +78,13 @@ export const StatesPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#083B2D]/5 border border-[#C49A3A]/40 text-[#083B2D] text-xs font-semibold uppercase tracking-[0.25em]">
             <Compass className="w-3.5 h-3.5 text-[#C49A3A]" />
-            <span>Complete Sovereign Pan-India Atlas</span>
+            <span>{t('statesBadge', 'Complete Sovereign Pan-India Atlas')}</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#083B2D] tracking-tight">
-            28 States & 8 Union Territories
+            {t('statesTitle', '28 States & 8 Union Territories')}
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-gray-700 italic">
-            Every sovereign state and territory of India with authenticated dynastic lineage, regional royal cuisine, luxury heritage hotels, and verified emergency helplines.
+            {t('statesSubtitle', 'Every sovereign state and territory of India with authenticated dynastic lineage, regional royal cuisine, luxury heritage hotels, and verified emergency helplines.')}
           </p>
         </div>
 
@@ -93,14 +98,14 @@ export const StatesPage: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search state name, capital, language, top attraction..."
+                placeholder={t('statesSearchPlaceholder', 'Search state name, capital, language, top attraction...')}
                 className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#FAF8F4] border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-[#C49A3A]"
               />
             </div>
 
             {/* Stats */}
             <div className="flex items-center space-x-4 text-xs font-mono text-gray-500">
-              <span>Showing <strong className="text-[#083B2D]">{statesList.length}</strong> of 28 States & 8 UTs</span>
+              <span>{counterText}</span>
               <span>•</span>
               <span className="text-[#083B2D] font-semibold">100% Zero-404 Guarantee</span>
             </div>
@@ -108,7 +113,7 @@ export const StatesPage: React.FC = () => {
 
           {/* Region Tabs */}
           <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar justify-start sm:justify-center">
-            {REGIONS.map((region) => (
+            {regions.map((region) => (
               <button
                 key={region.id}
                 onClick={() => {
@@ -128,10 +133,9 @@ export const StatesPage: React.FC = () => {
 
           {/* View Mode Switcher */}
           <div className="flex flex-col sm:flex-row items-center justify-between pt-3 border-t border-gray-100 gap-3">
-            <div className="flex items-center space-x-2 text-xs font-mono text-gray-500">
-              <Layers className="w-3.5 h-3.5 text-[#C49A3A]" />
-              <span>Atlas Representation:</span>
-            </div>
+            <span className="text-xs text-gray-500 font-mono">
+              Toggle Sovereign Interactive Explorer View:
+            </span>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => {
@@ -144,7 +148,7 @@ export const StatesPage: React.FC = () => {
                     : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                ⚡ Unified Dual Atlas (Map & Cards)
+                🗺️ + 🏛️ {t('viewBothBtn', 'Both View')}
               </button>
               <button
                 onClick={() => {
@@ -157,7 +161,7 @@ export const StatesPage: React.FC = () => {
                     : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                🗺️ Sovereign Political Map
+                {t('viewMapBtn', '🗺️ Sovereign Political Map')}
               </button>
               <button
                 onClick={() => {
@@ -170,7 +174,7 @@ export const StatesPage: React.FC = () => {
                     : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                🏛️ 28 States & 8 UTs Grid
+                {t('viewGridBtn', '🏛️ 28 States & 8 UTs Grid')}
               </button>
             </div>
           </div>
@@ -204,7 +208,7 @@ export const StatesPage: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                 <div className="absolute top-4 left-4 bg-[#083B2D]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#C49A3A]/40 text-[10px] text-[#C49A3A] font-mono font-bold uppercase tracking-wider">
-                  Capital: {state.capital.split('(')[0]}
+                  {t('stateCapital', 'Capital:')} {state.capital.split('(')[0]}
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -212,7 +216,7 @@ export const StatesPage: React.FC = () => {
                     {state.topAttraction}
                   </span>
                   <h3 className="font-serif text-2xl font-bold text-[#FAF8F4] leading-snug drop-shadow-md">
-                    {state.name}
+                    {tState(state.name)}
                   </h3>
                 </div>
               </div>
@@ -236,7 +240,7 @@ export const StatesPage: React.FC = () => {
                     </span>
                   </div>
                   <div className="pt-1 text-[11px] text-gray-700 font-medium truncate">
-                    <strong>Languages: </strong> {state.languages.join(', ')}
+                    <strong>{t('stateLanguage', 'Languages:')} </strong> {state.languages.join(', ')}
                   </div>
                 </div>
 
@@ -244,15 +248,15 @@ export const StatesPage: React.FC = () => {
                 <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
                   <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
                     <strong className="block text-sm font-bold text-[#083B2D]">{state.heritageCount}</strong>
-                    <span className="text-[9px] text-gray-500 uppercase">Monuments</span>
+                    <span className="text-[9px] text-gray-500 uppercase">{t('statMonuments', 'Monuments')}</span>
                   </div>
                   <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
                     <strong className="block text-sm font-bold text-[#C49A3A]">{state.festivalsCount}</strong>
-                    <span className="text-[9px] text-gray-500 uppercase">Festivals</span>
+                    <span className="text-[9px] text-gray-500 uppercase">{t('statFestivals', 'Festivals')}</span>
                   </div>
                   <div className="p-2 rounded-xl bg-gray-50 border border-gray-100">
                     <strong className="block text-sm font-bold text-[#E67E22]">{state.cultureCount}</strong>
-                    <span className="text-[9px] text-gray-500 uppercase">Traditions</span>
+                    <span className="text-[9px] text-gray-500 uppercase">{t('statTraditions', 'Traditions')}</span>
                   </div>
                 </div>
 
@@ -262,7 +266,7 @@ export const StatesPage: React.FC = () => {
                     to={`/state/${state.slug}`}
                     className="w-full py-2.5 rounded-2xl bg-[#083B2D] text-[#C49A3A] font-bold text-xs flex items-center justify-center space-x-2 hover:bg-[#0D523F] transition-colors"
                   >
-                    <span>Enter {state.name} State Portal</span>
+                    <span>{t('stateExploreAtlas', 'Explore State Heritage')}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

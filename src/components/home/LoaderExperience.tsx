@@ -92,15 +92,6 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
           >
             <defs>
               {/* Radial gradient mask for smooth map vignette blending */}
-              <radialGradient id="loaderMapVignette" cx="50%" cy="50%" r="50%">
-                <stop offset="60%" stopColor="#FFFFFF" stopOpacity="1" />
-                <stop offset="90%" stopColor="#FFFFFF" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
-              </radialGradient>
-              <mask id="mapMask">
-                <circle cx="384" cy="384" r="380" fill="url(#loaderMapVignette)" />
-              </mask>
-
               {/* Laser Outline Golden Gradient */}
               <linearGradient id="laserGold" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#E67E22" />
@@ -125,22 +116,10 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
               </filter>
             </defs>
 
-            {/* Official Survey of India Map Image (Locked Source of Truth) */}
-            <image
-              href="/india_political_map_official.jpg"
-              x="0"
-              y="0"
-              width="768"
-              height="768"
-              preserveAspectRatio="xMidYMid meet"
-              mask="url(#mapMask)"
-              className="opacity-80"
-            />
-
             {/* Traveling Laser Perimeter Trace Synced with Progress */}
             <motion.path
               d={INDIA_OUTER_BOUNDARY}
-              fill="none"
+              fill="rgba(196, 154, 58, 0.08)"
               stroke="url(#laserGold)"
               strokeWidth="3.2"
               strokeLinejoin="round"

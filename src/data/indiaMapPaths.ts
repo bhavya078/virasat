@@ -1,20 +1,15 @@
 /**
- * INDIA POLITICAL MAP — Detailed SVG Path Data
- * Coordinate System: 580 x 650 viewBox
- * Projection: India geographic bounds mapped to SVG
- *   Latitude:  6.5°N (bottom/south) to 37.5°N (top/north)
- *   Longitude: 68.0°E (left/west) to 97.5°E (right/east)
- *
- * Each state/UT has:
- *  - Accurate boundary polygon with many control points
- *  - Centroid (cx, cy) for label placement
- *  - Capital position for star marker
- *  - Optional label offset for readability
+ * INDIA POLITICAL MAP — Calibrated to Official Uploaded Political Map
+ * Source of Truth: media_1790499214413.jpg (768 x 768 viewBox)
+ * Contains all 28 States and 8 Union Territories with official stateIds,
+ * slugs, capitals, authentic pastel colors, and center coordinates.
  */
 
 export interface IndiaRegion {
-  id: string;
+  stateId: string;
+  id: string; // slug matching STATES_DATA key
   name: string;
+  slug: string;
   capital: string;
   isUT?: boolean;
   zone: 'North' | 'South' | 'West' | 'East' | 'Central' | 'Northeast' | 'Islands';
@@ -23,439 +18,572 @@ export interface IndiaRegion {
   labelX?: number;
   labelY?: number;
   path: string;
+  originalColor: string; // Pastel palette from uploaded map
   unescoCount: number;
   topAttraction: string;
 }
 
-// Helper: convert GPS (lat, lon) to SVG (x, y) in 580x650 space
+// Convert geographic GPS coordinates to exact pixel (x, y) on 768x768 canvas
 export function geo(lat: number, lon: number): string {
-  const minLat = 6.5, maxLat = 37.5;
-  const minLon = 68.0, maxLon = 97.5;
-  const padX = 25, padY = 25;
-  const w = 580 - 2 * padX, h = 650 - 2 * padY;
-  const x = padX + ((lon - minLon) / (maxLon - minLon)) * w;
-  const y = padY + ((maxLat - lat) / (maxLat - minLat)) * h;
-  return `${Math.round(x)} ${Math.round(y)}`;
+  const x = Math.round(22.501271 * lon + 0.492386 * lat - 1497.702259);
+  const y = Math.round(-0.548874 * lon - 23.918181 * lat + 966.381202);
+  return `${x} ${y}`;
 }
 
-export function geoXY(lat: number, lon: number): { cx: number; cy: number } {
-  const minLat = 6.5, maxLat = 37.5;
-  const minLon = 68.0, maxLon = 97.5;
-  const padX = 25, padY = 25;
-  const w = 580 - 2 * padX, h = 650 - 2 * padY;
-  return {
-    cx: Math.round(padX + ((lon - minLon) / (maxLon - minLon)) * w),
-    cy: Math.round(padY + ((maxLat - lat) / (maxLat - minLat)) * h),
-  };
+export function geoXY(lat: number, lon: number): { cx: number; cy: number; x: number; y: number } {
+  const x = Math.round(22.501271 * lon + 0.492386 * lat - 1497.702259);
+  const y = Math.round(-0.548874 * lon - 23.918181 * lat + 966.381202);
+  return { cx: x, cy: y, x, y };
 }
 
-// Build accurate paths using real geographic coordinate sequences
-// Each state boundary is traced from actual geographic coordinates
-
+// All 28 States + 8 Union Territories calibrated to the uploaded 768x768 image
 export const INDIA_REGIONS: IndiaRegion[] = [
-  // ===== NORTHERN INDIA =====
   {
+    stateId: 'LA',
+    id: 'ladakh',
+    name: 'Ladakh',
+    slug: 'ladakh',
+    capital: 'Leh',
+    isUT: true,
+    zone: 'North',
+    cx: 263,
+    cy: 94,
+    originalColor: '#C2E28F',
+    path: 'M 204 38 L 219 42 L 242 51 L 264 63 L 286 74 L 302 86 L 297 98 L 285 110 L 292 122 L 278 134 L 269 146 L 256 139 L 247 130 L 240 116 L 247 106 L 234 92 L 230 83 L 212 69 L 203 52 Z',
+    unescoCount: 1,
+    topAttraction: 'Hemis Gompa & Pangong Tso'
+  },
+  {
+    stateId: 'JK',
     id: 'jammu-kashmir',
     name: 'Jammu & Kashmir',
+    slug: 'jammu-kashmir',
     capital: 'Srinagar / Jammu',
     isUT: true,
     zone: 'North',
-    ...geoXY(33.7, 75.0),
-    path: `M ${geo(36.9, 73.8)} L ${geo(36.5, 74.5)} L ${geo(35.8, 75.3)} L ${geo(35.5, 76.0)} L ${geo(35.0, 76.2)} L ${geo(34.6, 75.8)} L ${geo(34.3, 75.5)} L ${geo(34.0, 75.0)} L ${geo(33.5, 74.5)} L ${geo(33.0, 74.3)} L ${geo(32.5, 74.6)} L ${geo(32.2, 75.0)} L ${geo(32.0, 75.6)} L ${geo(32.4, 75.8)} L ${geo(33.0, 75.5)} L ${geo(33.5, 75.8)} L ${geo(33.8, 76.2)} L ${geo(34.0, 76.8)} L ${geo(34.3, 76.5)} L ${geo(34.8, 76.0)} L ${geo(35.2, 76.2)} L ${geo(35.5, 76.8)} L ${geo(36.0, 76.0)} L ${geo(36.5, 75.5)} L ${geo(36.9, 74.5)} Z`,
+    cx: 222,
+    cy: 122,
+    originalColor: '#CADF9E',
+    path: 'M 181 70 L 196 84 L 207 93 L 189 108 L 184 117 L 195 131 L 202 141 L 210 150 L 224 155 L 228 145 L 224 135 L 233 123 L 240 116 L 247 106 L 234 92 L 230 83 L 212 69 L 196 64 Z',
     unescoCount: 1,
     topAttraction: 'Dal Lake & Mughal Gardens'
   },
   {
-    id: 'ladakh',
-    name: 'Ladakh',
-    capital: 'Leh',
-    isUT: true,
-    zone: 'North',
-    ...geoXY(34.2, 77.5),
-    path: `M ${geo(35.5, 76.8)} L ${geo(35.8, 77.5)} L ${geo(36.0, 78.0)} L ${geo(35.5, 78.5)} L ${geo(35.0, 78.8)} L ${geo(34.8, 78.3)} L ${geo(34.5, 78.0)} L ${geo(34.0, 77.8)} L ${geo(33.8, 77.5)} L ${geo(33.5, 77.0)} L ${geo(33.8, 76.5)} L ${geo(34.0, 76.8)} L ${geo(34.3, 76.5)} L ${geo(34.8, 76.5)} L ${geo(35.2, 76.2)} Z`,
-    unescoCount: 1,
-    topAttraction: 'Hemis & Pangong Tso'
-  },
-  {
+    stateId: 'HP',
     id: 'himachal-pradesh',
     name: 'Himachal Pradesh',
+    slug: 'himachal-pradesh',
     capital: 'Shimla',
+    isUT: false,
     zone: 'North',
-    ...geoXY(31.8, 77.0),
-    path: `M ${geo(33.0, 75.5)} L ${geo(32.5, 75.2)} L ${geo(32.0, 75.6)} L ${geo(31.5, 76.0)} L ${geo(31.2, 76.5)} L ${geo(30.8, 77.0)} L ${geo(31.0, 77.5)} L ${geo(31.3, 78.0)} L ${geo(31.5, 78.5)} L ${geo(31.8, 79.0)} L ${geo(32.2, 78.5)} L ${geo(32.5, 78.0)} L ${geo(32.8, 77.5)} L ${geo(33.0, 77.0)} L ${geo(33.5, 76.2)} L ${geo(33.5, 75.8)} Z`,
+    cx: 259,
+    cy: 160,
+    originalColor: '#B8A9D3',
+    path: 'M 224 131 L 217 140 L 224 155 L 228 164 L 239 173 L 250 183 L 261 192 L 273 184 L 284 177 L 295 167 L 291 158 L 278 146 L 262 139 L 247 130 Z',
     unescoCount: 2,
     topAttraction: 'Great Himalayan National Park'
   },
   {
+    stateId: 'PB',
     id: 'punjab',
     name: 'Punjab',
+    slug: 'punjab',
     capital: 'Chandigarh',
+    isUT: false,
     zone: 'North',
-    ...geoXY(31.0, 75.3),
-    path: `M ${geo(32.5, 74.6)} L ${geo(32.0, 74.2)} L ${geo(31.5, 74.0)} L ${geo(31.0, 74.0)} L ${geo(30.5, 74.5)} L ${geo(30.2, 75.0)} L ${geo(30.0, 75.5)} L ${geo(30.3, 76.0)} L ${geo(30.5, 76.3)} L ${geo(31.0, 76.5)} L ${geo(31.2, 76.5)} L ${geo(31.5, 76.0)} L ${geo(32.0, 75.6)} L ${geo(32.5, 75.2)} Z`,
+    cx: 223,
+    cy: 199,
+    originalColor: '#E8A4C8',
+    path: 'M 210 150 L 197 160 L 192 172 L 194 184 L 187 196 L 200 208 L 214 212 L 227 202 L 239 195 L 237 183 L 239 173 L 228 164 L 224 155 Z',
     unescoCount: 1,
     topAttraction: 'Golden Temple, Amritsar'
   },
   {
+    stateId: 'CH',
     id: 'chandigarh',
     name: 'Chandigarh',
+    slug: 'chandigarh',
     capital: 'Chandigarh',
     isUT: true,
     zone: 'North',
-    ...geoXY(30.73, 76.78),
-    path: `M ${geo(30.8, 76.7)} L ${geo(30.8, 76.9)} L ${geo(30.65, 76.9)} L ${geo(30.65, 76.7)} Z`,
+    cx: 236,
+    cy: 195,
+    originalColor: '#E8A4C8',
+    path: 'M 243 187 L 247 187 L 247 191 L 243 191 Z',
     unescoCount: 1,
     topAttraction: 'Capitol Complex'
   },
   {
+    stateId: 'UK',
     id: 'uttarakhand',
     name: 'Uttarakhand',
+    slug: 'uttarakhand',
     capital: 'Dehradun',
+    isUT: false,
     zone: 'North',
-    ...geoXY(30.0, 79.0),
-    path: `M ${geo(31.5, 78.5)} L ${geo(31.3, 78.0)} L ${geo(31.0, 77.5)} L ${geo(30.8, 77.0)} L ${geo(30.5, 76.8)} L ${geo(30.0, 77.0)} L ${geo(29.5, 78.0)} L ${geo(29.3, 78.5)} L ${geo(29.5, 79.0)} L ${geo(29.8, 79.5)} L ${geo(30.0, 80.0)} L ${geo(30.2, 80.5)} L ${geo(30.5, 81.0)} L ${geo(30.8, 80.5)} L ${geo(31.0, 80.0)} L ${geo(31.2, 79.5)} L ${geo(31.5, 79.0)} Z`,
+    cx: 304,
+    cy: 208,
+    originalColor: '#92D2C9',
+    path: 'M 295 167 L 284 177 L 273 184 L 261 192 L 263 201 L 277 211 L 290 220 L 306 224 L 321 217 L 335 209 L 340 195 L 331 185 L 318 176 L 307 169 Z',
     unescoCount: 2,
     topAttraction: 'Valley of Flowers & Nanda Devi'
   },
   {
+    stateId: 'HR',
     id: 'haryana',
     name: 'Haryana',
+    slug: 'haryana',
     capital: 'Chandigarh',
+    isUT: false,
     zone: 'North',
-    ...geoXY(29.0, 76.0),
-    path: `M ${geo(30.5, 76.3)} L ${geo(30.3, 76.0)} L ${geo(30.0, 75.5)} L ${geo(29.5, 75.0)} L ${geo(29.0, 75.5)} L ${geo(28.5, 76.0)} L ${geo(28.0, 76.5)} L ${geo(28.2, 77.0)} L ${geo(28.5, 77.2)} L ${geo(28.8, 77.0)} L ${geo(29.0, 76.8)} L ${geo(29.5, 78.0)} L ${geo(30.0, 77.0)} L ${geo(30.5, 76.8)} L ${geo(31.0, 76.5)} Z`,
+    cx: 241,
+    cy: 231,
+    originalColor: '#C5C384',
+    path: 'M 239 195 L 227 202 L 214 212 L 204 220 L 215 231 L 226 243 L 237 255 L 249 250 L 256 245 L 254 235 L 249 226 L 259 211 L 254 202 L 261 192 L 250 187 L 237 183 Z',
     unescoCount: 0,
     topAttraction: 'Kurukshetra & Sultanpur'
   },
   {
+    stateId: 'DL',
     id: 'delhi',
     name: 'Delhi',
+    slug: 'delhi',
     capital: 'New Delhi',
     isUT: true,
     zone: 'North',
-    ...geoXY(28.61, 77.2),
-    path: `M ${geo(28.88, 76.95)} L ${geo(28.88, 77.35)} L ${geo(28.40, 77.35)} L ${geo(28.40, 76.95)} Z`,
+    cx: 242,
+    cy: 236,
+    originalColor: '#5D7052',
+    path: 'M 248 233 L 257 233 L 257 245 L 248 245 Z',
     unescoCount: 3,
     topAttraction: 'Red Fort, Qutub Minar, Humayun Tomb'
   },
-
-  // ===== WESTERN INDIA =====
   {
+    stateId: 'RJ',
     id: 'rajasthan',
     name: 'Rajasthan',
+    slug: 'rajasthan',
     capital: 'Jaipur',
+    isUT: false,
     zone: 'West',
-    ...geoXY(26.5, 73.0),
-    path: `M ${geo(30.0, 71.0)} L ${geo(29.5, 71.5)} L ${geo(29.0, 71.0)} L ${geo(28.0, 70.0)} L ${geo(27.0, 69.5)} L ${geo(26.0, 69.8)} L ${geo(25.0, 70.5)} L ${geo(24.5, 71.0)} L ${geo(24.0, 72.0)} L ${geo(23.8, 72.5)} L ${geo(24.0, 73.0)} L ${geo(24.5, 73.5)} L ${geo(24.0, 74.0)} L ${geo(23.5, 74.5)} L ${geo(23.8, 75.0)} L ${geo(24.5, 75.5)} L ${geo(25.0, 76.0)} L ${geo(25.5, 76.5)} L ${geo(26.0, 77.0)} L ${geo(26.5, 77.5)} L ${geo(27.0, 77.0)} L ${geo(27.5, 77.0)} L ${geo(28.0, 76.5)} L ${geo(28.5, 76.0)} L ${geo(29.0, 75.5)} L ${geo(29.5, 75.0)} L ${geo(30.0, 75.5)} L ${geo(30.2, 75.0)} L ${geo(30.5, 74.5)} L ${geo(30.5, 74.0)} L ${geo(30.0, 73.5)} L ${geo(30.0, 72.5)} L ${geo(30.0, 71.5)} Z`,
+    cx: 178,
+    cy: 296,
+    originalColor: '#A0D9D9',
+    path: 'M 200 208 L 178 213 L 159 228 L 136 245 L 109 258 L 91 270 L 86 287 L 95 306 L 108 325 L 112 341 L 134 348 L 152 357 L 168 352 L 183 364 L 202 361 L 220 346 L 229 327 L 243 312 L 257 297 L 253 283 L 248 269 L 237 255 L 226 243 L 215 231 L 204 220 L 214 212 Z',
     unescoCount: 5,
     topAttraction: 'Amer Fort, Thar Desert & Chittorgarh'
   },
   {
+    stateId: 'GJ',
     id: 'gujarat',
     name: 'Gujarat',
+    slug: 'gujarat',
     capital: 'Gandhinagar',
+    isUT: false,
     zone: 'West',
-    ...geoXY(22.5, 71.5),
-    path: `M ${geo(24.0, 72.0)} L ${geo(23.8, 72.5)} L ${geo(24.0, 73.0)} L ${geo(24.5, 73.5)} L ${geo(24.0, 74.0)} L ${geo(23.5, 74.0)} L ${geo(23.0, 73.5)} L ${geo(22.5, 73.0)} L ${geo(22.0, 72.5)} L ${geo(21.5, 72.5)} L ${geo(21.0, 72.0)} L ${geo(20.5, 72.0)} L ${geo(20.2, 72.5)} L ${geo(20.0, 73.0)} L ${geo(20.5, 73.0)} L ${geo(21.0, 73.0)} L ${geo(21.2, 72.5)} L ${geo(21.5, 72.0)} L ${geo(22.0, 71.5)} L ${geo(22.5, 71.0)} L ${geo(23.0, 70.5)} L ${geo(23.2, 70.0)} L ${geo(22.8, 69.5)} L ${geo(22.3, 69.0)} L ${geo(21.5, 68.8)} L ${geo(21.0, 69.5)} L ${geo(20.8, 70.0)} L ${geo(21.0, 70.5)} L ${geo(21.5, 71.0)} L ${geo(22.0, 71.0)} L ${geo(22.5, 70.5)} L ${geo(23.0, 70.0)} L ${geo(23.5, 69.5)} L ${geo(23.8, 69.8)} L ${geo(24.0, 70.5)} L ${geo(24.5, 71.0)} Z`,
+    cx: 149,
+    cy: 373,
+    originalColor: '#B3AEDB',
+    path: 'M 112 341 L 134 348 L 152 357 L 168 352 L 179 364 L 174 376 L 167 388 L 160 400 L 155 414 L 160 429 L 150 441 L 144 436 L 137 424 L 137 413 L 129 401 L 111 392 L 89 383 L 70 390 L 63 407 L 77 421 L 92 428 L 110 420 L 115 406 L 106 397 L 93 383 L 71 369 L 85 359 L 100 354 Z',
     unescoCount: 4,
     topAttraction: 'Rani ki Vav & Dholavira'
   },
   {
+    stateId: 'DH',
     id: 'dadra-nagar-haveli-daman-diu',
-    name: 'DNHDD',
+    name: 'Dadra and Nagar Haveli and Daman and Diu',
+    slug: 'dadra-nagar-haveli-daman-diu',
     capital: 'Daman',
     isUT: true,
     zone: 'West',
-    ...geoXY(20.3, 73.0),
-    path: `M ${geo(20.5, 72.8)} L ${geo(20.5, 73.2)} L ${geo(20.1, 73.2)} L ${geo(20.1, 72.8)} Z`,
+    cx: 160,
+    cy: 425,
+    originalColor: '#B3AEDB',
+    path: 'M 150 436 L 159 436 L 159 445 L 150 446 Z',
     unescoCount: 0,
     topAttraction: 'Moti Daman Fort & Jampore Beach'
   },
-
-  // ===== CENTRAL INDIA =====
   {
+    stateId: 'UP',
     id: 'uttar-pradesh',
     name: 'Uttar Pradesh',
+    slug: 'uttar-pradesh',
     capital: 'Lucknow',
+    isUT: false,
     zone: 'North',
-    ...geoXY(27.0, 80.5),
-    path: `M ${geo(29.5, 78.0)} L ${geo(29.3, 78.5)} L ${geo(29.5, 79.0)} L ${geo(29.8, 79.5)} L ${geo(30.0, 80.0)} L ${geo(30.2, 80.5)} L ${geo(29.5, 81.0)} L ${geo(29.0, 81.5)} L ${geo(28.5, 82.0)} L ${geo(28.0, 82.5)} L ${geo(27.5, 83.0)} L ${geo(27.0, 83.5)} L ${geo(26.5, 84.0)} L ${geo(26.0, 84.5)} L ${geo(26.5, 84.0)} L ${geo(26.0, 83.5)} L ${geo(25.5, 83.0)} L ${geo(25.0, 82.5)} L ${geo(24.5, 82.0)} L ${geo(24.0, 81.0)} L ${geo(24.5, 80.0)} L ${geo(25.0, 79.5)} L ${geo(25.5, 79.0)} L ${geo(26.0, 78.5)} L ${geo(26.5, 78.0)} L ${geo(26.5, 77.5)} L ${geo(27.0, 77.0)} L ${geo(27.5, 77.0)} L ${geo(28.0, 77.2)} L ${geo(28.5, 77.2)} L ${geo(28.8, 77.0)} L ${geo(29.0, 77.5)} L ${geo(29.5, 78.0)} Z`,
+    cx: 353,
+    cy: 294,
+    originalColor: '#F8AE9D',
+    path: 'M 259 211 L 290 220 L 306 224 L 321 217 L 335 228 L 350 240 L 366 252 L 388 265 L 406 279 L 414 293 L 401 303 L 387 318 L 378 333 L 355 343 L 332 336 L 315 325 L 297 315 L 284 301 L 270 287 L 253 283 L 248 269 L 249 250 L 254 235 L 249 226 Z',
     unescoCount: 3,
     topAttraction: 'Taj Mahal, Agra Fort & Varanasi'
   },
   {
+    stateId: 'MP',
     id: 'madhya-pradesh',
     name: 'Madhya Pradesh',
+    slug: 'madhya-pradesh',
     capital: 'Bhopal',
+    isUT: false,
     zone: 'Central',
-    ...geoXY(23.5, 78.0),
-    path: `M ${geo(26.5, 78.0)} L ${geo(26.0, 78.5)} L ${geo(25.5, 79.0)} L ${geo(25.0, 79.5)} L ${geo(24.5, 80.0)} L ${geo(24.0, 81.0)} L ${geo(24.5, 82.0)} L ${geo(24.0, 82.0)} L ${geo(23.5, 82.5)} L ${geo(23.0, 82.0)} L ${geo(22.5, 81.5)} L ${geo(22.0, 80.5)} L ${geo(21.5, 80.0)} L ${geo(21.0, 79.0)} L ${geo(21.5, 78.0)} L ${geo(22.0, 77.5)} L ${geo(22.5, 77.0)} L ${geo(22.0, 76.5)} L ${geo(22.0, 76.0)} L ${geo(22.5, 75.5)} L ${geo(23.0, 75.0)} L ${geo(23.5, 74.5)} L ${geo(23.8, 75.0)} L ${geo(24.5, 75.5)} L ${geo(25.0, 76.0)} L ${geo(25.5, 76.5)} L ${geo(26.0, 77.0)} Z`,
+    cx: 277,
+    cy: 388,
+    originalColor: '#D3E98E',
+    path: 'M 270 287 L 284 301 L 297 315 L 315 325 L 332 336 L 355 343 L 370 347 L 363 362 L 354 376 L 336 391 L 318 401 L 295 411 L 272 409 L 250 403 L 235 393 L 219 399 L 201 389 L 197 375 L 183 364 L 202 361 L 220 346 L 229 327 L 243 312 L 257 297 Z',
     unescoCount: 3,
     topAttraction: 'Khajuraho, Sanchi & Bhimbetka'
   },
   {
+    stateId: 'CT',
     id: 'chhattisgarh',
     name: 'Chhattisgarh',
+    slug: 'chhattisgarh',
     capital: 'Raipur',
+    isUT: false,
     zone: 'Central',
-    ...geoXY(21.5, 82.0),
-    path: `M ${geo(24.0, 82.0)} L ${geo(23.5, 82.5)} L ${geo(23.0, 82.0)} L ${geo(22.5, 81.5)} L ${geo(22.0, 81.0)} L ${geo(21.5, 81.5)} L ${geo(21.0, 82.0)} L ${geo(20.5, 82.5)} L ${geo(20.0, 82.0)} L ${geo(19.5, 82.0)} L ${geo(19.0, 82.5)} L ${geo(19.5, 83.0)} L ${geo(20.0, 83.5)} L ${geo(20.5, 83.5)} L ${geo(21.0, 83.0)} L ${geo(21.5, 82.5)} L ${geo(22.0, 83.0)} L ${geo(22.5, 83.5)} L ${geo(23.0, 83.0)} L ${geo(23.5, 82.8)} L ${geo(24.0, 82.5)} Z`,
+    cx: 380,
+    cy: 404,
+    originalColor: '#F1B5D8',
+    path: 'M 370 347 L 386 356 L 392 370 L 385 383 L 376 395 L 369 407 L 362 424 L 357 438 L 353 455 L 357 467 L 345 479 L 334 472 L 323 463 L 330 444 L 340 424 L 318 401 L 336 391 L 354 376 L 363 362 Z',
     unescoCount: 0,
     topAttraction: 'Bastar Palace & Chitrakote Falls'
   },
-
-  // ===== EASTERN INDIA =====
   {
+    stateId: 'BR',
     id: 'bihar',
     name: 'Bihar',
+    slug: 'bihar',
     capital: 'Patna',
+    isUT: false,
     zone: 'East',
-    ...geoXY(25.5, 85.5),
-    path: `M ${geo(27.0, 83.5)} L ${geo(26.5, 84.0)} L ${geo(26.0, 84.5)} L ${geo(26.5, 85.0)} L ${geo(27.0, 85.5)} L ${geo(27.0, 86.5)} L ${geo(26.5, 87.0)} L ${geo(26.0, 87.0)} L ${geo(25.5, 87.0)} L ${geo(25.0, 86.5)} L ${geo(24.5, 86.0)} L ${geo(24.0, 85.5)} L ${geo(24.0, 85.0)} L ${geo(24.5, 84.5)} L ${geo(25.0, 84.0)} L ${geo(25.0, 83.5)} L ${geo(25.5, 83.0)} L ${geo(26.0, 83.5)} L ${geo(26.5, 84.0)} Z`,
+    cx: 452,
+    cy: 300,
+    originalColor: '#9CD8D5',
+    path: 'M 388 265 L 417 269 L 439 274 L 469 278 L 484 287 L 491 301 L 477 316 L 461 326 L 445 336 L 427 334 L 405 327 L 394 318 L 401 303 L 414 293 L 406 279 Z',
     unescoCount: 2,
     topAttraction: 'Mahabodhi Temple & Nalanda'
   },
   {
+    stateId: 'JH',
     id: 'jharkhand',
     name: 'Jharkhand',
+    slug: 'jharkhand',
     capital: 'Ranchi',
+    isUT: false,
     zone: 'East',
-    ...geoXY(23.5, 85.5),
-    path: `M ${geo(24.5, 84.5)} L ${geo(24.0, 85.0)} L ${geo(24.0, 85.5)} L ${geo(24.5, 86.0)} L ${geo(25.0, 86.5)} L ${geo(25.0, 87.0)} L ${geo(24.5, 87.0)} L ${geo(24.0, 87.0)} L ${geo(23.5, 86.5)} L ${geo(23.0, 86.0)} L ${geo(22.5, 85.5)} L ${geo(22.0, 85.0)} L ${geo(22.0, 84.5)} L ${geo(22.5, 84.0)} L ${geo(23.0, 83.5)} L ${geo(23.0, 83.0)} L ${geo(23.5, 83.0)} L ${geo(24.0, 83.5)} L ${geo(24.0, 84.0)} Z`,
+    cx: 433,
+    cy: 349,
+    originalColor: '#C5BE7A',
+    path: 'M 405 327 L 427 334 L 445 336 L 461 326 L 477 321 L 490 332 L 483 349 L 467 364 L 453 381 L 437 393 L 415 389 L 404 375 L 399 358 L 393 347 Z',
     unescoCount: 0,
     topAttraction: 'Baidyanath Dham & Parasnath'
   },
   {
+    stateId: 'OD',
     id: 'odisha',
     name: 'Odisha',
+    slug: 'odisha',
     capital: 'Bhubaneswar',
+    isUT: false,
     zone: 'East',
-    ...geoXY(20.5, 84.0),
-    path: `M ${geo(22.5, 83.5)} L ${geo(22.0, 83.0)} L ${geo(21.5, 82.5)} L ${geo(21.0, 83.0)} L ${geo(20.5, 83.5)} L ${geo(20.0, 83.5)} L ${geo(19.5, 83.0)} L ${geo(19.0, 83.5)} L ${geo(19.0, 84.0)} L ${geo(19.5, 84.5)} L ${geo(19.8, 85.0)} L ${geo(20.0, 85.5)} L ${geo(20.5, 86.0)} L ${geo(21.0, 86.5)} L ${geo(21.5, 87.0)} L ${geo(22.0, 87.0)} L ${geo(22.0, 86.5)} L ${geo(22.0, 86.0)} L ${geo(22.0, 85.5)} L ${geo(22.0, 85.0)} L ${geo(22.5, 84.5)} L ${geo(22.5, 84.0)} Z`,
+    cx: 423,
+    cy: 416,
+    originalColor: '#CFE58A',
+    path: 'M 453 381 L 466 393 L 475 404 L 466 421 L 447 436 L 429 451 L 420 465 L 406 478 L 391 466 L 380 454 L 384 438 L 376 423 L 385 406 L 403 394 L 430 381 Z',
     unescoCount: 1,
     topAttraction: 'Konark Sun Temple & Puri'
   },
   {
+    stateId: 'WB',
     id: 'west-bengal',
     name: 'West Bengal',
+    slug: 'west-bengal',
     capital: 'Kolkata',
+    isUT: false,
     zone: 'East',
-    ...geoXY(23.5, 88.0),
-    labelX: geoXY(24.0, 88.5).cx,
-    path: `M ${geo(27.0, 88.0)} L ${geo(26.8, 88.5)} L ${geo(26.5, 88.8)} L ${geo(26.0, 88.5)} L ${geo(25.5, 88.0)} L ${geo(25.0, 88.5)} L ${geo(24.5, 88.8)} L ${geo(24.0, 88.5)} L ${geo(23.5, 88.5)} L ${geo(23.0, 88.5)} L ${geo(22.5, 88.5)} L ${geo(22.0, 88.0)} L ${geo(21.5, 88.0)} L ${geo(21.5, 87.5)} L ${geo(22.0, 87.0)} L ${geo(22.0, 86.5)} L ${geo(22.5, 86.0)} L ${geo(22.5, 85.5)} L ${geo(23.0, 86.0)} L ${geo(23.5, 86.5)} L ${geo(24.0, 87.0)} L ${geo(24.5, 87.0)} L ${geo(25.0, 87.0)} L ${geo(25.5, 87.0)} L ${geo(26.0, 87.0)} L ${geo(26.5, 87.0)} L ${geo(27.0, 87.5)} Z`,
+    cx: 479,
+    cy: 357,
+    originalColor: '#E79E8B',
+    path: 'M 500 267 L 514 277 L 507 286 L 500 296 L 495 308 L 506 320 L 508 339 L 512 356 L 512 372 L 507 392 L 498 401 L 482 397 L 471 388 L 467 373 L 471 357 L 481 340 L 490 325 L 490 308 L 495 291 Z',
     unescoCount: 2,
     topAttraction: 'Sundarbans & Darjeeling Railway'
   },
-
-  // ===== NORTHEAST INDIA =====
   {
+    stateId: 'SK',
     id: 'sikkim',
     name: 'Sikkim',
+    slug: 'sikkim',
     capital: 'Gangtok',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(27.5, 88.5),
-    path: `M ${geo(28.0, 88.0)} L ${geo(28.0, 88.8)} L ${geo(27.5, 89.0)} L ${geo(27.0, 88.8)} L ${geo(27.0, 88.2)} L ${geo(27.5, 88.0)} Z`,
+    cx: 460,
+    cy: 256,
+    originalColor: '#BBA8D2',
+    path: 'M 501 246 L 514 248 L 518 260 L 514 269 L 500 267 L 496 258 Z',
     unescoCount: 1,
     topAttraction: 'Khangchendzonga National Park'
   },
   {
+    stateId: 'AS',
     id: 'assam',
     name: 'Assam',
+    slug: 'assam',
     capital: 'Dispur',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(26.0, 92.5),
-    path: `M ${geo(27.0, 89.8)} L ${geo(26.8, 90.5)} L ${geo(26.5, 90.2)} L ${geo(26.0, 90.0)} L ${geo(25.5, 90.5)} L ${geo(25.0, 91.0)} L ${geo(25.0, 91.5)} L ${geo(25.2, 92.0)} L ${geo(25.0, 92.5)} L ${geo(24.5, 92.5)} L ${geo(24.5, 93.0)} L ${geo(25.0, 93.5)} L ${geo(25.5, 94.0)} L ${geo(26.0, 94.5)} L ${geo(26.5, 95.0)} L ${geo(27.0, 94.5)} L ${geo(27.2, 94.0)} L ${geo(27.5, 93.5)} L ${geo(27.5, 93.0)} L ${geo(27.3, 92.5)} L ${geo(27.0, 92.0)} L ${geo(26.5, 91.5)} L ${geo(26.5, 91.0)} L ${geo(27.0, 90.5)} Z`,
+    cx: 589,
+    cy: 275,
+    originalColor: '#CDE885',
+    path: 'M 541 266 L 554 276 L 545 285 L 558 295 L 581 299 L 596 303 L 607 317 L 625 312 L 635 298 L 644 283 L 658 268 L 671 256 L 658 249 L 635 257 L 620 264 L 595 270 L 574 275 Z',
     unescoCount: 2,
     topAttraction: 'Kaziranga & Majuli River Island'
   },
   {
+    stateId: 'AR',
     id: 'arunachal-pradesh',
     name: 'Arunachal Pradesh',
+    slug: 'arunachal-pradesh',
     capital: 'Itanagar',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(28.0, 94.5),
-    path: `M ${geo(27.5, 91.5)} L ${geo(28.0, 92.0)} L ${geo(28.5, 92.5)} L ${geo(29.0, 93.5)} L ${geo(29.0, 94.5)} L ${geo(28.5, 95.5)} L ${geo(28.0, 96.0)} L ${geo(27.5, 96.5)} L ${geo(27.0, 97.0)} L ${geo(27.0, 96.0)} L ${geo(27.0, 95.5)} L ${geo(26.5, 95.0)} L ${geo(27.0, 94.5)} L ${geo(27.2, 94.0)} L ${geo(27.5, 93.5)} L ${geo(27.5, 93.0)} L ${geo(27.3, 92.5)} L ${geo(27.0, 92.0)} L ${geo(27.0, 91.5)} Z`,
+    cx: 636,
+    cy: 231,
+    originalColor: '#F4A28C',
+    path: 'M 581 258 L 597 246 L 620 231 L 643 221 L 672 225 L 688 239 L 703 248 L 687 263 L 664 268 L 649 257 L 626 264 L 599 260 Z',
     unescoCount: 0,
     topAttraction: 'Tawang Monastery & Ziro Valley'
   },
   {
+    stateId: 'NL',
     id: 'nagaland',
     name: 'Nagaland',
+    slug: 'nagaland',
     capital: 'Kohima',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(26.0, 94.5),
-    path: `M ${geo(27.0, 94.5)} L ${geo(26.5, 95.0)} L ${geo(26.0, 95.0)} L ${geo(25.5, 94.5)} L ${geo(25.5, 94.0)} L ${geo(26.0, 93.5)} L ${geo(26.5, 94.0)} Z`,
+    cx: 662,
+    cy: 278,
+    originalColor: '#A1D7D7',
+    path: 'M 649 269 L 662 273 L 657 287 L 644 302 L 630 305 L 635 288 Z',
     unescoCount: 0,
     topAttraction: 'Hornbill Festival & Dzukou'
   },
   {
+    stateId: 'MN',
     id: 'manipur',
     name: 'Manipur',
+    slug: 'manipur',
     capital: 'Imphal',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(24.8, 93.8),
-    path: `M ${geo(25.5, 93.5)} L ${geo(25.5, 94.0)} L ${geo(25.5, 94.5)} L ${geo(25.0, 94.5)} L ${geo(24.5, 94.0)} L ${geo(24.0, 93.5)} L ${geo(24.0, 93.0)} L ${geo(24.5, 93.0)} L ${geo(25.0, 93.5)} Z`,
+    cx: 652,
+    cy: 324,
+    originalColor: '#B7A5D2',
+    path: 'M 635 302 L 648 307 L 643 321 L 629 336 L 611 344 L 612 327 L 625 317 Z',
     unescoCount: 0,
     topAttraction: 'Loktak Floating Lake'
   },
   {
+    stateId: 'MZ',
     id: 'mizoram',
     name: 'Mizoram',
+    slug: 'mizoram',
     capital: 'Aizawl',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(23.2, 92.8),
-    path: `M ${geo(24.0, 92.5)} L ${geo(24.0, 93.0)} L ${geo(24.0, 93.5)} L ${geo(23.5, 93.5)} L ${geo(23.0, 93.2)} L ${geo(22.5, 93.0)} L ${geo(22.0, 92.8)} L ${geo(22.0, 92.5)} L ${geo(22.5, 92.5)} L ${geo(23.0, 92.0)} L ${geo(23.5, 92.2)} L ${geo(24.0, 92.5)} Z`,
+    cx: 631,
+    cy: 363,
+    originalColor: '#F39F8A',
+    path: 'M 602 334 L 616 336 L 616 351 L 611 370 L 601 389 L 592 380 L 593 361 L 598 346 Z',
     unescoCount: 0,
     topAttraction: 'Blue Mountain & Reiek'
   },
   {
+    stateId: 'TR',
     id: 'tripura',
     name: 'Tripura',
+    slug: 'tripura',
     capital: 'Agartala',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(23.8, 91.5),
-    path: `M ${geo(24.5, 91.5)} L ${geo(24.5, 92.0)} L ${geo(24.0, 92.5)} L ${geo(23.5, 92.2)} L ${geo(23.0, 91.5)} L ${geo(23.0, 91.0)} L ${geo(23.5, 91.0)} L ${geo(24.0, 91.5)} Z`,
+    cx: 531,
+    cy: 350,
+    originalColor: '#B5BC71',
+    path: 'M 573 333 L 589 332 L 593 346 L 579 361 L 566 366 L 566 352 L 573 342 Z',
     unescoCount: 0,
     topAttraction: 'Unakoti Rock Colossi'
   },
   {
+    stateId: 'ML',
     id: 'meghalaya',
     name: 'Meghalaya',
+    slug: 'meghalaya',
     capital: 'Shillong',
+    isUT: false,
     zone: 'Northeast',
-    ...geoXY(25.5, 91.5),
-    path: `M ${geo(26.0, 90.0)} L ${geo(26.0, 90.5)} L ${geo(25.8, 91.0)} L ${geo(25.5, 91.5)} L ${geo(25.2, 92.0)} L ${geo(25.0, 92.5)} L ${geo(25.0, 92.0)} L ${geo(25.0, 91.5)} L ${geo(25.0, 91.0)} L ${geo(25.0, 90.5)} L ${geo(25.2, 90.0)} L ${geo(25.5, 90.2)} Z`,
+    cx: 536,
+    cy: 321,
+    originalColor: '#BCABD5',
+    path: 'M 540 295 L 558 295 L 581 299 L 596 303 L 596 318 L 574 316 L 551 316 L 540 309 Z',
     unescoCount: 0,
     topAttraction: 'Mawlynnong & Living Root Bridges'
   },
-
-  // ===== DECCAN & SOUTHERN INDIA =====
   {
+    stateId: 'MH',
     id: 'maharashtra',
     name: 'Maharashtra',
+    slug: 'maharashtra',
     capital: 'Mumbai',
+    isUT: false,
     zone: 'West',
-    ...geoXY(19.5, 76.0),
-    path: `M ${geo(22.0, 73.0)} L ${geo(22.0, 73.5)} L ${geo(22.0, 74.0)} L ${geo(22.0, 75.0)} L ${geo(22.0, 76.0)} L ${geo(22.0, 76.5)} L ${geo(22.0, 77.5)} L ${geo(21.5, 78.0)} L ${geo(21.0, 79.0)} L ${geo(21.0, 79.5)} L ${geo(20.5, 80.0)} L ${geo(20.0, 80.0)} L ${geo(19.5, 79.5)} L ${geo(19.0, 79.0)} L ${geo(18.5, 78.5)} L ${geo(18.0, 78.0)} L ${geo(17.5, 77.5)} L ${geo(17.0, 77.0)} L ${geo(16.5, 76.5)} L ${geo(16.0, 76.0)} L ${geo(16.0, 75.0)} L ${geo(16.0, 74.0)} L ${geo(16.5, 73.5)} L ${geo(17.0, 73.0)} L ${geo(17.5, 73.0)} L ${geo(18.0, 73.0)} L ${geo(18.5, 72.8)} L ${geo(19.0, 72.8)} L ${geo(19.5, 73.0)} L ${geo(20.0, 73.0)} L ${geo(20.2, 72.5)} L ${geo(20.5, 72.0)} L ${geo(21.0, 72.0)} L ${geo(21.2, 72.5)} L ${geo(21.5, 73.0)} Z`,
+    cx: 221,
+    cy: 454,
+    originalColor: '#F5A894',
+    path: 'M 156 405 L 178 414 L 205 411 L 234 403 L 263 412 L 295 416 L 317 425 L 321 444 L 312 463 L 294 478 L 275 493 L 257 505 L 243 518 L 225 532 L 193 547 L 171 548 L 162 531 L 153 515 L 149 496 L 150 477 L 150 453 L 150 438 Z',
     unescoCount: 5,
     topAttraction: 'Ajanta, Ellora, Elephanta & Maratha Forts'
   },
   {
+    stateId: 'GA',
     id: 'goa',
     name: 'Goa',
+    slug: 'goa',
     capital: 'Panaji',
+    isUT: false,
     zone: 'South',
-    ...geoXY(15.4, 74.0),
-    path: `M ${geo(15.8, 73.7)} L ${geo(15.8, 74.2)} L ${geo(15.0, 74.3)} L ${geo(14.9, 74.0)} L ${geo(15.0, 73.7)} Z`,
+    cx: 162,
+    cy: 558,
+    originalColor: '#8CD0BC',
+    path: 'M 168 548 L 180 548 L 182 567 L 175 569 L 168 567 Z',
     unescoCount: 1,
     topAttraction: 'Churches of Old Goa'
   },
   {
+    stateId: 'KA',
     id: 'karnataka',
     name: 'Karnataka',
+    slug: 'karnataka',
     capital: 'Bengaluru',
+    isUT: false,
     zone: 'South',
-    ...geoXY(14.5, 76.0),
-    path: `M ${geo(16.0, 74.0)} L ${geo(16.0, 75.0)} L ${geo(16.0, 76.0)} L ${geo(16.5, 76.5)} L ${geo(17.0, 77.0)} L ${geo(17.5, 77.5)} L ${geo(17.0, 78.0)} L ${geo(16.5, 78.0)} L ${geo(16.0, 78.0)} L ${geo(15.5, 78.0)} L ${geo(15.0, 78.0)} L ${geo(14.5, 77.5)} L ${geo(14.0, 77.5)} L ${geo(13.5, 77.5)} L ${geo(13.0, 77.5)} L ${geo(12.5, 77.5)} L ${geo(12.0, 77.0)} L ${geo(11.8, 76.5)} L ${geo(11.5, 76.0)} L ${geo(11.8, 75.5)} L ${geo(12.0, 75.0)} L ${geo(12.5, 74.8)} L ${geo(13.0, 74.5)} L ${geo(13.5, 74.5)} L ${geo(14.0, 74.0)} L ${geo(14.5, 74.0)} L ${geo(15.0, 73.7)} L ${geo(15.5, 73.8)} L ${geo(16.0, 74.0)} Z`,
+    cx: 224,
+    cy: 595,
+    originalColor: '#E2E984',
+    path: 'M 243 518 L 257 505 L 270 517 L 265 536 L 260 555 L 253 575 L 260 594 L 268 608 L 259 622 L 241 642 L 218 647 L 200 638 L 192 619 L 183 595 L 179 572 L 184 548 L 209 533 L 232 523 Z',
     unescoCount: 4,
     topAttraction: 'Hampi, Pattadakal & Hoysala Temples'
   },
   {
+    stateId: 'TG',
     id: 'telangana',
     name: 'Telangana',
+    slug: 'telangana',
     capital: 'Hyderabad',
+    isUT: false,
     zone: 'South',
-    ...geoXY(17.5, 79.0),
-    path: `M ${geo(19.0, 79.0)} L ${geo(18.5, 78.5)} L ${geo(18.0, 78.0)} L ${geo(17.5, 77.5)} L ${geo(17.0, 78.0)} L ${geo(16.5, 78.0)} L ${geo(16.5, 78.5)} L ${geo(16.5, 79.0)} L ${geo(16.5, 79.5)} L ${geo(17.0, 80.0)} L ${geo(17.5, 80.5)} L ${geo(18.0, 80.5)} L ${geo(18.5, 80.0)} L ${geo(19.0, 80.0)} L ${geo(19.5, 79.5)} Z`,
+    cx: 301,
+    cy: 495,
+    originalColor: '#B8BA67',
+    path: 'M 278 464 L 301 456 L 316 468 L 329 487 L 322 506 L 311 521 L 292 535 L 274 541 L 261 522 L 257 505 L 275 493 Z',
     unescoCount: 1,
     topAttraction: 'Ramappa Kakatiya Temple & Golconda'
   },
   {
+    stateId: 'AP',
     id: 'andhra-pradesh',
     name: 'Andhra Pradesh',
+    slug: 'andhra-pradesh',
     capital: 'Amaravati',
+    isUT: false,
     zone: 'South',
-    ...geoXY(15.5, 79.5),
-    path: `M ${geo(19.0, 80.0)} L ${geo(18.5, 80.0)} L ${geo(18.0, 80.5)} L ${geo(17.5, 80.5)} L ${geo(17.0, 80.0)} L ${geo(16.5, 80.5)} L ${geo(16.0, 81.0)} L ${geo(15.5, 81.0)} L ${geo(15.0, 80.5)} L ${geo(14.5, 80.0)} L ${geo(14.0, 79.5)} L ${geo(13.8, 79.5)} L ${geo(13.5, 80.0)} L ${geo(13.8, 80.2)} L ${geo(14.5, 80.2)} L ${geo(15.0, 80.0)} L ${geo(15.5, 79.5)} L ${geo(16.0, 79.5)} L ${geo(16.5, 79.5)} L ${geo(16.5, 79.0)} L ${geo(16.5, 78.5)} L ${geo(16.0, 78.0)} L ${geo(15.5, 78.0)} L ${geo(15.0, 78.0)} L ${geo(14.5, 77.5)} L ${geo(14.0, 77.5)} L ${geo(13.5, 77.5)} L ${geo(13.8, 78.0)} L ${geo(14.0, 78.5)} L ${geo(14.5, 79.0)} L ${geo(14.5, 79.5)} L ${geo(14.0, 79.5)} L ${geo(13.8, 79.5)} Z`,
+    cx: 286,
+    cy: 559,
+    originalColor: '#95D5CE',
+    path: 'M 316 468 L 345 477 L 368 486 L 406 478 L 390 495 L 365 515 L 344 534 L 321 551 L 314 576 L 314 597 L 298 602 L 275 593 L 260 577 L 260 555 L 265 536 L 292 535 L 311 521 L 322 506 L 329 487 Z',
     unescoCount: 0,
     topAttraction: 'Gandikota Canyon & Lepakshi'
   },
   {
+    stateId: 'TN',
     id: 'tamil-nadu',
     name: 'Tamil Nadu',
+    slug: 'tamil-nadu',
     capital: 'Chennai',
+    isUT: false,
     zone: 'South',
-    ...geoXY(11.0, 79.0),
-    path: `M ${geo(13.5, 80.0)} L ${geo(13.0, 80.2)} L ${geo(12.5, 80.0)} L ${geo(12.0, 80.0)} L ${geo(11.5, 80.0)} L ${geo(11.0, 79.8)} L ${geo(10.5, 79.5)} L ${geo(10.0, 79.3)} L ${geo(9.5, 79.0)} L ${geo(9.0, 78.5)} L ${geo(8.5, 78.0)} L ${geo(8.0, 77.5)} L ${geo(8.5, 77.0)} L ${geo(9.0, 77.0)} L ${geo(9.5, 77.0)} L ${geo(10.0, 77.0)} L ${geo(10.5, 77.0)} L ${geo(11.0, 77.0)} L ${geo(11.5, 77.0)} L ${geo(11.8, 76.5)} L ${geo(12.0, 77.0)} L ${geo(12.5, 77.5)} L ${geo(13.0, 77.5)} L ${geo(13.5, 77.5)} L ${geo(13.8, 78.0)} L ${geo(13.8, 78.5)} L ${geo(13.8, 79.0)} L ${geo(13.8, 79.5)} L ${geo(13.5, 80.0)} Z`,
+    cx: 276,
+    cy: 663,
+    originalColor: '#AEAAD7',
+    path: 'M 314 597 L 313 611 L 308 631 L 304 648 L 296 664 L 289 684 L 280 703 L 262 723 L 250 730 L 239 721 L 244 704 L 240 685 L 240 666 L 241 649 L 241 642 L 259 622 L 268 608 L 275 593 L 298 602 Z',
     unescoCount: 5,
     topAttraction: 'Great Chola Temples & Mahabalipuram'
   },
   {
+    stateId: 'KL',
     id: 'kerala',
     name: 'Kerala',
+    slug: 'kerala',
     capital: 'Thiruvananthapuram',
+    isUT: false,
     zone: 'South',
-    ...geoXY(10.0, 76.5),
-    path: `M ${geo(12.5, 74.8)} L ${geo(12.0, 75.0)} L ${geo(11.8, 75.5)} L ${geo(11.5, 76.0)} L ${geo(11.0, 76.0)} L ${geo(10.5, 76.2)} L ${geo(10.0, 76.5)} L ${geo(9.5, 76.5)} L ${geo(9.0, 76.5)} L ${geo(8.5, 77.0)} L ${geo(8.0, 77.5)} L ${geo(8.5, 77.0)} L ${geo(9.0, 77.0)} L ${geo(9.5, 77.0)} L ${geo(10.0, 77.0)} L ${geo(10.5, 77.0)} L ${geo(11.0, 77.0)} L ${geo(11.5, 77.0)} L ${geo(11.8, 76.5)} L ${geo(11.5, 76.0)} L ${geo(11.8, 75.5)} L ${geo(12.0, 75.0)} L ${geo(12.5, 74.8)} Z`,
+    cx: 197,
+    cy: 681,
+    originalColor: '#F39E88',
+    path: 'M 192 619 L 200 638 L 218 647 L 222 661 L 226 680 L 228 697 L 239 714 L 250 730 L 239 721 L 244 704 L 240 685 L 240 666 L 241 649 L 229 642 L 209 633 Z',
     unescoCount: 1,
     topAttraction: 'Western Ghats & Padmanabhaswamy'
   },
   {
+    stateId: 'PY',
     id: 'puducherry',
     name: 'Puducherry',
+    slug: 'puducherry',
     capital: 'Puducherry',
     isUT: true,
     zone: 'South',
-    ...geoXY(11.93, 79.83),
-    path: `M ${geo(12.1, 79.7)} L ${geo(12.1, 80.0)} L ${geo(11.8, 80.0)} L ${geo(11.8, 79.7)} Z`,
+    cx: 328,
+    cy: 615,
+    originalColor: '#AEAAD7',
+    path: 'M 303 636 L 308 635 L 308 641 L 303 642 Z',
     unescoCount: 0,
     topAttraction: 'Auroville & French Colony'
   },
-
-  // ===== ISLAND TERRITORIES =====
   {
+    stateId: 'LD',
     id: 'lakshadweep',
     name: 'Lakshadweep',
+    slug: 'lakshadweep',
     capital: 'Kavaratti',
     isUT: true,
     zone: 'Islands',
-    ...geoXY(10.5, 72.5),
-    labelX: geoXY(10.5, 72.5).cx - 20,
-    path: `M ${geo(12.0, 72.0)} L ${geo(12.0, 73.0)} L ${geo(10.0, 73.0)} L ${geo(8.5, 73.5)} L ${geo(8.5, 72.5)} L ${geo(10.0, 72.0)} Z`,
+    cx: 175,
+    cy: 620,
+    originalColor: '#95D5CE',
+    path: 'M 133 645 L 151 644 L 150 682 L 158 720 L 140 721 L 132 683 Z',
     unescoCount: 0,
     topAttraction: 'Agatti & Coral Lagoons'
   },
   {
+    stateId: 'AN',
     id: 'andaman-nicobar',
-    name: 'Andaman & Nicobar',
+    name: 'Andaman and Nicobar Islands',
+    slug: 'andaman-nicobar',
     capital: 'Port Blair',
     isUT: true,
     zone: 'Islands',
-    ...geoXY(11.5, 92.8),
-    path: `M ${geo(13.5, 92.5)} L ${geo(13.5, 93.5)} L ${geo(12.5, 93.5)} L ${geo(12.0, 93.0)} L ${geo(11.0, 92.5)} L ${geo(10.0, 92.5)} L ${geo(9.0, 92.5)} L ${geo(7.5, 93.5)} L ${geo(7.0, 94.0)} L ${geo(6.8, 93.5)} L ${geo(7.0, 93.0)} L ${geo(8.0, 92.5)} L ${geo(9.0, 92.0)} L ${geo(10.0, 92.0)} L ${geo(11.0, 92.0)} L ${geo(12.0, 92.0)} L ${geo(13.0, 92.0)} Z`,
+    cx: 640,
+    cy: 600,
+    originalColor: '#F4A28C',
+    path: 'M 593 590 L 606 590 L 606 616 L 601 633 L 594 652 L 595 688 L 617 736 L 621 750 L 610 752 L 598 743 L 590 719 L 586 676 L 587 629 Z',
     unescoCount: 0,
     topAttraction: 'Cellular Jail & Radhanagar Beach'
-  }
+  },
+
 ];
 
-/**
- * Outer boundary path for India's sovereign territory
- * Traces the full coastline and land borders
- */
-export const INDIA_OUTER_BOUNDARY = `M ${geo(36.9, 73.8)} L ${geo(36.5, 74.5)} L ${geo(35.8, 75.3)} L ${geo(35.5, 76.0)} L ${geo(35.5, 76.8)} L ${geo(35.8, 77.5)} L ${geo(36.0, 78.0)} L ${geo(35.5, 78.5)} L ${geo(35.0, 78.8)} L ${geo(34.5, 78.0)} L ${geo(33.5, 77.0)} L ${geo(32.5, 78.0)} L ${geo(31.5, 79.0)} L ${geo(31.0, 80.0)} L ${geo(30.5, 81.0)} L ${geo(29.5, 81.0)} L ${geo(28.5, 82.0)} L ${geo(27.5, 83.0)} L ${geo(27.0, 83.5)} L ${geo(27.0, 85.5)} L ${geo(27.0, 87.5)} L ${geo(27.0, 88.0)} L ${geo(28.0, 88.0)} L ${geo(28.5, 92.5)} L ${geo(29.0, 94.5)} L ${geo(28.0, 96.0)} L ${geo(27.0, 97.0)} L ${geo(27.0, 95.5)} L ${geo(26.0, 95.0)} L ${geo(25.5, 94.5)} L ${geo(24.5, 94.0)} L ${geo(23.5, 93.5)} L ${geo(22.0, 92.8)} L ${geo(22.0, 92.5)} L ${geo(21.5, 92.0)} L ${geo(21.5, 88.0)} L ${geo(21.5, 87.5)} L ${geo(21.5, 87.0)} L ${geo(20.5, 86.0)} L ${geo(19.8, 85.0)} L ${geo(19.0, 84.0)} L ${geo(19.0, 83.5)} L ${geo(19.5, 82.0)} L ${geo(20.0, 82.0)} L ${geo(20.5, 80.0)} L ${geo(19.0, 79.0)} L ${geo(17.0, 77.0)} L ${geo(16.0, 76.0)} L ${geo(15.0, 73.7)} L ${geo(14.0, 74.0)} L ${geo(13.0, 74.5)} L ${geo(12.0, 75.0)} L ${geo(10.0, 76.5)} L ${geo(8.0, 77.5)} L ${geo(9.0, 78.5)} L ${geo(10.0, 79.3)} L ${geo(11.0, 79.8)} L ${geo(13.0, 80.2)} L ${geo(14.5, 80.0)} L ${geo(16.0, 81.0)} L ${geo(17.5, 80.5)} L ${geo(19.0, 80.0)} L ${geo(20.0, 80.0)} L ${geo(20.5, 80.0)} L ${geo(19.5, 79.5)} L ${geo(19.0, 79.0)} L ${geo(19.5, 73.0)} L ${geo(20.0, 73.0)} L ${geo(20.2, 72.5)} L ${geo(21.0, 72.0)} L ${geo(21.5, 72.0)} L ${geo(22.0, 71.5)} L ${geo(23.0, 70.5)} L ${geo(23.8, 69.8)} L ${geo(22.3, 69.0)} L ${geo(21.0, 69.5)} L ${geo(20.8, 70.0)} L ${geo(21.0, 70.5)} L ${geo(22.5, 70.5)} L ${geo(23.5, 69.5)} L ${geo(24.0, 70.5)} L ${geo(24.5, 71.0)} L ${geo(24.0, 72.0)} L ${geo(23.8, 72.5)} L ${geo(24.0, 73.0)} L ${geo(24.0, 72.0)} L ${geo(24.5, 71.0)} L ${geo(24.0, 70.5)} L ${geo(24.0, 72.0)} L ${geo(24.5, 71.0)} L ${geo(27.0, 69.5)} L ${geo(28.0, 70.0)} L ${geo(29.0, 71.0)} L ${geo(30.0, 71.0)} L ${geo(30.0, 72.5)} L ${geo(30.5, 74.0)} L ${geo(30.5, 74.5)} L ${geo(31.0, 74.0)} L ${geo(32.0, 74.2)} L ${geo(32.5, 74.6)} L ${geo(33.0, 74.3)} L ${geo(34.0, 75.0)} L ${geo(34.6, 75.8)} L ${geo(35.0, 76.2)} L ${geo(35.5, 76.0)} L ${geo(35.8, 75.3)} L ${geo(36.5, 74.5)} L ${geo(36.9, 73.8)} Z`;
+// Outer boundary path for Bharat
+export const INDIA_OUTER_BOUNDARY = 'M 204 38 L 219 42 L 264 63 L 302 86 L 285 110 L 278 134 L 269 146 L 295 167 L 340 195 L 335 209 L 350 240 L 388 265 L 439 274 L 484 287 L 500 267 L 501 246 L 514 248 L 581 258 L 620 231 L 643 221 L 703 248 L 664 268 L 657 287 L 648 307 L 629 336 L 611 370 L 601 389 L 592 380 L 566 352 L 573 333 L 551 316 L 500 296 L 508 339 L 507 392 L 498 401 L 475 404 L 429 451 L 406 478 L 365 515 L 321 551 L 314 597 L 308 631 L 289 684 L 250 730 L 239 714 L 226 680 L 218 647 L 192 619 L 179 572 L 168 548 L 153 515 L 150 477 L 150 441 L 137 424 L 63 407 L 89 383 L 71 369 L 100 354 L 112 341 L 108 325 L 86 287 L 109 258 L 178 213 L 200 208 L 194 184 L 197 160 L 202 141 L 184 117 L 196 84 L 181 70 Z';
 
-/**
- * Simplified India boundary for PoliticalMapLocator (360x420 viewBox)
- */
 export function getLocatorBoundary(): string {
-  const scale = (lat: number, lon: number): string => {
-    const minLat = 7.5, maxLat = 37.5;
-    const minLon = 68.0, maxLon = 97.5;
-    const w = 360, h = 420;
-    const x = ((lon - minLon) / (maxLon - minLon)) * (w - 60) + 30;
-    const y = ((maxLat - lat) / (maxLat - minLat)) * (h - 60) + 30;
-    return `${Math.round(x)} ${Math.round(y)}`;
-  };
-
-  return `M ${scale(36.9, 73.8)} L ${scale(35.5, 76.0)} L ${scale(35.5, 76.8)} L ${scale(36.0, 78.0)} L ${scale(35.0, 78.8)} L ${scale(33.5, 77.0)} L ${scale(31.5, 79.0)} L ${scale(30.5, 81.0)} L ${scale(28.5, 82.0)} L ${scale(27.0, 83.5)} L ${scale(27.0, 85.5)} L ${scale(27.0, 88.0)} L ${scale(28.5, 92.5)} L ${scale(29.0, 94.5)} L ${scale(27.0, 97.0)} L ${scale(26.0, 95.0)} L ${scale(24.5, 94.0)} L ${scale(22.0, 92.5)} L ${scale(21.5, 88.0)} L ${scale(20.5, 86.0)} L ${scale(19.0, 84.0)} L ${scale(19.5, 82.0)} L ${scale(20.0, 80.0)} L ${scale(17.0, 77.0)} L ${scale(15.0, 73.7)} L ${scale(12.0, 75.0)} L ${scale(8.0, 77.5)} L ${scale(10.0, 79.3)} L ${scale(13.0, 80.2)} L ${scale(16.0, 81.0)} L ${scale(19.0, 80.0)} L ${scale(20.0, 73.0)} L ${scale(21.0, 72.0)} L ${scale(23.0, 70.5)} L ${scale(22.3, 69.0)} L ${scale(21.0, 69.5)} L ${scale(22.5, 70.5)} L ${scale(24.5, 71.0)} L ${scale(24.0, 72.0)} L ${scale(27.0, 69.5)} L ${scale(30.0, 71.0)} L ${scale(30.5, 74.5)} L ${scale(32.5, 74.6)} L ${scale(34.6, 75.8)} L ${scale(36.9, 73.8)} Z`;
+  return INDIA_OUTER_BOUNDARY;
 }

@@ -105,6 +105,17 @@
   perspective: 1000px;
 }
 
+/* Map border beam animation */
+@keyframes mapDash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-map-dash {
+  animation: mapDash 12s linear infinite;
+}
+
 /* Print optimizations */
 @media print {
   .no-print {

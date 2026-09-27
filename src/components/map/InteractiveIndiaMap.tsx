@@ -34,10 +34,50 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 import { STATES_DATA } from '../../data/statesData';
-import { INDIA_REGIONS, type IndiaRegion, geoXY } from '../../data/indiaMapPaths';
+import { INDIA_REGIONS, type IndiaRegion, geoXY, INDIA_OUTER_BOUNDARY } from '../../data/indiaMapPaths';
 import { ODYSSEY_STOPS } from '../../data/mapOdysseyData';
 import { useLanguage } from '../../context/LanguageContext';
 import { heritageAudio } from '../../utils/audioService';
+
+// Authentic Devanagari script names for all states and UTs
+const STATE_HINDI_NAMES: Record<string, string> = {
+  'ladakh': 'लद्दाख',
+  'jammu-kashmir': 'जम्मू और कश्मीर',
+  'himachal-pradesh': 'हिमाचल प्रदेश',
+  'punjab': 'पंजाब',
+  'chandigarh': 'चंडीगढ़',
+  'uttarakhand': 'उत्तराखंड',
+  'haryana': 'हरियाणा',
+  'delhi': 'दिल्ली',
+  'rajasthan': 'राजस्थान',
+  'gujarat': 'गुजरात',
+  'dadra-nagar-haveli-daman-diu': 'दादरा और नगर हवेली',
+  'uttar-pradesh': 'उत्तर प्रदेश',
+  'madhya-pradesh': 'मध्य प्रदेश',
+  'chhattisgarh': 'छत्तीसगढ़',
+  'bihar': 'बिहार',
+  'jharkhand': 'झारखंड',
+  'odisha': 'ओडिशा',
+  'west-bengal': 'पश्चिम बंगाल',
+  'sikkim': 'सिक्किम',
+  'assam': 'असम',
+  'arunachal-pradesh': 'अरुणाचल प्रदेश',
+  'nagaland': 'नागालैंड',
+  'manipur': 'मणिपुर',
+  'mizoram': 'मिज़ोरम',
+  'tripura': 'त्रिपुरा',
+  'meghalaya': 'मेघालय',
+  'maharashtra': 'महाराष्ट्र',
+  'goa': 'गोवा',
+  'karnataka': 'कर्नाटक',
+  'telangana': 'तेलंगाना',
+  'andhra-pradesh': 'आंध्र प्रदेश',
+  'tamil-nadu': 'तमिलनाडु',
+  'kerala': 'केरल',
+  'puducherry': 'पुडुचेरी',
+  'lakshadweep': 'लक्षद्वीप',
+  'andaman-nicobar': 'अंडमान और निकोबार द्वीप'
+};
 
 type FilterCategory = 'all' | 'unesco' | 'temple' | 'fort' | 'palace' | 'museum' | 'beach' | 'gem' | 'festival' | 'cuisine';
 
@@ -96,6 +136,33 @@ export const InteractiveIndiaMap: React.FC = () => {
   });
   const [hoveredRegion, setHoveredRegion] = useState<IndiaRegion | null>(null);
   const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  // Sovereign National Border Display Toggle
+  const [showNationalBorder, setShowNationalBorder] = useState<boolean>(true);
+  const lastHoveredSlugRef = useRef<string | null>(null);
+
+  // Soft haptic audio chime on state hover
+  const playHoverChime = () => {
+    try {
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (AudioCtx) {
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(659.25, ctx.currentTime); // E5 note
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.05); // A5 note
+        gain.gain.setValueAtTime(0.02, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.08);
+      }
+    } catch {
+      // Audio context before user gesture ignored safely
+    }
+  };
 
   // Map Camera: Zoom & Pan
   const [zoomLevel, setZoomLevel] = useState<number>(1);
@@ -722,17 +789,36 @@ export const InteractiveIndiaMap: React.FC = () => {
               >
                 <RotateCcw className="w-4 h-4 text-white/80" />
               </button>
+              <button
+                onClick={() => setShowNationalBorder(!showNationalBorder)}
+                className={`p-2 rounded-xl transition-all text-xs ${showNationalBorder ? 'bg-[#DFB757]/25 text-[#DFB757] border border-[#DFB757]/60' : 'hover:bg-white/20 text-white/50'}`}
+                title={showNationalBorder ? 'National Sovereign Border Glow: ON' : 'National Sovereign Border Glow: OFF'}
+              >
+                <Layers className="w-4 h-4" />
+              </button>
               <div className="text-[9px] font-mono text-center text-[#C49A3A] pt-1 border-t border-white/10">
                 {Math.round(zoomLevel * 100)}%
               </div>
             </div>
 
-            {/* Currently Active State Badge on Canvas */}
-            <div className="absolute top-16 left-6 z-20 hidden sm:flex items-center space-x-2 bg-black/75 border border-[#C49A3A]/40 px-3 py-1.5 rounded-2xl backdrop-blur-md">
-              <span className="w-6 h-5 rounded bg-[#C49A3A] text-[#083B2D] font-mono text-[10px] flex items-center justify-center font-bold">
-                {activeRegion.stateId}
+            {/* Live Active / Hovering State Badge on Canvas */}
+            <div className="absolute top-16 left-6 z-20 hidden sm:flex items-center space-x-2.5 bg-black/85 border border-[#C49A3A]/50 px-3.5 py-2 rounded-2xl backdrop-blur-md shadow-2xl transition-all duration-200">
+              <span className="w-7 h-6 rounded-lg bg-gradient-to-br from-[#DFB757] to-[#C49A3A] text-[#083B2D] font-mono text-[11px] flex items-center justify-center font-black shadow-inner">
+                {hoveredRegion ? hoveredRegion.stateId : activeRegion.stateId}
               </span>
-              <span className="text-xs font-serif font-bold text-[#DFB757]">{activeRegion.name}</span>
+              <div className="flex flex-col">
+                <div className="flex items-center space-x-1.5">
+                  <span className="text-xs font-serif font-bold text-[#DFB757]">
+                    {hoveredRegion ? hoveredRegion.name : activeRegion.name}
+                  </span>
+                  <span className="text-[10px] text-white/60 font-serif">
+                    ({STATE_HINDI_NAMES[(hoveredRegion || activeRegion).slug] || ''})
+                  </span>
+                </div>
+                <span className="text-[9px] font-mono text-white/60">
+                  {hoveredRegion ? `${hoveredRegion.capital} • ${hoveredRegion.zone} Zone • ${hoveredRegion.unescoCount} UNESCO` : `Active Dossier • Hover state to inspect`}
+                </span>
+              </div>
             </div>
 
             {/* 3D SVG Map Canvas with Parallax Tilt */}
@@ -765,6 +851,18 @@ export const InteractiveIndiaMap: React.FC = () => {
                     <stop offset="0%" stopColor="#2E7D32" stopOpacity="0.55" />
                     <stop offset="100%" stopColor="#1B5E20" stopOpacity="0.7" />
                   </linearGradient>
+
+                  <linearGradient id="nationalBorderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.85" />
+                    <stop offset="50%" stopColor="#FFF2A7" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#C49A3A" stopOpacity="0.85" />
+                  </linearGradient>
+
+                  <radialGradient id="stateHoverShimmer" cx="50%" cy="50%" r="55%">
+                    <stop offset="0%" stopColor="#DFB757" stopOpacity="0.42" />
+                    <stop offset="60%" stopColor="#C49A3A" stopOpacity="0.28" />
+                    <stop offset="100%" stopColor="#083B2D" stopOpacity="0.18" />
+                  </radialGradient>
 
                   <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
                     <feGaussianBlur stdDeviation="3" result="blur" />
@@ -841,6 +939,16 @@ export const InteractiveIndiaMap: React.FC = () => {
                       onDoubleClick={() => handleNavigateToState(region.slug)}
                       onMouseEnter={(e) => {
                         setHoveredRegion(region);
+                        playHoverChime();
+                        const rect = mapContainerRef.current?.getBoundingClientRect();
+                        if (rect) {
+                          setTooltipPos({
+                            x: e.clientX - rect.left,
+                            y: e.clientY - rect.top
+                          });
+                        }
+                      }}
+                      onMouseMove={(e) => {
                         const rect = mapContainerRef.current?.getBoundingClientRect();
                         if (rect) {
                           setTooltipPos({
@@ -860,6 +968,90 @@ export const InteractiveIndiaMap: React.FC = () => {
                     />
                   );
                 })}
+
+                {/* National Sovereign Perimeter Trace (High-Precision Survey of India Outer Boundary) */}
+                <path
+                  d={INDIA_OUTER_BOUNDARY}
+                  fill="none"
+                  stroke={showNationalBorder ? 'url(#nationalBorderGradient)' : 'rgba(223, 183, 87, 0.35)'}
+                  strokeWidth={showNationalBorder ? '1.8' : '1.0'}
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  vectorEffect="non-scaling-stroke"
+                  className="pointer-events-none transition-all duration-300"
+                  style={{
+                    filter: showNationalBorder ? 'drop-shadow(0 0 6px rgba(223, 183, 87, 0.75))' : 'none'
+                  }}
+                />
+
+                {/* Dedicated Elevated Hover Layer (Renders on Top of All Paths for 100% Crisp Glow) */}
+                {hoveredRegion && (
+                  <g className="pointer-events-none transition-all duration-200">
+                    {/* 1. Atmospheric Golden Ambient Aura */}
+                    <path
+                      d={hoveredRegion.path}
+                      fill="rgba(223, 183, 87, 0.20)"
+                      stroke="#DFB757"
+                      strokeWidth="7"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      vectorEffect="non-scaling-stroke"
+                      className="opacity-50 blur-[3px]"
+                    />
+
+                    {/* 2. Precision Radiant Golden State Boundary with Shimmer Fill */}
+                    <path
+                      d={hoveredRegion.path}
+                      fill="url(#stateHoverShimmer)"
+                      stroke="#FFF6C8"
+                      strokeWidth="2.8"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      vectorEffect="non-scaling-stroke"
+                      style={{
+                        filter: 'drop-shadow(0 0 10px rgba(223, 183, 87, 0.95)) drop-shadow(0 0 22px rgba(196, 154, 58, 0.5))'
+                      }}
+                    />
+
+                    {/* 3. Traveling Golden Photon Accent Line */}
+                    <path
+                      d={hoveredRegion.path}
+                      fill="none"
+                      stroke="#DFB757"
+                      strokeWidth="2.2"
+                      strokeDasharray="12 8"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      vectorEffect="non-scaling-stroke"
+                      className="animate-map-dash opacity-90"
+                    />
+
+                    {/* 4. State Center Sonar Beacon Pulse */}
+                    <circle
+                      cx={hoveredRegion.cx}
+                      cy={hoveredRegion.cy}
+                      r="14"
+                      fill="none"
+                      stroke="#DFB757"
+                      strokeWidth="1.8"
+                      className="animate-ping opacity-75"
+                    />
+                    <circle
+                      cx={hoveredRegion.cx}
+                      cy={hoveredRegion.cy}
+                      r="5"
+                      fill="#FFFFFF"
+                      stroke="#DFB757"
+                      strokeWidth="2.2"
+                    />
+                    <circle
+                      cx={hoveredRegion.cx}
+                      cy={hoveredRegion.cy}
+                      r="2"
+                      fill="#083B2D"
+                    />
+                  </g>
+                )}
 
                 {/* Animated Storytelling Flight Path (In Odyssey Mode) */}
                 {isOdysseyMode && (
@@ -888,56 +1080,62 @@ export const InteractiveIndiaMap: React.FC = () => {
             <AnimatePresence>
               {hoveredRegion && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.92, y: 8 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.92, y: 8 }}
+                  transition={{ duration: 0.15 }}
                   style={{
                     position: 'absolute',
-                    left: `${Math.min(tooltipPos.x + 15, 360)}px`,
-                    top: `${Math.max(tooltipPos.y - 130, 20)}px`,
+                    left: `${Math.min(Math.max(tooltipPos.x + 18, 16), (mapContainerRef.current?.clientWidth || 600) - 280)}px`,
+                    top: `${Math.min(Math.max(tooltipPos.y - 145, 16), (mapContainerRef.current?.clientHeight || 600) - 230)}px`,
                     pointerEvents: 'none'
                   }}
-                  className="z-50 p-4 rounded-2xl bg-black/95 text-white border border-[#C49A3A] shadow-2xl backdrop-blur-xl w-64 space-y-2"
+                  className="z-50 p-4 rounded-2xl bg-[#083B2D]/95 text-white border-2 border-[#DFB757] shadow-[0_10px_35px_rgba(0,0,0,0.85)] backdrop-blur-2xl w-68 space-y-2.5"
                 >
-                  <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
-                    <div className="flex items-center space-x-1.5">
-                      <span className="w-6 h-5 rounded bg-[#C49A3A] text-[#083B2D] font-mono text-[10px] flex items-center justify-center font-bold">
+                  {/* Top Header with State Badge & Hindi name */}
+                  <div className="flex items-center justify-between border-b border-[#C49A3A]/30 pb-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-7 h-6 rounded-md bg-[#DFB757] text-[#083B2D] font-mono text-[11px] flex items-center justify-center font-black shadow-sm">
                         {hoveredRegion.stateId}
                       </span>
-                      <span className="font-serif text-sm font-bold text-[#DFB757]">
-                        {hoveredRegion.name}
-                      </span>
+                      <div>
+                        <h4 className="font-serif text-sm font-bold text-[#FFF2A7] leading-tight">
+                          {hoveredRegion.name}
+                        </h4>
+                        <p className="text-[10px] text-[#DFB757]/80 font-serif">
+                          {STATE_HINDI_NAMES[hoveredRegion.slug] || ''}
+                        </p>
+                      </div>
                     </div>
-                    <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-white/70">
-                      {hoveredRegion.isUT ? 'Union Territory' : 'State'}
+                    <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/15">
+                      {hoveredRegion.zone}
                     </span>
                   </div>
 
-                  <div className="space-y-1 text-[11px] font-mono text-white/80">
-                    <div className="flex justify-between">
-                      <span className="text-white/50">Capital:</span>
-                      <strong>{hoveredRegion.capital}</strong>
+                  {/* Stats Grid */}
+                  <div className="space-y-1.5 text-[11px] font-mono text-white/90">
+                    <div className="flex items-center justify-between">
+                      <span className="text-white/50 flex items-center gap-1"><MapPin className="w-3 h-3 text-[#DFB757]" /> Capital:</span>
+                      <strong className="text-white">{hoveredRegion.capital}</strong>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/50">Top Landmark:</span>
-                      <strong className="text-[#C49A3A] truncate max-w-[130px]">
-                        {hoveredRegion.topAttraction}
+                    <div className="flex items-center justify-between">
+                      <span className="text-white/50 flex items-center gap-1"><Landmark className="w-3 h-3 text-[#DFB757]" /> UNESCO Sites:</span>
+                      <strong className="text-[#DFB757] flex items-center gap-0.5">
+                        <Star className="w-3 h-3 fill-[#DFB757]" /> {hoveredRegion.unescoCount}
                       </strong>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/50">UNESCO Sites:</span>
-                      <strong>{hoveredRegion.unescoCount}</strong>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/50">Status:</span>
-                      <strong className={visitedStates.includes(hoveredRegion.slug) ? 'text-green-400' : 'text-gray-400'}>
-                        {visitedStates.includes(hoveredRegion.slug) ? '✓ Visited' : 'Unexplored'}
+                    <div className="flex items-start justify-between gap-2 pt-0.5">
+                      <span className="text-white/50 flex items-center gap-1 shrink-0"><Sparkles className="w-3 h-3 text-[#DFB757]" /> Highlight:</span>
+                      <strong className="text-[#DFB757] text-right truncate text-[10.5px]">
+                        {hoveredRegion.topAttraction}
                       </strong>
                     </div>
                   </div>
 
-                  <div className="pt-1 text-[10px] text-center text-[#DFB757] font-sans border-t border-white/10 flex items-center justify-center space-x-1">
-                    <span>Click to zoom • Double-click to open page</span>
+                  {/* Call to action footer */}
+                  <div className="pt-2 text-[10px] text-center text-[#FFF2A7] font-sans border-t border-white/15 flex items-center justify-center space-x-1.5 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DFB757] animate-ping" />
+                    <span>Click to zoom & explore • Double-click to visit</span>
                   </div>
                 </motion.div>
               )}

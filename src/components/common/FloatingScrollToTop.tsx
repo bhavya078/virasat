@@ -37,14 +37,14 @@ export const FloatingScrollToTop: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          initial={{ opacity: 0, scale: 0.7, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.7, y: 20 }}
+          initial={{ opacity: 0, scale: 0.7, x: -30 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          exit={{ opacity: 0, scale: 0.7, x: -30 }}
           whileHover={{ scale: 1.1, boxShadow: '0 0 20px rgba(196,154,58,0.6)' }}
           whileTap={{ scale: 0.92 }}
           onClick={scrollToTop}
-          aria-label="Scroll to top of sovereign atlas"
-          className="fixed bottom-6 right-24 z-40 w-12 h-12 rounded-full bg-[#083B2D] border border-[#C49A3A]/40 text-[#C49A3A] flex items-center justify-center shadow-luxury cursor-pointer backdrop-blur-md"
+          aria-label="Scroll back to top"
+          className="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full bg-[#083B2D] border border-[#C49A3A]/40 text-[#C49A3A] flex items-center justify-center shadow-luxury cursor-pointer backdrop-blur-md"
         >
           {/* Radial Scroll Progress Ring */}
           <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 44 44">

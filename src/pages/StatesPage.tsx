@@ -20,7 +20,7 @@ import { heritageAudio } from '../utils/audioService';
 import { InteractiveIndiaMap } from '../components/map/InteractiveIndiaMap';
 
 const REGIONS = [
-  { id: 'all', label: 'All 36 States & UTs' },
+  { id: 'all', label: '28 States & 8 UTs' },
   { id: 'north', label: 'North India' },
   { id: 'south', label: 'South India' },
   { id: 'west', label: 'West India' },
@@ -76,7 +76,7 @@ export const StatesPage: React.FC = () => {
             <span>Complete Sovereign Pan-India Atlas</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#083B2D] tracking-tight">
-            All 36 States & Union Territories
+            28 States & 8 Union Territories
           </h1>
           <p className="font-subheading text-lg sm:text-xl text-gray-700 italic">
             Every sovereign state and territory of India with authenticated dynastic lineage, regional royal cuisine, luxury heritage hotels, and verified emergency helplines.
@@ -100,7 +100,7 @@ export const StatesPage: React.FC = () => {
 
             {/* Stats */}
             <div className="flex items-center space-x-4 text-xs font-mono text-gray-500">
-              <span>Showing <strong className="text-[#083B2D]">{statesList.length}</strong> of 36 Regions</span>
+              <span>Showing <strong className="text-[#083B2D]">{statesList.length}</strong> of 28 States & 8 UTs</span>
               <span>•</span>
               <span className="text-[#083B2D] font-semibold">100% Zero-404 Guarantee</span>
             </div>
@@ -170,7 +170,7 @@ export const StatesPage: React.FC = () => {
                     : 'bg-[#FAF8F4] text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                🏛️ 36 Regions Grid
+                🏛️ 28 States & 8 UTs Grid
               </button>
             </div>
           </div>
@@ -183,7 +183,7 @@ export const StatesPage: React.FC = () => {
           </div>
         )}
 
-        {/* 36 States Grid */}
+        {/* 28 States & 8 Union Territories Grid */}
         {(viewMode === 'both' || viewMode === 'grid') && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {statesList.map((state) => (

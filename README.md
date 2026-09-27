@@ -46,7 +46,7 @@
 - **Anatomy of Technique:** 4-stage master breakdown covering raw material preparation, sacred mudras, aesthetic expressions (Navarasas), and public Arangetram.
 - **Masterclass Apprenticeship Guilds:** Verified government craft emporiums, certified GI tags, and artisan homestay residencies.
 
-### 5. 🗺️ Sovereign 36 States & Union Territories Atlas (`/states`)
+### 5. 🗺️ Sovereign 28 States & 8 Union Territories Atlas (`/states`)
 - **Complete Interactive Political Map of India:** State-by-state geopolitical and cultural atlas.
 - **Gastronomic Master Register:** Regional delicacies, street food capitals, and royal confectionery for every state.
 - **Curated 3-Day Algorithmic Routes:** Auto-planned itineraries linked with state heritage sites and hidden gems.
@@ -60,7 +60,7 @@
 - Simulated real-time micro-climate monitoring: Temperature, humidity, wind velocity, precipitation likelihood, sunrise/sunset, and color-coded AQI badges with seasonal packing advisories.
 
 ### 8. 🔍 Global Spotlight Search (`Ctrl+K`)
-- Instant keyboard-driven lookup across all 50 monuments, 50 gems, 50 festivals, 50 traditions, and 36 states with auto-completion and instant navigation.
+- Instant keyboard-driven lookup across all 50 monuments, 50 gems, 50 festivals, 50 traditions, and 28 states & 8 UTs with auto-completion and instant navigation.
 
 ---
 
@@ -142,7 +142,7 @@ src/
 │   ├── hiddenGems.ts         # 50 Untouched destinations with serenity scores
 │   ├── festivals.ts          # 50 Grand celebrations with ritual protocols
 │   ├── culturalExperiences.ts # 50 Master traditions with technique breakdowns
-│   └── statesData.ts         # Complete 36 States & UTs cultural atlas
+│   └── statesData.ts         # Complete 28 States & 8 UTs cultural atlas
 ├── pages/
 │   ├── HomePage.tsx            # Flagship landing experience
 │   ├── ExplorePage.tsx         # 50 Monuments filterable catalog
@@ -153,7 +153,7 @@ src/
 │   ├── FestivalDetailPage.tsx  # Festival ritual & countdown page
 │   ├── CulturePage.tsx         # 50 Cultural traditions index
 │   ├── CultureDetailPage.tsx   # Masterclass technique & lineage page
-│   ├── StatesPage.tsx          # 36 States interactive political map
+│   ├── StatesPage.tsx          # 28 States & 8 UTs interactive political map
 │   └── StateDetailPage.tsx     # State-specific cultural atlas
 ├── services/
 │   ├── entityDetailService.ts  # Deep intelligence resolver for all 150 pages

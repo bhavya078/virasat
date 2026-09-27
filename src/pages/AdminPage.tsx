@@ -212,7 +212,7 @@ export const AdminPage: React.FC = () => {
               VIRASAT Platform Control Center
             </h1>
             <p className="text-xs text-gray-500 font-mono">
-              Production Database v4.2 • Latency: 14ms • 36 Regions Connected • Zero Mock Data
+              Production Database v4.2 • Latency: 14ms • 28 States & 8 Union Territories Connected • Zero Mock Data
             </p>
           </div>
 
@@ -296,7 +296,7 @@ export const AdminPage: React.FC = () => {
               <div className="bg-white p-5 rounded-2xl border border-[#C49A3A]/25 shadow-sm space-y-1">
                 <span className="text-[10px] font-mono text-gray-500 uppercase">States & UTs</span>
                 <strong className="text-3xl font-bold font-serif text-[#083B2D] block">{Object.keys(STATES_DATA).length}</strong>
-                <span className="text-[10px] text-emerald-600 font-mono">All 36 Covered</span>
+                <span className="text-[10px] text-emerald-600 font-mono">28 States & 8 UTs Covered</span>
               </div>
             </div>
 

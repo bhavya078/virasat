@@ -236,7 +236,7 @@ export const AITripPlanner: React.FC = () => {
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup label="All 36 States & Union Territories">
+                  <optgroup label="28 States & 8 Union Territories">
                     {ALL_INDIAN_STATES.map((s) => (
                       <option key={s.id} value={s.name}>
                         {s.name} ({s.region})

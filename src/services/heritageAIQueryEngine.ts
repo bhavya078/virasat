@@ -362,7 +362,7 @@ export class HeritageAIQueryEngine {
       };
     }
 
-    // 9. General State Match across all 36 States & UTs
+    // 9. General State Match across all 28 States & 8 UTs
     const state = Object.values(STATES_DATA).find(s => query.includes(s.name.toLowerCase()) || query.includes(s.slug.toLowerCase()));
     if (state) {
       return {

@@ -82,7 +82,7 @@ export const StateDetailPage: React.FC = () => {
             className="inline-flex items-center space-x-2 text-xs font-semibold text-[#083B2D] hover:text-[#C49A3A] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to All 36 States & UTs</span>
+            <span>Back to 28 States & 8 Union Territories</span>
           </Link>
 
           {/* Quick Helplines */}

@@ -386,7 +386,7 @@ export const InteractiveIndiaMap: React.FC = () => {
         setAIResponse(`Displaying sovereign dossier and landmarks for ${matched.name} (${matched.capital}).`);
       } else {
         setAIResponse(
-          'Scanning Bharat Sovereign Atlas: Found 50 UNESCO monuments, 50 untouched hidden gems, and 50 sacred festivals across all 36 regions.'
+          'Scanning Bharat Sovereign Atlas: Found 50 UNESCO monuments, 50 untouched hidden gems, and 50 sacred festivals across all 28 states and 8 union territories.'
         );
       }
     }
@@ -746,7 +746,7 @@ export const InteractiveIndiaMap: React.FC = () => {
             <div className="w-full flex items-center justify-between text-[11px] font-mono pb-3 border-b border-white/10 text-white/60">
               <div className="flex items-center space-x-2">
                 <Shield className="w-3.5 h-3.5 text-[#C49A3A]" />
-                <span>Survey of India Official Political Map • All 36 States & UTs Clickable</span>
+                <span>Survey of India Official Political Map • 28 States & 8 Union Territories Clickable</span>
               </div>
               <div className="flex items-center space-x-2 text-[10px]">
                 <span className="w-2 h-2 rounded-full bg-[#A3E635] animate-pulse" />

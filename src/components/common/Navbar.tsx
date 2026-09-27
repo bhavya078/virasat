@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
     { label: t('navHiddenGems', 'Hidden Gems'), path: '/hidden-gems' },
     { label: t('navFestivals', 'Festivals'), path: '/festivals' },
     { label: t('navCulture', 'Culture'), path: '/culture' },
-    { label: t('navStates', '36 States'), path: '/states' },
+    { label: t('navStates', '28 States & 8 UTs'), path: '/states' },
     { label: t('navWeather', 'Weather'), path: '/weather' },
     { label: t('navBudget', 'Budget'), path: '/budget' },
     { label: t('navAdmin', 'Admin'), path: '/admin' }

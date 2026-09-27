@@ -263,8 +263,7 @@ export const CinematicHero: React.FC = () => {
           </div>
           <div className="flex items-center space-x-1.5">
             <span className="w-2 h-2 rounded-full bg-[#C49A3A]" />
-            <strong className="text-white text-sm">36</strong>
-            <span>States & UTs</span>
+            <strong className="text-white text-sm">28 States & 8 UTs</strong>
           </div>
         </motion.div>
       </motion.div>

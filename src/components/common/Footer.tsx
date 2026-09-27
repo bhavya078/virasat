@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/states" className="hover:text-[#C49A3A] transition-colors">
-                  36 States & Union Territories
+                  28 States & 8 Union Territories
                 </Link>
               </li>
             </ul>

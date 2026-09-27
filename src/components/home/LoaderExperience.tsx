@@ -186,34 +186,34 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
           </svg>
 
           {/* Central Logo & Rotating Ashoka Chakra Relief */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-            {/* Soft dark backing pill for text contrast */}
-            <div className="px-5 py-3 rounded-2xl bg-black/70 border border-[#DFB757]/40 backdrop-blur-md flex flex-col items-center shadow-2xl">
-              {/* Rotating 24-Spoke Golden Chakra */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-                className="w-10 h-10 mb-1.5 relative flex items-center justify-center"
-              >
-                <div className="w-9 h-9 rounded-full border border-[#DFB757] flex items-center justify-center shadow-[0_0_12px_rgba(223,183,87,0.7)]">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#DFB757]" />
-                  {[...Array(12)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-full h-[1px] bg-[#DFB757]/70"
-                      style={{ transform: `rotate(${i * 15}deg)` }}
-                    />
-                  ))}
-                </div>
-              </motion.div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
+            {/* Rotating 24-Spoke Golden Chakra */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
+              className="w-12 h-12 mb-2 relative flex items-center justify-center filter drop-shadow-[0_0_16px_rgba(223,183,87,0.65)]"
+            >
+              <div className="w-11 h-11 rounded-full border-[1.5px] border-[#DFB757] flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-gradient-to-br from-[#FFF4B8] to-[#C49A3A] shadow-inner" />
+                {[...Array(12)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-[#DFB757] to-transparent"
+                    style={{ transform: `rotate(${i * 15}deg)` }}
+                  />
+                ))}
+              </div>
+            </motion.div>
 
-              <span className="font-serif text-2xl md:text-3xl tracking-[0.25em] text-[#FFF2A7] font-bold drop-shadow-md">
-                VIRASAT
-              </span>
-              <span className="text-[9px] md:text-[10px] tracking-[0.3em] text-[#DFB757] uppercase font-mono mt-0.5">
-                BHARAT HERITAGE OS
-              </span>
-            </div>
+            {/* Bold VIRASAT in Luxury Gold */}
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black tracking-[0.28em] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFDF0] via-[#DFB757] to-[#C49A3A] filter drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] drop-shadow-[0_0_20px_rgba(223,183,87,0.45)]">
+              VIRASAT
+            </h1>
+
+            {/* Small Elegant Bharat Tagline */}
+            <span className="text-[8px] sm:text-[9px] tracking-[0.45em] text-[#DFB757]/80 uppercase font-mono mt-1 drop-shadow-sm font-medium">
+              BHARAT HERITAGE OS
+            </span>
           </div>
         </div>
 

@@ -137,8 +137,6 @@ export const InteractiveIndiaMap: React.FC = () => {
   const [hoveredRegion, setHoveredRegion] = useState<IndiaRegion | null>(null);
   const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
-  // Sovereign National Border Display Toggle
-  const [showNationalBorder, setShowNationalBorder] = useState<boolean>(true);
   const lastHoveredSlugRef = useRef<string | null>(null);
 
   // Soft haptic audio chime on state hover
@@ -789,13 +787,6 @@ export const InteractiveIndiaMap: React.FC = () => {
               >
                 <RotateCcw className="w-4 h-4 text-white/80" />
               </button>
-              <button
-                onClick={() => setShowNationalBorder(!showNationalBorder)}
-                className={`p-2 rounded-xl transition-all text-xs ${showNationalBorder ? 'bg-[#DFB757]/25 text-[#DFB757] border border-[#DFB757]/60' : 'hover:bg-white/20 text-white/50'}`}
-                title={showNationalBorder ? 'National Sovereign Border Glow: ON' : 'National Sovereign Border Glow: OFF'}
-              >
-                <Layers className="w-4 h-4" />
-              </button>
               <div className="text-[9px] font-mono text-center text-[#C49A3A] pt-1 border-t border-white/10">
                 {Math.round(zoomLevel * 100)}%
               </div>
@@ -882,33 +873,8 @@ export const InteractiveIndiaMap: React.FC = () => {
                 />
 
                 {/* Vector Layer: Clean, Refined Interactive State Outlines */}
+                {/* Vector Layer: Pure Invisible Interactive Hit-Zones (Zero Outlines, Zero Yellow Lines) */}
                 {INDIA_REGIONS.map((region) => {
-                  const isSelected = activeRegion.slug === region.slug;
-                  const isHovered = hoveredRegion?.slug === region.slug;
-                  const isVisited = visitedStates.includes(region.slug);
-                  const isFilteredMatch = filteredStateSlugs.includes(region.slug);
-                  const isAIHighlighted = aiHighlightedStates.includes(region.slug);
-
-                  // Strict rule: ZERO area fill highlight — authentic map is 100% visible
-                  const pathFill = 'transparent';
-                  let strokeColor = 'rgba(255, 255, 255, 0.15)';
-                  let strokeWidth = '0.8';
-
-                  // Interaction Overrides (Outlines only, no area fill)
-                  if (isHovered) {
-                    strokeColor = '#DFB757';
-                    strokeWidth = '2.2';
-                  } else if (isSelected) {
-                    strokeColor = '#C49A3A';
-                    strokeWidth = '2';
-                  } else if (isFilteredMatch) {
-                    strokeColor = '#E67E22';
-                    strokeWidth = '1.6';
-                  } else if (isVisited) {
-                    strokeColor = '#A3E635';
-                    strokeWidth = '1.2';
-                  }
-
                   return (
                     <path
                       key={region.slug}
@@ -917,12 +883,9 @@ export const InteractiveIndiaMap: React.FC = () => {
                       data-state-name={region.name}
                       data-slug={region.slug}
                       d={region.path}
-                      fill={pathFill}
-                      stroke={strokeColor}
-                      strokeWidth={strokeWidth}
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      vectorEffect="non-scaling-stroke"
+                      fill="transparent"
+                      stroke="transparent"
+                      strokeWidth="0"
                       onClick={() => handleStateClick(region)}
                       onDoubleClick={() => handleNavigateToState(region.slug)}
                       onMouseEnter={(e) => {
@@ -947,50 +910,10 @@ export const InteractiveIndiaMap: React.FC = () => {
                           });
                         }
                       }}
-                      className="cursor-pointer transition-all duration-200"
-                      style={{
-                        filter: isHovered
-                          ? 'drop-shadow(0 0 8px rgba(223, 183, 87, 0.85))'
-                          : isSelected
-                          ? 'drop-shadow(0 0 10px rgba(196, 154, 58, 0.75))'
-                          : 'none'
-                      }}
+                      className="cursor-pointer transition-none"
                     />
                   );
                 })}
-
-                {/* National Sovereign Perimeter Trace (Survey of India Outline) */}
-                <path
-                  d={INDIA_OUTER_BOUNDARY}
-                  fill="none"
-                  stroke={showNationalBorder ? 'url(#nationalBorderGradient)' : 'rgba(223, 183, 87, 0.35)'}
-                  strokeWidth={showNationalBorder ? '1.8' : '1.0'}
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  vectorEffect="non-scaling-stroke"
-                  className="pointer-events-none transition-all duration-300"
-                  style={{
-                    filter: showNationalBorder ? 'drop-shadow(0 0 6px rgba(223, 183, 87, 0.75))' : 'none'
-                  }}
-                />
-
-                {/* Dedicated Elevated Hover Layer (Clean Outline Only — ZERO Area Highlight) */}
-                {hoveredRegion && (
-                  <g className="pointer-events-none transition-all duration-200">
-                    <path
-                      d={hoveredRegion.path}
-                      fill="none"
-                      stroke="#DFB757"
-                      strokeWidth="2.4"
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      vectorEffect="non-scaling-stroke"
-                      style={{
-                        filter: 'drop-shadow(0 0 6px rgba(223, 183, 87, 0.85))'
-                      }}
-                    />
-                  </g>
-                )}
 
                 {/* Animated Storytelling Flight Path (In Odyssey Mode) */}
                 {isOdysseyMode && (

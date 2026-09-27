@@ -123,6 +123,7 @@ export function App() {
             <Route path="/culture-detail/:slug" element={<CultureDetailPage />} />
             <Route path="/states" element={<StatesPage />} />
             <Route path="/state/:slug" element={<StateDetailPage />} />
+            <Route path="/states/:slug" element={<StateDetailPage />} />
             <Route path="/ai-planner" element={<AITripPlanner />} />
             <Route path="/weather" element={<WeatherExperience />} />
             <Route path="/budget" element={<BudgetPlanner />} />

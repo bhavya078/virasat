@@ -235,7 +235,7 @@ export interface HotelPlace {
   distanceKm: string;
   address: string;
   image: string;
-  mapUrl: string;
+  mapUrl?: string;
   website?: string;
   phone?: string;
 }
@@ -252,7 +252,7 @@ export interface RestaurantPlace {
   timings: string;
   image: string;
   address: string;
-  mapUrl: string;
+  mapUrl?: string;
   phone?: string;
   mustTry: string;
 }

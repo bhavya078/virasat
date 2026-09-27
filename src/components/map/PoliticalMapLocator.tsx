@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Compass, ExternalLink, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getLocatorBoundary } from '../../data/indiaMapPaths';
 
 interface PoliticalMapLocatorProps {
   monumentName: string;
@@ -70,45 +71,14 @@ export const PoliticalMapLocator: React.FC<PoliticalMapLocatorProps> = ({
 
           {/* Sovereign Outer Boundary of Bharat */}
           <path
-            d="M 125 35
-               C 135 20, 160 15, 175 22
-               C 190 28, 205 38, 215 50
-               C 225 65, 235 85, 220 100
-               C 210 110, 225 125, 240 130
-               C 260 135, 275 140, 290 145
-               C 315 148, 335 152, 340 165
-               C 345 180, 330 195, 310 195
-               C 290 195, 275 200, 265 210
-               C 255 225, 260 250, 260 270
-               C 260 295, 245 320, 230 345
-               C 215 370, 195 395, 180 405
-               C 165 395, 150 365, 140 335
-               C 130 305, 120 275, 115 250
-               C 110 230, 95 220, 75 225
-               C 50 230, 40 215, 55 200
-               C 70 185, 85 160, 95 135
-               C 105 110, 115 70, 125 35 Z"
+            d={getLocatorBoundary()}
             fill="#083B2D"
             stroke="#C49A3A"
             strokeWidth="1.5"
             strokeLinejoin="round"
           />
 
-          {/* Internal State Partition Skeletal Lines */}
-          <path
-            d="M 125 85 L 180 95 L 215 80
-               M 140 135 L 180 140 L 225 130
-               M 95 185 L 155 180 L 220 175 L 265 180
-               M 75 225 L 140 220 L 195 225 L 255 220
-               M 115 250 L 175 260 L 235 255
-               M 130 305 L 180 300 L 225 315
-               M 150 365 L 180 360 L 205 370"
-            fill="none"
-            stroke="#C49A3A"
-            strokeWidth="0.75"
-            strokeDasharray="2 2"
-            opacity="0.4"
-          />
+
 
           {/* Pulsing Radar Ring on Exact Location */}
           <circle cx={pin.x} cy={pin.y} r="18" fill="url(#locGlow)" className="animate-pulse" />

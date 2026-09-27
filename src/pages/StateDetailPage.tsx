@@ -32,9 +32,18 @@ export const StateDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [isNarrating, setIsNarrating] = useState(false);
 
-  // Look up state by slug or normalize
-  const stateKey = slug?.toLowerCase() || 'rajasthan';
-  const state = STATES_DATA[stateKey] || Object.values(STATES_DATA).find((s) => s.slug === slug) || STATES_DATA['rajasthan'];
+  // Look up state by slug, ID, or normalized name
+  const rawSlug = slug?.toLowerCase().trim() || 'rajasthan';
+  const cleanSlug = rawSlug.replace(/\s+/g, '-');
+  const state = STATES_DATA[cleanSlug] ||
+                STATES_DATA[rawSlug] ||
+                Object.values(STATES_DATA).find((s) =>
+                  s.slug.toLowerCase() === cleanSlug ||
+                  s.id.toLowerCase() === cleanSlug ||
+                  s.name.toLowerCase() === rawSlug ||
+                  s.name.toLowerCase().replace(/\s+/g, '-') === cleanSlug
+                ) ||
+                STATES_DATA['rajasthan'];
 
   // Query linked heritage items for this state
   const stateName = state.name.toLowerCase();

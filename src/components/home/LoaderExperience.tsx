@@ -185,34 +185,24 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
             })}
           </svg>
 
-          {/* Central Logo & Rotating Ashoka Chakra Relief */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
-            {/* Rotating 24-Spoke Golden Chakra */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-              className="w-12 h-12 mb-2 relative flex items-center justify-center filter drop-shadow-[0_0_16px_rgba(223,183,87,0.65)]"
-            >
-              <div className="w-11 h-11 rounded-full border-[1.5px] border-[#DFB757] flex items-center justify-center">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-br from-[#FFF4B8] to-[#C49A3A] shadow-inner" />
-                {[...Array(12)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-[#DFB757] to-transparent"
-                    style={{ transform: `rotate(${i * 15}deg)` }}
-                  />
-                ))}
-              </div>
-            </motion.div>
+          {/* Central Logo & Sovereign Heritage Title */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none text-center px-4">
+            {/* Ambient Gold Glow Aura */}
+            <div className="absolute w-56 h-20 bg-gradient-to-r from-[#F59E0B]/30 via-[#FBBF24]/40 to-[#E67E22]/30 rounded-full filter blur-2xl pointer-events-none" />
 
-            {/* Bold VIRASAT in Luxury Gold */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black tracking-[0.28em] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFDF0] via-[#DFB757] to-[#C49A3A] filter drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] drop-shadow-[0_0_20px_rgba(223,183,87,0.45)]">
+            {/* Radiant Multi-Dimensional 3D Gold VIRASAT */}
+            <h1
+              className="relative font-serif text-4xl sm:text-5xl md:text-6xl font-black tracking-[0.24em] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFEEA] via-[#FBBF24] via-[#F59E0B] to-[#92400E]"
+              style={{
+                filter: 'drop-shadow(0 0 28px rgba(245, 158, 11, 0.7)) drop-shadow(0 4px 14px rgba(0, 0, 0, 0.95))'
+              }}
+            >
               VIRASAT
             </h1>
 
-            {/* Small Elegant Bharat Tagline */}
-            <span className="text-[8px] sm:text-[9px] tracking-[0.45em] text-[#DFB757]/80 uppercase font-mono mt-1 drop-shadow-sm font-medium">
-              BHARAT HERITAGE OS
+            {/* Refined Sovereign Tagline */}
+            <span className="relative text-[10px] sm:text-[11px] md:text-xs tracking-[0.3em] text-[#FDE68A] uppercase font-serif mt-2 font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+              Many Cultures. One India. One Legacy.
             </span>
           </div>
         </div>

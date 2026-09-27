@@ -117,7 +117,7 @@ export const CinematicHero: React.FC = () => {
     <section
       ref={heroRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full h-[100dvh] min-h-[580px] sm:min-h-[700px] flex items-center justify-center overflow-hidden bg-[#041D16]"
+      className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center overflow-hidden bg-[#041D16]"
     >
       {/* LAYER 1: Cinematic Heritage Backdrop with Parallax Tilt */}
       <motion.div
@@ -179,16 +179,16 @@ export const CinematicHero: React.FC = () => {
       {/* Hero Content Container (With collapse animation) */}
       <motion.div
         style={{ scale: heroScale, opacity: heroOpacity, y: heroY }}
-        className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center pt-20 sm:pt-16"
+        className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center pt-16"
       >
         {/* Crown Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C49A3A]/40 text-[#C49A3A] text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] mb-4 sm:mb-6 shadow-gold-glow"
+          className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C49A3A]/40 text-[#C49A3A] text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-gold-glow"
         >
-          <Compass className="w-3.5 h-3.5 text-[#C49A3A] animate-spin-slow shrink-0" />
+          <Compass className="w-3.5 h-3.5 text-[#C49A3A] animate-spin-slow" />
           <span>Sovereign AI Heritage Platform • Bharat</span>
         </motion.div>
 
@@ -197,7 +197,7 @@ export const CinematicHero: React.FC = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4 }}
-          className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FAF8F4] font-bold tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-2xl"
+          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FAF8F4] font-bold tracking-tight leading-[1.08] mb-6 drop-shadow-2xl"
         >
           {t('heroHeadline', 'Discover the Soul of India.')}
         </motion.h1>
@@ -207,7 +207,7 @@ export const CinematicHero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6 }}
-          className="font-subheading text-lg sm:text-2xl md:text-3xl text-[#FAF8F4]/90 max-w-3xl font-light italic leading-relaxed mb-8 sm:mb-10 text-balance"
+          className="font-subheading text-xl sm:text-2xl md:text-3xl text-[#FAF8F4]/90 max-w-3xl font-light italic leading-relaxed mb-10 text-balance"
         >
           {t(
             'heroSubheadline',

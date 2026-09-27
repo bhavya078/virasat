@@ -50,10 +50,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 pt-[env(safe-area-inset-top,0px)] ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         scrolled
-          ? 'py-2.5 sm:py-3.5 bg-[#083B2D]/95 backdrop-blur-xl border-b border-[#C49A3A]/25 shadow-luxury text-[#FAF8F4]'
-          : 'py-3.5 sm:py-6 bg-gradient-to-b from-[#083B2D]/90 via-[#083B2D]/40 to-transparent text-[#FAF8F4]'
+          ? 'py-3.5 bg-[#083B2D]/90 backdrop-blur-xl border-b border-[#C49A3A]/25 shadow-luxury text-[#FAF8F4]'
+          : 'py-6 bg-gradient-to-b from-[#083B2D]/80 via-[#083B2D]/40 to-transparent text-[#FAF8F4]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -188,10 +188,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-[#FAF8F4] active:scale-95 transition-all"
-            aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+            className="xl:hidden p-2 rounded-full bg-white/10 border border-white/20 text-[#FAF8F4]"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 text-[#DFB757]" /> : <Menu className="w-5 h-5 text-[#DFB757]" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -204,18 +203,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="xl:hidden bg-[#083B2D]/98 border-b border-[#C49A3A]/30 backdrop-blur-2xl px-5 sm:px-6 py-5 max-h-[calc(100dvh-5rem)] overflow-y-auto scroll-touch pb-safe shadow-2xl"
+            className="xl:hidden bg-[#083B2D]/98 border-b border-[#C49A3A]/30 backdrop-blur-2xl px-6 py-6"
           >
-            <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mb-5">
+            <div className="grid grid-cols-2 gap-3 mb-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`p-3 rounded-xl text-xs font-medium border flex items-center transition-all ${
+                  className={`p-2.5 rounded-xl text-xs font-medium border ${
                     location.pathname === link.path
-                      ? 'bg-[#C49A3A]/25 border-[#C49A3A] text-[#DFB757] font-semibold'
-                      : 'border-white/10 text-[#FAF8F4]/85 hover:bg-white/5 active:bg-white/10'
+                      ? 'bg-[#C49A3A]/20 border-[#C49A3A] text-[#C49A3A]'
+                      : 'border-white/10 text-[#FAF8F4]/80 hover:bg-white/5'
                   }`}
                 >
                   {link.label}
@@ -225,7 +224,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
             <Link
               to="/ai-planner"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center space-x-2 py-3.5 rounded-full bg-gradient-to-r from-[#C49A3A] via-[#DFB757] to-[#AA7F27] text-[#083B2D] font-bold text-sm shadow-gold-glow active:scale-[0.98] transition-transform"
+              className="w-full flex items-center justify-center space-x-2 py-3 rounded-full bg-gradient-to-r from-[#C49A3A] to-[#DFB757] text-[#083B2D] font-semibold text-sm shadow-gold-glow"
             >
               <Sparkles className="w-4 h-4 text-[#083B2D]" />
               <span>Launch AI Heritage Trip Planner</span>

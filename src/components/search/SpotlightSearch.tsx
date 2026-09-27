@@ -345,7 +345,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 sm:px-6">
+      <div className="fixed inset-0 z-50 flex items-start justify-center pt-12 sm:pt-20 pt-safe px-3 sm:px-6">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -362,8 +362,8 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
           className="relative w-full max-w-2xl bg-[#083B2D] border border-[#C49A3A]/40 rounded-3xl shadow-luxury-hover overflow-hidden z-10 text-[#FAF8F4]"
         >
           {/* Search Input Bar */}
-          <div className="flex items-center px-6 py-4 border-b border-white/10 bg-black/20">
-            <Search className="w-5 h-5 text-[#C49A3A] mr-3" />
+          <div className="flex items-center px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/10 bg-black/20">
+            <Search className="w-5 h-5 text-[#C49A3A] mr-2.5 sm:mr-3 shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -373,13 +373,13 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
                 setSelectedIndex(-1);
               }}
               placeholder="Search 50 monuments, gems, festivals, states..."
-              className="flex-1 bg-transparent text-sm sm:text-base text-white placeholder-white/50 focus:outline-none"
+              className="flex-1 bg-transparent text-base text-white placeholder-white/50 focus:outline-none"
             />
             
             {/* Voice Search Button */}
             <button 
               onClick={toggleVoiceSearch}
-              className={`mr-3 p-1.5 rounded-full transition-colors ${
+              className={`mr-2 sm:mr-3 p-2 rounded-full transition-colors ${
                 isListening ? 'bg-red-500/20 text-red-400 animate-pulse' : 'text-white/50 hover:text-white hover:bg-white/10'
               }`}
               title="Voice Search"
@@ -388,7 +388,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
             </button>
 
             {query && (
-              <button onClick={() => setQuery('')} className="text-white/50 hover:text-white mr-3 text-xs p-1.5 hover:bg-white/10 rounded-full">
+              <button onClick={() => setQuery('')} className="text-white/50 hover:text-white mr-2 sm:mr-3 text-xs p-2 hover:bg-white/10 rounded-full">
                 <X className="w-4 h-4" />
               </button>
             )}
@@ -398,7 +398,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
           </div>
 
           {/* Category Filter Pills */}
-          <div className="px-6 py-2.5 bg-black/10 border-b border-white/5 flex items-center space-x-2 overflow-x-auto text-xs no-scrollbar">
+          <div className="px-4 sm:px-6 py-2.5 bg-black/10 border-b border-white/5 flex items-center space-x-2 overflow-x-auto text-xs no-scrollbar scroll-touch">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -422,7 +422,7 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
           {/* Results List */}
           <div 
             ref={resultsContainerRef}
-            className="max-h-[380px] overflow-y-auto p-4 space-y-4 no-scrollbar"
+            className="max-h-[55dvh] sm:max-h-[420px] overflow-y-auto p-3 sm:p-4 space-y-4 no-scrollbar scroll-touch pb-safe"
           >
             {!query && category === 'all' ? (
               <div className="space-y-6">

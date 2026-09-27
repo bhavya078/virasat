@@ -739,7 +739,8 @@ export const InteractiveIndiaMap: React.FC = () => {
             className="lg:col-span-8 rounded-3xl border border-[#C49A3A]/35 bg-black/40 p-4 sm:p-6 backdrop-blur-md relative overflow-hidden flex flex-col items-center shadow-2xl transition-all"
             style={{
               perspective: '1200px',
-              cursor: isDragging ? 'grabbing' : zoomLevel > 1 ? 'grab' : 'default'
+              cursor: isDragging ? 'grabbing' : zoomLevel > 1 ? 'grab' : 'default',
+              touchAction: zoomLevel > 1 ? 'none' : 'pan-y'
             }}
           >
             {/* Map Geodetic Header */}

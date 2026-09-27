@@ -50,6 +50,7 @@ export const MonumentCard3D: React.FC<CardProps> = ({ site }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       className="perspective-1000 group w-full"
+      style={{ touchAction: 'pan-y' }}
     >
       <motion.div
         animate={{

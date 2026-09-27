@@ -10,11 +10,20 @@
     --surface-stone: #F2EEE6;
     --accent-saffron: #E67E22;
     --text-charcoal: #111827;
+
+    /* iOS Safe Area Insets (iPhone notch, Dynamic Island, Home indicator) */
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
   }
 
   html {
     scroll-behavior: smooth;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   body {
@@ -22,6 +31,17 @@
     color: #111827;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    /* Prevent rubber-band effect horizontally on iOS Safari */
+    overscroll-behavior-x: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Prevent iOS Safari from auto-zooming inputs on focus */
+  @media screen and (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
   }
 
   h1, h2, h3, .font-serif {
@@ -122,3 +142,57 @@
     display: none !important;
   }
 }
+
+/* Mobile & iPhone iOS Ergonomics & Safe Area Utilities */
+.pt-safe {
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
+}
+
+.pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+}
+
+.pb-safe-nav {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+.top-safe {
+  top: env(safe-area-inset-top, 0px);
+}
+
+.bottom-safe {
+  bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.h-dvh {
+  height: 100dvh;
+}
+
+.min-h-dvh {
+  min-height: 100dvh;
+}
+
+/* Smooth momentum touch scrolling for iOS Safari */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* 44x44px minimum tap target compliance for Apple HIG */
+.tap-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Prevent unwanted callout menus on long press on iOS */
+.no-callout {
+  -webkit-touch-callout: none;
+}
+
+/* Global mobile bottom navigation clearance */
+@media (max-width: 1279px) {
+  main {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+

@@ -194,7 +194,7 @@ export const AITripPlanner: React.FC = () => {
   };
 
   return (
-    <div className="py-24 bg-[#FAF8F4] min-h-screen">
+    <div className="pt-24 sm:pt-28 pb-32 xl:pb-24 bg-[#FAF8F4] min-h-dvh">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">

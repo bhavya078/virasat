@@ -44,7 +44,7 @@ export const FloatingScrollToTop: React.FC = () => {
           whileTap={{ scale: 0.92 }}
           onClick={scrollToTop}
           aria-label="Scroll back to top"
-          className="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full bg-[#083B2D] border border-[#C49A3A]/40 text-[#C49A3A] flex items-center justify-center shadow-luxury cursor-pointer backdrop-blur-md"
+          className="fixed bottom-20 xl:bottom-6 left-4 sm:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#083B2D] border border-[#C49A3A]/40 text-[#C49A3A] flex items-center justify-center shadow-luxury cursor-pointer backdrop-blur-md active:scale-90 transition-all"
         >
           {/* Radial Scroll Progress Ring */}
           <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 44 44">

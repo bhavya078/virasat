@@ -9,6 +9,7 @@ import { LoaderExperience } from './components/home/LoaderExperience';
 import { SpotlightSearch } from './components/search/SpotlightSearch';
 import { AIHeritageGuide } from './components/ai/AIHeritageGuide';
 import { FloatingScrollToTop } from './components/common/FloatingScrollToTop';
+import { MobileBottomNav } from './components/common/MobileBottomNav';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -134,6 +135,9 @@ export function App() {
 
         {/* Sovereign Luxury Footer */}
         <Footer />
+
+        {/* Dedicated Mobile & iPhone Bottom Navigation Bar */}
+        <MobileBottomNav onOpenSearch={() => setIsSearchOpen(true)} />
       </div>
     </BrowserRouter>
   );

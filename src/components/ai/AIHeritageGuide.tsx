@@ -130,19 +130,19 @@ export const AIHeritageGuide: React.FC = () => {
   return (
     <>
       {/* Floating Launcher Pill in Bottom-Right */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-20 xl:bottom-6 right-4 sm:right-6 z-40">
         <button
           onClick={() => {
             setIsOpen(!isOpen);
             heritageAudio.playTempleBell();
           }}
-          className="group relative flex items-center space-x-2.5 px-4 py-3 rounded-full bg-[#083B2D] border border-[#C49A3A] text-[#C49A3A] shadow-luxury-hover hover:scale-105 transition-all duration-300"
+          className="group relative flex items-center space-x-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-full bg-[#083B2D] border border-[#C49A3A] text-[#C49A3A] shadow-luxury-hover active:scale-95 hover:scale-105 transition-all duration-300"
           title="Open Dhara AI Heritage Guide"
         >
-          <div className="w-8 h-8 rounded-full bg-[#C49A3A] text-[#083B2D] flex items-center justify-center font-bold font-serif shadow-gold-glow">
-            <Sparkles className="w-4 h-4 text-[#083B2D] animate-spin-slow" />
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C49A3A] text-[#083B2D] flex items-center justify-center font-bold font-serif shadow-gold-glow">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#083B2D] animate-spin-slow" />
           </div>
-          <span className="font-semibold text-xs text-[#FAF8F4] tracking-wide">
+          <span className="font-semibold text-[11px] sm:text-xs text-[#FAF8F4] tracking-wide">
             Dhara AI Guide
           </span>
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
@@ -157,7 +157,7 @@ export const AIHeritageGuide: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-20 right-4 sm:right-6 w-[94vw] sm:w-[480px] h-[640px] max-h-[85vh] bg-[#083B2D]/95 backdrop-blur-2xl border border-[#C49A3A]/40 rounded-3xl shadow-luxury-hover z-50 flex flex-col overflow-hidden text-[#FAF8F4]"
+            className="fixed bottom-[4.5rem] xl:bottom-20 right-3 sm:right-6 left-3 sm:left-auto w-auto sm:w-[480px] h-[580px] max-h-[calc(100dvh-5.5rem)] bg-[#083B2D]/95 backdrop-blur-2xl border border-[#C49A3A]/40 rounded-3xl shadow-luxury-hover z-50 flex flex-col overflow-hidden text-[#FAF8F4]"
           >
             {/* Header */}
             <div className="px-5 py-4 bg-black/40 border-b border-white/10 flex items-center justify-between shrink-0">

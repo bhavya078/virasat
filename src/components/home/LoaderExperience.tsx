@@ -21,6 +21,17 @@ const HERITAGE_BEACONS = [
   { name: 'Cape Comorin', x: 256, y: 728, minProgress: 95 }
 ];
 
+// 32 subtle celestial floating dust particles
+const DUST_PARTICLES = Array.from({ length: 32 }, (_, i) => ({
+  id: i,
+  x: ((i * 31 + 17) % 96) + 2,
+  y: ((i * 47 + 23) % 94) + 3,
+  size: 1 + (i % 4) * 0.5,
+  duration: 8 + (i % 6) * 1.5,
+  delay: (i % 8) * 0.5,
+  opacity: 0.18 + (i % 4) * 0.08,
+}));
+
 interface LoaderProps {
   onComplete: () => void;
 }
@@ -71,10 +82,38 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#083B2D] text-[#FAF8F4] overflow-hidden selection:bg-[#C49A3A]"
       >
-        {/* Ambient subtle background dust particles & gold aura */}
+        {/* Ambient subtle background gold aura */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C49A3A] rounded-full filter blur-[130px] animate-pulse-slow" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#E67E22] rounded-full filter blur-[150px] animate-pulse-slow" />
+        </div>
+
+        {/* Very Subtle Ambient Golden Dust Particles */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          {DUST_PARTICLES.map((p) => (
+            <motion.div
+              key={p.id}
+              className="absolute rounded-full bg-[#DFB757]"
+              style={{
+                left: `${p.x}%`,
+                top: `${p.y}%`,
+                width: `${p.size}px`,
+                height: `${p.size}px`,
+                boxShadow: `0 0 ${p.size * 2}px rgba(223, 183, 87, 0.6)`,
+              }}
+              animate={{
+                y: [0, -30, -60, -25, 0],
+                x: [0, p.id % 2 === 0 ? 12 : -12, p.id % 2 === 0 ? -8 : 8, 0],
+                opacity: [0, p.opacity, p.opacity * 1.3, p.opacity * 0.5, 0],
+              }}
+              transition={{
+                duration: p.duration,
+                repeat: Infinity,
+                delay: p.delay,
+                ease: 'easeInOut',
+              }}
+            />
+          ))}
         </div>
 
         {/* Central Official India Map Loading Canvas */}
@@ -200,8 +239,8 @@ export const LoaderExperience: React.FC<LoaderProps> = ({ onComplete }) => {
               VIRASAT
             </h1>
 
-            {/* Refined Sovereign Tagline */}
-            <span className="relative text-[10px] sm:text-[11px] md:text-xs tracking-[0.3em] text-[#FDE68A] uppercase font-serif mt-2 font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+            {/* Refined Sovereign Tagline - Guaranteed Single Line */}
+            <span className="relative whitespace-nowrap text-[9px] sm:text-[11px] md:text-xs tracking-[0.16em] sm:tracking-[0.26em] text-[#FDE68A] uppercase font-serif mt-2 font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
               Many Cultures. One India. One Legacy.
             </span>
           </div>

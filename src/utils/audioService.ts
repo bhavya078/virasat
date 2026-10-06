@@ -6,6 +6,20 @@ class HeritageAudioService {
   private ambientGain: GainNode | null = null;
   private ambientInterval: number | null = null;
 
+  constructor() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('beforeunload', () => {
+        this.stopSpeaking();
+        this.stopAmbience();
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          this.stopSpeaking();
+        }
+      });
+    }
+  }
+
   private initAudio() {
     if (!this.audioCtx) {
       const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;

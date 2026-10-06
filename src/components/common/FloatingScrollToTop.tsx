@@ -21,7 +21,6 @@ export const FloatingScrollToTop: React.FC = () => {
   }, []);
 
   const scrollToTop = () => {
-    heritageAudio.playTempleBell();
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

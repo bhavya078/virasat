@@ -134,7 +134,6 @@ export const AIHeritageGuide: React.FC = () => {
         <button
           onClick={() => {
             setIsOpen(!isOpen);
-            heritageAudio.playTempleBell();
           }}
           className="group relative flex items-center space-x-2.5 px-4 py-3 rounded-full bg-[#083B2D] border border-[#C49A3A] text-[#C49A3A] shadow-luxury-hover hover:scale-105 transition-all duration-300"
           title="Open Dhara AI Heritage Guide"

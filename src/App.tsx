@@ -9,6 +9,7 @@ import { LoaderExperience } from './components/home/LoaderExperience';
 import { SpotlightSearch } from './components/search/SpotlightSearch';
 import { AIHeritageGuide } from './components/ai/AIHeritageGuide';
 import { FloatingScrollToTop } from './components/common/FloatingScrollToTop';
+import { heritageAudio } from './utils/audioService';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -76,6 +77,7 @@ export function App() {
 
   const handleLoaderComplete = () => {
     sessionStorage.setItem('virasat_intro_loaded', 'true');
+    heritageAudio.stopSpeaking();
     setShowLoader(false);
   };
 

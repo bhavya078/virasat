@@ -107,7 +107,6 @@ export const AITripPlanner: React.FC = () => {
     setIsGenerating(true);
     setItineraryResult(null);
     setStreamedText('');
-    heritageAudio.playTempleBell();
 
     const realResult = AITripPlannerService.generateDestinationItinerary(formData);
 

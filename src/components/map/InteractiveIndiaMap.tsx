@@ -139,27 +139,9 @@ export const InteractiveIndiaMap: React.FC = () => {
 
   const lastHoveredSlugRef = useRef<string | null>(null);
 
-  // Soft haptic audio chime on state hover
+  // Soft haptic audio chime disabled on load/hover
   const playHoverChime = () => {
-    try {
-      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
-      if (AudioCtx) {
-        const ctx = new AudioCtx();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(659.25, ctx.currentTime); // E5 note
-        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.05); // A5 note
-        gain.gain.setValueAtTime(0.02, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.08);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.08);
-      }
-    } catch {
-      // Audio context before user gesture ignored safely
-    }
+    // Disabled to keep map loading and browsing quiet
   };
 
   // Map Camera: Zoom & Pan
@@ -328,7 +310,6 @@ export const InteractiveIndiaMap: React.FC = () => {
           y: (384 - matchingRegion.cy) * 0.8
         });
       }
-      heritageAudio.playTempleBell();
     }
   }, [isOdysseyMode, odysseyStep]);
 
@@ -336,8 +317,6 @@ export const InteractiveIndiaMap: React.FC = () => {
   const handleAISubmit = (promptText: string) => {
     const p = promptText.toLowerCase().trim();
     if (!p) return;
-
-    heritageAudio.playTempleBell();
 
     if (p.includes('gujarat') || p.includes('gem')) {
       const guj = INDIA_REGIONS.find((r) => r.slug === 'gujarat');
@@ -882,7 +861,6 @@ export const InteractiveIndiaMap: React.FC = () => {
                         // Immediately open state details in the dossier drawer
                         setActiveRegion(region);
                         setHoveredRegion(region);
-                        playHoverChime();
                         const rect = mapContainerRef.current?.getBoundingClientRect();
                         if (rect) {
                           setTooltipPos({

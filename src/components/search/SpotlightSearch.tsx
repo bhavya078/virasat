@@ -141,7 +141,6 @@ export const SpotlightSearch: React.FC<SpotlightProps> = ({ isOpen, onClose }) =
   };
 
   const handleSelect = (url: string, itemName: string) => {
-    heritageAudio.playTempleBell();
     saveRecentSearch(itemName);
     onClose();
     navigate(url);
